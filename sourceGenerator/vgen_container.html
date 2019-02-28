@@ -1,0 +1,59 @@
+<table style="width:100%">
+    <tr>
+        <td style="width:50%">
+            <div id="dynamic"></div>
+        </td>
+        <td style="width:50%;vertical-align:top">
+            <input type="number" id="controlValue" placeholder="Matrix size">
+            <button type="button" onclick='generate(document.getElementById("controlValue").value, +document.getElementById("delayRatioValue").value)'>Generate</button>
+            <br>
+            <input type="text" id="delayRatioValue" placeholder="mult/add delay ratio">
+        </td>
+    </tr>
+</table>
+
+<script>
+    const container = document.getElementById("dynamic")
+    let memory = ""
+    
+    function bodyReset() {
+        // container.innerHTML = ""
+        
+        memory = ""
+        document.getElementById("saveButton") ? document.getElementById("saveButton").hidden = true : null
+    }
+
+    function bodyPrint(string = "") {
+        // const current = document.createElement("pre")
+        // current.innerText = string
+        // container.appendChild(current)
+
+        // console.log(string)
+
+        memory = memory + "\n" + string
+        if(!document.getElementById("saveButton")) {
+            const saveButton = document.createElement("button")
+            saveButton.id = "saveButton"
+            saveButton.type = "button"
+            saveButton.innerText = "Save generated Verilog code"
+            saveButton.hidden = true;
+            saveButton.onclick = (ev) => {
+                const file = new Blob([memory], {type: "text/plain;charset=utf-8"})
+                const url = URL.createObjectURL(file)
+                const target = document.createElement("a")
+                target.href = url;
+                target.hidden = true;
+                target.download = "verilogCode_generated-" + document.getElementById("controlValue").value + "-" + Math.floor(+document.getElementById("delayRatioValue").value);
+                container.appendChild(target)
+                target.click()
+                setTimeout(() => {
+                    window.URL.revokeObjectURL(url);
+                    bodyReset()
+                }, 0)
+            }
+            container.appendChild(saveButton)
+        }
+    }
+</script>
+
+<script src=vcodegen_axi.js></script>
