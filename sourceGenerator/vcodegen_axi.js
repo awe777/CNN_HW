@@ -226,7 +226,7 @@ function generate(v, r) {
     }
     bodyPrint(`    .enabler(|reg0),`)
     bodyPrint(`    .masterClock(aclk),`)
-    bodyPrint(`    .masterReset(aresetn),`)
+    bodyPrint(`    .masterReset(aresetn)`)
     bodyPrint(`);`)
     bodyPrint(`// end of instance`)
     bodyPrint(`endmodule`);
