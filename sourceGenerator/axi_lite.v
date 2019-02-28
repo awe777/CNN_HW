@@ -48,7 +48,6 @@ localparam 	S_WRIDLE = 2'd0,
 // *** AXI read FSM ***
 localparam 	S_RDIDLE = 2'd0,
 			S_RDDATA = 2'd1;
-	
 // *** AXI write ***
 reg [1:0] wstate_cs, wstate_ns;
 reg [C_ADDR_BITS-1:0] waddr;

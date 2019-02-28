@@ -2,7 +2,7 @@ function ceilLog2(v) {
     return +v > 1 ? Math.ceil(Math.log2(+v)) : (+v - 1 ? NaN : 0)
 }
 
-function generate(v, r, dl = 0) {
+function generate(v, r) {
     const start = Date.now()
     v = +v > 0 ? +v : 0
     if(!v) {
@@ -10,7 +10,8 @@ function generate(v, r, dl = 0) {
     }
     r = +r > 0 ? Math.floor(+r): 0
     bodyReset();
-    const dataLength = +dl ? +dl : 32;
+    const dataLength = 18;
+    const fixedPoint = 12;
     /**
      * dataLength diatur menurut jenis data yang dipegang register:
      * * 16 untuk 16-bit fixed-point
@@ -27,6 +28,8 @@ function generate(v, r, dl = 0) {
     bodyPrint(`// input from reset that refreshes this system is masterReset`)
     bodyPrint(`// output of convolutional multiplication is out0 to out${v * v - 1}`)
     r ? bodyPrint(`// the maximum amount of adder connected serially while not exceeding the delay of 1 multiplier is ${r}`) : null
+
+    
     bodyPrint(`// Alert: main module - convmultCore`)   // !!! ALERT !!!
     let opening = "module convmultCore("
     let ioList = ""
@@ -170,7 +173,7 @@ function generate(v, r, dl = 0) {
     bodyPrint(`input [${dataLength - 1}:0] in0, in1;`)
     bodyPrint(`wire signed [${2 * dataLength - 1}:0] outMem = in0 * in1;`)
     bodyPrint(`output [${dataLength - 1}:0] out;`)
-    bodyPrint(`assign out = outMem[${24 + dataLength - 1}:24];`)
+    bodyPrint(`assign out = outMem[${fixedPoint + dataLength - 1}:${fixedPoint}];`)
     bodyPrint(`endmodule`)
 
     bodyPrint(`module mult2reg(in0, in1, sel, out, clk, rst);`)
