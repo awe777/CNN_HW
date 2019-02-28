@@ -10,8 +10,8 @@ function generate(v, r) {
     }
     r = +r > 0 ? Math.floor(+r): 0
     bodyReset();
-    const dataLength = 18;
-    const fixedPoint = 12;
+    const dataLength = 18; // because DSP48 only has 25x18 multiplier; 32 bit data will take 4 DSP units to implement 1 multiplier
+    const fixedPoint = 10;
     /**
      * dataLength diatur menurut jenis data yang dipegang register:
      * * 16 untuk 16-bit fixed-point
@@ -20,16 +20,216 @@ function generate(v, r) {
      * 
      * wire yang diperlukan berbanding linier dengan dataLength
      */    
-    bodyPrint(`// IMPORTANT: RENAME FILE TO \"axi_cnn.v\"`)
-    bodyPrint(`// input data word length is ${dataLength}`)
-    bodyPrint(`// input from shift register that holds source matrix data is in0 to in${v * v - 1}`)
-    bodyPrint(`// input from shift register that holds weight matrix data is wg0 to wg${v * v - 1}`)
+    bodyPrint(`// maximum matrix size is ${v} by ${v}`)
+    bodyPrint(`// input data word length is ${dataLength} bits, uses ${8 * Math.ceil(dataLength / 8)} bits of register for each entry`)
+    bodyPrint(`// data is a fixed-point fraction with ${dataLength - fixedPoint} integer bits and ${fixedPoint} fraction bits`)
+    bodyPrint(`// accepted address range is [offset + 0x00000000, offset + 0x0fffffff) with jumps of ${Math.ceil(dataLength / 8)} for each register`)
+    bodyPrint(`// there are ${3 * v * v + 1} registers in this AXI node`)
     bodyPrint(`// input from clock that drives this system is masterClock`)
     bodyPrint(`// input from reset that refreshes this system is masterReset`)
-    bodyPrint(`// output of convolutional multiplication is out0 to out${v * v - 1}`)
     r ? bodyPrint(`// the maximum amount of adder connected serially while not exceeding the delay of 1 multiplier is ${r}`) : null
 
-    
+    bodyPrint(`\`timescale 1ns / 1ps`);
+    bodyPrint(`module axi_cnn(`);
+    bodyPrint(`	// ### Clock and reset signals #########################################`);
+    bodyPrint(`	input  wire        	aclk,`);
+    bodyPrint(`	input  wire        	aresetn,`);
+    bodyPrint(`	// ### AXI4-lite slave signals #########################################`);
+    bodyPrint(`	// *** Write address signals ***`);
+    bodyPrint(`    output wire        	s_axi_awready,`);
+    bodyPrint(`	input  wire [31:0] 	s_axi_awaddr,`);
+    bodyPrint(`	input  wire        	s_axi_awvalid,`);
+    bodyPrint(`	// *** Write data signals ***`);
+    bodyPrint(`    output wire        	s_axi_wready,`);
+    bodyPrint(`	input  wire [31:0] 	s_axi_wdata,`);
+    bodyPrint(`	input  wire [3:0]  	s_axi_wstrb,`);
+    bodyPrint(`	input  wire        	s_axi_wvalid,`);
+    bodyPrint(`	// *** Write response signals ***`);
+    bodyPrint(`    input  wire        	s_axi_bready,`);
+    bodyPrint(`	output wire [1:0]  	s_axi_bresp,`);
+    bodyPrint(`	output wire        	s_axi_bvalid,`);
+    bodyPrint(`	// *** Read address signals ***`);
+    bodyPrint(`    output wire        	s_axi_arready,`);
+    bodyPrint(`	input  wire [31:0] 	s_axi_araddr,`);
+    bodyPrint(`	input  wire        	s_axi_arvalid,`);
+    bodyPrint(`	// *** Read data signals ***	`);
+    bodyPrint(`    input  wire        	s_axi_rready,`);
+    bodyPrint(`	output wire [31:0] 	s_axi_rdata,`);
+    bodyPrint(`	output wire [1:0]  	s_axi_rresp,`);
+    bodyPrint(`	output wire        	s_axi_rvalid`);
+    bodyPrint(`	// ### User signals ####################################################`);
+    bodyPrint(`);`);
+    bodyPrint(``);
+    bodyPrint(`// ### Register map ########################################################`);
+    // change address bit length to at most 28
+    bodyPrint(`localparam 	C_ADDR_BITS = 28;`);
+    // end of bit length
+    bodyPrint(`// *** Address ***`);
+    // change to dynamic # of registers and distance
+    for(addReg = 0; addReg <= 3 * v * v; addReg++) {
+        bodyPrint(`localparam C_ADDR_REG${addReg} = 28'd${addReg * Math.ceil(dataLength / 8)};`)
+    }
+    // end dynamic change
+    bodyPrint(`// *** AXI write FSM ***`);
+    bodyPrint(`localparam 	S_WRIDLE = 2'd0,`);
+    bodyPrint(`			S_WRDATA = 2'd1,`);
+    bodyPrint(`			S_WRRESP = 2'd2;`);
+    bodyPrint(`// *** AXI read FSM ***`);
+    bodyPrint(`localparam 	S_RDIDLE = 2'd0,`);
+    bodyPrint(`			S_RDDATA = 2'd1;`);
+    bodyPrint(`// *** AXI write ***`);
+    bodyPrint(`reg [1:0] wstate_cs, wstate_ns;`);
+    bodyPrint(`reg [C_ADDR_BITS-1:0] waddr;`);
+    bodyPrint(`wire [31:0] wmask;`);
+    bodyPrint(`wire aw_hs, w_hs;`);
+    bodyPrint(`// *** AXI read ***`);
+    bodyPrint(`reg [1:0] rstate_cs, rstate_ns;`);
+    bodyPrint(`wire [C_ADDR_BITS-1:0] raddr;`);
+    bodyPrint(`reg [31:0] rdata;`);
+    bodyPrint(`wire ar_hs;`);
+    bodyPrint(`// *** Registers ***`);
+    bodyPrint(`// reg0 will be control register; hardware will run if one of its bits are 1`)
+    bodyPrint(`// reg1 to reg${v * v} will be image data input`)
+    bodyPrint(`// reg${v * v + 1} to reg${2 * v * v} will be weight data input`)
+    bodyPrint(`// reg${2 * v * v + 1} to reg${3 * v * v} will be processed data output`)
+    // change to dynamic and change data length, if required
+    for(dataReg = 0; dataReg <= 3 * v * v; dataReg++) {
+        bodyPrint(`reg [${8 * Math.ceil(dataLength / 8) - 1}:0] reg${dataReg};`)
+        dataReg < v * v ? bodyPrint(`wire [${dataLength - 1}:0] output${dataReg};`) : null;
+    }
+    // end dynamic change
+    bodyPrint(`// ### AXI write ###########################################################`);
+    bodyPrint(`assign s_axi_awready = (wstate_cs == S_WRIDLE);`);
+    bodyPrint(`assign s_axi_wready = (wstate_cs == S_WRDATA);`);
+    bodyPrint(`assign s_axi_bresp = 2'b00;    // OKAY`);
+    bodyPrint(`assign s_axi_bvalid = (wstate_cs == S_WRRESP);`);
+    bodyPrint(`assign wmask = {{8{s_axi_wstrb[3]}}, {8{s_axi_wstrb[2]}}, {8{s_axi_wstrb[1]}}, {8{s_axi_wstrb[0]}}};`);
+    bodyPrint(`assign aw_hs = s_axi_awvalid & s_axi_awready;`);
+    bodyPrint(`assign w_hs = s_axi_wvalid & s_axi_wready;`);
+    bodyPrint(``);
+    bodyPrint(`// *** Write state register ***`);
+    bodyPrint(`always @(posedge aclk)`);
+    bodyPrint(`begin`);
+    bodyPrint(`	if (!aresetn)`);
+    bodyPrint(`		wstate_cs <= S_WRIDLE;`);
+    bodyPrint(`	else`);
+    bodyPrint(`		wstate_cs <= wstate_ns;`);
+    bodyPrint(`end`);
+    bodyPrint(`// *** Write state next ***`);
+    bodyPrint(`always @(*)`);
+    bodyPrint(`begin`);
+    bodyPrint(`	case (wstate_cs)`);
+    bodyPrint(`		S_WRIDLE:`);
+    bodyPrint(`			if (s_axi_awvalid)`);
+    bodyPrint(`				wstate_ns = S_WRDATA;`);
+    bodyPrint(`			else`);
+    bodyPrint(`				wstate_ns = S_WRIDLE;`);
+    bodyPrint(`		S_WRDATA:`);
+    bodyPrint(`			if (s_axi_wvalid)`);
+    bodyPrint(`				wstate_ns = S_WRRESP;`);
+    bodyPrint(`			else`);
+    bodyPrint(`				wstate_ns = S_WRDATA;`);
+    bodyPrint(`		S_WRRESP:`);
+    bodyPrint(`			if (s_axi_bready)`);
+    bodyPrint(`				wstate_ns = S_WRIDLE;`);
+    bodyPrint(`			else`);
+    bodyPrint(`				wstate_ns = S_WRRESP;`);
+    bodyPrint(`		default:`);
+    bodyPrint(`			wstate_ns = S_WRIDLE;`);
+    bodyPrint(`	endcase`);
+    bodyPrint(`end`);
+    bodyPrint(`// *** Write address register ***`);
+    bodyPrint(`always @(posedge aclk)`);
+    bodyPrint(`begin`);
+    bodyPrint(`	if (aw_hs)`);
+    bodyPrint(`		waddr <= s_axi_awaddr[C_ADDR_BITS-1:0];`);
+    bodyPrint(`end`);
+    bodyPrint(`// ### AXI read ############################################################`);
+    bodyPrint(`assign s_axi_arready = (rstate_cs == S_RDIDLE);`);
+    bodyPrint(`assign s_axi_rdata = rdata;`);
+    bodyPrint(`assign s_axi_rresp = 2'b00;    // OKAY`);
+    bodyPrint(`assign s_axi_rvalid = (rstate_cs == S_RDDATA);`);
+    bodyPrint(`assign ar_hs = s_axi_arvalid & s_axi_arready;`);
+    bodyPrint(`assign raddr = s_axi_araddr[C_ADDR_BITS-1:0];`);
+    bodyPrint(`// *** Read state register ***`);
+    bodyPrint(`always @(posedge aclk)`);
+    bodyPrint(`begin`);
+    bodyPrint(`	if (!aresetn)`);
+    bodyPrint(`		rstate_cs <= S_RDIDLE;`);
+    bodyPrint(`	else`);
+    bodyPrint(`		rstate_cs <= rstate_ns;`);
+    bodyPrint(`end`);
+    bodyPrint(`// *** Read state next ***`);
+    bodyPrint(`always @(*) `);
+    bodyPrint(`begin`);
+    bodyPrint(`	case (rstate_cs)`);
+    bodyPrint(`		S_RDIDLE:`);
+    bodyPrint(`			if (s_axi_arvalid)`);
+    bodyPrint(`				rstate_ns = S_RDDATA;`);
+    bodyPrint(`			else`);
+    bodyPrint(`				rstate_ns = S_RDIDLE;`);
+    bodyPrint(`		S_RDDATA:`);
+    bodyPrint(`			if (s_axi_rready)`);
+    bodyPrint(`				rstate_ns = S_RDIDLE;`);
+    bodyPrint(`			else`);
+    bodyPrint(`				rstate_ns = S_RDDATA;`);
+    bodyPrint(`		default:`);
+    bodyPrint(`			rstate_ns = S_RDIDLE;`);
+    bodyPrint(`	endcase`);
+    bodyPrint(`end`);
+    bodyPrint(`	`);
+    bodyPrint(`// *** Read data register ***`);
+    bodyPrint(`always @(posedge aclk)`);
+    bodyPrint(`begin`);
+    bodyPrint(`    if (!aresetn)`);
+    bodyPrint(`        rdata <= 0;`);
+    bodyPrint(`	else if (ar_hs)`);
+    bodyPrint(`		case (raddr)`);
+    // change to dynamic
+    for(readReg = 0; readReg <= 3 * v * v; readReg++) {
+        bodyPrint(`			C_ADDR_REG${readReg}:`);
+        bodyPrint(`             rdata <= {reg${readReg}, ${32 - 8 * Math.ceil(dataLength / 8)}'b0};`);
+    }
+    // end change
+    bodyPrint(`		endcase`);
+    bodyPrint(`end`);
+    bodyPrint(`// ### Registers ############################################################`);
+    bodyPrint(`always @(posedge aclk)`);
+    bodyPrint(`begin`);
+    bodyPrint(`    if (!aresetn)`);
+    bodyPrint(`    begin`);
+    // change to dynamic
+    for(resetReg = 0; resetReg <= 3 * v * v; resetReg++) {
+        bodyPrint(`        reg${resetReg} <= ${8 * Math.ceil(dataLength / 8)}'b0;`);
+    }
+    // end change
+    bodyPrint(`    end`);
+    // change to dynamic
+    for(writeReg = 0; writeReg <= 3 * v * v; writeReg++) {
+        bodyPrint(`	else if (w_hs && waddr == C_ADDR_REG${writeReg})`);
+        bodyPrint(`	   begin`);
+        if(writeReg <= 2 * v * v) {
+            bodyPrint(`		reg${writeReg}[${8 * Math.ceil(dataLength / 8) - 1}:0] <= (s_axi_wdata[31:${32 - 8 * Math.ceil(dataLength / 8)}] & wmask) | (reg${writeReg}[${8 * Math.ceil(dataLength / 8) - 1}:0] & ~wmask);`);
+        } else {
+            bodyPrint(`		reg${writeReg}[${8 * Math.ceil(dataLength / 8) - 1}:0] <= (s_axi_wdata[31:${32 - 8 * Math.ceil(dataLength / 8)}] & wmask) | ({output${writeReg - (2 * v * v + 1)}, ${8 * Math.ceil(dataLength / 8) - dataLength}'b0} & ~wmask);`);
+        }
+        bodyPrint(`    end`);
+    }
+    // end change
+    bodyPrint(`end    `);
+    bodyPrint(`// core module instance`)
+    bodyPrint(`convmultCore coreInstance(`)
+    for(eachIO = 0; eachIO < v * v; eachIO++) {
+        bodyPrint(`    .in${eachIO}(reg${eachIO + 1}[${8 * Math.ceil(dataLength / 8) - 1}:${8 * Math.ceil(dataLength / 8) - dataLength}]),`)
+        bodyPrint(`    .wg${eachIO}(reg${eachIO + v * v + 1}[${8 * Math.ceil(dataLength / 8) - 1}:${8 * Math.ceil(dataLength / 8) - dataLength}]),`)
+        bodyPrint(`    .out${eachIO}(output${eachIO}),`)
+    }
+    bodyPrint(`    .enabler(|reg0),`)
+    bodyPrint(`    .masterClock(aclk),`)
+    bodyPrint(`    .masterReset(aresetn),`)
+    bodyPrint(`);`)
+    bodyPrint(`// end of instance`)
+    bodyPrint(`endmodule`);
     bodyPrint(`// Alert: main module - convmultCore`)   // !!! ALERT !!!
     let opening = "module convmultCore("
     let ioList = ""

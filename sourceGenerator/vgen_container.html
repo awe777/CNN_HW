@@ -43,7 +43,7 @@
                 const target = document.createElement("a")
                 target.href = url;
                 target.hidden = true;
-                target.download = "verilogCode_generated-" + document.getElementById("controlValue").value + "-" + Math.floor(+document.getElementById("delayRatioValue").value);
+                target.download = "axi_cnn.v";
                 container.appendChild(target)
                 target.click()
                 setTimeout(() => {
