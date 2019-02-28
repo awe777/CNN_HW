@@ -677,8 +677,6 @@
 
 //MODULE DECLARATION
  module CNN_design_processing_system7_0_0 (
-  UART0_TX,
-  UART0_RX,
   M_AXI_GP0_ARVALID,
   M_AXI_GP0_AWVALID,
   M_AXI_GP0_BREADY,
@@ -804,8 +802,6 @@
 
 //INPUT AND OUTPUT PORTS
 
-      output  UART0_TX;
-      input  UART0_RX;
       output  M_AXI_GP0_ARVALID;
       output  M_AXI_GP0_AWVALID;
       output  M_AXI_GP0_BREADY;
@@ -871,7 +867,6 @@
 
 //REG DECLARATIONS
 
-      reg UART0_TX;
       reg M_AXI_GP0_ARVALID;
       reg M_AXI_GP0_AWVALID;
       reg M_AXI_GP0_BREADY;

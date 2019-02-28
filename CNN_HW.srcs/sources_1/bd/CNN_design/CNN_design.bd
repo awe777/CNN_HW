@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x37B90A15FCB466A8",
+      "boundary_crc": "0xCC6CFA5306BD3ECB",
       "device": "xc7z010clg400-1",
       "name": "CNN_design",
       "synth_flow_mode": "None",
@@ -11,7 +11,6 @@
     "design_tree": {
       "processing_system7_0": "",
       "axi_lite_0": "",
-      "axi_gpio_0": "",
       "ps7_0_axi_periph": {
         "xbar": "",
         "s00_couplers": {
@@ -23,10 +22,6 @@
       "rst_ps7_0_50M": ""
     },
     "interface_ports": {
-      "gpio_rtl_0": {
-        "mode": "Master",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
-      },
       "DDR": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:ddrx_rtl:1.0",
@@ -161,7 +156,7 @@
             "value": "111.111115"
           },
           "PCW_ACT_UART_PERIPHERAL_FREQMHZ": {
-            "value": "100.000000"
+            "value": "10.000000"
           },
           "PCW_ACT_WDT_PERIPHERAL_FREQMHZ": {
             "value": "111.111115"
@@ -179,28 +174,22 @@
             "value": "10000000"
           },
           "PCW_EN_EMIO_UART0": {
-            "value": "1"
+            "value": "0"
           },
           "PCW_EN_UART0": {
-            "value": "1"
+            "value": "0"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
           },
-          "PCW_UART0_GRP_FULL_ENABLE": {
-            "value": "0"
-          },
           "PCW_UART0_PERIPHERAL_ENABLE": {
-            "value": "1"
-          },
-          "PCW_UART0_UART0_IO": {
-            "value": "EMIO"
+            "value": "0"
           },
           "PCW_UART_PERIPHERAL_FREQMHZ": {
             "value": "100"
           },
           "PCW_UART_PERIPHERAL_VALID": {
-            "value": "1"
+            "value": "0"
           },
           "PCW_UIPARAM_ACT_DDR_FREQ_MHZ": {
             "value": "533.333374"
@@ -443,10 +432,6 @@
           }
         }
       },
-      "axi_gpio_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "CNN_design_axi_gpio_0_0"
-      },
       "ps7_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
         "xci_name": "CNN_design_ps7_0_axi_periph_0",
@@ -608,16 +593,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -746,22 +731,10 @@
           }
         },
         "interface_nets": {
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
-            ]
-          },
           "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
               "s00_couplers/S_AXI"
-            ]
-          },
-          "m00_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
             ]
           },
           "s00_couplers_to_xbar": {
@@ -770,10 +743,22 @@
               "xbar/S00_AXI"
             ]
           },
+          "m00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
           "m01_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
             ]
           },
           "xbar_to_m01_couplers": {
@@ -839,18 +824,6 @@
           "ps7_0_axi_periph/M00_AXI",
           "axi_lite_0/s_axi"
         ]
-      },
-      "ps7_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M01_AXI",
-          "axi_gpio_0/S_AXI"
-        ]
-      },
-      "axi_gpio_0_GPIO": {
-        "interface_ports": [
-          "gpio_rtl_0",
-          "axi_gpio_0/GPIO"
-        ]
       }
     },
     "nets": {
@@ -863,7 +836,6 @@
           "axi_lite_0/aclk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
-          "axi_gpio_0/s_axi_aclk",
           "ps7_0_axi_periph/M01_ACLK"
         ]
       },
@@ -880,7 +852,6 @@
           "axi_lite_0/aresetn",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
-          "axi_gpio_0/s_axi_aresetn",
           "ps7_0_axi_periph/M01_ARESETN"
         ]
       }
@@ -892,11 +863,6 @@
             "range": "4G",
             "width": "32",
             "segments": {
-              "SEG_axi_gpio_0_Reg": {
-                "address_block": "/axi_gpio_0/S_AXI/Reg",
-                "offset": "0x42000000",
-                "range": "64K"
-              },
               "SEG_axi_lite_0_reg0": {
                 "address_block": "/axi_lite_0/s_axi/reg0",
                 "offset": "0x40000000",

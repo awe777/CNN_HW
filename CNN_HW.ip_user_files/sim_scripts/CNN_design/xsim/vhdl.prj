@@ -1,5 +1,4 @@
 vhdl xil_defaultlib  \
-"../../../bd/CNN_design/ip/CNN_design_axi_gpio_0_0/sim/CNN_design_axi_gpio_0_0.vhd" \
 "../../../bd/CNN_design/ip/CNN_design_rst_ps7_0_50M_0/sim/CNN_design_rst_ps7_0_50M_0.vhd" \
 
 nosort

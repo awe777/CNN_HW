@@ -56,8 +56,6 @@
 `timescale 1ns/1ps
 
 module CNN_design_processing_system7_0_0 (
-UART0_TX, 
-UART0_RX, 
 M_AXI_GP0_ARVALID, 
 M_AXI_GP0_AWVALID, 
 M_AXI_GP0_BREADY, 
@@ -121,8 +119,6 @@ PS_SRSTB,
 PS_CLK, 
 PS_PORB 
 );
-output UART0_TX;
-input UART0_RX;
 output M_AXI_GP0_ARVALID;
 output M_AXI_GP0_AWVALID;
 output M_AXI_GP0_BREADY;

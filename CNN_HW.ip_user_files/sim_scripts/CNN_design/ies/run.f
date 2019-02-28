@@ -9,6 +9,13 @@
   "D:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/clk_vip_if.sv" \
   "D:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
+-makelib ies_lib/xil_defaultlib -sv \
+  "D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+-endlib
+-makelib ies_lib/xpm \
+  "D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
+-endlib
 -makelib ies_lib/axi_infrastructure_v1_1_0 \
   "../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 -endlib
@@ -21,21 +28,6 @@
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/CNN_design/ip/CNN_design_processing_system7_0_0/sim/CNN_design_processing_system7_0_0.v" \
   "../../../bd/CNN_design/ip/CNN_design_axi_lite_0_0/sim/CNN_design_axi_lite_0_0.v" \
--endlib
--makelib ies_lib/axi_lite_ipif_v3_0_4 \
-  "../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/lib_cdc_v1_0_2 \
-  "../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
--endlib
--makelib ies_lib/interrupt_control_v3_1_4 \
-  "../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
--endlib
--makelib ies_lib/axi_gpio_v2_0_20 \
-  "../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/a7c9/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/CNN_design/ip/CNN_design_axi_gpio_0_0/sim/CNN_design_axi_gpio_0_0.vhd" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
   "../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -61,20 +53,21 @@
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/CNN_design/ip/CNN_design_xbar_0/sim/CNN_design_xbar_0.v" \
 -endlib
+-makelib ies_lib/lib_cdc_v1_0_2 \
+  "../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
+-endlib
 -makelib ies_lib/proc_sys_reset_v5_0_13 \
   "../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/CNN_design/ip/CNN_design_rst_ps7_0_50M_0/sim/CNN_design_rst_ps7_0_50M_0.vhd" \
 -endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/CNN_design/sim/CNN_design.v" \
--endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_18 \
   "../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/CNN_design/ip/CNN_design_auto_pc_0/sim/CNN_design_auto_pc_0.v" \
+  "../../../bd/CNN_design/sim/CNN_design.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v
