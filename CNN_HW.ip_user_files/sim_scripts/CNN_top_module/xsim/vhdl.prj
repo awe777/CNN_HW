@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/sim/CNN_top_module_rst_ps7_0_50M_0.vhd" \
+
+nosort
