@@ -20,11 +20,11 @@ function generate(v, r) {
      * 
      * wire yang diperlukan berbanding linier dengan dataLength
      */    
-    bodyPrint(`// maximum matrix size is ${v} by ${v}`)
+    bodyPrint(`// maximum matrix size is ${v} by ${v} for image data and ${v - 1} by ${v - 1} for weight data`)
     bodyPrint(`// input data word length is ${dataLength} bits, uses ${8 * Math.ceil(dataLength / 8)} bits of register for each entry`)
     bodyPrint(`// data is a fixed-point fraction with ${dataLength - fixedPoint} integer bits and ${fixedPoint} fraction bits`)
-    bodyPrint(`// accepted address range is [offset + 0x00000000, offset + 0x0fffffff) with jumps of ${Math.ceil(dataLength / 8)} for each register`)
-    bodyPrint(`// there are ${3 * v * v + 1} registers in this AXI node`)
+    bodyPrint(`// accepted address range is [offset + 0x00000000, offset + 0x00ffffff) with jumps of ${Math.ceil(dataLength / 8)} for each register`)
+    bodyPrint(`// there are ${(v - 1) * (3 * v + 1) + 3} registers in this AXI node`)
     bodyPrint(`// input from clock that drives this system is masterClock`)
     bodyPrint(`// input from reset that refreshes this system is masterReset`)
     r ? bodyPrint(`// the maximum amount of adder connected serially while not exceeding the delay of 1 multiplier is ${r}`) : null
@@ -61,13 +61,13 @@ function generate(v, r) {
     bodyPrint(`);`);
     bodyPrint(``);
     bodyPrint(`// ### Register map ########################################################`);
-    // change address bit length to at most 28
-    bodyPrint(`localparam 	C_ADDR_BITS = 28;`);
+    // change address bit length to at most 25, in order to put these values to RAM
+    bodyPrint(`localparam 	C_ADDR_BITS = 24;`);
     // end of bit length
     bodyPrint(`// *** Address ***`);
     // change to dynamic # of registers and distance
-    for(addReg = 0; addReg <= 3 * v * v; addReg++) {
-        bodyPrint(`localparam C_ADDR_REG${addReg} = 28'd${addReg * Math.ceil(dataLength / 8)};`)
+    for(addReg = 0; addReg <= (v - 1) * (3 * v + 1) + 2; addReg++) {
+        bodyPrint(`localparam C_ADDR_REG${addReg} = 24'd${addReg * Math.ceil(dataLength / 8)};`)
     }
     // end dynamic change
     bodyPrint(`// *** AXI write FSM ***`);
@@ -90,10 +90,10 @@ function generate(v, r) {
     bodyPrint(`// *** Registers ***`);
     bodyPrint(`// reg0 will be control register; hardware will run if one of its bits are 1`)
     bodyPrint(`// reg1 to reg${v * v} will be image data input`)
-    bodyPrint(`// reg${v * v + 1} to reg${2 * v * v} will be weight data input`)
-    bodyPrint(`// reg${2 * v * v + 1} to reg${3 * v * v} will be processed data output`)
+    bodyPrint(`// reg${v * v + 1} to reg${2 * v * (v - 1) + 1} will be weight data input`)
+    bodyPrint(`// reg${2 * (v * v - v + 1)} to reg${(v - 1) * (3 * v + 1) + 2} will be processed data output`)
     // change to dynamic and change data length, if required
-    for(dataReg = 0; dataReg <= 3 * v * v; dataReg++) {
+    for(dataReg = 0; dataReg <= (v - 1) * (3 * v + 1) + 2; dataReg++) {
         bodyPrint(`reg [${8 * Math.ceil(dataLength / 8) - 1}:0] reg${dataReg};`)
         dataReg < v * v ? bodyPrint(`wire [${dataLength - 1}:0] output${dataReg};`) : null;
     }
@@ -186,7 +186,7 @@ function generate(v, r) {
     bodyPrint(`	else if (ar_hs)`);
     bodyPrint(`		case (raddr)`);
     // change to dynamic
-    for(readReg = 0; readReg <= 3 * v * v; readReg++) {
+    for(readReg = 0; readReg <= (v - 1) * (3 * v + 1) + 2; readReg++) {
         bodyPrint(`			C_ADDR_REG${readReg}:`);
         bodyPrint(`             rdata <= {reg${readReg}, ${32 - 8 * Math.ceil(dataLength / 8)}'b0};`);
     }
@@ -199,19 +199,19 @@ function generate(v, r) {
     bodyPrint(`    if (!aresetn)`);
     bodyPrint(`    begin`);
     // change to dynamic
-    for(resetReg = 0; resetReg <= 3 * v * v; resetReg++) {
+    for(resetReg = 0; resetReg <= (v - 1) * (3 * v + 1) + 2; resetReg++) {
         bodyPrint(`        reg${resetReg} <= ${8 * Math.ceil(dataLength / 8)}'b0;`);
     }
     // end change
     bodyPrint(`    end`);
     // change to dynamic
-    for(writeReg = 0; writeReg <= 3 * v * v; writeReg++) {
+    for(writeReg = 0; writeReg <= (v - 1) * (3 * v + 1) + 2; writeReg++) {
         bodyPrint(`	else if (w_hs && waddr == C_ADDR_REG${writeReg})`);
         bodyPrint(`	   begin`);
-        if(writeReg <= 2 * v * v) {
+        if(writeReg < 2 * (v * v - v + 1)) {
             bodyPrint(`		reg${writeReg}[${8 * Math.ceil(dataLength / 8) - 1}:0] <= (s_axi_wdata[31:${32 - 8 * Math.ceil(dataLength / 8)}] & wmask) | (reg${writeReg}[${8 * Math.ceil(dataLength / 8) - 1}:0] & ~wmask);`);
         } else {
-            bodyPrint(`		reg${writeReg}[${8 * Math.ceil(dataLength / 8) - 1}:0] <= (s_axi_wdata[31:${32 - 8 * Math.ceil(dataLength / 8)}] & wmask) | ({output${writeReg - (2 * v * v + 1)}, ${8 * Math.ceil(dataLength / 8) - dataLength}'b0} & ~wmask);`);
+            bodyPrint(`		reg${writeReg}[${8 * Math.ceil(dataLength / 8) - 1}:0] <= (s_axi_wdata[31:${32 - 8 * Math.ceil(dataLength / 8)}] & wmask) | ({output${writeReg - 2 * (v * v - v + 1)}, ${8 * Math.ceil(dataLength / 8) - dataLength}'b0} & ~wmask);`);
         }
         bodyPrint(`    end`);
     }
@@ -221,7 +221,11 @@ function generate(v, r) {
     bodyPrint(`convmultCore coreInstance(`)
     for(eachIO = 0; eachIO < v * v; eachIO++) {
         bodyPrint(`    .in${eachIO}(reg${eachIO + 1}[${8 * Math.ceil(dataLength / 8) - 1}:${8 * Math.ceil(dataLength / 8) - dataLength}]),`)
-        bodyPrint(`    .wg${eachIO}(reg${eachIO + v * v + 1}[${8 * Math.ceil(dataLength / 8) - 1}:${8 * Math.ceil(dataLength / 8) - dataLength}]),`)
+        if((eachIO + 1) % v && eachIO / v < (v - 1)) {
+            bodyPrint(`    .wg${eachIO}(reg${eachIO + v * v + 1 - Math.floor(eachIO / 8)}[${8 * Math.ceil(dataLength / 8) - 1}:${8 * Math.ceil(dataLength / 8) - dataLength}]),`)
+        } else {
+            bodyPrint(`    .wg${eachIO}(${dataLength}'b0),`)
+        }
         bodyPrint(`    .out${eachIO}(output${eachIO}),`)
     }
     bodyPrint(`    .enabler(|reg0),`)
@@ -301,7 +305,7 @@ function generate(v, r) {
         bodyPrint(`   end`)
     }
 
-    bodyPrint(`always @(posedge masterClock or negedge masterReset)`)
+    bodyPrint(`always @(posedge masterClock)`)
     bodyPrint(`   begin`)
     bodyPrint(`      counter <= masterReset & enabler ? counter + 1 : ${ceilLog2(v * v) + 1}'b0;`)
     bodyPrint(`   end`)
@@ -358,7 +362,7 @@ function generate(v, r) {
 
     bodyPrint(`assign out = w${layerCount}_0;`)
 
-    bodyPrint(`always @(posedge clk or negedge rst)`)
+    bodyPrint(`always @(posedge clk)`)
     bodyPrint(`   begin`)
     for(c = 0; c < v * v; c++) {
         bodyPrint(`      w0_${c} <= rst ? w${c} : ${dataLength}'b0;`)
@@ -383,7 +387,7 @@ function generate(v, r) {
     bodyPrint(`output [${dataLength - 1}:0] out;`)
     bodyPrint(`assign out = outq;`)
 
-    bodyPrint(`always @(posedge clk or negedge rst)`)
+    bodyPrint(`always @(posedge clk)`)
     bodyPrint(`   begin`)
     bodyPrint(`      outq <= rst ? (sel ? in1 : in0) : ${dataLength}'b0;`)
     bodyPrint(`   end`)
