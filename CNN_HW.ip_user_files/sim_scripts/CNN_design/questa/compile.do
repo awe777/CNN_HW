@@ -104,12 +104,14 @@ vcom -work proc_sys_reset_v5_0_13 -64 -93 \
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/CNN_design/ip/CNN_design_rst_ps7_0_50M_0/sim/CNN_design_rst_ps7_0_50M_0.vhd" \
 
+vlog -work xil_defaultlib -64 "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/ec67/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/70cf/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ip/CNN_design_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../bd/CNN_design/sim/CNN_design.v" \
+
 vlog -work axi_protocol_converter_v2_1_18 -64 "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/ec67/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/70cf/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ip/CNN_design_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/ec67/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/70cf/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ip/CNN_design_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/CNN_design/ip/CNN_design_auto_pc_0/sim/CNN_design_auto_pc_0.v" \
-"../../../bd/CNN_design/sim/CNN_design.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

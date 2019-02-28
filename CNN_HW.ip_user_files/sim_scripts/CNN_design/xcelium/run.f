@@ -67,12 +67,14 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/CNN_design/ip/CNN_design_rst_ps7_0_50M_0/sim/CNN_design_rst_ps7_0_50M_0.vhd" \
 -endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/CNN_design/sim/CNN_design.v" \
+-endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_18 \
   "../../../../CNN_HW.srcs/sources_1/bd/CNN_design/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/CNN_design/ip/CNN_design_auto_pc_0/sim/CNN_design_auto_pc_0.v" \
-  "../../../bd/CNN_design/sim/CNN_design.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v
