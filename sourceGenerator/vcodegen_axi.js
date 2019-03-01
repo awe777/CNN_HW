@@ -23,7 +23,7 @@ function generate(v, r) {
     bodyPrint(`// maximum matrix size is ${v} by ${v} for image data and ${v - 1} by ${v - 1} for weight data`)
     bodyPrint(`// input data word length is ${dataLength} bits, uses ${8 * Math.ceil(dataLength / 8)} bits of register for each entry`)
     bodyPrint(`// data is a fixed-point fraction with ${dataLength - fixedPoint} integer bits and ${fixedPoint} fraction bits`)
-    bodyPrint(`// accepted address range is [offset + 0x00000000, offset + 0x00ffffff) with jumps of ${Math.ceil(dataLength / 8)} for each register`)
+    bodyPrint(`// accepted address range is [offset + 0x00000000, offset + 0x00ffffff) with jumps of 4 for each register`)
     bodyPrint(`// there are ${(v - 1) * (3 * v + 1) + 3} registers in this AXI node`)
     bodyPrint(`// input from clock that drives this system is masterClock`)
     bodyPrint(`// input from reset that refreshes this system is masterReset`)
@@ -67,7 +67,7 @@ function generate(v, r) {
     bodyPrint(`// *** Address ***`);
     // change to dynamic # of registers and distance
     for(addReg = 0; addReg <= (v - 1) * (3 * v + 1) + 2; addReg++) {
-        bodyPrint(`localparam C_ADDR_REG${addReg} = 24'd${addReg * Math.ceil(dataLength / 8)};`)
+        bodyPrint(`localparam C_ADDR_REG${addReg} = 24'd${addReg * 4};`)
     }
     // end dynamic change
     bodyPrint(`// *** AXI write FSM ***`);
