@@ -21,7 +21,7 @@ function generate(v, r) {
      * wire yang diperlukan berbanding linier dengan dataLength
      */    
     bodyPrint(`// maximum matrix size is ${v} by ${v} for image data and ${v - 1} by ${v - 1} for weight data`)
-    bodyPrint(`// input data word length is ${dataLength} bits, uses ${8 * Math.ceil(dataLength / 8)} bits of register for each entry`)
+    bodyPrint(`// input data word length is ${dataLength} bits, uses ${dataLength} bits of register for each entry`)
     bodyPrint(`// data is a fixed-point fraction with ${dataLength - fixedPoint} integer bits and ${fixedPoint} fraction bits`)
     bodyPrint(`// accepted address range is [offset + 0x00000000, offset + 0x00ffffff) with jumps of 4 for each register`)
     bodyPrint(`// there are ${(v - 1) * (3 * v + 1) + 3} registers in this AXI node`)
@@ -94,7 +94,7 @@ function generate(v, r) {
     bodyPrint(`// reg${2 * (v * v - v + 1)} to reg${(v - 1) * (3 * v + 1) + 2} will be processed data output`)
     // change to dynamic and change data length, if required
     for(dataReg = 0; dataReg <= (v - 1) * (3 * v + 1) + 2; dataReg++) {
-        bodyPrint(`reg [${8 * Math.ceil(dataLength / 8) - 1}:0] reg${dataReg};`)
+        bodyPrint(`reg [${dataLength - 1}:0] reg${dataReg};`)
         dataReg < v * v ? bodyPrint(`wire [${dataLength - 1}:0] output${dataReg};`) : null;
     }
     // end dynamic change
@@ -188,7 +188,7 @@ function generate(v, r) {
     // change to dynamic
     for(readReg = 0; readReg <= (v - 1) * (3 * v + 1) + 2; readReg++) {
         bodyPrint(`			C_ADDR_REG${readReg}:`);
-        bodyPrint(`             rdata <= {reg${readReg}, ${32 - 8 * Math.ceil(dataLength / 8)}'b0};`);
+        bodyPrint(`             rdata <= {reg${readReg}, ${32 - dataLength}'b0};`);
     }
     // end change
     bodyPrint(`		endcase`);
@@ -200,7 +200,7 @@ function generate(v, r) {
     bodyPrint(`    begin`);
     // change to dynamic
     for(resetReg = 0; resetReg <= (v - 1) * (3 * v + 1) + 2; resetReg++) {
-        bodyPrint(`        reg${resetReg} <= ${8 * Math.ceil(dataLength / 8)}'b0;`);
+        bodyPrint(`        reg${resetReg} <= ${dataLength}'b0;`);
     }
     // end change
     bodyPrint(`    end`);
@@ -209,9 +209,9 @@ function generate(v, r) {
         bodyPrint(`	else if (w_hs && waddr == C_ADDR_REG${writeReg})`);
         bodyPrint(`	   begin`);
         if(writeReg < 2 * (v * v - v + 1)) {
-            bodyPrint(`		reg${writeReg}[${8 * Math.ceil(dataLength / 8) - 1}:0] <= (s_axi_wdata[31:${32 - 8 * Math.ceil(dataLength / 8)}] & wmask) | (reg${writeReg}[${8 * Math.ceil(dataLength / 8) - 1}:0] & ~wmask);`);
+            bodyPrint(`		reg${writeReg}[${dataLength - 1}:0] <= (s_axi_wdata[31:${32 - dataLength}] & wmask) | (reg${writeReg}[${dataLength - 1}:0] & ~wmask);`);
         } else {
-            bodyPrint(`		reg${writeReg}[${8 * Math.ceil(dataLength / 8) - 1}:0] <= (s_axi_wdata[31:${32 - 8 * Math.ceil(dataLength / 8)}] & wmask) | ({output${writeReg - 2 * (v * v - v + 1)}, ${8 * Math.ceil(dataLength / 8) - dataLength}'b0} & ~wmask);`);
+            bodyPrint(`		reg${writeReg}[${dataLength - 1}:0] <= (s_axi_wdata[31:${32 - dataLength}] & wmask) | (output${writeReg - 2 * (v * v - v + 1)} & ~wmask);`);
         }
         bodyPrint(`    end`);
     }
@@ -220,9 +220,9 @@ function generate(v, r) {
     bodyPrint(`// core module instance`)
     bodyPrint(`convmultCore coreInstance(`)
     for(eachIO = 0; eachIO < v * v; eachIO++) {
-        bodyPrint(`    .in${eachIO}(reg${eachIO + 1}[${8 * Math.ceil(dataLength / 8) - 1}:${8 * Math.ceil(dataLength / 8) - dataLength}]),`)
+        bodyPrint(`    .in${eachIO}(reg${eachIO + 1}[${dataLength - 1}:0]),`)
         if((eachIO + 1) % v && eachIO / v < (v - 1)) {
-            bodyPrint(`    .wg${eachIO}(reg${eachIO + v * v + 1 - Math.floor(eachIO / 8)}[${8 * Math.ceil(dataLength / 8) - 1}:${8 * Math.ceil(dataLength / 8) - dataLength}]),`)
+            bodyPrint(`    .wg${eachIO}(reg${eachIO + v * v + 1 - Math.floor(eachIO / 8)}[${dataLength - 1}:0]),`)
         } else {
             bodyPrint(`    .wg${eachIO}(${dataLength}'b0),`)
         }
