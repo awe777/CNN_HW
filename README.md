@@ -1,5 +1,2 @@
 # CNN_HW
-Implementation of convolutional neural network using Xilinx SOC devices
-
-# Gitignore
-vcodegen_container is a container for CNN Verilog code generator in another project (https://github.com/awe777/my-service/blob/master/public/ with filenames vcodegen_8-24*)
+Implementation of convolutional neural network using Xilinx SOC devices, particularly xc7z010clg400-1 and XC7Z020-2CLG400I
