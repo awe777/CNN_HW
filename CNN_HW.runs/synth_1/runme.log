@@ -17,9 +17,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 35296 
+INFO: Helper process launched with PID 24664 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 413.262 ; gain = 110.922
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 413.891 ; gain = 112.934
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_wrapper' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/hdl/CNN_top_module_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/synth/CNN_top_module.v:13]
@@ -27,183 +27,183 @@ INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_axi_cnn_0_0' [d:/Docume
 INFO: [Synth 8-6157] synthesizing module 'axi_cnn' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:11]
 	Parameter C_ADDR_BITS bound to: 24 - type: integer 
 	Parameter C_ADDR_REG0 bound to: 24'b000000000000000000000000 
-	Parameter C_ADDR_REG1 bound to: 24'b000000000000000000000011 
-	Parameter C_ADDR_REG2 bound to: 24'b000000000000000000000110 
-	Parameter C_ADDR_REG3 bound to: 24'b000000000000000000001001 
-	Parameter C_ADDR_REG4 bound to: 24'b000000000000000000001100 
-	Parameter C_ADDR_REG5 bound to: 24'b000000000000000000001111 
-	Parameter C_ADDR_REG6 bound to: 24'b000000000000000000010010 
-	Parameter C_ADDR_REG7 bound to: 24'b000000000000000000010101 
-	Parameter C_ADDR_REG8 bound to: 24'b000000000000000000011000 
-	Parameter C_ADDR_REG9 bound to: 24'b000000000000000000011011 
-	Parameter C_ADDR_REG10 bound to: 24'b000000000000000000011110 
-	Parameter C_ADDR_REG11 bound to: 24'b000000000000000000100001 
-	Parameter C_ADDR_REG12 bound to: 24'b000000000000000000100100 
-	Parameter C_ADDR_REG13 bound to: 24'b000000000000000000100111 
-	Parameter C_ADDR_REG14 bound to: 24'b000000000000000000101010 
-	Parameter C_ADDR_REG15 bound to: 24'b000000000000000000101101 
-	Parameter C_ADDR_REG16 bound to: 24'b000000000000000000110000 
-	Parameter C_ADDR_REG17 bound to: 24'b000000000000000000110011 
-	Parameter C_ADDR_REG18 bound to: 24'b000000000000000000110110 
-	Parameter C_ADDR_REG19 bound to: 24'b000000000000000000111001 
-	Parameter C_ADDR_REG20 bound to: 24'b000000000000000000111100 
-	Parameter C_ADDR_REG21 bound to: 24'b000000000000000000111111 
-	Parameter C_ADDR_REG22 bound to: 24'b000000000000000001000010 
-	Parameter C_ADDR_REG23 bound to: 24'b000000000000000001000101 
-	Parameter C_ADDR_REG24 bound to: 24'b000000000000000001001000 
-	Parameter C_ADDR_REG25 bound to: 24'b000000000000000001001011 
-	Parameter C_ADDR_REG26 bound to: 24'b000000000000000001001110 
-	Parameter C_ADDR_REG27 bound to: 24'b000000000000000001010001 
-	Parameter C_ADDR_REG28 bound to: 24'b000000000000000001010100 
-	Parameter C_ADDR_REG29 bound to: 24'b000000000000000001010111 
-	Parameter C_ADDR_REG30 bound to: 24'b000000000000000001011010 
-	Parameter C_ADDR_REG31 bound to: 24'b000000000000000001011101 
-	Parameter C_ADDR_REG32 bound to: 24'b000000000000000001100000 
-	Parameter C_ADDR_REG33 bound to: 24'b000000000000000001100011 
-	Parameter C_ADDR_REG34 bound to: 24'b000000000000000001100110 
-	Parameter C_ADDR_REG35 bound to: 24'b000000000000000001101001 
-	Parameter C_ADDR_REG36 bound to: 24'b000000000000000001101100 
-	Parameter C_ADDR_REG37 bound to: 24'b000000000000000001101111 
-	Parameter C_ADDR_REG38 bound to: 24'b000000000000000001110010 
-	Parameter C_ADDR_REG39 bound to: 24'b000000000000000001110101 
-	Parameter C_ADDR_REG40 bound to: 24'b000000000000000001111000 
-	Parameter C_ADDR_REG41 bound to: 24'b000000000000000001111011 
-	Parameter C_ADDR_REG42 bound to: 24'b000000000000000001111110 
-	Parameter C_ADDR_REG43 bound to: 24'b000000000000000010000001 
-	Parameter C_ADDR_REG44 bound to: 24'b000000000000000010000100 
-	Parameter C_ADDR_REG45 bound to: 24'b000000000000000010000111 
-	Parameter C_ADDR_REG46 bound to: 24'b000000000000000010001010 
-	Parameter C_ADDR_REG47 bound to: 24'b000000000000000010001101 
-	Parameter C_ADDR_REG48 bound to: 24'b000000000000000010010000 
-	Parameter C_ADDR_REG49 bound to: 24'b000000000000000010010011 
-	Parameter C_ADDR_REG50 bound to: 24'b000000000000000010010110 
-	Parameter C_ADDR_REG51 bound to: 24'b000000000000000010011001 
-	Parameter C_ADDR_REG52 bound to: 24'b000000000000000010011100 
-	Parameter C_ADDR_REG53 bound to: 24'b000000000000000010011111 
-	Parameter C_ADDR_REG54 bound to: 24'b000000000000000010100010 
-	Parameter C_ADDR_REG55 bound to: 24'b000000000000000010100101 
-	Parameter C_ADDR_REG56 bound to: 24'b000000000000000010101000 
-	Parameter C_ADDR_REG57 bound to: 24'b000000000000000010101011 
-	Parameter C_ADDR_REG58 bound to: 24'b000000000000000010101110 
-	Parameter C_ADDR_REG59 bound to: 24'b000000000000000010110001 
-	Parameter C_ADDR_REG60 bound to: 24'b000000000000000010110100 
-	Parameter C_ADDR_REG61 bound to: 24'b000000000000000010110111 
-	Parameter C_ADDR_REG62 bound to: 24'b000000000000000010111010 
-	Parameter C_ADDR_REG63 bound to: 24'b000000000000000010111101 
-	Parameter C_ADDR_REG64 bound to: 24'b000000000000000011000000 
-	Parameter C_ADDR_REG65 bound to: 24'b000000000000000011000011 
-	Parameter C_ADDR_REG66 bound to: 24'b000000000000000011000110 
-	Parameter C_ADDR_REG67 bound to: 24'b000000000000000011001001 
-	Parameter C_ADDR_REG68 bound to: 24'b000000000000000011001100 
-	Parameter C_ADDR_REG69 bound to: 24'b000000000000000011001111 
-	Parameter C_ADDR_REG70 bound to: 24'b000000000000000011010010 
-	Parameter C_ADDR_REG71 bound to: 24'b000000000000000011010101 
-	Parameter C_ADDR_REG72 bound to: 24'b000000000000000011011000 
-	Parameter C_ADDR_REG73 bound to: 24'b000000000000000011011011 
-	Parameter C_ADDR_REG74 bound to: 24'b000000000000000011011110 
-	Parameter C_ADDR_REG75 bound to: 24'b000000000000000011100001 
-	Parameter C_ADDR_REG76 bound to: 24'b000000000000000011100100 
-	Parameter C_ADDR_REG77 bound to: 24'b000000000000000011100111 
-	Parameter C_ADDR_REG78 bound to: 24'b000000000000000011101010 
-	Parameter C_ADDR_REG79 bound to: 24'b000000000000000011101101 
-	Parameter C_ADDR_REG80 bound to: 24'b000000000000000011110000 
-	Parameter C_ADDR_REG81 bound to: 24'b000000000000000011110011 
-	Parameter C_ADDR_REG82 bound to: 24'b000000000000000011110110 
-	Parameter C_ADDR_REG83 bound to: 24'b000000000000000011111001 
-	Parameter C_ADDR_REG84 bound to: 24'b000000000000000011111100 
-	Parameter C_ADDR_REG85 bound to: 24'b000000000000000011111111 
-	Parameter C_ADDR_REG86 bound to: 24'b000000000000000100000010 
-	Parameter C_ADDR_REG87 bound to: 24'b000000000000000100000101 
-	Parameter C_ADDR_REG88 bound to: 24'b000000000000000100001000 
-	Parameter C_ADDR_REG89 bound to: 24'b000000000000000100001011 
-	Parameter C_ADDR_REG90 bound to: 24'b000000000000000100001110 
-	Parameter C_ADDR_REG91 bound to: 24'b000000000000000100010001 
-	Parameter C_ADDR_REG92 bound to: 24'b000000000000000100010100 
-	Parameter C_ADDR_REG93 bound to: 24'b000000000000000100010111 
-	Parameter C_ADDR_REG94 bound to: 24'b000000000000000100011010 
-	Parameter C_ADDR_REG95 bound to: 24'b000000000000000100011101 
-	Parameter C_ADDR_REG96 bound to: 24'b000000000000000100100000 
-	Parameter C_ADDR_REG97 bound to: 24'b000000000000000100100011 
-	Parameter C_ADDR_REG98 bound to: 24'b000000000000000100100110 
-	Parameter C_ADDR_REG99 bound to: 24'b000000000000000100101001 
-	Parameter C_ADDR_REG100 bound to: 24'b000000000000000100101100 
-	Parameter C_ADDR_REG101 bound to: 24'b000000000000000100101111 
-	Parameter C_ADDR_REG102 bound to: 24'b000000000000000100110010 
-	Parameter C_ADDR_REG103 bound to: 24'b000000000000000100110101 
-	Parameter C_ADDR_REG104 bound to: 24'b000000000000000100111000 
-	Parameter C_ADDR_REG105 bound to: 24'b000000000000000100111011 
-	Parameter C_ADDR_REG106 bound to: 24'b000000000000000100111110 
-	Parameter C_ADDR_REG107 bound to: 24'b000000000000000101000001 
-	Parameter C_ADDR_REG108 bound to: 24'b000000000000000101000100 
-	Parameter C_ADDR_REG109 bound to: 24'b000000000000000101000111 
-	Parameter C_ADDR_REG110 bound to: 24'b000000000000000101001010 
-	Parameter C_ADDR_REG111 bound to: 24'b000000000000000101001101 
-	Parameter C_ADDR_REG112 bound to: 24'b000000000000000101010000 
-	Parameter C_ADDR_REG113 bound to: 24'b000000000000000101010011 
-	Parameter C_ADDR_REG114 bound to: 24'b000000000000000101010110 
-	Parameter C_ADDR_REG115 bound to: 24'b000000000000000101011001 
-	Parameter C_ADDR_REG116 bound to: 24'b000000000000000101011100 
-	Parameter C_ADDR_REG117 bound to: 24'b000000000000000101011111 
-	Parameter C_ADDR_REG118 bound to: 24'b000000000000000101100010 
-	Parameter C_ADDR_REG119 bound to: 24'b000000000000000101100101 
-	Parameter C_ADDR_REG120 bound to: 24'b000000000000000101101000 
-	Parameter C_ADDR_REG121 bound to: 24'b000000000000000101101011 
-	Parameter C_ADDR_REG122 bound to: 24'b000000000000000101101110 
-	Parameter C_ADDR_REG123 bound to: 24'b000000000000000101110001 
-	Parameter C_ADDR_REG124 bound to: 24'b000000000000000101110100 
-	Parameter C_ADDR_REG125 bound to: 24'b000000000000000101110111 
-	Parameter C_ADDR_REG126 bound to: 24'b000000000000000101111010 
-	Parameter C_ADDR_REG127 bound to: 24'b000000000000000101111101 
-	Parameter C_ADDR_REG128 bound to: 24'b000000000000000110000000 
-	Parameter C_ADDR_REG129 bound to: 24'b000000000000000110000011 
-	Parameter C_ADDR_REG130 bound to: 24'b000000000000000110000110 
-	Parameter C_ADDR_REG131 bound to: 24'b000000000000000110001001 
-	Parameter C_ADDR_REG132 bound to: 24'b000000000000000110001100 
-	Parameter C_ADDR_REG133 bound to: 24'b000000000000000110001111 
-	Parameter C_ADDR_REG134 bound to: 24'b000000000000000110010010 
-	Parameter C_ADDR_REG135 bound to: 24'b000000000000000110010101 
-	Parameter C_ADDR_REG136 bound to: 24'b000000000000000110011000 
-	Parameter C_ADDR_REG137 bound to: 24'b000000000000000110011011 
-	Parameter C_ADDR_REG138 bound to: 24'b000000000000000110011110 
-	Parameter C_ADDR_REG139 bound to: 24'b000000000000000110100001 
-	Parameter C_ADDR_REG140 bound to: 24'b000000000000000110100100 
-	Parameter C_ADDR_REG141 bound to: 24'b000000000000000110100111 
-	Parameter C_ADDR_REG142 bound to: 24'b000000000000000110101010 
-	Parameter C_ADDR_REG143 bound to: 24'b000000000000000110101101 
-	Parameter C_ADDR_REG144 bound to: 24'b000000000000000110110000 
-	Parameter C_ADDR_REG145 bound to: 24'b000000000000000110110011 
-	Parameter C_ADDR_REG146 bound to: 24'b000000000000000110110110 
-	Parameter C_ADDR_REG147 bound to: 24'b000000000000000110111001 
-	Parameter C_ADDR_REG148 bound to: 24'b000000000000000110111100 
-	Parameter C_ADDR_REG149 bound to: 24'b000000000000000110111111 
-	Parameter C_ADDR_REG150 bound to: 24'b000000000000000111000010 
-	Parameter C_ADDR_REG151 bound to: 24'b000000000000000111000101 
-	Parameter C_ADDR_REG152 bound to: 24'b000000000000000111001000 
-	Parameter C_ADDR_REG153 bound to: 24'b000000000000000111001011 
-	Parameter C_ADDR_REG154 bound to: 24'b000000000000000111001110 
-	Parameter C_ADDR_REG155 bound to: 24'b000000000000000111010001 
-	Parameter C_ADDR_REG156 bound to: 24'b000000000000000111010100 
-	Parameter C_ADDR_REG157 bound to: 24'b000000000000000111010111 
-	Parameter C_ADDR_REG158 bound to: 24'b000000000000000111011010 
-	Parameter C_ADDR_REG159 bound to: 24'b000000000000000111011101 
-	Parameter C_ADDR_REG160 bound to: 24'b000000000000000111100000 
-	Parameter C_ADDR_REG161 bound to: 24'b000000000000000111100011 
-	Parameter C_ADDR_REG162 bound to: 24'b000000000000000111100110 
-	Parameter C_ADDR_REG163 bound to: 24'b000000000000000111101001 
-	Parameter C_ADDR_REG164 bound to: 24'b000000000000000111101100 
-	Parameter C_ADDR_REG165 bound to: 24'b000000000000000111101111 
-	Parameter C_ADDR_REG166 bound to: 24'b000000000000000111110010 
-	Parameter C_ADDR_REG167 bound to: 24'b000000000000000111110101 
-	Parameter C_ADDR_REG168 bound to: 24'b000000000000000111111000 
-	Parameter C_ADDR_REG169 bound to: 24'b000000000000000111111011 
-	Parameter C_ADDR_REG170 bound to: 24'b000000000000000111111110 
-	Parameter C_ADDR_REG171 bound to: 24'b000000000000001000000001 
-	Parameter C_ADDR_REG172 bound to: 24'b000000000000001000000100 
-	Parameter C_ADDR_REG173 bound to: 24'b000000000000001000000111 
-	Parameter C_ADDR_REG174 bound to: 24'b000000000000001000001010 
-	Parameter C_ADDR_REG175 bound to: 24'b000000000000001000001101 
-	Parameter C_ADDR_REG176 bound to: 24'b000000000000001000010000 
-	Parameter C_ADDR_REG177 bound to: 24'b000000000000001000010011 
+	Parameter C_ADDR_REG1 bound to: 24'b000000000000000000000100 
+	Parameter C_ADDR_REG2 bound to: 24'b000000000000000000001000 
+	Parameter C_ADDR_REG3 bound to: 24'b000000000000000000001100 
+	Parameter C_ADDR_REG4 bound to: 24'b000000000000000000010000 
+	Parameter C_ADDR_REG5 bound to: 24'b000000000000000000010100 
+	Parameter C_ADDR_REG6 bound to: 24'b000000000000000000011000 
+	Parameter C_ADDR_REG7 bound to: 24'b000000000000000000011100 
+	Parameter C_ADDR_REG8 bound to: 24'b000000000000000000100000 
+	Parameter C_ADDR_REG9 bound to: 24'b000000000000000000100100 
+	Parameter C_ADDR_REG10 bound to: 24'b000000000000000000101000 
+	Parameter C_ADDR_REG11 bound to: 24'b000000000000000000101100 
+	Parameter C_ADDR_REG12 bound to: 24'b000000000000000000110000 
+	Parameter C_ADDR_REG13 bound to: 24'b000000000000000000110100 
+	Parameter C_ADDR_REG14 bound to: 24'b000000000000000000111000 
+	Parameter C_ADDR_REG15 bound to: 24'b000000000000000000111100 
+	Parameter C_ADDR_REG16 bound to: 24'b000000000000000001000000 
+	Parameter C_ADDR_REG17 bound to: 24'b000000000000000001000100 
+	Parameter C_ADDR_REG18 bound to: 24'b000000000000000001001000 
+	Parameter C_ADDR_REG19 bound to: 24'b000000000000000001001100 
+	Parameter C_ADDR_REG20 bound to: 24'b000000000000000001010000 
+	Parameter C_ADDR_REG21 bound to: 24'b000000000000000001010100 
+	Parameter C_ADDR_REG22 bound to: 24'b000000000000000001011000 
+	Parameter C_ADDR_REG23 bound to: 24'b000000000000000001011100 
+	Parameter C_ADDR_REG24 bound to: 24'b000000000000000001100000 
+	Parameter C_ADDR_REG25 bound to: 24'b000000000000000001100100 
+	Parameter C_ADDR_REG26 bound to: 24'b000000000000000001101000 
+	Parameter C_ADDR_REG27 bound to: 24'b000000000000000001101100 
+	Parameter C_ADDR_REG28 bound to: 24'b000000000000000001110000 
+	Parameter C_ADDR_REG29 bound to: 24'b000000000000000001110100 
+	Parameter C_ADDR_REG30 bound to: 24'b000000000000000001111000 
+	Parameter C_ADDR_REG31 bound to: 24'b000000000000000001111100 
+	Parameter C_ADDR_REG32 bound to: 24'b000000000000000010000000 
+	Parameter C_ADDR_REG33 bound to: 24'b000000000000000010000100 
+	Parameter C_ADDR_REG34 bound to: 24'b000000000000000010001000 
+	Parameter C_ADDR_REG35 bound to: 24'b000000000000000010001100 
+	Parameter C_ADDR_REG36 bound to: 24'b000000000000000010010000 
+	Parameter C_ADDR_REG37 bound to: 24'b000000000000000010010100 
+	Parameter C_ADDR_REG38 bound to: 24'b000000000000000010011000 
+	Parameter C_ADDR_REG39 bound to: 24'b000000000000000010011100 
+	Parameter C_ADDR_REG40 bound to: 24'b000000000000000010100000 
+	Parameter C_ADDR_REG41 bound to: 24'b000000000000000010100100 
+	Parameter C_ADDR_REG42 bound to: 24'b000000000000000010101000 
+	Parameter C_ADDR_REG43 bound to: 24'b000000000000000010101100 
+	Parameter C_ADDR_REG44 bound to: 24'b000000000000000010110000 
+	Parameter C_ADDR_REG45 bound to: 24'b000000000000000010110100 
+	Parameter C_ADDR_REG46 bound to: 24'b000000000000000010111000 
+	Parameter C_ADDR_REG47 bound to: 24'b000000000000000010111100 
+	Parameter C_ADDR_REG48 bound to: 24'b000000000000000011000000 
+	Parameter C_ADDR_REG49 bound to: 24'b000000000000000011000100 
+	Parameter C_ADDR_REG50 bound to: 24'b000000000000000011001000 
+	Parameter C_ADDR_REG51 bound to: 24'b000000000000000011001100 
+	Parameter C_ADDR_REG52 bound to: 24'b000000000000000011010000 
+	Parameter C_ADDR_REG53 bound to: 24'b000000000000000011010100 
+	Parameter C_ADDR_REG54 bound to: 24'b000000000000000011011000 
+	Parameter C_ADDR_REG55 bound to: 24'b000000000000000011011100 
+	Parameter C_ADDR_REG56 bound to: 24'b000000000000000011100000 
+	Parameter C_ADDR_REG57 bound to: 24'b000000000000000011100100 
+	Parameter C_ADDR_REG58 bound to: 24'b000000000000000011101000 
+	Parameter C_ADDR_REG59 bound to: 24'b000000000000000011101100 
+	Parameter C_ADDR_REG60 bound to: 24'b000000000000000011110000 
+	Parameter C_ADDR_REG61 bound to: 24'b000000000000000011110100 
+	Parameter C_ADDR_REG62 bound to: 24'b000000000000000011111000 
+	Parameter C_ADDR_REG63 bound to: 24'b000000000000000011111100 
+	Parameter C_ADDR_REG64 bound to: 24'b000000000000000100000000 
+	Parameter C_ADDR_REG65 bound to: 24'b000000000000000100000100 
+	Parameter C_ADDR_REG66 bound to: 24'b000000000000000100001000 
+	Parameter C_ADDR_REG67 bound to: 24'b000000000000000100001100 
+	Parameter C_ADDR_REG68 bound to: 24'b000000000000000100010000 
+	Parameter C_ADDR_REG69 bound to: 24'b000000000000000100010100 
+	Parameter C_ADDR_REG70 bound to: 24'b000000000000000100011000 
+	Parameter C_ADDR_REG71 bound to: 24'b000000000000000100011100 
+	Parameter C_ADDR_REG72 bound to: 24'b000000000000000100100000 
+	Parameter C_ADDR_REG73 bound to: 24'b000000000000000100100100 
+	Parameter C_ADDR_REG74 bound to: 24'b000000000000000100101000 
+	Parameter C_ADDR_REG75 bound to: 24'b000000000000000100101100 
+	Parameter C_ADDR_REG76 bound to: 24'b000000000000000100110000 
+	Parameter C_ADDR_REG77 bound to: 24'b000000000000000100110100 
+	Parameter C_ADDR_REG78 bound to: 24'b000000000000000100111000 
+	Parameter C_ADDR_REG79 bound to: 24'b000000000000000100111100 
+	Parameter C_ADDR_REG80 bound to: 24'b000000000000000101000000 
+	Parameter C_ADDR_REG81 bound to: 24'b000000000000000101000100 
+	Parameter C_ADDR_REG82 bound to: 24'b000000000000000101001000 
+	Parameter C_ADDR_REG83 bound to: 24'b000000000000000101001100 
+	Parameter C_ADDR_REG84 bound to: 24'b000000000000000101010000 
+	Parameter C_ADDR_REG85 bound to: 24'b000000000000000101010100 
+	Parameter C_ADDR_REG86 bound to: 24'b000000000000000101011000 
+	Parameter C_ADDR_REG87 bound to: 24'b000000000000000101011100 
+	Parameter C_ADDR_REG88 bound to: 24'b000000000000000101100000 
+	Parameter C_ADDR_REG89 bound to: 24'b000000000000000101100100 
+	Parameter C_ADDR_REG90 bound to: 24'b000000000000000101101000 
+	Parameter C_ADDR_REG91 bound to: 24'b000000000000000101101100 
+	Parameter C_ADDR_REG92 bound to: 24'b000000000000000101110000 
+	Parameter C_ADDR_REG93 bound to: 24'b000000000000000101110100 
+	Parameter C_ADDR_REG94 bound to: 24'b000000000000000101111000 
+	Parameter C_ADDR_REG95 bound to: 24'b000000000000000101111100 
+	Parameter C_ADDR_REG96 bound to: 24'b000000000000000110000000 
+	Parameter C_ADDR_REG97 bound to: 24'b000000000000000110000100 
+	Parameter C_ADDR_REG98 bound to: 24'b000000000000000110001000 
+	Parameter C_ADDR_REG99 bound to: 24'b000000000000000110001100 
+	Parameter C_ADDR_REG100 bound to: 24'b000000000000000110010000 
+	Parameter C_ADDR_REG101 bound to: 24'b000000000000000110010100 
+	Parameter C_ADDR_REG102 bound to: 24'b000000000000000110011000 
+	Parameter C_ADDR_REG103 bound to: 24'b000000000000000110011100 
+	Parameter C_ADDR_REG104 bound to: 24'b000000000000000110100000 
+	Parameter C_ADDR_REG105 bound to: 24'b000000000000000110100100 
+	Parameter C_ADDR_REG106 bound to: 24'b000000000000000110101000 
+	Parameter C_ADDR_REG107 bound to: 24'b000000000000000110101100 
+	Parameter C_ADDR_REG108 bound to: 24'b000000000000000110110000 
+	Parameter C_ADDR_REG109 bound to: 24'b000000000000000110110100 
+	Parameter C_ADDR_REG110 bound to: 24'b000000000000000110111000 
+	Parameter C_ADDR_REG111 bound to: 24'b000000000000000110111100 
+	Parameter C_ADDR_REG112 bound to: 24'b000000000000000111000000 
+	Parameter C_ADDR_REG113 bound to: 24'b000000000000000111000100 
+	Parameter C_ADDR_REG114 bound to: 24'b000000000000000111001000 
+	Parameter C_ADDR_REG115 bound to: 24'b000000000000000111001100 
+	Parameter C_ADDR_REG116 bound to: 24'b000000000000000111010000 
+	Parameter C_ADDR_REG117 bound to: 24'b000000000000000111010100 
+	Parameter C_ADDR_REG118 bound to: 24'b000000000000000111011000 
+	Parameter C_ADDR_REG119 bound to: 24'b000000000000000111011100 
+	Parameter C_ADDR_REG120 bound to: 24'b000000000000000111100000 
+	Parameter C_ADDR_REG121 bound to: 24'b000000000000000111100100 
+	Parameter C_ADDR_REG122 bound to: 24'b000000000000000111101000 
+	Parameter C_ADDR_REG123 bound to: 24'b000000000000000111101100 
+	Parameter C_ADDR_REG124 bound to: 24'b000000000000000111110000 
+	Parameter C_ADDR_REG125 bound to: 24'b000000000000000111110100 
+	Parameter C_ADDR_REG126 bound to: 24'b000000000000000111111000 
+	Parameter C_ADDR_REG127 bound to: 24'b000000000000000111111100 
+	Parameter C_ADDR_REG128 bound to: 24'b000000000000001000000000 
+	Parameter C_ADDR_REG129 bound to: 24'b000000000000001000000100 
+	Parameter C_ADDR_REG130 bound to: 24'b000000000000001000001000 
+	Parameter C_ADDR_REG131 bound to: 24'b000000000000001000001100 
+	Parameter C_ADDR_REG132 bound to: 24'b000000000000001000010000 
+	Parameter C_ADDR_REG133 bound to: 24'b000000000000001000010100 
+	Parameter C_ADDR_REG134 bound to: 24'b000000000000001000011000 
+	Parameter C_ADDR_REG135 bound to: 24'b000000000000001000011100 
+	Parameter C_ADDR_REG136 bound to: 24'b000000000000001000100000 
+	Parameter C_ADDR_REG137 bound to: 24'b000000000000001000100100 
+	Parameter C_ADDR_REG138 bound to: 24'b000000000000001000101000 
+	Parameter C_ADDR_REG139 bound to: 24'b000000000000001000101100 
+	Parameter C_ADDR_REG140 bound to: 24'b000000000000001000110000 
+	Parameter C_ADDR_REG141 bound to: 24'b000000000000001000110100 
+	Parameter C_ADDR_REG142 bound to: 24'b000000000000001000111000 
+	Parameter C_ADDR_REG143 bound to: 24'b000000000000001000111100 
+	Parameter C_ADDR_REG144 bound to: 24'b000000000000001001000000 
+	Parameter C_ADDR_REG145 bound to: 24'b000000000000001001000100 
+	Parameter C_ADDR_REG146 bound to: 24'b000000000000001001001000 
+	Parameter C_ADDR_REG147 bound to: 24'b000000000000001001001100 
+	Parameter C_ADDR_REG148 bound to: 24'b000000000000001001010000 
+	Parameter C_ADDR_REG149 bound to: 24'b000000000000001001010100 
+	Parameter C_ADDR_REG150 bound to: 24'b000000000000001001011000 
+	Parameter C_ADDR_REG151 bound to: 24'b000000000000001001011100 
+	Parameter C_ADDR_REG152 bound to: 24'b000000000000001001100000 
+	Parameter C_ADDR_REG153 bound to: 24'b000000000000001001100100 
+	Parameter C_ADDR_REG154 bound to: 24'b000000000000001001101000 
+	Parameter C_ADDR_REG155 bound to: 24'b000000000000001001101100 
+	Parameter C_ADDR_REG156 bound to: 24'b000000000000001001110000 
+	Parameter C_ADDR_REG157 bound to: 24'b000000000000001001110100 
+	Parameter C_ADDR_REG158 bound to: 24'b000000000000001001111000 
+	Parameter C_ADDR_REG159 bound to: 24'b000000000000001001111100 
+	Parameter C_ADDR_REG160 bound to: 24'b000000000000001010000000 
+	Parameter C_ADDR_REG161 bound to: 24'b000000000000001010000100 
+	Parameter C_ADDR_REG162 bound to: 24'b000000000000001010001000 
+	Parameter C_ADDR_REG163 bound to: 24'b000000000000001010001100 
+	Parameter C_ADDR_REG164 bound to: 24'b000000000000001010010000 
+	Parameter C_ADDR_REG165 bound to: 24'b000000000000001010010100 
+	Parameter C_ADDR_REG166 bound to: 24'b000000000000001010011000 
+	Parameter C_ADDR_REG167 bound to: 24'b000000000000001010011100 
+	Parameter C_ADDR_REG168 bound to: 24'b000000000000001010100000 
+	Parameter C_ADDR_REG169 bound to: 24'b000000000000001010100100 
+	Parameter C_ADDR_REG170 bound to: 24'b000000000000001010101000 
+	Parameter C_ADDR_REG171 bound to: 24'b000000000000001010101100 
+	Parameter C_ADDR_REG172 bound to: 24'b000000000000001010110000 
+	Parameter C_ADDR_REG173 bound to: 24'b000000000000001010110100 
+	Parameter C_ADDR_REG174 bound to: 24'b000000000000001010111000 
+	Parameter C_ADDR_REG175 bound to: 24'b000000000000001010111100 
+	Parameter C_ADDR_REG176 bound to: 24'b000000000000001011000000 
+	Parameter C_ADDR_REG177 bound to: 24'b000000000000001011000100 
 	Parameter S_WRIDLE bound to: 2'b00 
 	Parameter S_WRDATA bound to: 2'b01 
 	Parameter S_WRRESP bound to: 2'b10 
@@ -1255,7 +1255,7 @@ WARNING: [Synth 8-3331] design axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm has
 WARNING: [Synth 8-3331] design axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm has unconnected port s_arlen[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:31 ; elapsed = 00:01:34 . Memory (MB): peak = 1100.184 ; gain = 797.844
+Finished RTL Elaboration : Time (s): cpu = 00:01:33 ; elapsed = 00:01:36 . Memory (MB): peak = 1059.324 ; gain = 758.367
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1268,10 +1268,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:35 ; elapsed = 00:01:37 . Memory (MB): peak = 1100.184 ; gain = 797.844
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1059.324 ; gain = 758.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:35 ; elapsed = 00:01:37 . Memory (MB): peak = 1100.184 ; gain = 797.844
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1059.324 ; gain = 758.367
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1288,24 +1288,24 @@ Parsing XDC File [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN
 Finished Parsing XDC File [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0_board.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
 Parsing XDC File [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
 Finished Parsing XDC File [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1521.270 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1446.855 ; gain = 0.000
 Parsing XDC File [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNN_top_module_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/CNN_top_module_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1521.270 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1446.855 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1521.270 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1446.855 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1521.270 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1521.270 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1446.855 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1446.855 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:06 ; elapsed = 00:02:06 . Memory (MB): peak = 1521.270 ; gain = 1218.930
+Finished Constraint Validation : Time (s): cpu = 00:02:02 ; elapsed = 00:02:05 . Memory (MB): peak = 1446.855 ; gain = 1145.898
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -1348,7 +1348,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'rstate_cs_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:00 ; elapsed = 00:03:02 . Memory (MB): peak = 1521.270 ; gain = 1218.930
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:28 ; elapsed = 00:02:32 . Memory (MB): peak = 1446.855 ; gain = 1145.898
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1359,19 +1359,9 @@ Report RTL Partitions:
 |2     |convmultCore__GB1   |           1|     19104|
 |3     |convmultCore__GB2   |           1|     19810|
 |4     |convmultCore__GB3   |           1|     17010|
-|5     |axi_cnn__GCB0       |           1|     45478|
-|6     |axi_cnn__GCB1       |           1|     11746|
-|7     |axi_cnn__GCB2       |           1|     13794|
-|8     |axi_cnn__GCB3       |           1|     18348|
-|9     |axi_cnn__GCB4       |           1|     20707|
-|10    |axi_cnn__GCB5       |           1|     28584|
-|11    |axi_cnn__GCB6       |           1|     31244|
-|12    |axi_cnn__GCB7       |           1|     20043|
-|13    |axi_cnn__GCB8       |           1|     30941|
-|14    |axi_cnn__GCB9       |           1|     17044|
-|15    |axi_cnn__GCB10      |           1|     42385|
-|16    |axi_cnn__GCB11      |           1|     18476|
-|17    |CNN_top_module__GC0 |           1|      3033|
+|5     |axi_cnn__GCB0       |           1|     40386|
+|6     |axi_cnn__GCB1       |           1|     12173|
+|7     |CNN_top_module__GC0 |           1|      3033|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1391,9 +1381,9 @@ Detailed RTL Component Info :
 	               66 Bit    Registers := 4     
 	               47 Bit    Registers := 2     
 	               32 Bit    Registers := 1     
-	               24 Bit    Registers := 179   
+	               24 Bit    Registers := 1     
 	               20 Bit    Registers := 4     
-	               18 Bit    Registers := 148   
+	               18 Bit    Registers := 326   
 	               14 Bit    Registers := 2     
 	               12 Bit    Registers := 9     
 	                9 Bit    Registers := 2     
@@ -1409,186 +1399,114 @@ Detailed RTL Component Info :
 	   2 Input     66 Bit        Muxes := 4     
 	   2 Input     47 Bit        Muxes := 2     
 	   2 Input     35 Bit        Muxes := 64    
-	 179 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 8     
-	 164 Input     24 Bit        Muxes := 1     
-	 171 Input     24 Bit        Muxes := 1     
-	   2 Input     24 Bit        Muxes := 178   
-	 166 Input     24 Bit        Muxes := 1     
-	 178 Input     24 Bit        Muxes := 1     
-	 172 Input     24 Bit        Muxes := 1     
-	 169 Input     24 Bit        Muxes := 1     
-	 155 Input     24 Bit        Muxes := 1     
-	 177 Input     24 Bit        Muxes := 1     
-	 176 Input     24 Bit        Muxes := 1     
-	 156 Input     24 Bit        Muxes := 1     
-	 167 Input     24 Bit        Muxes := 1     
-	 175 Input     24 Bit        Muxes := 1     
-	 157 Input     24 Bit        Muxes := 1     
-	 174 Input     24 Bit        Muxes := 1     
-	 173 Input     24 Bit        Muxes := 1     
-	 158 Input     24 Bit        Muxes := 1     
-	 162 Input     24 Bit        Muxes := 1     
-	 168 Input     24 Bit        Muxes := 1     
-	  16 Input     24 Bit        Muxes := 1     
-	 154 Input     24 Bit        Muxes := 1     
-	 153 Input     24 Bit        Muxes := 1     
-	 152 Input     24 Bit        Muxes := 1     
-	 151 Input     24 Bit        Muxes := 1     
-	  84 Input     24 Bit        Muxes := 1     
-	 159 Input     24 Bit        Muxes := 1     
-	  88 Input     24 Bit        Muxes := 1     
-	  91 Input     24 Bit        Muxes := 1     
-	 160 Input     24 Bit        Muxes := 1     
-	 170 Input     24 Bit        Muxes := 1     
-	 148 Input     24 Bit        Muxes := 1     
-	 161 Input     24 Bit        Muxes := 1     
-	  36 Input     24 Bit        Muxes := 1     
-	  35 Input     24 Bit        Muxes := 1     
-	  77 Input     24 Bit        Muxes := 1     
-	  80 Input     24 Bit        Muxes := 1     
-	  45 Input     24 Bit        Muxes := 1     
-	  83 Input     24 Bit        Muxes := 1     
-	 163 Input     24 Bit        Muxes := 1     
-	  29 Input     24 Bit        Muxes := 1     
-	  28 Input     24 Bit        Muxes := 1     
-	  26 Input     24 Bit        Muxes := 1     
-	  69 Input     24 Bit        Muxes := 1     
-	  25 Input     24 Bit        Muxes := 1     
-	  24 Input     24 Bit        Muxes := 1     
-	  23 Input     24 Bit        Muxes := 1     
-	  22 Input     24 Bit        Muxes := 1     
-	  19 Input     24 Bit        Muxes := 1     
-	  47 Input     24 Bit        Muxes := 1     
-	 129 Input     24 Bit        Muxes := 1     
-	 165 Input     24 Bit        Muxes := 1     
-	 132 Input     24 Bit        Muxes := 1     
-	 126 Input     24 Bit        Muxes := 1     
-	 125 Input     24 Bit        Muxes := 1     
-	 131 Input     24 Bit        Muxes := 1     
-	 150 Input     24 Bit        Muxes := 1     
-	 149 Input     24 Bit        Muxes := 1     
-	 105 Input     24 Bit        Muxes := 1     
-	 123 Input     24 Bit        Muxes := 1     
-	 143 Input     24 Bit        Muxes := 1     
-	 135 Input     24 Bit        Muxes := 1     
-	 136 Input     24 Bit        Muxes := 1     
-	 137 Input     24 Bit        Muxes := 1     
-	 134 Input     24 Bit        Muxes := 1     
-	 138 Input     24 Bit        Muxes := 1     
-	 139 Input     24 Bit        Muxes := 1     
-	 141 Input     24 Bit        Muxes := 1     
-	 142 Input     24 Bit        Muxes := 1     
-	 147 Input     24 Bit        Muxes := 1     
-	 118 Input     24 Bit        Muxes := 1     
-	 119 Input     24 Bit        Muxes := 1     
-	 120 Input     24 Bit        Muxes := 1     
-	 133 Input     24 Bit        Muxes := 1     
-	  58 Input     24 Bit        Muxes := 1     
-	  63 Input     24 Bit        Muxes := 1     
-	 117 Input     24 Bit        Muxes := 1     
-	 116 Input     24 Bit        Muxes := 1     
-	  68 Input     24 Bit        Muxes := 1     
-	  41 Input     24 Bit        Muxes := 1     
-	  39 Input     24 Bit        Muxes := 1     
-	 121 Input     24 Bit        Muxes := 1     
-	  78 Input     24 Bit        Muxes := 1     
-	  81 Input     24 Bit        Muxes := 1     
-	  93 Input     24 Bit        Muxes := 1     
-	  12 Input     24 Bit        Muxes := 1     
-	  11 Input     24 Bit        Muxes := 1     
-	 124 Input     24 Bit        Muxes := 1     
-	  10 Input     24 Bit        Muxes := 1     
-	   8 Input     24 Bit        Muxes := 1     
-	   7 Input     24 Bit        Muxes := 1     
-	   6 Input     24 Bit        Muxes := 1     
-	   5 Input     24 Bit        Muxes := 1     
-	 106 Input     24 Bit        Muxes := 1     
-	 111 Input     24 Bit        Muxes := 1     
-	   4 Input     24 Bit        Muxes := 1     
-	 107 Input     24 Bit        Muxes := 1     
-	 100 Input     24 Bit        Muxes := 1     
-	  87 Input     24 Bit        Muxes := 1     
-	  30 Input     24 Bit        Muxes := 1     
-	 113 Input     24 Bit        Muxes := 1     
-	  31 Input     24 Bit        Muxes := 1     
-	  74 Input     24 Bit        Muxes := 1     
-	  43 Input     24 Bit        Muxes := 1     
-	  66 Input     24 Bit        Muxes := 1     
-	  65 Input     24 Bit        Muxes := 1     
-	  62 Input     24 Bit        Muxes := 1     
-	  60 Input     24 Bit        Muxes := 1     
-	  48 Input     24 Bit        Muxes := 1     
-	  55 Input     24 Bit        Muxes := 1     
-	  54 Input     24 Bit        Muxes := 1     
-	 115 Input     24 Bit        Muxes := 1     
-	 145 Input     24 Bit        Muxes := 1     
-	   9 Input     24 Bit        Muxes := 1     
-	  97 Input     24 Bit        Muxes := 1     
-	  86 Input     24 Bit        Muxes := 1     
-	  82 Input     24 Bit        Muxes := 1     
-	  79 Input     24 Bit        Muxes := 1     
-	  76 Input     24 Bit        Muxes := 1     
-	  70 Input     24 Bit        Muxes := 1     
-	  13 Input     24 Bit        Muxes := 1     
-	  64 Input     24 Bit        Muxes := 1     
-	  61 Input     24 Bit        Muxes := 1     
-	  56 Input     24 Bit        Muxes := 1     
-	  53 Input     24 Bit        Muxes := 1     
-	  50 Input     24 Bit        Muxes := 1     
-	  49 Input     24 Bit        Muxes := 1     
-	  42 Input     24 Bit        Muxes := 1     
-	  38 Input     24 Bit        Muxes := 1     
-	  32 Input     24 Bit        Muxes := 1     
-	  27 Input     24 Bit        Muxes := 1     
-	 140 Input     24 Bit        Muxes := 1     
-	  17 Input     24 Bit        Muxes := 1     
-	  67 Input     24 Bit        Muxes := 1     
-	 144 Input     24 Bit        Muxes := 1     
-	  94 Input     24 Bit        Muxes := 1     
-	 109 Input     24 Bit        Muxes := 1     
-	 112 Input     24 Bit        Muxes := 1     
-	 146 Input     24 Bit        Muxes := 1     
-	 130 Input     24 Bit        Muxes := 1     
-	 128 Input     24 Bit        Muxes := 1     
-	 127 Input     24 Bit        Muxes := 1     
-	 122 Input     24 Bit        Muxes := 1     
-	  14 Input     24 Bit        Muxes := 1     
-	  15 Input     24 Bit        Muxes := 1     
-	 102 Input     24 Bit        Muxes := 1     
-	 101 Input     24 Bit        Muxes := 1     
-	  18 Input     24 Bit        Muxes := 1     
-	  20 Input     24 Bit        Muxes := 1     
-	  21 Input     24 Bit        Muxes := 1     
-	  92 Input     24 Bit        Muxes := 1     
-	  90 Input     24 Bit        Muxes := 1     
-	  89 Input     24 Bit        Muxes := 1     
-	  85 Input     24 Bit        Muxes := 1     
-	  75 Input     24 Bit        Muxes := 1     
-	  73 Input     24 Bit        Muxes := 1     
-	  72 Input     24 Bit        Muxes := 1     
-	  71 Input     24 Bit        Muxes := 1     
-	  59 Input     24 Bit        Muxes := 1     
-	  57 Input     24 Bit        Muxes := 1     
-	  52 Input     24 Bit        Muxes := 1     
-	  51 Input     24 Bit        Muxes := 1     
-	  46 Input     24 Bit        Muxes := 1     
-	  44 Input     24 Bit        Muxes := 1     
-	  40 Input     24 Bit        Muxes := 1     
-	  37 Input     24 Bit        Muxes := 1     
-	  34 Input     24 Bit        Muxes := 1     
-	  33 Input     24 Bit        Muxes := 1     
-	  95 Input     24 Bit        Muxes := 1     
-	  96 Input     24 Bit        Muxes := 1     
-	  98 Input     24 Bit        Muxes := 1     
-	  99 Input     24 Bit        Muxes := 1     
-	 103 Input     24 Bit        Muxes := 1     
-	 104 Input     24 Bit        Muxes := 1     
-	 108 Input     24 Bit        Muxes := 1     
-	 110 Input     24 Bit        Muxes := 1     
-	 114 Input     24 Bit        Muxes := 1     
 	   4 Input     20 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 256   
+	   2 Input     18 Bit        Muxes := 434   
+	   5 Input     18 Bit        Muxes := 1     
+	 171 Input     18 Bit        Muxes := 1     
+	 170 Input     18 Bit        Muxes := 1     
+	 168 Input     18 Bit        Muxes := 1     
+	  10 Input     18 Bit        Muxes := 1     
+	  11 Input     18 Bit        Muxes := 1     
+	  12 Input     18 Bit        Muxes := 1     
+	 167 Input     18 Bit        Muxes := 1     
+	  13 Input     18 Bit        Muxes := 1     
+	  14 Input     18 Bit        Muxes := 1     
+	 164 Input     18 Bit        Muxes := 1     
+	  16 Input     18 Bit        Muxes := 1     
+	  18 Input     18 Bit        Muxes := 1     
+	  19 Input     18 Bit        Muxes := 1     
+	  20 Input     18 Bit        Muxes := 1     
+	 162 Input     18 Bit        Muxes := 1     
+	  21 Input     18 Bit        Muxes := 1     
+	  22 Input     18 Bit        Muxes := 1     
+	  23 Input     18 Bit        Muxes := 1     
+	  24 Input     18 Bit        Muxes := 1     
+	 160 Input     18 Bit        Muxes := 1     
+	  25 Input     18 Bit        Muxes := 1     
+	  26 Input     18 Bit        Muxes := 1     
+	  27 Input     18 Bit        Muxes := 1     
+	  28 Input     18 Bit        Muxes := 1     
+	  29 Input     18 Bit        Muxes := 1     
+	 157 Input     18 Bit        Muxes := 1     
+	 156 Input     18 Bit        Muxes := 1     
+	  34 Input     18 Bit        Muxes := 1     
+	 153 Input     18 Bit        Muxes := 1     
+	  35 Input     18 Bit        Muxes := 1     
+	  36 Input     18 Bit        Muxes := 1     
+	 152 Input     18 Bit        Muxes := 1     
+	  37 Input     18 Bit        Muxes := 1     
+	  39 Input     18 Bit        Muxes := 1     
+	  40 Input     18 Bit        Muxes := 1     
+	  41 Input     18 Bit        Muxes := 1     
+	  43 Input     18 Bit        Muxes := 1     
+	  45 Input     18 Bit        Muxes := 1     
+	  47 Input     18 Bit        Muxes := 1     
+	  49 Input     18 Bit        Muxes := 1     
+	 146 Input     18 Bit        Muxes := 1     
+	  51 Input     18 Bit        Muxes := 1     
+	 145 Input     18 Bit        Muxes := 1     
+	  53 Input     18 Bit        Muxes := 1     
+	  54 Input     18 Bit        Muxes := 1     
+	  55 Input     18 Bit        Muxes := 1     
+	 144 Input     18 Bit        Muxes := 1     
+	  57 Input     18 Bit        Muxes := 1     
+	  61 Input     18 Bit        Muxes := 1     
+	 141 Input     18 Bit        Muxes := 1     
+	 140 Input     18 Bit        Muxes := 1     
+	  66 Input     18 Bit        Muxes := 1     
+	  67 Input     18 Bit        Muxes := 1     
+	 137 Input     18 Bit        Muxes := 1     
+	  68 Input     18 Bit        Muxes := 1     
+	  69 Input     18 Bit        Muxes := 1     
+	 136 Input     18 Bit        Muxes := 1     
+	  71 Input     18 Bit        Muxes := 1     
+	 134 Input     18 Bit        Muxes := 1     
+	  73 Input     18 Bit        Muxes := 1     
+	 132 Input     18 Bit        Muxes := 1     
+	 130 Input     18 Bit        Muxes := 1     
+	  77 Input     18 Bit        Muxes := 1     
+	  79 Input     18 Bit        Muxes := 1     
+	  81 Input     18 Bit        Muxes := 1     
+	  84 Input     18 Bit        Muxes := 1     
+	  85 Input     18 Bit        Muxes := 1     
+	  86 Input     18 Bit        Muxes := 1     
+	 120 Input     18 Bit        Muxes := 1     
+	  88 Input     18 Bit        Muxes := 1     
+	  89 Input     18 Bit        Muxes := 1     
+	 118 Input     18 Bit        Muxes := 1     
+	  93 Input     18 Bit        Muxes := 1     
+	 114 Input     18 Bit        Muxes := 1     
+	  97 Input     18 Bit        Muxes := 1     
+	 113 Input     18 Bit        Muxes := 1     
+	  98 Input     18 Bit        Muxes := 1     
+	 100 Input     18 Bit        Muxes := 1     
+	 101 Input     18 Bit        Muxes := 1     
+	 102 Input     18 Bit        Muxes := 1     
+	 104 Input     18 Bit        Muxes := 1     
+	 105 Input     18 Bit        Muxes := 1     
+	 109 Input     18 Bit        Muxes := 1     
+	 107 Input     18 Bit        Muxes := 1     
+	 116 Input     18 Bit        Muxes := 1     
+	 121 Input     18 Bit        Muxes := 1     
+	 131 Input     18 Bit        Muxes := 1     
+	 133 Input     18 Bit        Muxes := 1     
+	 135 Input     18 Bit        Muxes := 1     
+	 148 Input     18 Bit        Muxes := 1     
+	  31 Input     18 Bit        Muxes := 1     
+	 161 Input     18 Bit        Muxes := 1     
+	  15 Input     18 Bit        Muxes := 1     
+	 166 Input     18 Bit        Muxes := 1     
+	 169 Input     18 Bit        Muxes := 1     
+	   9 Input     18 Bit        Muxes := 1     
+	   8 Input     18 Bit        Muxes := 1     
+	   7 Input     18 Bit        Muxes := 1     
+	   6 Input     18 Bit        Muxes := 1     
+	 174 Input     18 Bit        Muxes := 1     
+	   4 Input     18 Bit        Muxes := 1     
+	 175 Input     18 Bit        Muxes := 1     
+	 177 Input     18 Bit        Muxes := 1     
+	 178 Input     18 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 6     
 	   2 Input      9 Bit        Muxes := 4     
@@ -2269,185 +2187,115 @@ Module axi_cnn
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
-	               24 Bit    Registers := 179   
+	               24 Bit    Registers := 1     
+	               18 Bit    Registers := 178   
 +---Muxes : 
-	 179 Input     32 Bit        Muxes := 1     
-	 164 Input     24 Bit        Muxes := 1     
-	 171 Input     24 Bit        Muxes := 1     
-	   2 Input     24 Bit        Muxes := 178   
-	 166 Input     24 Bit        Muxes := 1     
-	 178 Input     24 Bit        Muxes := 1     
-	 172 Input     24 Bit        Muxes := 1     
-	 169 Input     24 Bit        Muxes := 1     
-	 155 Input     24 Bit        Muxes := 1     
-	 177 Input     24 Bit        Muxes := 1     
-	 176 Input     24 Bit        Muxes := 1     
-	 156 Input     24 Bit        Muxes := 1     
-	 167 Input     24 Bit        Muxes := 1     
-	 175 Input     24 Bit        Muxes := 1     
-	 157 Input     24 Bit        Muxes := 1     
-	 174 Input     24 Bit        Muxes := 1     
-	 173 Input     24 Bit        Muxes := 1     
-	 158 Input     24 Bit        Muxes := 1     
-	 162 Input     24 Bit        Muxes := 1     
-	 168 Input     24 Bit        Muxes := 1     
-	  16 Input     24 Bit        Muxes := 1     
-	 154 Input     24 Bit        Muxes := 1     
-	 153 Input     24 Bit        Muxes := 1     
-	 152 Input     24 Bit        Muxes := 1     
-	 151 Input     24 Bit        Muxes := 1     
-	  84 Input     24 Bit        Muxes := 1     
-	 159 Input     24 Bit        Muxes := 1     
-	  88 Input     24 Bit        Muxes := 1     
-	  91 Input     24 Bit        Muxes := 1     
-	 160 Input     24 Bit        Muxes := 1     
-	 170 Input     24 Bit        Muxes := 1     
-	 148 Input     24 Bit        Muxes := 1     
-	 161 Input     24 Bit        Muxes := 1     
-	  36 Input     24 Bit        Muxes := 1     
-	  35 Input     24 Bit        Muxes := 1     
-	  77 Input     24 Bit        Muxes := 1     
-	  80 Input     24 Bit        Muxes := 1     
-	  45 Input     24 Bit        Muxes := 1     
-	  83 Input     24 Bit        Muxes := 1     
-	 163 Input     24 Bit        Muxes := 1     
-	  29 Input     24 Bit        Muxes := 1     
-	  28 Input     24 Bit        Muxes := 1     
-	  26 Input     24 Bit        Muxes := 1     
-	  69 Input     24 Bit        Muxes := 1     
-	  25 Input     24 Bit        Muxes := 1     
-	  24 Input     24 Bit        Muxes := 1     
-	  23 Input     24 Bit        Muxes := 1     
-	  22 Input     24 Bit        Muxes := 1     
-	  19 Input     24 Bit        Muxes := 1     
-	  47 Input     24 Bit        Muxes := 1     
-	 129 Input     24 Bit        Muxes := 1     
-	 165 Input     24 Bit        Muxes := 1     
-	 132 Input     24 Bit        Muxes := 1     
-	 126 Input     24 Bit        Muxes := 1     
-	 125 Input     24 Bit        Muxes := 1     
-	 131 Input     24 Bit        Muxes := 1     
-	 150 Input     24 Bit        Muxes := 1     
-	 149 Input     24 Bit        Muxes := 1     
-	 105 Input     24 Bit        Muxes := 1     
-	 123 Input     24 Bit        Muxes := 1     
-	 143 Input     24 Bit        Muxes := 1     
-	 135 Input     24 Bit        Muxes := 1     
-	 136 Input     24 Bit        Muxes := 1     
-	 137 Input     24 Bit        Muxes := 1     
-	 134 Input     24 Bit        Muxes := 1     
-	 138 Input     24 Bit        Muxes := 1     
-	 139 Input     24 Bit        Muxes := 1     
-	 141 Input     24 Bit        Muxes := 1     
-	 142 Input     24 Bit        Muxes := 1     
-	 147 Input     24 Bit        Muxes := 1     
-	 118 Input     24 Bit        Muxes := 1     
-	 119 Input     24 Bit        Muxes := 1     
-	 120 Input     24 Bit        Muxes := 1     
-	 133 Input     24 Bit        Muxes := 1     
-	  58 Input     24 Bit        Muxes := 1     
-	  63 Input     24 Bit        Muxes := 1     
-	 117 Input     24 Bit        Muxes := 1     
-	 116 Input     24 Bit        Muxes := 1     
-	  68 Input     24 Bit        Muxes := 1     
-	  41 Input     24 Bit        Muxes := 1     
-	  39 Input     24 Bit        Muxes := 1     
-	 121 Input     24 Bit        Muxes := 1     
-	  78 Input     24 Bit        Muxes := 1     
-	  81 Input     24 Bit        Muxes := 1     
-	  93 Input     24 Bit        Muxes := 1     
-	  12 Input     24 Bit        Muxes := 1     
-	  11 Input     24 Bit        Muxes := 1     
-	 124 Input     24 Bit        Muxes := 1     
-	  10 Input     24 Bit        Muxes := 1     
-	   8 Input     24 Bit        Muxes := 1     
-	   7 Input     24 Bit        Muxes := 1     
-	   6 Input     24 Bit        Muxes := 1     
-	   5 Input     24 Bit        Muxes := 1     
-	 106 Input     24 Bit        Muxes := 1     
-	 111 Input     24 Bit        Muxes := 1     
-	   4 Input     24 Bit        Muxes := 1     
-	 107 Input     24 Bit        Muxes := 1     
-	 100 Input     24 Bit        Muxes := 1     
-	  87 Input     24 Bit        Muxes := 1     
-	  30 Input     24 Bit        Muxes := 1     
-	 113 Input     24 Bit        Muxes := 1     
-	  31 Input     24 Bit        Muxes := 1     
-	  74 Input     24 Bit        Muxes := 1     
-	  43 Input     24 Bit        Muxes := 1     
-	  66 Input     24 Bit        Muxes := 1     
-	  65 Input     24 Bit        Muxes := 1     
-	  62 Input     24 Bit        Muxes := 1     
-	  60 Input     24 Bit        Muxes := 1     
-	  48 Input     24 Bit        Muxes := 1     
-	  55 Input     24 Bit        Muxes := 1     
-	  54 Input     24 Bit        Muxes := 1     
-	 115 Input     24 Bit        Muxes := 1     
-	 145 Input     24 Bit        Muxes := 1     
-	   9 Input     24 Bit        Muxes := 1     
-	  97 Input     24 Bit        Muxes := 1     
-	  86 Input     24 Bit        Muxes := 1     
-	  82 Input     24 Bit        Muxes := 1     
-	  79 Input     24 Bit        Muxes := 1     
-	  76 Input     24 Bit        Muxes := 1     
-	  70 Input     24 Bit        Muxes := 1     
-	  13 Input     24 Bit        Muxes := 1     
-	  64 Input     24 Bit        Muxes := 1     
-	  61 Input     24 Bit        Muxes := 1     
-	  56 Input     24 Bit        Muxes := 1     
-	  53 Input     24 Bit        Muxes := 1     
-	  50 Input     24 Bit        Muxes := 1     
-	  49 Input     24 Bit        Muxes := 1     
-	  42 Input     24 Bit        Muxes := 1     
-	  38 Input     24 Bit        Muxes := 1     
-	  32 Input     24 Bit        Muxes := 1     
-	  27 Input     24 Bit        Muxes := 1     
-	 140 Input     24 Bit        Muxes := 1     
-	  17 Input     24 Bit        Muxes := 1     
-	  67 Input     24 Bit        Muxes := 1     
-	 144 Input     24 Bit        Muxes := 1     
-	  94 Input     24 Bit        Muxes := 1     
-	 109 Input     24 Bit        Muxes := 1     
-	 112 Input     24 Bit        Muxes := 1     
-	 146 Input     24 Bit        Muxes := 1     
-	 130 Input     24 Bit        Muxes := 1     
-	 128 Input     24 Bit        Muxes := 1     
-	 127 Input     24 Bit        Muxes := 1     
-	 122 Input     24 Bit        Muxes := 1     
-	  14 Input     24 Bit        Muxes := 1     
-	  15 Input     24 Bit        Muxes := 1     
-	 102 Input     24 Bit        Muxes := 1     
-	 101 Input     24 Bit        Muxes := 1     
-	  18 Input     24 Bit        Muxes := 1     
-	  20 Input     24 Bit        Muxes := 1     
-	  21 Input     24 Bit        Muxes := 1     
-	  92 Input     24 Bit        Muxes := 1     
-	  90 Input     24 Bit        Muxes := 1     
-	  89 Input     24 Bit        Muxes := 1     
-	  85 Input     24 Bit        Muxes := 1     
-	  75 Input     24 Bit        Muxes := 1     
-	  73 Input     24 Bit        Muxes := 1     
-	  72 Input     24 Bit        Muxes := 1     
-	  71 Input     24 Bit        Muxes := 1     
-	  59 Input     24 Bit        Muxes := 1     
-	  57 Input     24 Bit        Muxes := 1     
-	  52 Input     24 Bit        Muxes := 1     
-	  51 Input     24 Bit        Muxes := 1     
-	  46 Input     24 Bit        Muxes := 1     
-	  44 Input     24 Bit        Muxes := 1     
-	  40 Input     24 Bit        Muxes := 1     
-	  37 Input     24 Bit        Muxes := 1     
-	  34 Input     24 Bit        Muxes := 1     
-	  33 Input     24 Bit        Muxes := 1     
-	  95 Input     24 Bit        Muxes := 1     
-	  96 Input     24 Bit        Muxes := 1     
-	  98 Input     24 Bit        Muxes := 1     
-	  99 Input     24 Bit        Muxes := 1     
-	 103 Input     24 Bit        Muxes := 1     
-	 104 Input     24 Bit        Muxes := 1     
-	 108 Input     24 Bit        Muxes := 1     
-	 110 Input     24 Bit        Muxes := 1     
-	 114 Input     24 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 178   
+	   5 Input     18 Bit        Muxes := 1     
+	 171 Input     18 Bit        Muxes := 1     
+	 170 Input     18 Bit        Muxes := 1     
+	 168 Input     18 Bit        Muxes := 1     
+	  10 Input     18 Bit        Muxes := 1     
+	  11 Input     18 Bit        Muxes := 1     
+	  12 Input     18 Bit        Muxes := 1     
+	 167 Input     18 Bit        Muxes := 1     
+	  13 Input     18 Bit        Muxes := 1     
+	  14 Input     18 Bit        Muxes := 1     
+	 164 Input     18 Bit        Muxes := 1     
+	  16 Input     18 Bit        Muxes := 1     
+	  18 Input     18 Bit        Muxes := 1     
+	  19 Input     18 Bit        Muxes := 1     
+	  20 Input     18 Bit        Muxes := 1     
+	 162 Input     18 Bit        Muxes := 1     
+	  21 Input     18 Bit        Muxes := 1     
+	  22 Input     18 Bit        Muxes := 1     
+	  23 Input     18 Bit        Muxes := 1     
+	  24 Input     18 Bit        Muxes := 1     
+	 160 Input     18 Bit        Muxes := 1     
+	  25 Input     18 Bit        Muxes := 1     
+	  26 Input     18 Bit        Muxes := 1     
+	  27 Input     18 Bit        Muxes := 1     
+	  28 Input     18 Bit        Muxes := 1     
+	  29 Input     18 Bit        Muxes := 1     
+	 157 Input     18 Bit        Muxes := 1     
+	 156 Input     18 Bit        Muxes := 1     
+	  34 Input     18 Bit        Muxes := 1     
+	 153 Input     18 Bit        Muxes := 1     
+	  35 Input     18 Bit        Muxes := 1     
+	  36 Input     18 Bit        Muxes := 1     
+	 152 Input     18 Bit        Muxes := 1     
+	  37 Input     18 Bit        Muxes := 1     
+	  39 Input     18 Bit        Muxes := 1     
+	  40 Input     18 Bit        Muxes := 1     
+	  41 Input     18 Bit        Muxes := 1     
+	  43 Input     18 Bit        Muxes := 1     
+	  45 Input     18 Bit        Muxes := 1     
+	  47 Input     18 Bit        Muxes := 1     
+	  49 Input     18 Bit        Muxes := 1     
+	 146 Input     18 Bit        Muxes := 1     
+	  51 Input     18 Bit        Muxes := 1     
+	 145 Input     18 Bit        Muxes := 1     
+	  53 Input     18 Bit        Muxes := 1     
+	  54 Input     18 Bit        Muxes := 1     
+	  55 Input     18 Bit        Muxes := 1     
+	 144 Input     18 Bit        Muxes := 1     
+	  57 Input     18 Bit        Muxes := 1     
+	  61 Input     18 Bit        Muxes := 1     
+	 141 Input     18 Bit        Muxes := 1     
+	 140 Input     18 Bit        Muxes := 1     
+	  66 Input     18 Bit        Muxes := 1     
+	  67 Input     18 Bit        Muxes := 1     
+	 137 Input     18 Bit        Muxes := 1     
+	  68 Input     18 Bit        Muxes := 1     
+	  69 Input     18 Bit        Muxes := 1     
+	 136 Input     18 Bit        Muxes := 1     
+	  71 Input     18 Bit        Muxes := 1     
+	 134 Input     18 Bit        Muxes := 1     
+	  73 Input     18 Bit        Muxes := 1     
+	 132 Input     18 Bit        Muxes := 1     
+	 130 Input     18 Bit        Muxes := 1     
+	  77 Input     18 Bit        Muxes := 1     
+	  79 Input     18 Bit        Muxes := 1     
+	  81 Input     18 Bit        Muxes := 1     
+	  84 Input     18 Bit        Muxes := 1     
+	  85 Input     18 Bit        Muxes := 1     
+	  86 Input     18 Bit        Muxes := 1     
+	 120 Input     18 Bit        Muxes := 1     
+	  88 Input     18 Bit        Muxes := 1     
+	  89 Input     18 Bit        Muxes := 1     
+	 118 Input     18 Bit        Muxes := 1     
+	  93 Input     18 Bit        Muxes := 1     
+	 114 Input     18 Bit        Muxes := 1     
+	  97 Input     18 Bit        Muxes := 1     
+	 113 Input     18 Bit        Muxes := 1     
+	  98 Input     18 Bit        Muxes := 1     
+	 100 Input     18 Bit        Muxes := 1     
+	 101 Input     18 Bit        Muxes := 1     
+	 102 Input     18 Bit        Muxes := 1     
+	 104 Input     18 Bit        Muxes := 1     
+	 105 Input     18 Bit        Muxes := 1     
+	 109 Input     18 Bit        Muxes := 1     
+	 107 Input     18 Bit        Muxes := 1     
+	 116 Input     18 Bit        Muxes := 1     
+	 121 Input     18 Bit        Muxes := 1     
+	 131 Input     18 Bit        Muxes := 1     
+	 133 Input     18 Bit        Muxes := 1     
+	 135 Input     18 Bit        Muxes := 1     
+	 148 Input     18 Bit        Muxes := 1     
+	  31 Input     18 Bit        Muxes := 1     
+	 161 Input     18 Bit        Muxes := 1     
+	  15 Input     18 Bit        Muxes := 1     
+	 166 Input     18 Bit        Muxes := 1     
+	 169 Input     18 Bit        Muxes := 1     
+	   9 Input     18 Bit        Muxes := 1     
+	   8 Input     18 Bit        Muxes := 1     
+	   7 Input     18 Bit        Muxes := 1     
+	   6 Input     18 Bit        Muxes := 1     
+	 174 Input     18 Bit        Muxes := 1     
+	   4 Input     18 Bit        Muxes := 1     
+	 175 Input     18 Bit        Muxes := 1     
+	 177 Input     18 Bit        Muxes := 1     
+	 178 Input     18 Bit        Muxes := 1     
 	   3 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 3     
@@ -2890,16 +2738,8 @@ DSP Report: Generating DSP mult63/outMem, operation Mode is: C+A*B.
 DSP Report: operator mult63/outMem is absorbed into DSP mult63/outMem.
 DSP Report: operator mult63/outMem is absorbed into DSP mult63/outMem.
 INFO: [Synth 8-5546] ROM "rdata" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdata_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdata_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdata_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdata_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdata_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdata_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdata_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rdata_reg[7] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:45 ; elapsed = 00:03:50 . Memory (MB): peak = 1521.270 ; gain = 1218.930
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:52 ; elapsed = 00:02:57 . Memory (MB): peak = 1446.855 ; gain = 1145.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2988,71 +2828,61 @@ Report RTL Partitions:
 |2     |convmultCore__GB1   |           1|     13375|
 |3     |convmultCore__GB2   |           1|      9069|
 |4     |convmultCore__GB3   |           1|      5346|
-|5     |axi_cnn__GCB0       |           1|     14270|
-|6     |axi_cnn__GCB1       |           1|       559|
-|7     |axi_cnn__GCB2       |           1|       425|
-|8     |axi_cnn__GCB3       |           1|       151|
-|9     |axi_cnn__GCB4       |           1|       324|
-|10    |axi_cnn__GCB5       |           1|       158|
-|11    |axi_cnn__GCB6       |           1|      3244|
-|12    |axi_cnn__GCB7       |           1|      1250|
-|13    |axi_cnn__GCB8       |           1|      2524|
-|14    |axi_cnn__GCB9       |           1|       101|
-|15    |axi_cnn__GCB10      |           1|      3194|
-|16    |axi_cnn__GCB11      |           1|       784|
-|17    |CNN_top_module__GC0 |           1|      2563|
+|5     |axi_cnn__GCB0       |           1|     11294|
+|6     |axi_cnn__GCB1       |           1|      2359|
+|7     |CNN_top_module__GC0 |           1|      2563|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:56 ; elapsed = 00:04:02 . Memory (MB): peak = 1521.270 ; gain = 1218.930
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:03 ; elapsed = 00:03:09 . Memory (MB): peak = 1446.855 ; gain = 1145.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[13] )
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:06:02 ; elapsed = 00:06:10 . Memory (MB): peak = 2414.469 ; gain = 2112.129
+Finished Timing Optimization : Time (s): cpu = 00:05:20 ; elapsed = 00:05:28 . Memory (MB): peak = 2573.789 ; gain = 2272.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+----------------------------------+------------+----------+
 |      |RTL Partition                     |Replication |Instances |
 +------+----------------------------------+------------+----------+
-|1     |axi_cnn__GCB1                     |           1|       559|
-|2     |axi_cnn__GCB2                     |           1|       425|
-|3     |axi_cnn__GCB4                     |           1|       278|
-|4     |axi_cnn__GCB5                     |           1|       158|
-|5     |axi_cnn__GCB7                     |           1|      1250|
-|6     |axi_cnn__GCB9                     |           1|       101|
-|7     |axi_cnn__GCB11                    |           1|       784|
-|8     |CNN_top_module__GC0               |           1|      2563|
-|9     |CNN_top_module_axi_cnn_0_0_GT1    |           1|     19286|
-|10    |CNN_top_module_axi_cnn_0_0_GT0    |           1|     27565|
-|11    |CNN_top_module_axi_cnn_0_0_GT1__1 |           1|     10110|
+|1     |CNN_top_module__GC0               |           1|      2563|
+|2     |CNN_top_module_axi_cnn_0_0_GT1    |           1|      2377|
+|3     |CNN_top_module_axi_cnn_0_0_GT0    |           1|     34755|
+|4     |CNN_top_module_axi_cnn_0_0_GT1__1 |           1|      6644|
 +------+----------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:33 ; elapsed = 00:06:51 . Memory (MB): peak = 2414.469 ; gain = 2112.129
+Finished Technology Mapping : Time (s): cpu = 00:05:24 ; elapsed = 00:06:16 . Memory (MB): peak = 2573.789 ; gain = 2272.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+----------------------------------+------------+----------+
 |      |RTL Partition                     |Replication |Instances |
 +------+----------------------------------+------------+----------+
-|1     |axi_cnn__GCB1                     |           1|       335|
-|2     |axi_cnn__GCB2                     |           1|       268|
-|3     |axi_cnn__GCB4                     |           1|       126|
-|4     |axi_cnn__GCB5                     |           1|        48|
-|5     |axi_cnn__GCB7                     |           1|       776|
-|6     |axi_cnn__GCB9                     |           1|        44|
-|7     |axi_cnn__GCB11                    |           1|       488|
-|8     |CNN_top_module__GC0               |           1|      1515|
-|9     |CNN_top_module_axi_cnn_0_0_GT1    |           1|      8081|
-|10    |CNN_top_module_axi_cnn_0_0_GT0    |           1|     10017|
-|11    |CNN_top_module_axi_cnn_0_0_GT1__1 |           1|      3271|
+|1     |CNN_top_module__GC0               |           1|      1515|
+|2     |CNN_top_module_axi_cnn_0_0_GT1    |           1|       937|
+|3     |CNN_top_module_axi_cnn_0_0_GT0    |           1|     11809|
+|4     |CNN_top_module_axi_cnn_0_0_GT1__1 |           1|      4461|
 +------+----------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -3066,15 +2896,13 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[5] because some of its loads are not in same hierarchy as its driver   
-INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[6] because some of its loads are not in same hierarchy as its driver   
-INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[7] because some of its loads are not in same hierarchy as its driver   
-INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[8] because some of its loads are not in same hierarchy as its driver   
+INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[2] because some of its loads are not in same hierarchy as its driver   
+INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[3] because some of its loads are not in same hierarchy as its driver   
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:06:37 ; elapsed = 00:06:55 . Memory (MB): peak = 2414.469 ; gain = 2112.129
+Finished IO Insertion : Time (s): cpu = 00:05:27 ; elapsed = 00:06:19 . Memory (MB): peak = 2573.789 ; gain = 2272.832
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3087,7 +2915,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:06:37 ; elapsed = 00:06:55 . Memory (MB): peak = 2414.469 ; gain = 2112.129
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:28 ; elapsed = 00:06:19 . Memory (MB): peak = 2573.789 ; gain = 2272.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3099,25 +2927,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:38 ; elapsed = 00:06:56 . Memory (MB): peak = 2414.469 ; gain = 2112.129
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:28 ; elapsed = 00:06:20 . Memory (MB): peak = 2573.789 ; gain = 2272.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:38 ; elapsed = 00:06:57 . Memory (MB): peak = 2414.469 ; gain = 2112.129
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:29 ; elapsed = 00:06:21 . Memory (MB): peak = 2573.789 ; gain = 2272.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:38 ; elapsed = 00:06:57 . Memory (MB): peak = 2414.469 ; gain = 2112.129
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:29 ; elapsed = 00:06:21 . Memory (MB): peak = 2573.789 ; gain = 2272.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:06:38 ; elapsed = 00:06:57 . Memory (MB): peak = 2414.469 ; gain = 2112.129
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:29 ; elapsed = 00:06:21 . Memory (MB): peak = 2573.789 ; gain = 2272.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -3152,154 +2980,154 @@ Report Cell Usage:
 |2     |BUFG      |     2|
 |3     |CARRY4    |   123|
 |4     |DSP48E1_1 |    64|
-|5     |LUT1      |   134|
-|6     |LUT2      |   460|
-|7     |LUT3      |  5513|
-|8     |LUT4      |   811|
-|9     |LUT5      |  1974|
-|10    |LUT6      |  6311|
-|11    |MUXF7     |  1268|
-|12    |MUXF8     |   255|
+|5     |LUT1      |   133|
+|6     |LUT2      |    63|
+|7     |LUT3      |  5002|
+|8     |LUT4      |   926|
+|9     |LUT5      |  1097|
+|10    |LUT6      |  5012|
+|11    |MUXF7     |   556|
+|12    |MUXF8     |   206|
 |13    |PS7       |     1|
 |14    |SRL16     |     1|
 |15    |SRLC32E   |    47|
 |16    |FDR       |     8|
-|17    |FDRE      |  6634|
-|18    |FDSE      |    22|
+|17    |FDRE      |  5512|
+|18    |FDSE      |    21|
 +------+----------+------+
 
 Report Instance Areas: 
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 |      |Instance                                           |Module                                                         |Cells |
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
-|1     |top                                                |                                                               | 23758|
-|2     |  CNN_top_module_i                                 |CNN_top_module                                                 | 23758|
-|3     |    axi_cnn_0                                      |CNN_top_module_axi_cnn_0_0                                     | 22219|
-|4     |      inst                                         |axi_cnn                                                        | 22218|
-|5     |        coreInstance                               |convmultCore                                                   | 11048|
-|6     |          multxPrime                               |multx                                                          |  8422|
-|7     |            mult0                                  |multiplier                                                     |    72|
-|8     |            mult1                                  |multiplier_68                                                  |    85|
-|9     |            mult10                                 |multiplier_69                                                  |    33|
-|10    |            mult11                                 |multiplier_70                                                  |    59|
-|11    |            mult12                                 |multiplier_71                                                  |   245|
-|12    |            mult13                                 |multiplier_72                                                  |   220|
-|13    |            mult14                                 |multiplier_73                                                  |    86|
-|14    |            mult15                                 |multiplier_74                                                  |   124|
-|15    |            mult16                                 |multiplier_75                                                  |   109|
-|16    |            mult17                                 |multiplier_76                                                  |   122|
-|17    |            mult18                                 |multiplier_77                                                  |   122|
-|18    |            mult19                                 |multiplier_78                                                  |   135|
-|19    |            mult2                                  |multiplier_79                                                  |    87|
-|20    |            mult20                                 |multiplier_80                                                  |    37|
-|21    |            mult21                                 |multiplier_81                                                  |   122|
-|22    |            mult22                                 |multiplier_82                                                  |    56|
-|23    |            mult23                                 |multiplier_83                                                  |    39|
-|24    |            mult24                                 |multiplier_84                                                  |   109|
-|25    |            mult25                                 |multiplier_85                                                  |    54|
-|26    |            mult26                                 |multiplier_86                                                  |    56|
-|27    |            mult27                                 |multiplier_87                                                  |   112|
-|28    |            mult28                                 |multiplier_88                                                  |    54|
-|29    |            mult29                                 |multiplier_89                                                  |    49|
-|30    |            mult3                                  |multiplier_90                                                  |    61|
-|31    |            mult30                                 |multiplier_91                                                  |    34|
-|32    |            mult31                                 |multiplier_92                                                  |    39|
-|33    |            mult32                                 |multiplier_93                                                  |   108|
-|34    |            mult33                                 |multiplier_94                                                  |   121|
-|35    |            mult34                                 |multiplier_95                                                  |   121|
-|36    |            mult35                                 |multiplier_96                                                  |   133|
-|37    |            mult36                                 |multiplier_97                                                  |    36|
-|38    |            mult37                                 |multiplier_98                                                  |    49|
-|39    |            mult38                                 |multiplier_99                                                  |   213|
-|40    |            mult39                                 |multiplier_100                                                 |   192|
-|41    |            mult4                                  |multiplier_101                                                 |    54|
-|42    |            mult40                                 |multiplier_102                                                 |   180|
-|43    |            mult41                                 |multiplier_103                                                 |   193|
-|44    |            mult42                                 |multiplier_104                                                 |   195|
-|45    |            mult43                                 |multiplier_105                                                 |   194|
-|46    |            mult44                                 |multiplier_106                                                 |   350|
-|47    |            mult45                                 |multiplier_107                                                 |   121|
-|48    |            mult46                                 |multiplier_108                                                 |    89|
-|49    |            mult47                                 |multiplier_109                                                 |   107|
-|50    |            mult48                                 |multiplier_110                                                 |    36|
-|51    |            mult49                                 |multiplier_111                                                 |    49|
-|52    |            mult5                                  |multiplier_112                                                 |    50|
+|1     |top                                                |                                                               | 18904|
+|2     |  CNN_top_module_i                                 |CNN_top_module                                                 | 18904|
+|3     |    axi_cnn_0                                      |CNN_top_module_axi_cnn_0_0                                     | 17365|
+|4     |      inst                                         |axi_cnn                                                        | 17364|
+|5     |        coreInstance                               |convmultCore                                                   | 10313|
+|6     |          multxPrime                               |multx                                                          |  7752|
+|7     |            mult0                                  |multiplier                                                     |    29|
+|8     |            mult1                                  |multiplier_68                                                  |    42|
+|9     |            mult10                                 |multiplier_69                                                  |   214|
+|10    |            mult11                                 |multiplier_70                                                  |    33|
+|11    |            mult12                                 |multiplier_71                                                  |   486|
+|12    |            mult13                                 |multiplier_72                                                  |   499|
+|13    |            mult14                                 |multiplier_73                                                  |    69|
+|14    |            mult15                                 |multiplier_74                                                  |    56|
+|15    |            mult16                                 |multiplier_75                                                  |    54|
+|16    |            mult17                                 |multiplier_76                                                  |    67|
+|17    |            mult18                                 |multiplier_77                                                  |    69|
+|18    |            mult19                                 |multiplier_78                                                  |    89|
+|19    |            mult2                                  |multiplier_79                                                  |    44|
+|20    |            mult20                                 |multiplier_80                                                  |    54|
+|21    |            mult21                                 |multiplier_81                                                  |    67|
+|22    |            mult22                                 |multiplier_82                                                  |    69|
+|23    |            mult23                                 |multiplier_83                                                  |    22|
+|24    |            mult24                                 |multiplier_84                                                  |    54|
+|25    |            mult25                                 |multiplier_85                                                  |    67|
+|26    |            mult26                                 |multiplier_86                                                  |    69|
+|27    |            mult27                                 |multiplier_87                                                  |   145|
+|28    |            mult28                                 |multiplier_88                                                  |    73|
+|29    |            mult29                                 |multiplier_89                                                  |    53|
+|30    |            mult3                                  |multiplier_90                                                  |    33|
+|31    |            mult30                                 |multiplier_91                                                  |   121|
+|32    |            mult31                                 |multiplier_92                                                  |   135|
+|33    |            mult32                                 |multiplier_93                                                  |   118|
+|34    |            mult33                                 |multiplier_94                                                  |   131|
+|35    |            mult34                                 |multiplier_95                                                  |   133|
+|36    |            mult35                                 |multiplier_96                                                  |    89|
+|37    |            mult36                                 |multiplier_97                                                  |   118|
+|38    |            mult37                                 |multiplier_98                                                  |   131|
+|39    |            mult38                                 |multiplier_99                                                  |    70|
+|40    |            mult39                                 |multiplier_100                                                 |    22|
+|41    |            mult4                                  |multiplier_101                                                 |    29|
+|42    |            mult40                                 |multiplier_102                                                 |    39|
+|43    |            mult41                                 |multiplier_103                                                 |    52|
+|44    |            mult42                                 |multiplier_104                                                 |    54|
+|45    |            mult43                                 |multiplier_105                                                 |   125|
+|46    |            mult44                                 |multiplier_106                                                 |    40|
+|47    |            mult45                                 |multiplier_107                                                 |    65|
+|48    |            mult46                                 |multiplier_108                                                 |    55|
+|49    |            mult47                                 |multiplier_109                                                 |    45|
+|50    |            mult48                                 |multiplier_110                                                 |    39|
+|51    |            mult49                                 |multiplier_111                                                 |    51|
+|52    |            mult5                                  |multiplier_112                                                 |    42|
 |53    |            mult50                                 |multiplier_113                                                 |    53|
-|54    |            mult51                                 |multiplier_114                                                 |    41|
-|55    |            mult52                                 |multiplier_115                                                 |   108|
-|56    |            mult53                                 |multiplier_116                                                 |   273|
-|57    |            mult54                                 |multiplier_117                                                 |   130|
-|58    |            mult55                                 |multiplier_118                                                 |   107|
-|59    |            mult56                                 |multiplier_119                                                 |    35|
+|54    |            mult51                                 |multiplier_114                                                 |    59|
+|55    |            mult52                                 |multiplier_115                                                 |    39|
+|56    |            mult53                                 |multiplier_116                                                 |    51|
+|57    |            mult54                                 |multiplier_117                                                 |   131|
+|58    |            mult55                                 |multiplier_118                                                 |    56|
+|59    |            mult56                                 |multiplier_119                                                 |   103|
 |60    |            mult57                                 |multiplier_120                                                 |   116|
 |61    |            mult58                                 |multiplier_121                                                 |   118|
-|62    |            mult59                                 |multiplier_122                                                 |    39|
-|63    |            mult6                                  |multiplier_123                                                 |   412|
-|64    |            mult60                                 |multiplier_124                                                 |   103|
-|65    |            mult61                                 |multiplier_125                                                 |    82|
-|66    |            mult62                                 |multiplier_126                                                 |    84|
-|67    |            mult63                                 |multiplier_127                                                 |    39|
-|68    |            mult7                                  |multiplier_128                                                 |   311|
-|69    |            mult8                                  |multiplier_129                                                 |    18|
-|70    |            mult9                                  |multiplier_130                                                 |    31|
+|62    |            mult59                                 |multiplier_122                                                 |    58|
+|63    |            mult6                                  |multiplier_123                                                 |   486|
+|64    |            mult60                                 |multiplier_124                                                 |    69|
+|65    |            mult61                                 |multiplier_125                                                 |   102|
+|66    |            mult62                                 |multiplier_126                                                 |    33|
+|67    |            mult63                                 |multiplier_127                                                 |    57|
+|68    |            mult7                                  |multiplier_128                                                 |   328|
+|69    |            mult8                                  |multiplier_129                                                 |   199|
+|70    |            mult9                                  |multiplier_130                                                 |   212|
 |71    |          outMult0                                 |mult2reg                                                       |    37|
 |72    |          outMult1                                 |mult2reg_5                                                     |    37|
-|73    |          outMult10                                |mult2reg_6                                                     |    38|
+|73    |          outMult10                                |mult2reg_6                                                     |    37|
 |74    |          outMult11                                |mult2reg_7                                                     |    37|
 |75    |          outMult12                                |mult2reg_8                                                     |    37|
 |76    |          outMult13                                |mult2reg_9                                                     |    37|
 |77    |          outMult14                                |mult2reg_10                                                    |    37|
-|78    |          outMult15                                |mult2reg_11                                                    |    38|
+|78    |          outMult15                                |mult2reg_11                                                    |    37|
 |79    |          outMult16                                |mult2reg_12                                                    |    37|
-|80    |          outMult17                                |mult2reg_13                                                    |    38|
+|80    |          outMult17                                |mult2reg_13                                                    |    37|
 |81    |          outMult18                                |mult2reg_14                                                    |    37|
 |82    |          outMult19                                |mult2reg_15                                                    |    37|
 |83    |          outMult2                                 |mult2reg_16                                                    |    37|
 |84    |          outMult20                                |mult2reg_17                                                    |    37|
-|85    |          outMult21                                |mult2reg_18                                                    |    38|
+|85    |          outMult21                                |mult2reg_18                                                    |    37|
 |86    |          outMult22                                |mult2reg_19                                                    |    37|
 |87    |          outMult23                                |mult2reg_20                                                    |    37|
 |88    |          outMult24                                |mult2reg_21                                                    |    37|
-|89    |          outMult25                                |mult2reg_22                                                    |    38|
+|89    |          outMult25                                |mult2reg_22                                                    |    37|
 |90    |          outMult26                                |mult2reg_23                                                    |    37|
 |91    |          outMult27                                |mult2reg_24                                                    |    37|
 |92    |          outMult28                                |mult2reg_25                                                    |    37|
 |93    |          outMult29                                |mult2reg_26                                                    |    37|
 |94    |          outMult3                                 |mult2reg_27                                                    |    37|
 |95    |          outMult30                                |mult2reg_28                                                    |    37|
-|96    |          outMult31                                |mult2reg_29                                                    |    38|
+|96    |          outMult31                                |mult2reg_29                                                    |    37|
 |97    |          outMult32                                |mult2reg_30                                                    |    37|
-|98    |          outMult33                                |mult2reg_31                                                    |    38|
+|98    |          outMult33                                |mult2reg_31                                                    |    37|
 |99    |          outMult34                                |mult2reg_32                                                    |    37|
 |100   |          outMult35                                |mult2reg_33                                                    |    37|
 |101   |          outMult36                                |mult2reg_34                                                    |    37|
-|102   |          outMult37                                |mult2reg_35                                                    |    38|
+|102   |          outMult37                                |mult2reg_35                                                    |    37|
 |103   |          outMult38                                |mult2reg_36                                                    |    37|
 |104   |          outMult39                                |mult2reg_37                                                    |    37|
 |105   |          outMult4                                 |mult2reg_38                                                    |    37|
 |106   |          outMult40                                |mult2reg_39                                                    |    37|
 |107   |          outMult41                                |mult2reg_40                                                    |    37|
-|108   |          outMult42                                |mult2reg_41                                                    |    38|
+|108   |          outMult42                                |mult2reg_41                                                    |    37|
 |109   |          outMult43                                |mult2reg_42                                                    |    37|
 |110   |          outMult44                                |mult2reg_43                                                    |    37|
 |111   |          outMult45                                |mult2reg_44                                                    |    37|
 |112   |          outMult46                                |mult2reg_45                                                    |    37|
 |113   |          outMult47                                |mult2reg_46                                                    |    38|
 |114   |          outMult48                                |mult2reg_47                                                    |    37|
-|115   |          outMult49                                |mult2reg_48                                                    |    38|
+|115   |          outMult49                                |mult2reg_48                                                    |    37|
 |116   |          outMult5                                 |mult2reg_49                                                    |    37|
 |117   |          outMult50                                |mult2reg_50                                                    |    37|
 |118   |          outMult51                                |mult2reg_51                                                    |    37|
 |119   |          outMult52                                |mult2reg_52                                                    |    37|
-|120   |          outMult53                                |mult2reg_53                                                    |    38|
+|120   |          outMult53                                |mult2reg_53                                                    |    37|
 |121   |          outMult54                                |mult2reg_54                                                    |    37|
 |122   |          outMult55                                |mult2reg_55                                                    |    37|
 |123   |          outMult56                                |mult2reg_56                                                    |    37|
-|124   |          outMult57                                |mult2reg_57                                                    |    38|
+|124   |          outMult57                                |mult2reg_57                                                    |    37|
 |125   |          outMult58                                |mult2reg_58                                                    |    37|
 |126   |          outMult59                                |mult2reg_59                                                    |    37|
 |127   |          outMult6                                 |mult2reg_60                                                    |    37|
-|128   |          outMult60                                |mult2reg_61                                                    |    37|
+|128   |          outMult60                                |mult2reg_61                                                    |    38|
 |129   |          outMult61                                |mult2reg_62                                                    |    38|
 |130   |          outMult62                                |mult2reg_63                                                    |    38|
 |131   |          outMult63                                |mult2reg_64                                                    |    38|
@@ -3343,29 +3171,29 @@ Report Instance Areas:
 |169   |          SEQ_COUNTER                              |upcnt_n                                                        |    13|
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:38 ; elapsed = 00:06:57 . Memory (MB): peak = 2414.469 ; gain = 2112.129
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:29 ; elapsed = 00:06:21 . Memory (MB): peak = 2573.789 ; gain = 2272.832
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:37 ; elapsed = 00:06:33 . Memory (MB): peak = 2414.469 ; gain = 1691.043
-Synthesis Optimization Complete : Time (s): cpu = 00:06:39 ; elapsed = 00:06:58 . Memory (MB): peak = 2414.469 ; gain = 2112.129
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:31 ; elapsed = 00:06:03 . Memory (MB): peak = 2573.789 ; gain = 1885.301
+Synthesis Optimization Complete : Time (s): cpu = 00:05:29 ; elapsed = 00:06:23 . Memory (MB): peak = 2573.789 ; gain = 2272.832
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1719 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 958 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2414.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2573.789 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-187 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+191 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:44 ; elapsed = 00:07:03 . Memory (MB): peak = 2414.469 ; gain = 2119.406
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2414.469 ; gain = 0.000
+synth_design: Time (s): cpu = 00:05:33 ; elapsed = 00:06:29 . Memory (MB): peak = 2573.789 ; gain = 2280.098
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2573.789 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.runs/synth_1/CNN_top_module_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CNN_top_module_wrapper_utilization_synth.rpt -pb CNN_top_module_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Mar  1 00:43:34 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat Mar  2 09:31:03 2019...

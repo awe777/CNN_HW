@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Fri Mar  1 00:47:47 2019
+| Date             : Sat Mar  2 09:52:43 2019
 | Host             : KomputerUtama running 64-bit major release  (build 9200)
 | Command          : report_power -file CNN_top_module_wrapper_power_routed.rpt -pb CNN_top_module_wrapper_power_summary_routed.pb -rpx CNN_top_module_wrapper_power_routed.rpx
 | Design           : CNN_top_module_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.876        |
+| Total On-Chip Power (W)  | 2.079        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.757        |
-| Device Static (W)        | 0.119        |
+| Dynamic (W)              | 1.956        |
+| Device Static (W)        | 0.123        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 63.4         |
-| Junction Temperature (C) | 46.6         |
+| Max Ambient (C)          | 61.0         |
+| Junction Temperature (C) | 49.0         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.012 |        3 |       --- |             --- |
-| Slice Logic             |     0.065 |    23709 |       --- |             --- |
-|   LUT as Logic          |     0.064 |    14879 |     17600 |           84.54 |
-|   F7/F8 Muxes           |    <0.001 |     1523 |     17600 |            8.65 |
+| Clocks                  |     0.019 |        3 |       --- |             --- |
+| Slice Logic             |     0.107 |    18831 |       --- |             --- |
+|   LUT as Logic          |     0.105 |    12069 |     17600 |           68.57 |
 |   CARRY4                |    <0.001 |      123 |      4400 |            2.80 |
-|   Register              |    <0.001 |     6592 |     35200 |           18.73 |
-|   LUT as Shift Register |    <0.001 |       38 |      6000 |            0.63 |
+|   F7/F8 Muxes           |    <0.001 |      762 |     17600 |            4.33 |
+|   Register              |    <0.001 |     5457 |     35200 |           15.50 |
+|   LUT as Shift Register |    <0.001 |       32 |      6000 |            0.53 |
 |   Others                |     0.000 |      380 |       --- |             --- |
-| Signals                 |     0.127 |    17603 |       --- |             --- |
-| DSPs                    |     0.028 |       64 |        80 |           80.00 |
-| PS7                     |     1.525 |        1 |       --- |             --- |
-| Static Power            |     0.119 |          |           |                 |
-| Total                   |     1.876 |          |           |                 |
+| Signals                 |     0.248 |    14463 |       --- |             --- |
+| DSPs                    |     0.056 |       64 |        80 |           80.00 |
+| PS7                     |     1.526 |        1 |       --- |             --- |
+| Static Power            |     0.123 |          |           |                 |
+| Total                   |     2.079 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.239 |       0.231 |      0.008 |
+| Vccint    |       1.000 |     0.438 |       0.430 |      0.008 |
 | Vccaux    |       1.800 |     0.009 |       0.000 |      0.009 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -83,11 +83,11 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.754 |       0.722 |      0.033 |
+| Vccpint   |       1.000 |     0.758 |       0.723 |      0.035 |
 | Vccpaux   |       1.800 |     0.060 |       0.050 |      0.010 |
 | Vccpll    |       1.800 |     0.018 |       0.015 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.459 |       0.457 |      0.002 |
@@ -137,7 +137,7 @@ Table of Contents
 +------------+-------------------------------------------------------------------+-----------------+
 | Clock      | Domain                                                            | Constraint (ns) |
 +------------+-------------------------------------------------------------------+-----------------+
-| clk_fpga_0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            20.0 |
+| clk_fpga_0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
 +------------+-------------------------------------------------------------------+-----------------+
 
 
@@ -150,14 +150,14 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| CNN_top_module_wrapper   |     1.757 |
-|   CNN_top_module_i       |     1.757 |
-|     axi_cnn_0            |     0.225 |
-|       inst               |     0.225 |
-|     processing_system7_0 |     1.527 |
-|       inst               |     1.527 |
-|     ps7_0_axi_periph     |     0.004 |
-|       s00_couplers       |     0.004 |
+| CNN_top_module_wrapper   |     1.956 |
+|   CNN_top_module_i       |     1.956 |
+|     axi_cnn_0            |     0.417 |
+|       inst               |     0.417 |
+|     processing_system7_0 |     1.532 |
+|       inst               |     1.532 |
+|     ps7_0_axi_periph     |     0.008 |
+|       s00_couplers       |     0.008 |
 +--------------------------+-----------+
 
 
