@@ -10,7 +10,8 @@ function generate(v, r) {
     }
     r = +r > 0 ? Math.floor(+r): 0
     bodyReset();
-    const dataLength = 18; // because DSP48 only has 25x18 multiplier; 32 bit data will take 4 DSP units to implement 1 multiplier
+    const dataLength = 18; // because DSP48 only has 25x18 multiplier
+    // dataLength MUST BE >= 16; dataLength > 18 will result in multiple (4 for dataLength <= 36) DSP48 instances for implementation of 1 multiplier
     const fixedPoint = 10;
     /**
      * dataLength diatur menurut jenis data yang dipegang register:
@@ -22,7 +23,8 @@ function generate(v, r) {
      */    
     bodyPrint(`// maximum matrix size is ${v} by ${v} for image data and ${v - 1} by ${v - 1} for weight data`)
     bodyPrint(`// input data word length is ${dataLength} bits, uses ${dataLength} bits of register for each entry`)
-    bodyPrint(`// data is a fixed-point fraction with ${dataLength - fixedPoint} integer bits and ${fixedPoint} fraction bits`)
+    bodyPrint(`// input data is a fixed-point fraction with ${dataLength - fixedPoint} integer bits and ${fixedPoint} fraction bits`)
+    bodyPrint(`// output data is a fixed-point fraction with ${2 * (dataLength - fixedPoint)} integer bits and ${32 - 2 * (dataLength - fixedPoint)} fraction bits`)
     bodyPrint(`// accepted address range is [offset + 0x00000000, offset + 0x00ffffff) with jumps of 4 for each register`)
     bodyPrint(`// there are ${(v - 1) * (3 * v + 1) + 3} registers in this AXI node`)
     bodyPrint(`// input from clock that drives this system is masterClock`)
@@ -94,8 +96,8 @@ function generate(v, r) {
     bodyPrint(`// reg${2 * (v * v - v + 1)} to reg${(v - 1) * (3 * v + 1) + 2} will be processed data output`)
     // change to dynamic and change data length, if required
     for(dataReg = 0; dataReg <= (v - 1) * (3 * v + 1) + 2; dataReg++) {
-        bodyPrint(`reg [${dataLength - 1}:0] reg${dataReg};`)
-        dataReg < v * v ? bodyPrint(`wire [${dataLength - 1}:0] output${dataReg};`) : null;
+        dataReg < 2 * (v * v - v + 1) ? bodyPrint(`reg [${dataLength - 1}:0] reg${dataReg};`) : bodyPrint(`reg [31:0] reg${dataReg};`)
+        dataReg < v * v ? bodyPrint(`wire [${2 * dataLength - 1}:0] output${dataReg};`) : null;
     }
     // end dynamic change
     bodyPrint(`// ### AXI write ###########################################################`);
@@ -188,7 +190,11 @@ function generate(v, r) {
     // change to dynamic
     for(readReg = 0; readReg <= (v - 1) * (3 * v + 1) + 2; readReg++) {
         bodyPrint(`			C_ADDR_REG${readReg}:`);
-        bodyPrint(`             rdata <= {reg${readReg}, ${32 - dataLength}'b0};`);
+        if(readReg < 2 * (v * v - v + 1)) {
+            bodyPrint(`             rdata <= {reg${readReg}, ${32 - dataLength}'b0};`);
+        } else {
+            bodyPrint(`             rdata <= reg${readReg};`);
+        }
     }
     // end change
     bodyPrint(`		endcase`);
@@ -200,7 +206,7 @@ function generate(v, r) {
     bodyPrint(`    begin`);
     // change to dynamic
     for(resetReg = 0; resetReg <= (v - 1) * (3 * v + 1) + 2; resetReg++) {
-        bodyPrint(`        reg${resetReg} <= ${dataLength}'b0;`);
+        resetReg < 2 * (v * v - v + 1) ? bodyPrint(`        reg${resetReg} <= ${dataLength}'b0;`) : bodyPrint(`        reg${resetReg} <= 32'b0;`);
     }
     // end change
     bodyPrint(`    end`);
@@ -211,7 +217,7 @@ function generate(v, r) {
         if(writeReg < 2 * (v * v - v + 1)) {
             bodyPrint(`		reg${writeReg}[${dataLength - 1}:0] <= (s_axi_wdata[31:${32 - dataLength}] & wmask) | (reg${writeReg}[${dataLength - 1}:0] & ~wmask);`);
         } else {
-            bodyPrint(`		reg${writeReg}[${dataLength - 1}:0] <= (s_axi_wdata[31:${32 - dataLength}] & wmask) | (output${writeReg - 2 * (v * v - v + 1)} & ~wmask);`);
+            bodyPrint(`		reg${writeReg}[31:0] <= (s_axi_wdata[31:0] & wmask) | (output${writeReg - 2 * (v * v - v + 1)}[${2 * dataLength - 1}:${2 * dataLength - 32}] & ~wmask);`);
         }
         bodyPrint(`    end`);
     }
@@ -239,7 +245,7 @@ function generate(v, r) {
     let ioList = ""
     for(o = 0; o < v * v; o++) {
         opening = opening + `in${o}, wg${o}, out${o}, `
-        ioList = ioList + `input [${dataLength - 1}:0] in${o};` + "\n" + `input [${dataLength - 1}:0] wg${o};` + "\n" + `output [${dataLength - 1}:0] out${o};` + "\n"
+        ioList = ioList + `input [${dataLength - 1}:0] in${o};` + "\n" + `input [${dataLength - 1}:0] wg${o};` + "\n" + `output [${2 * dataLength - 1}:0] out${o};` + "\n"
     }
     bodyPrint(opening + `enabler, masterClock, masterReset);`)
     
@@ -247,7 +253,7 @@ function generate(v, r) {
     for(iny = 0; iny < v * v; iny++){
         bodyPrint(`reg [${dataLength - 1}:0] multxInput${iny};`)
     }
-    bodyPrint(`wire [${dataLength - 1}:0] outTemp;`)
+    bodyPrint(`wire [${2 * dataLength - 1}:0] outTemp;`)
     bodyPrint(`reg [${ceilLog2(v * v)}:0] counter;`)
     const workspace = new Array(v * v);
     for(i = 0; i < workspace.length; i++) {
@@ -322,9 +328,9 @@ function generate(v, r) {
     for(n = 0; n < v * v; n++) {
         bodyPrint(`input  [${dataLength - 1}:0]     d${n};`)
         bodyPrint(`input  [${dataLength - 1}:0]     i${n};`)
-        bodyPrint(`wire signed [${dataLength - 1}:0]     w${n};`)
+        bodyPrint(`wire signed [${2 * dataLength - 1}:0]     w${n};`)
         bodyPrint(`multiplier mult${n} (.in0(d${n}), .in1(i${n}), .out(w${n}));`)
-        bodyPrint(`reg signed [${dataLength - 1}:0]     w0_${n};`)
+        bodyPrint(`reg signed [${2 * dataLength - 1}:0]     w0_${n};`)
     }
     const layerCount = ceilLog2(v * v);
     let current = v * v;
@@ -336,20 +342,20 @@ function generate(v, r) {
         for(y = 0; y < current; y++) {
             if(2 * y + 1 < previous) {
                 if(r && !((x + 1) % r) && (x + 1) != layerCount) {
-                    bodyPrint(`reg signed [${dataLength - 1}:0]     w${x + 1}_${y};`)
-                    bodyPrint(`wire signed [${dataLength - 1}:0]     w${x + 1}_${y}d = w${x}_${2 * y} + w${x}_${2 * y + 1};`)
+                    bodyPrint(`reg signed [${2 * dataLength - 1}:0]     w${x + 1}_${y};`)
+                    bodyPrint(`wire signed [${2 * dataLength - 1}:0]     w${x + 1}_${y}d = w${x}_${2 * y} + w${x}_${2 * y + 1};`)
                     lhs.push(`w${x + 1}_${y}`)
                     rhs.push(`w${x + 1}_${y}d`)
                 } else {
-                    bodyPrint(`wire signed [${dataLength - 1}:0]     w${x + 1}_${y} = w${x}_${2 * y} + w${x}_${2 * y + 1};`)
+                    bodyPrint(`wire signed [${2 * dataLength - 1}:0]     w${x + 1}_${y} = w${x}_${2 * y} + w${x}_${2 * y + 1};`)
                 }
             } else {
                 if(r && !((x + 1) % r) && (x + 1) != layerCount) {
-                    bodyPrint(`reg signed [${dataLength - 1}:0]     w${x + 1}_${y};`)
+                    bodyPrint(`reg signed [${2 * dataLength - 1}:0]     w${x + 1}_${y};`)
                     lhs.push(`w${x + 1}_${y}`)
                     rhs.push(`w${x}_${2 * y}`)
                 } else {
-                    bodyPrint(`wire signed [${dataLength - 1}:0]     w${x + 1}_${y} = w${x}_${2 * y};`)
+                    bodyPrint(`wire signed [${2 * dataLength - 1}:0]     w${x + 1}_${y} = w${x}_${2 * y};`)
                 }
             }
         }
@@ -357,7 +363,7 @@ function generate(v, r) {
     }
     bodyPrint(`input clk;`)
     bodyPrint(`input rst;`)
-    bodyPrint(`output  [${dataLength - 1}:0]    out;`)
+    bodyPrint(`output  [${2 * dataLength - 1}:0]    out;`)
     bodyPrint(`// end of submodule parameter`)
 
     bodyPrint(`assign out = w${layerCount}_0;`)
@@ -365,10 +371,10 @@ function generate(v, r) {
     bodyPrint(`always @(posedge clk)`)
     bodyPrint(`   begin`)
     for(c = 0; c < v * v; c++) {
-        bodyPrint(`      w0_${c} <= rst ? w${c} : ${dataLength}'b0;`)
+        bodyPrint(`      w0_${c} <= rst ? w${c} : ${2 * dataLength}'b0;`)
     }
     lhs.forEach((entry, index) => {
-        bodyPrint(`      ${entry} <= rst ? ${rhs[index]} : ${dataLength}'b0;`)
+        bodyPrint(`      ${entry} <= rst ? ${rhs[index]} : ${2 * dataLength}'b0;`)
     })
     bodyPrint(`   end`)
     bodyPrint(`endmodule`)
@@ -376,20 +382,20 @@ function generate(v, r) {
     bodyPrint(`module multiplier(in0, in1, out);`)
     bodyPrint(`input [${dataLength - 1}:0] in0, in1;`)
     bodyPrint(`wire signed [${2 * dataLength - 1}:0] outMem = in0 * in1;`)
-    bodyPrint(`output [${dataLength - 1}:0] out;`)
-    bodyPrint(`assign out = outMem[${fixedPoint + dataLength - 1}:${fixedPoint}];`)
+    bodyPrint(`output [${2 * dataLength - 1}:0] out;`)
+    bodyPrint(`assign out = outMem;`)
     bodyPrint(`endmodule`)
 
     bodyPrint(`module mult2reg(in0, in1, sel, out, clk, rst);`)
-    bodyPrint(`input [${dataLength - 1}:0] in0, in1;`)
+    bodyPrint(`input [${2 * dataLength - 1}:0] in0, in1;`)
     bodyPrint(`input sel, clk, rst;`)
-    bodyPrint(`reg signed [${dataLength - 1}:0] outq;`)
-    bodyPrint(`output [${dataLength - 1}:0] out;`)
+    bodyPrint(`reg signed [${2 * dataLength - 1}:0] outq;`)
+    bodyPrint(`output [${2 * dataLength - 1}:0] out;`)
     bodyPrint(`assign out = outq;`)
 
     bodyPrint(`always @(posedge clk)`)
     bodyPrint(`   begin`)
-    bodyPrint(`      outq <= rst ? (sel ? in1 : in0) : ${dataLength}'b0;`)
+    bodyPrint(`      outq <= rst ? (sel ? in1 : in0) : ${2 * dataLength}'b0;`)
     bodyPrint(`   end`)
     bodyPrint(`endmodule`)
     console.log(Date.now() - start)
