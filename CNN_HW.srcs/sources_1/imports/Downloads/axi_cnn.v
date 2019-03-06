@@ -1,7 +1,8 @@
 
 // maximum matrix size is 8 by 8 for image data and 7 by 7 for weight data
 // input data word length is 18 bits, uses 18 bits of register for each entry
-// data is a fixed-point fraction with 8 integer bits and 10 fraction bits
+// input data is a fixed-point fraction with 8 integer bits and 10 fraction bits
+// output data is a fixed-point fraction with 16 integer bits and 16 fraction bits
 // accepted address range is [offset + 0x00000000, offset + 0x00ffffff) with jumps of 4 for each register
 // there are 178 registers in this AXI node
 // input from clock that drives this system is masterClock
@@ -242,133 +243,133 @@ wire ar_hs;
 // reg65 to reg113 will be weight data input
 // reg114 to reg177 will be processed data output
 reg [17:0] reg0;
-wire [17:0] output0;
+wire [35:0] output0;
 reg [17:0] reg1;
-wire [17:0] output1;
+wire [35:0] output1;
 reg [17:0] reg2;
-wire [17:0] output2;
+wire [35:0] output2;
 reg [17:0] reg3;
-wire [17:0] output3;
+wire [35:0] output3;
 reg [17:0] reg4;
-wire [17:0] output4;
+wire [35:0] output4;
 reg [17:0] reg5;
-wire [17:0] output5;
+wire [35:0] output5;
 reg [17:0] reg6;
-wire [17:0] output6;
+wire [35:0] output6;
 reg [17:0] reg7;
-wire [17:0] output7;
+wire [35:0] output7;
 reg [17:0] reg8;
-wire [17:0] output8;
+wire [35:0] output8;
 reg [17:0] reg9;
-wire [17:0] output9;
+wire [35:0] output9;
 reg [17:0] reg10;
-wire [17:0] output10;
+wire [35:0] output10;
 reg [17:0] reg11;
-wire [17:0] output11;
+wire [35:0] output11;
 reg [17:0] reg12;
-wire [17:0] output12;
+wire [35:0] output12;
 reg [17:0] reg13;
-wire [17:0] output13;
+wire [35:0] output13;
 reg [17:0] reg14;
-wire [17:0] output14;
+wire [35:0] output14;
 reg [17:0] reg15;
-wire [17:0] output15;
+wire [35:0] output15;
 reg [17:0] reg16;
-wire [17:0] output16;
+wire [35:0] output16;
 reg [17:0] reg17;
-wire [17:0] output17;
+wire [35:0] output17;
 reg [17:0] reg18;
-wire [17:0] output18;
+wire [35:0] output18;
 reg [17:0] reg19;
-wire [17:0] output19;
+wire [35:0] output19;
 reg [17:0] reg20;
-wire [17:0] output20;
+wire [35:0] output20;
 reg [17:0] reg21;
-wire [17:0] output21;
+wire [35:0] output21;
 reg [17:0] reg22;
-wire [17:0] output22;
+wire [35:0] output22;
 reg [17:0] reg23;
-wire [17:0] output23;
+wire [35:0] output23;
 reg [17:0] reg24;
-wire [17:0] output24;
+wire [35:0] output24;
 reg [17:0] reg25;
-wire [17:0] output25;
+wire [35:0] output25;
 reg [17:0] reg26;
-wire [17:0] output26;
+wire [35:0] output26;
 reg [17:0] reg27;
-wire [17:0] output27;
+wire [35:0] output27;
 reg [17:0] reg28;
-wire [17:0] output28;
+wire [35:0] output28;
 reg [17:0] reg29;
-wire [17:0] output29;
+wire [35:0] output29;
 reg [17:0] reg30;
-wire [17:0] output30;
+wire [35:0] output30;
 reg [17:0] reg31;
-wire [17:0] output31;
+wire [35:0] output31;
 reg [17:0] reg32;
-wire [17:0] output32;
+wire [35:0] output32;
 reg [17:0] reg33;
-wire [17:0] output33;
+wire [35:0] output33;
 reg [17:0] reg34;
-wire [17:0] output34;
+wire [35:0] output34;
 reg [17:0] reg35;
-wire [17:0] output35;
+wire [35:0] output35;
 reg [17:0] reg36;
-wire [17:0] output36;
+wire [35:0] output36;
 reg [17:0] reg37;
-wire [17:0] output37;
+wire [35:0] output37;
 reg [17:0] reg38;
-wire [17:0] output38;
+wire [35:0] output38;
 reg [17:0] reg39;
-wire [17:0] output39;
+wire [35:0] output39;
 reg [17:0] reg40;
-wire [17:0] output40;
+wire [35:0] output40;
 reg [17:0] reg41;
-wire [17:0] output41;
+wire [35:0] output41;
 reg [17:0] reg42;
-wire [17:0] output42;
+wire [35:0] output42;
 reg [17:0] reg43;
-wire [17:0] output43;
+wire [35:0] output43;
 reg [17:0] reg44;
-wire [17:0] output44;
+wire [35:0] output44;
 reg [17:0] reg45;
-wire [17:0] output45;
+wire [35:0] output45;
 reg [17:0] reg46;
-wire [17:0] output46;
+wire [35:0] output46;
 reg [17:0] reg47;
-wire [17:0] output47;
+wire [35:0] output47;
 reg [17:0] reg48;
-wire [17:0] output48;
+wire [35:0] output48;
 reg [17:0] reg49;
-wire [17:0] output49;
+wire [35:0] output49;
 reg [17:0] reg50;
-wire [17:0] output50;
+wire [35:0] output50;
 reg [17:0] reg51;
-wire [17:0] output51;
+wire [35:0] output51;
 reg [17:0] reg52;
-wire [17:0] output52;
+wire [35:0] output52;
 reg [17:0] reg53;
-wire [17:0] output53;
+wire [35:0] output53;
 reg [17:0] reg54;
-wire [17:0] output54;
+wire [35:0] output54;
 reg [17:0] reg55;
-wire [17:0] output55;
+wire [35:0] output55;
 reg [17:0] reg56;
-wire [17:0] output56;
+wire [35:0] output56;
 reg [17:0] reg57;
-wire [17:0] output57;
+wire [35:0] output57;
 reg [17:0] reg58;
-wire [17:0] output58;
+wire [35:0] output58;
 reg [17:0] reg59;
-wire [17:0] output59;
+wire [35:0] output59;
 reg [17:0] reg60;
-wire [17:0] output60;
+wire [35:0] output60;
 reg [17:0] reg61;
-wire [17:0] output61;
+wire [35:0] output61;
 reg [17:0] reg62;
-wire [17:0] output62;
+wire [35:0] output62;
 reg [17:0] reg63;
-wire [17:0] output63;
+wire [35:0] output63;
 reg [17:0] reg64;
 reg [17:0] reg65;
 reg [17:0] reg66;
@@ -419,70 +420,70 @@ reg [17:0] reg110;
 reg [17:0] reg111;
 reg [17:0] reg112;
 reg [17:0] reg113;
-reg [17:0] reg114;
-reg [17:0] reg115;
-reg [17:0] reg116;
-reg [17:0] reg117;
-reg [17:0] reg118;
-reg [17:0] reg119;
-reg [17:0] reg120;
-reg [17:0] reg121;
-reg [17:0] reg122;
-reg [17:0] reg123;
-reg [17:0] reg124;
-reg [17:0] reg125;
-reg [17:0] reg126;
-reg [17:0] reg127;
-reg [17:0] reg128;
-reg [17:0] reg129;
-reg [17:0] reg130;
-reg [17:0] reg131;
-reg [17:0] reg132;
-reg [17:0] reg133;
-reg [17:0] reg134;
-reg [17:0] reg135;
-reg [17:0] reg136;
-reg [17:0] reg137;
-reg [17:0] reg138;
-reg [17:0] reg139;
-reg [17:0] reg140;
-reg [17:0] reg141;
-reg [17:0] reg142;
-reg [17:0] reg143;
-reg [17:0] reg144;
-reg [17:0] reg145;
-reg [17:0] reg146;
-reg [17:0] reg147;
-reg [17:0] reg148;
-reg [17:0] reg149;
-reg [17:0] reg150;
-reg [17:0] reg151;
-reg [17:0] reg152;
-reg [17:0] reg153;
-reg [17:0] reg154;
-reg [17:0] reg155;
-reg [17:0] reg156;
-reg [17:0] reg157;
-reg [17:0] reg158;
-reg [17:0] reg159;
-reg [17:0] reg160;
-reg [17:0] reg161;
-reg [17:0] reg162;
-reg [17:0] reg163;
-reg [17:0] reg164;
-reg [17:0] reg165;
-reg [17:0] reg166;
-reg [17:0] reg167;
-reg [17:0] reg168;
-reg [17:0] reg169;
-reg [17:0] reg170;
-reg [17:0] reg171;
-reg [17:0] reg172;
-reg [17:0] reg173;
-reg [17:0] reg174;
-reg [17:0] reg175;
-reg [17:0] reg176;
-reg [17:0] reg177;
+reg [31:0] reg114;
+reg [31:0] reg115;
+reg [31:0] reg116;
+reg [31:0] reg117;
+reg [31:0] reg118;
+reg [31:0] reg119;
+reg [31:0] reg120;
+reg [31:0] reg121;
+reg [31:0] reg122;
+reg [31:0] reg123;
+reg [31:0] reg124;
+reg [31:0] reg125;
+reg [31:0] reg126;
+reg [31:0] reg127;
+reg [31:0] reg128;
+reg [31:0] reg129;
+reg [31:0] reg130;
+reg [31:0] reg131;
+reg [31:0] reg132;
+reg [31:0] reg133;
+reg [31:0] reg134;
+reg [31:0] reg135;
+reg [31:0] reg136;
+reg [31:0] reg137;
+reg [31:0] reg138;
+reg [31:0] reg139;
+reg [31:0] reg140;
+reg [31:0] reg141;
+reg [31:0] reg142;
+reg [31:0] reg143;
+reg [31:0] reg144;
+reg [31:0] reg145;
+reg [31:0] reg146;
+reg [31:0] reg147;
+reg [31:0] reg148;
+reg [31:0] reg149;
+reg [31:0] reg150;
+reg [31:0] reg151;
+reg [31:0] reg152;
+reg [31:0] reg153;
+reg [31:0] reg154;
+reg [31:0] reg155;
+reg [31:0] reg156;
+reg [31:0] reg157;
+reg [31:0] reg158;
+reg [31:0] reg159;
+reg [31:0] reg160;
+reg [31:0] reg161;
+reg [31:0] reg162;
+reg [31:0] reg163;
+reg [31:0] reg164;
+reg [31:0] reg165;
+reg [31:0] reg166;
+reg [31:0] reg167;
+reg [31:0] reg168;
+reg [31:0] reg169;
+reg [31:0] reg170;
+reg [31:0] reg171;
+reg [31:0] reg172;
+reg [31:0] reg173;
+reg [31:0] reg174;
+reg [31:0] reg175;
+reg [31:0] reg176;
+reg [31:0] reg177;
 // ### AXI write ###########################################################
 assign s_axi_awready = (wstate_cs == S_WRIDLE);
 assign s_axi_wready = (wstate_cs == S_WRDATA);
@@ -799,133 +800,133 @@ begin
 			C_ADDR_REG113:
              rdata <= {reg113, 14'b0};
 			C_ADDR_REG114:
-             rdata <= {reg114, 14'b0};
+             rdata <= reg114;
 			C_ADDR_REG115:
-             rdata <= {reg115, 14'b0};
+             rdata <= reg115;
 			C_ADDR_REG116:
-             rdata <= {reg116, 14'b0};
+             rdata <= reg116;
 			C_ADDR_REG117:
-             rdata <= {reg117, 14'b0};
+             rdata <= reg117;
 			C_ADDR_REG118:
-             rdata <= {reg118, 14'b0};
+             rdata <= reg118;
 			C_ADDR_REG119:
-             rdata <= {reg119, 14'b0};
+             rdata <= reg119;
 			C_ADDR_REG120:
-             rdata <= {reg120, 14'b0};
+             rdata <= reg120;
 			C_ADDR_REG121:
-             rdata <= {reg121, 14'b0};
+             rdata <= reg121;
 			C_ADDR_REG122:
-             rdata <= {reg122, 14'b0};
+             rdata <= reg122;
 			C_ADDR_REG123:
-             rdata <= {reg123, 14'b0};
+             rdata <= reg123;
 			C_ADDR_REG124:
-             rdata <= {reg124, 14'b0};
+             rdata <= reg124;
 			C_ADDR_REG125:
-             rdata <= {reg125, 14'b0};
+             rdata <= reg125;
 			C_ADDR_REG126:
-             rdata <= {reg126, 14'b0};
+             rdata <= reg126;
 			C_ADDR_REG127:
-             rdata <= {reg127, 14'b0};
+             rdata <= reg127;
 			C_ADDR_REG128:
-             rdata <= {reg128, 14'b0};
+             rdata <= reg128;
 			C_ADDR_REG129:
-             rdata <= {reg129, 14'b0};
+             rdata <= reg129;
 			C_ADDR_REG130:
-             rdata <= {reg130, 14'b0};
+             rdata <= reg130;
 			C_ADDR_REG131:
-             rdata <= {reg131, 14'b0};
+             rdata <= reg131;
 			C_ADDR_REG132:
-             rdata <= {reg132, 14'b0};
+             rdata <= reg132;
 			C_ADDR_REG133:
-             rdata <= {reg133, 14'b0};
+             rdata <= reg133;
 			C_ADDR_REG134:
-             rdata <= {reg134, 14'b0};
+             rdata <= reg134;
 			C_ADDR_REG135:
-             rdata <= {reg135, 14'b0};
+             rdata <= reg135;
 			C_ADDR_REG136:
-             rdata <= {reg136, 14'b0};
+             rdata <= reg136;
 			C_ADDR_REG137:
-             rdata <= {reg137, 14'b0};
+             rdata <= reg137;
 			C_ADDR_REG138:
-             rdata <= {reg138, 14'b0};
+             rdata <= reg138;
 			C_ADDR_REG139:
-             rdata <= {reg139, 14'b0};
+             rdata <= reg139;
 			C_ADDR_REG140:
-             rdata <= {reg140, 14'b0};
+             rdata <= reg140;
 			C_ADDR_REG141:
-             rdata <= {reg141, 14'b0};
+             rdata <= reg141;
 			C_ADDR_REG142:
-             rdata <= {reg142, 14'b0};
+             rdata <= reg142;
 			C_ADDR_REG143:
-             rdata <= {reg143, 14'b0};
+             rdata <= reg143;
 			C_ADDR_REG144:
-             rdata <= {reg144, 14'b0};
+             rdata <= reg144;
 			C_ADDR_REG145:
-             rdata <= {reg145, 14'b0};
+             rdata <= reg145;
 			C_ADDR_REG146:
-             rdata <= {reg146, 14'b0};
+             rdata <= reg146;
 			C_ADDR_REG147:
-             rdata <= {reg147, 14'b0};
+             rdata <= reg147;
 			C_ADDR_REG148:
-             rdata <= {reg148, 14'b0};
+             rdata <= reg148;
 			C_ADDR_REG149:
-             rdata <= {reg149, 14'b0};
+             rdata <= reg149;
 			C_ADDR_REG150:
-             rdata <= {reg150, 14'b0};
+             rdata <= reg150;
 			C_ADDR_REG151:
-             rdata <= {reg151, 14'b0};
+             rdata <= reg151;
 			C_ADDR_REG152:
-             rdata <= {reg152, 14'b0};
+             rdata <= reg152;
 			C_ADDR_REG153:
-             rdata <= {reg153, 14'b0};
+             rdata <= reg153;
 			C_ADDR_REG154:
-             rdata <= {reg154, 14'b0};
+             rdata <= reg154;
 			C_ADDR_REG155:
-             rdata <= {reg155, 14'b0};
+             rdata <= reg155;
 			C_ADDR_REG156:
-             rdata <= {reg156, 14'b0};
+             rdata <= reg156;
 			C_ADDR_REG157:
-             rdata <= {reg157, 14'b0};
+             rdata <= reg157;
 			C_ADDR_REG158:
-             rdata <= {reg158, 14'b0};
+             rdata <= reg158;
 			C_ADDR_REG159:
-             rdata <= {reg159, 14'b0};
+             rdata <= reg159;
 			C_ADDR_REG160:
-             rdata <= {reg160, 14'b0};
+             rdata <= reg160;
 			C_ADDR_REG161:
-             rdata <= {reg161, 14'b0};
+             rdata <= reg161;
 			C_ADDR_REG162:
-             rdata <= {reg162, 14'b0};
+             rdata <= reg162;
 			C_ADDR_REG163:
-             rdata <= {reg163, 14'b0};
+             rdata <= reg163;
 			C_ADDR_REG164:
-             rdata <= {reg164, 14'b0};
+             rdata <= reg164;
 			C_ADDR_REG165:
-             rdata <= {reg165, 14'b0};
+             rdata <= reg165;
 			C_ADDR_REG166:
-             rdata <= {reg166, 14'b0};
+             rdata <= reg166;
 			C_ADDR_REG167:
-             rdata <= {reg167, 14'b0};
+             rdata <= reg167;
 			C_ADDR_REG168:
-             rdata <= {reg168, 14'b0};
+             rdata <= reg168;
 			C_ADDR_REG169:
-             rdata <= {reg169, 14'b0};
+             rdata <= reg169;
 			C_ADDR_REG170:
-             rdata <= {reg170, 14'b0};
+             rdata <= reg170;
 			C_ADDR_REG171:
-             rdata <= {reg171, 14'b0};
+             rdata <= reg171;
 			C_ADDR_REG172:
-             rdata <= {reg172, 14'b0};
+             rdata <= reg172;
 			C_ADDR_REG173:
-             rdata <= {reg173, 14'b0};
+             rdata <= reg173;
 			C_ADDR_REG174:
-             rdata <= {reg174, 14'b0};
+             rdata <= reg174;
 			C_ADDR_REG175:
-             rdata <= {reg175, 14'b0};
+             rdata <= reg175;
 			C_ADDR_REG176:
-             rdata <= {reg176, 14'b0};
+             rdata <= reg176;
 			C_ADDR_REG177:
-             rdata <= {reg177, 14'b0};
+             rdata <= reg177;
 		endcase
 end
 // ### Registers ############################################################
@@ -1047,70 +1048,70 @@ begin
         reg111 <= 18'b0;
         reg112 <= 18'b0;
         reg113 <= 18'b0;
-        reg114 <= 18'b0;
-        reg115 <= 18'b0;
-        reg116 <= 18'b0;
-        reg117 <= 18'b0;
-        reg118 <= 18'b0;
-        reg119 <= 18'b0;
-        reg120 <= 18'b0;
-        reg121 <= 18'b0;
-        reg122 <= 18'b0;
-        reg123 <= 18'b0;
-        reg124 <= 18'b0;
-        reg125 <= 18'b0;
-        reg126 <= 18'b0;
-        reg127 <= 18'b0;
-        reg128 <= 18'b0;
-        reg129 <= 18'b0;
-        reg130 <= 18'b0;
-        reg131 <= 18'b0;
-        reg132 <= 18'b0;
-        reg133 <= 18'b0;
-        reg134 <= 18'b0;
-        reg135 <= 18'b0;
-        reg136 <= 18'b0;
-        reg137 <= 18'b0;
-        reg138 <= 18'b0;
-        reg139 <= 18'b0;
-        reg140 <= 18'b0;
-        reg141 <= 18'b0;
-        reg142 <= 18'b0;
-        reg143 <= 18'b0;
-        reg144 <= 18'b0;
-        reg145 <= 18'b0;
-        reg146 <= 18'b0;
-        reg147 <= 18'b0;
-        reg148 <= 18'b0;
-        reg149 <= 18'b0;
-        reg150 <= 18'b0;
-        reg151 <= 18'b0;
-        reg152 <= 18'b0;
-        reg153 <= 18'b0;
-        reg154 <= 18'b0;
-        reg155 <= 18'b0;
-        reg156 <= 18'b0;
-        reg157 <= 18'b0;
-        reg158 <= 18'b0;
-        reg159 <= 18'b0;
-        reg160 <= 18'b0;
-        reg161 <= 18'b0;
-        reg162 <= 18'b0;
-        reg163 <= 18'b0;
-        reg164 <= 18'b0;
-        reg165 <= 18'b0;
-        reg166 <= 18'b0;
-        reg167 <= 18'b0;
-        reg168 <= 18'b0;
-        reg169 <= 18'b0;
-        reg170 <= 18'b0;
-        reg171 <= 18'b0;
-        reg172 <= 18'b0;
-        reg173 <= 18'b0;
-        reg174 <= 18'b0;
-        reg175 <= 18'b0;
-        reg176 <= 18'b0;
-        reg177 <= 18'b0;
+        reg114 <= 32'b0;
+        reg115 <= 32'b0;
+        reg116 <= 32'b0;
+        reg117 <= 32'b0;
+        reg118 <= 32'b0;
+        reg119 <= 32'b0;
+        reg120 <= 32'b0;
+        reg121 <= 32'b0;
+        reg122 <= 32'b0;
+        reg123 <= 32'b0;
+        reg124 <= 32'b0;
+        reg125 <= 32'b0;
+        reg126 <= 32'b0;
+        reg127 <= 32'b0;
+        reg128 <= 32'b0;
+        reg129 <= 32'b0;
+        reg130 <= 32'b0;
+        reg131 <= 32'b0;
+        reg132 <= 32'b0;
+        reg133 <= 32'b0;
+        reg134 <= 32'b0;
+        reg135 <= 32'b0;
+        reg136 <= 32'b0;
+        reg137 <= 32'b0;
+        reg138 <= 32'b0;
+        reg139 <= 32'b0;
+        reg140 <= 32'b0;
+        reg141 <= 32'b0;
+        reg142 <= 32'b0;
+        reg143 <= 32'b0;
+        reg144 <= 32'b0;
+        reg145 <= 32'b0;
+        reg146 <= 32'b0;
+        reg147 <= 32'b0;
+        reg148 <= 32'b0;
+        reg149 <= 32'b0;
+        reg150 <= 32'b0;
+        reg151 <= 32'b0;
+        reg152 <= 32'b0;
+        reg153 <= 32'b0;
+        reg154 <= 32'b0;
+        reg155 <= 32'b0;
+        reg156 <= 32'b0;
+        reg157 <= 32'b0;
+        reg158 <= 32'b0;
+        reg159 <= 32'b0;
+        reg160 <= 32'b0;
+        reg161 <= 32'b0;
+        reg162 <= 32'b0;
+        reg163 <= 32'b0;
+        reg164 <= 32'b0;
+        reg165 <= 32'b0;
+        reg166 <= 32'b0;
+        reg167 <= 32'b0;
+        reg168 <= 32'b0;
+        reg169 <= 32'b0;
+        reg170 <= 32'b0;
+        reg171 <= 32'b0;
+        reg172 <= 32'b0;
+        reg173 <= 32'b0;
+        reg174 <= 32'b0;
+        reg175 <= 32'b0;
+        reg176 <= 32'b0;
+        reg177 <= 32'b0;
     end
 	else if (w_hs && waddr == C_ADDR_REG0)
 	   begin
@@ -1570,259 +1571,259 @@ begin
     end
 	else if (w_hs && waddr == C_ADDR_REG114)
 	   begin
-		reg114[17:0] <= (s_axi_wdata[31:14] & wmask) | (output0 & ~wmask);
+		reg114[31:0] <= (s_axi_wdata[31:0] & wmask) | (output0[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG115)
 	   begin
-		reg115[17:0] <= (s_axi_wdata[31:14] & wmask) | (output1 & ~wmask);
+		reg115[31:0] <= (s_axi_wdata[31:0] & wmask) | (output1[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG116)
 	   begin
-		reg116[17:0] <= (s_axi_wdata[31:14] & wmask) | (output2 & ~wmask);
+		reg116[31:0] <= (s_axi_wdata[31:0] & wmask) | (output2[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG117)
 	   begin
-		reg117[17:0] <= (s_axi_wdata[31:14] & wmask) | (output3 & ~wmask);
+		reg117[31:0] <= (s_axi_wdata[31:0] & wmask) | (output3[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG118)
 	   begin
-		reg118[17:0] <= (s_axi_wdata[31:14] & wmask) | (output4 & ~wmask);
+		reg118[31:0] <= (s_axi_wdata[31:0] & wmask) | (output4[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG119)
 	   begin
-		reg119[17:0] <= (s_axi_wdata[31:14] & wmask) | (output5 & ~wmask);
+		reg119[31:0] <= (s_axi_wdata[31:0] & wmask) | (output5[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG120)
 	   begin
-		reg120[17:0] <= (s_axi_wdata[31:14] & wmask) | (output6 & ~wmask);
+		reg120[31:0] <= (s_axi_wdata[31:0] & wmask) | (output6[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG121)
 	   begin
-		reg121[17:0] <= (s_axi_wdata[31:14] & wmask) | (output7 & ~wmask);
+		reg121[31:0] <= (s_axi_wdata[31:0] & wmask) | (output7[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG122)
 	   begin
-		reg122[17:0] <= (s_axi_wdata[31:14] & wmask) | (output8 & ~wmask);
+		reg122[31:0] <= (s_axi_wdata[31:0] & wmask) | (output8[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG123)
 	   begin
-		reg123[17:0] <= (s_axi_wdata[31:14] & wmask) | (output9 & ~wmask);
+		reg123[31:0] <= (s_axi_wdata[31:0] & wmask) | (output9[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG124)
 	   begin
-		reg124[17:0] <= (s_axi_wdata[31:14] & wmask) | (output10 & ~wmask);
+		reg124[31:0] <= (s_axi_wdata[31:0] & wmask) | (output10[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG125)
 	   begin
-		reg125[17:0] <= (s_axi_wdata[31:14] & wmask) | (output11 & ~wmask);
+		reg125[31:0] <= (s_axi_wdata[31:0] & wmask) | (output11[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG126)
 	   begin
-		reg126[17:0] <= (s_axi_wdata[31:14] & wmask) | (output12 & ~wmask);
+		reg126[31:0] <= (s_axi_wdata[31:0] & wmask) | (output12[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG127)
 	   begin
-		reg127[17:0] <= (s_axi_wdata[31:14] & wmask) | (output13 & ~wmask);
+		reg127[31:0] <= (s_axi_wdata[31:0] & wmask) | (output13[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG128)
 	   begin
-		reg128[17:0] <= (s_axi_wdata[31:14] & wmask) | (output14 & ~wmask);
+		reg128[31:0] <= (s_axi_wdata[31:0] & wmask) | (output14[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG129)
 	   begin
-		reg129[17:0] <= (s_axi_wdata[31:14] & wmask) | (output15 & ~wmask);
+		reg129[31:0] <= (s_axi_wdata[31:0] & wmask) | (output15[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG130)
 	   begin
-		reg130[17:0] <= (s_axi_wdata[31:14] & wmask) | (output16 & ~wmask);
+		reg130[31:0] <= (s_axi_wdata[31:0] & wmask) | (output16[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG131)
 	   begin
-		reg131[17:0] <= (s_axi_wdata[31:14] & wmask) | (output17 & ~wmask);
+		reg131[31:0] <= (s_axi_wdata[31:0] & wmask) | (output17[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG132)
 	   begin
-		reg132[17:0] <= (s_axi_wdata[31:14] & wmask) | (output18 & ~wmask);
+		reg132[31:0] <= (s_axi_wdata[31:0] & wmask) | (output18[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG133)
 	   begin
-		reg133[17:0] <= (s_axi_wdata[31:14] & wmask) | (output19 & ~wmask);
+		reg133[31:0] <= (s_axi_wdata[31:0] & wmask) | (output19[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG134)
 	   begin
-		reg134[17:0] <= (s_axi_wdata[31:14] & wmask) | (output20 & ~wmask);
+		reg134[31:0] <= (s_axi_wdata[31:0] & wmask) | (output20[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG135)
 	   begin
-		reg135[17:0] <= (s_axi_wdata[31:14] & wmask) | (output21 & ~wmask);
+		reg135[31:0] <= (s_axi_wdata[31:0] & wmask) | (output21[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG136)
 	   begin
-		reg136[17:0] <= (s_axi_wdata[31:14] & wmask) | (output22 & ~wmask);
+		reg136[31:0] <= (s_axi_wdata[31:0] & wmask) | (output22[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG137)
 	   begin
-		reg137[17:0] <= (s_axi_wdata[31:14] & wmask) | (output23 & ~wmask);
+		reg137[31:0] <= (s_axi_wdata[31:0] & wmask) | (output23[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG138)
 	   begin
-		reg138[17:0] <= (s_axi_wdata[31:14] & wmask) | (output24 & ~wmask);
+		reg138[31:0] <= (s_axi_wdata[31:0] & wmask) | (output24[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG139)
 	   begin
-		reg139[17:0] <= (s_axi_wdata[31:14] & wmask) | (output25 & ~wmask);
+		reg139[31:0] <= (s_axi_wdata[31:0] & wmask) | (output25[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG140)
 	   begin
-		reg140[17:0] <= (s_axi_wdata[31:14] & wmask) | (output26 & ~wmask);
+		reg140[31:0] <= (s_axi_wdata[31:0] & wmask) | (output26[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG141)
 	   begin
-		reg141[17:0] <= (s_axi_wdata[31:14] & wmask) | (output27 & ~wmask);
+		reg141[31:0] <= (s_axi_wdata[31:0] & wmask) | (output27[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG142)
 	   begin
-		reg142[17:0] <= (s_axi_wdata[31:14] & wmask) | (output28 & ~wmask);
+		reg142[31:0] <= (s_axi_wdata[31:0] & wmask) | (output28[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG143)
 	   begin
-		reg143[17:0] <= (s_axi_wdata[31:14] & wmask) | (output29 & ~wmask);
+		reg143[31:0] <= (s_axi_wdata[31:0] & wmask) | (output29[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG144)
 	   begin
-		reg144[17:0] <= (s_axi_wdata[31:14] & wmask) | (output30 & ~wmask);
+		reg144[31:0] <= (s_axi_wdata[31:0] & wmask) | (output30[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG145)
 	   begin
-		reg145[17:0] <= (s_axi_wdata[31:14] & wmask) | (output31 & ~wmask);
+		reg145[31:0] <= (s_axi_wdata[31:0] & wmask) | (output31[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG146)
 	   begin
-		reg146[17:0] <= (s_axi_wdata[31:14] & wmask) | (output32 & ~wmask);
+		reg146[31:0] <= (s_axi_wdata[31:0] & wmask) | (output32[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG147)
 	   begin
-		reg147[17:0] <= (s_axi_wdata[31:14] & wmask) | (output33 & ~wmask);
+		reg147[31:0] <= (s_axi_wdata[31:0] & wmask) | (output33[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG148)
 	   begin
-		reg148[17:0] <= (s_axi_wdata[31:14] & wmask) | (output34 & ~wmask);
+		reg148[31:0] <= (s_axi_wdata[31:0] & wmask) | (output34[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG149)
 	   begin
-		reg149[17:0] <= (s_axi_wdata[31:14] & wmask) | (output35 & ~wmask);
+		reg149[31:0] <= (s_axi_wdata[31:0] & wmask) | (output35[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG150)
 	   begin
-		reg150[17:0] <= (s_axi_wdata[31:14] & wmask) | (output36 & ~wmask);
+		reg150[31:0] <= (s_axi_wdata[31:0] & wmask) | (output36[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG151)
 	   begin
-		reg151[17:0] <= (s_axi_wdata[31:14] & wmask) | (output37 & ~wmask);
+		reg151[31:0] <= (s_axi_wdata[31:0] & wmask) | (output37[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG152)
 	   begin
-		reg152[17:0] <= (s_axi_wdata[31:14] & wmask) | (output38 & ~wmask);
+		reg152[31:0] <= (s_axi_wdata[31:0] & wmask) | (output38[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG153)
 	   begin
-		reg153[17:0] <= (s_axi_wdata[31:14] & wmask) | (output39 & ~wmask);
+		reg153[31:0] <= (s_axi_wdata[31:0] & wmask) | (output39[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG154)
 	   begin
-		reg154[17:0] <= (s_axi_wdata[31:14] & wmask) | (output40 & ~wmask);
+		reg154[31:0] <= (s_axi_wdata[31:0] & wmask) | (output40[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG155)
 	   begin
-		reg155[17:0] <= (s_axi_wdata[31:14] & wmask) | (output41 & ~wmask);
+		reg155[31:0] <= (s_axi_wdata[31:0] & wmask) | (output41[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG156)
 	   begin
-		reg156[17:0] <= (s_axi_wdata[31:14] & wmask) | (output42 & ~wmask);
+		reg156[31:0] <= (s_axi_wdata[31:0] & wmask) | (output42[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG157)
 	   begin
-		reg157[17:0] <= (s_axi_wdata[31:14] & wmask) | (output43 & ~wmask);
+		reg157[31:0] <= (s_axi_wdata[31:0] & wmask) | (output43[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG158)
 	   begin
-		reg158[17:0] <= (s_axi_wdata[31:14] & wmask) | (output44 & ~wmask);
+		reg158[31:0] <= (s_axi_wdata[31:0] & wmask) | (output44[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG159)
 	   begin
-		reg159[17:0] <= (s_axi_wdata[31:14] & wmask) | (output45 & ~wmask);
+		reg159[31:0] <= (s_axi_wdata[31:0] & wmask) | (output45[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG160)
 	   begin
-		reg160[17:0] <= (s_axi_wdata[31:14] & wmask) | (output46 & ~wmask);
+		reg160[31:0] <= (s_axi_wdata[31:0] & wmask) | (output46[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG161)
 	   begin
-		reg161[17:0] <= (s_axi_wdata[31:14] & wmask) | (output47 & ~wmask);
+		reg161[31:0] <= (s_axi_wdata[31:0] & wmask) | (output47[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG162)
 	   begin
-		reg162[17:0] <= (s_axi_wdata[31:14] & wmask) | (output48 & ~wmask);
+		reg162[31:0] <= (s_axi_wdata[31:0] & wmask) | (output48[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG163)
 	   begin
-		reg163[17:0] <= (s_axi_wdata[31:14] & wmask) | (output49 & ~wmask);
+		reg163[31:0] <= (s_axi_wdata[31:0] & wmask) | (output49[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG164)
 	   begin
-		reg164[17:0] <= (s_axi_wdata[31:14] & wmask) | (output50 & ~wmask);
+		reg164[31:0] <= (s_axi_wdata[31:0] & wmask) | (output50[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG165)
 	   begin
-		reg165[17:0] <= (s_axi_wdata[31:14] & wmask) | (output51 & ~wmask);
+		reg165[31:0] <= (s_axi_wdata[31:0] & wmask) | (output51[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG166)
 	   begin
-		reg166[17:0] <= (s_axi_wdata[31:14] & wmask) | (output52 & ~wmask);
+		reg166[31:0] <= (s_axi_wdata[31:0] & wmask) | (output52[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG167)
 	   begin
-		reg167[17:0] <= (s_axi_wdata[31:14] & wmask) | (output53 & ~wmask);
+		reg167[31:0] <= (s_axi_wdata[31:0] & wmask) | (output53[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG168)
 	   begin
-		reg168[17:0] <= (s_axi_wdata[31:14] & wmask) | (output54 & ~wmask);
+		reg168[31:0] <= (s_axi_wdata[31:0] & wmask) | (output54[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG169)
 	   begin
-		reg169[17:0] <= (s_axi_wdata[31:14] & wmask) | (output55 & ~wmask);
+		reg169[31:0] <= (s_axi_wdata[31:0] & wmask) | (output55[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG170)
 	   begin
-		reg170[17:0] <= (s_axi_wdata[31:14] & wmask) | (output56 & ~wmask);
+		reg170[31:0] <= (s_axi_wdata[31:0] & wmask) | (output56[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG171)
 	   begin
-		reg171[17:0] <= (s_axi_wdata[31:14] & wmask) | (output57 & ~wmask);
+		reg171[31:0] <= (s_axi_wdata[31:0] & wmask) | (output57[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG172)
 	   begin
-		reg172[17:0] <= (s_axi_wdata[31:14] & wmask) | (output58 & ~wmask);
+		reg172[31:0] <= (s_axi_wdata[31:0] & wmask) | (output58[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG173)
 	   begin
-		reg173[17:0] <= (s_axi_wdata[31:14] & wmask) | (output59 & ~wmask);
+		reg173[31:0] <= (s_axi_wdata[31:0] & wmask) | (output59[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG174)
 	   begin
-		reg174[17:0] <= (s_axi_wdata[31:14] & wmask) | (output60 & ~wmask);
+		reg174[31:0] <= (s_axi_wdata[31:0] & wmask) | (output60[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG175)
 	   begin
-		reg175[17:0] <= (s_axi_wdata[31:14] & wmask) | (output61 & ~wmask);
+		reg175[31:0] <= (s_axi_wdata[31:0] & wmask) | (output61[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG176)
 	   begin
-		reg176[17:0] <= (s_axi_wdata[31:14] & wmask) | (output62 & ~wmask);
+		reg176[31:0] <= (s_axi_wdata[31:0] & wmask) | (output62[35:4] & ~wmask);
     end
 	else if (w_hs && waddr == C_ADDR_REG177)
 	   begin
-		reg177[17:0] <= (s_axi_wdata[31:14] & wmask) | (output63 & ~wmask);
+		reg177[31:0] <= (s_axi_wdata[31:0] & wmask) | (output63[35:4] & ~wmask);
     end
 end    
 // core module instance
@@ -2029,196 +2030,196 @@ endmodule
 module convmultCore(in0, wg0, out0, in1, wg1, out1, in2, wg2, out2, in3, wg3, out3, in4, wg4, out4, in5, wg5, out5, in6, wg6, out6, in7, wg7, out7, in8, wg8, out8, in9, wg9, out9, in10, wg10, out10, in11, wg11, out11, in12, wg12, out12, in13, wg13, out13, in14, wg14, out14, in15, wg15, out15, in16, wg16, out16, in17, wg17, out17, in18, wg18, out18, in19, wg19, out19, in20, wg20, out20, in21, wg21, out21, in22, wg22, out22, in23, wg23, out23, in24, wg24, out24, in25, wg25, out25, in26, wg26, out26, in27, wg27, out27, in28, wg28, out28, in29, wg29, out29, in30, wg30, out30, in31, wg31, out31, in32, wg32, out32, in33, wg33, out33, in34, wg34, out34, in35, wg35, out35, in36, wg36, out36, in37, wg37, out37, in38, wg38, out38, in39, wg39, out39, in40, wg40, out40, in41, wg41, out41, in42, wg42, out42, in43, wg43, out43, in44, wg44, out44, in45, wg45, out45, in46, wg46, out46, in47, wg47, out47, in48, wg48, out48, in49, wg49, out49, in50, wg50, out50, in51, wg51, out51, in52, wg52, out52, in53, wg53, out53, in54, wg54, out54, in55, wg55, out55, in56, wg56, out56, in57, wg57, out57, in58, wg58, out58, in59, wg59, out59, in60, wg60, out60, in61, wg61, out61, in62, wg62, out62, in63, wg63, out63, enabler, masterClock, masterReset);
 input [17:0] in0;
 input [17:0] wg0;
-output [17:0] out0;
+output [35:0] out0;
 input [17:0] in1;
 input [17:0] wg1;
-output [17:0] out1;
+output [35:0] out1;
 input [17:0] in2;
 input [17:0] wg2;
-output [17:0] out2;
+output [35:0] out2;
 input [17:0] in3;
 input [17:0] wg3;
-output [17:0] out3;
+output [35:0] out3;
 input [17:0] in4;
 input [17:0] wg4;
-output [17:0] out4;
+output [35:0] out4;
 input [17:0] in5;
 input [17:0] wg5;
-output [17:0] out5;
+output [35:0] out5;
 input [17:0] in6;
 input [17:0] wg6;
-output [17:0] out6;
+output [35:0] out6;
 input [17:0] in7;
 input [17:0] wg7;
-output [17:0] out7;
+output [35:0] out7;
 input [17:0] in8;
 input [17:0] wg8;
-output [17:0] out8;
+output [35:0] out8;
 input [17:0] in9;
 input [17:0] wg9;
-output [17:0] out9;
+output [35:0] out9;
 input [17:0] in10;
 input [17:0] wg10;
-output [17:0] out10;
+output [35:0] out10;
 input [17:0] in11;
 input [17:0] wg11;
-output [17:0] out11;
+output [35:0] out11;
 input [17:0] in12;
 input [17:0] wg12;
-output [17:0] out12;
+output [35:0] out12;
 input [17:0] in13;
 input [17:0] wg13;
-output [17:0] out13;
+output [35:0] out13;
 input [17:0] in14;
 input [17:0] wg14;
-output [17:0] out14;
+output [35:0] out14;
 input [17:0] in15;
 input [17:0] wg15;
-output [17:0] out15;
+output [35:0] out15;
 input [17:0] in16;
 input [17:0] wg16;
-output [17:0] out16;
+output [35:0] out16;
 input [17:0] in17;
 input [17:0] wg17;
-output [17:0] out17;
+output [35:0] out17;
 input [17:0] in18;
 input [17:0] wg18;
-output [17:0] out18;
+output [35:0] out18;
 input [17:0] in19;
 input [17:0] wg19;
-output [17:0] out19;
+output [35:0] out19;
 input [17:0] in20;
 input [17:0] wg20;
-output [17:0] out20;
+output [35:0] out20;
 input [17:0] in21;
 input [17:0] wg21;
-output [17:0] out21;
+output [35:0] out21;
 input [17:0] in22;
 input [17:0] wg22;
-output [17:0] out22;
+output [35:0] out22;
 input [17:0] in23;
 input [17:0] wg23;
-output [17:0] out23;
+output [35:0] out23;
 input [17:0] in24;
 input [17:0] wg24;
-output [17:0] out24;
+output [35:0] out24;
 input [17:0] in25;
 input [17:0] wg25;
-output [17:0] out25;
+output [35:0] out25;
 input [17:0] in26;
 input [17:0] wg26;
-output [17:0] out26;
+output [35:0] out26;
 input [17:0] in27;
 input [17:0] wg27;
-output [17:0] out27;
+output [35:0] out27;
 input [17:0] in28;
 input [17:0] wg28;
-output [17:0] out28;
+output [35:0] out28;
 input [17:0] in29;
 input [17:0] wg29;
-output [17:0] out29;
+output [35:0] out29;
 input [17:0] in30;
 input [17:0] wg30;
-output [17:0] out30;
+output [35:0] out30;
 input [17:0] in31;
 input [17:0] wg31;
-output [17:0] out31;
+output [35:0] out31;
 input [17:0] in32;
 input [17:0] wg32;
-output [17:0] out32;
+output [35:0] out32;
 input [17:0] in33;
 input [17:0] wg33;
-output [17:0] out33;
+output [35:0] out33;
 input [17:0] in34;
 input [17:0] wg34;
-output [17:0] out34;
+output [35:0] out34;
 input [17:0] in35;
 input [17:0] wg35;
-output [17:0] out35;
+output [35:0] out35;
 input [17:0] in36;
 input [17:0] wg36;
-output [17:0] out36;
+output [35:0] out36;
 input [17:0] in37;
 input [17:0] wg37;
-output [17:0] out37;
+output [35:0] out37;
 input [17:0] in38;
 input [17:0] wg38;
-output [17:0] out38;
+output [35:0] out38;
 input [17:0] in39;
 input [17:0] wg39;
-output [17:0] out39;
+output [35:0] out39;
 input [17:0] in40;
 input [17:0] wg40;
-output [17:0] out40;
+output [35:0] out40;
 input [17:0] in41;
 input [17:0] wg41;
-output [17:0] out41;
+output [35:0] out41;
 input [17:0] in42;
 input [17:0] wg42;
-output [17:0] out42;
+output [35:0] out42;
 input [17:0] in43;
 input [17:0] wg43;
-output [17:0] out43;
+output [35:0] out43;
 input [17:0] in44;
 input [17:0] wg44;
-output [17:0] out44;
+output [35:0] out44;
 input [17:0] in45;
 input [17:0] wg45;
-output [17:0] out45;
+output [35:0] out45;
 input [17:0] in46;
 input [17:0] wg46;
-output [17:0] out46;
+output [35:0] out46;
 input [17:0] in47;
 input [17:0] wg47;
-output [17:0] out47;
+output [35:0] out47;
 input [17:0] in48;
 input [17:0] wg48;
-output [17:0] out48;
+output [35:0] out48;
 input [17:0] in49;
 input [17:0] wg49;
-output [17:0] out49;
+output [35:0] out49;
 input [17:0] in50;
 input [17:0] wg50;
-output [17:0] out50;
+output [35:0] out50;
 input [17:0] in51;
 input [17:0] wg51;
-output [17:0] out51;
+output [35:0] out51;
 input [17:0] in52;
 input [17:0] wg52;
-output [17:0] out52;
+output [35:0] out52;
 input [17:0] in53;
 input [17:0] wg53;
-output [17:0] out53;
+output [35:0] out53;
 input [17:0] in54;
 input [17:0] wg54;
-output [17:0] out54;
+output [35:0] out54;
 input [17:0] in55;
 input [17:0] wg55;
-output [17:0] out55;
+output [35:0] out55;
 input [17:0] in56;
 input [17:0] wg56;
-output [17:0] out56;
+output [35:0] out56;
 input [17:0] in57;
 input [17:0] wg57;
-output [17:0] out57;
+output [35:0] out57;
 input [17:0] in58;
 input [17:0] wg58;
-output [17:0] out58;
+output [35:0] out58;
 input [17:0] in59;
 input [17:0] wg59;
-output [17:0] out59;
+output [35:0] out59;
 input [17:0] in60;
 input [17:0] wg60;
-output [17:0] out60;
+output [35:0] out60;
 input [17:0] in61;
 input [17:0] wg61;
-output [17:0] out61;
+output [35:0] out61;
 input [17:0] in62;
 input [17:0] wg62;
-output [17:0] out62;
+output [35:0] out62;
 input [17:0] in63;
 input [17:0] wg63;
-output [17:0] out63;
+output [35:0] out63;
 input masterClock;
 input masterReset;
 input enabler;
@@ -2287,7 +2288,7 @@ reg [17:0] multxInput60;
 reg [17:0] multxInput61;
 reg [17:0] multxInput62;
 reg [17:0] multxInput63;
-wire [17:0] outTemp;
+wire [35:0] outTemp;
 reg [6:0] counter;
 mult2reg outMult0 (
    .in0(out0),
@@ -7489,514 +7490,514 @@ endmodule
 module multx(d0, i0, d1, i1, d2, i2, d3, i3, d4, i4, d5, i5, d6, i6, d7, i7, d8, i8, d9, i9, d10, i10, d11, i11, d12, i12, d13, i13, d14, i14, d15, i15, d16, i16, d17, i17, d18, i18, d19, i19, d20, i20, d21, i21, d22, i22, d23, i23, d24, i24, d25, i25, d26, i26, d27, i27, d28, i28, d29, i29, d30, i30, d31, i31, d32, i32, d33, i33, d34, i34, d35, i35, d36, i36, d37, i37, d38, i38, d39, i39, d40, i40, d41, i41, d42, i42, d43, i43, d44, i44, d45, i45, d46, i46, d47, i47, d48, i48, d49, i49, d50, i50, d51, i51, d52, i52, d53, i53, d54, i54, d55, i55, d56, i56, d57, i57, d58, i58, d59, i59, d60, i60, d61, i61, d62, i62, d63, i63, out, clk, rst);
 input  [17:0]     d0;
 input  [17:0]     i0;
-wire signed [17:0]     w0;
+wire signed [35:0]     w0;
 multiplier mult0 (.in0(d0), .in1(i0), .out(w0));
-reg signed [17:0]     w0_0;
+reg signed [35:0]     w0_0;
 input  [17:0]     d1;
 input  [17:0]     i1;
-wire signed [17:0]     w1;
+wire signed [35:0]     w1;
 multiplier mult1 (.in0(d1), .in1(i1), .out(w1));
-reg signed [17:0]     w0_1;
+reg signed [35:0]     w0_1;
 input  [17:0]     d2;
 input  [17:0]     i2;
-wire signed [17:0]     w2;
+wire signed [35:0]     w2;
 multiplier mult2 (.in0(d2), .in1(i2), .out(w2));
-reg signed [17:0]     w0_2;
+reg signed [35:0]     w0_2;
 input  [17:0]     d3;
 input  [17:0]     i3;
-wire signed [17:0]     w3;
+wire signed [35:0]     w3;
 multiplier mult3 (.in0(d3), .in1(i3), .out(w3));
-reg signed [17:0]     w0_3;
+reg signed [35:0]     w0_3;
 input  [17:0]     d4;
 input  [17:0]     i4;
-wire signed [17:0]     w4;
+wire signed [35:0]     w4;
 multiplier mult4 (.in0(d4), .in1(i4), .out(w4));
-reg signed [17:0]     w0_4;
+reg signed [35:0]     w0_4;
 input  [17:0]     d5;
 input  [17:0]     i5;
-wire signed [17:0]     w5;
+wire signed [35:0]     w5;
 multiplier mult5 (.in0(d5), .in1(i5), .out(w5));
-reg signed [17:0]     w0_5;
+reg signed [35:0]     w0_5;
 input  [17:0]     d6;
 input  [17:0]     i6;
-wire signed [17:0]     w6;
+wire signed [35:0]     w6;
 multiplier mult6 (.in0(d6), .in1(i6), .out(w6));
-reg signed [17:0]     w0_6;
+reg signed [35:0]     w0_6;
 input  [17:0]     d7;
 input  [17:0]     i7;
-wire signed [17:0]     w7;
+wire signed [35:0]     w7;
 multiplier mult7 (.in0(d7), .in1(i7), .out(w7));
-reg signed [17:0]     w0_7;
+reg signed [35:0]     w0_7;
 input  [17:0]     d8;
 input  [17:0]     i8;
-wire signed [17:0]     w8;
+wire signed [35:0]     w8;
 multiplier mult8 (.in0(d8), .in1(i8), .out(w8));
-reg signed [17:0]     w0_8;
+reg signed [35:0]     w0_8;
 input  [17:0]     d9;
 input  [17:0]     i9;
-wire signed [17:0]     w9;
+wire signed [35:0]     w9;
 multiplier mult9 (.in0(d9), .in1(i9), .out(w9));
-reg signed [17:0]     w0_9;
+reg signed [35:0]     w0_9;
 input  [17:0]     d10;
 input  [17:0]     i10;
-wire signed [17:0]     w10;
+wire signed [35:0]     w10;
 multiplier mult10 (.in0(d10), .in1(i10), .out(w10));
-reg signed [17:0]     w0_10;
+reg signed [35:0]     w0_10;
 input  [17:0]     d11;
 input  [17:0]     i11;
-wire signed [17:0]     w11;
+wire signed [35:0]     w11;
 multiplier mult11 (.in0(d11), .in1(i11), .out(w11));
-reg signed [17:0]     w0_11;
+reg signed [35:0]     w0_11;
 input  [17:0]     d12;
 input  [17:0]     i12;
-wire signed [17:0]     w12;
+wire signed [35:0]     w12;
 multiplier mult12 (.in0(d12), .in1(i12), .out(w12));
-reg signed [17:0]     w0_12;
+reg signed [35:0]     w0_12;
 input  [17:0]     d13;
 input  [17:0]     i13;
-wire signed [17:0]     w13;
+wire signed [35:0]     w13;
 multiplier mult13 (.in0(d13), .in1(i13), .out(w13));
-reg signed [17:0]     w0_13;
+reg signed [35:0]     w0_13;
 input  [17:0]     d14;
 input  [17:0]     i14;
-wire signed [17:0]     w14;
+wire signed [35:0]     w14;
 multiplier mult14 (.in0(d14), .in1(i14), .out(w14));
-reg signed [17:0]     w0_14;
+reg signed [35:0]     w0_14;
 input  [17:0]     d15;
 input  [17:0]     i15;
-wire signed [17:0]     w15;
+wire signed [35:0]     w15;
 multiplier mult15 (.in0(d15), .in1(i15), .out(w15));
-reg signed [17:0]     w0_15;
+reg signed [35:0]     w0_15;
 input  [17:0]     d16;
 input  [17:0]     i16;
-wire signed [17:0]     w16;
+wire signed [35:0]     w16;
 multiplier mult16 (.in0(d16), .in1(i16), .out(w16));
-reg signed [17:0]     w0_16;
+reg signed [35:0]     w0_16;
 input  [17:0]     d17;
 input  [17:0]     i17;
-wire signed [17:0]     w17;
+wire signed [35:0]     w17;
 multiplier mult17 (.in0(d17), .in1(i17), .out(w17));
-reg signed [17:0]     w0_17;
+reg signed [35:0]     w0_17;
 input  [17:0]     d18;
 input  [17:0]     i18;
-wire signed [17:0]     w18;
+wire signed [35:0]     w18;
 multiplier mult18 (.in0(d18), .in1(i18), .out(w18));
-reg signed [17:0]     w0_18;
+reg signed [35:0]     w0_18;
 input  [17:0]     d19;
 input  [17:0]     i19;
-wire signed [17:0]     w19;
+wire signed [35:0]     w19;
 multiplier mult19 (.in0(d19), .in1(i19), .out(w19));
-reg signed [17:0]     w0_19;
+reg signed [35:0]     w0_19;
 input  [17:0]     d20;
 input  [17:0]     i20;
-wire signed [17:0]     w20;
+wire signed [35:0]     w20;
 multiplier mult20 (.in0(d20), .in1(i20), .out(w20));
-reg signed [17:0]     w0_20;
+reg signed [35:0]     w0_20;
 input  [17:0]     d21;
 input  [17:0]     i21;
-wire signed [17:0]     w21;
+wire signed [35:0]     w21;
 multiplier mult21 (.in0(d21), .in1(i21), .out(w21));
-reg signed [17:0]     w0_21;
+reg signed [35:0]     w0_21;
 input  [17:0]     d22;
 input  [17:0]     i22;
-wire signed [17:0]     w22;
+wire signed [35:0]     w22;
 multiplier mult22 (.in0(d22), .in1(i22), .out(w22));
-reg signed [17:0]     w0_22;
+reg signed [35:0]     w0_22;
 input  [17:0]     d23;
 input  [17:0]     i23;
-wire signed [17:0]     w23;
+wire signed [35:0]     w23;
 multiplier mult23 (.in0(d23), .in1(i23), .out(w23));
-reg signed [17:0]     w0_23;
+reg signed [35:0]     w0_23;
 input  [17:0]     d24;
 input  [17:0]     i24;
-wire signed [17:0]     w24;
+wire signed [35:0]     w24;
 multiplier mult24 (.in0(d24), .in1(i24), .out(w24));
-reg signed [17:0]     w0_24;
+reg signed [35:0]     w0_24;
 input  [17:0]     d25;
 input  [17:0]     i25;
-wire signed [17:0]     w25;
+wire signed [35:0]     w25;
 multiplier mult25 (.in0(d25), .in1(i25), .out(w25));
-reg signed [17:0]     w0_25;
+reg signed [35:0]     w0_25;
 input  [17:0]     d26;
 input  [17:0]     i26;
-wire signed [17:0]     w26;
+wire signed [35:0]     w26;
 multiplier mult26 (.in0(d26), .in1(i26), .out(w26));
-reg signed [17:0]     w0_26;
+reg signed [35:0]     w0_26;
 input  [17:0]     d27;
 input  [17:0]     i27;
-wire signed [17:0]     w27;
+wire signed [35:0]     w27;
 multiplier mult27 (.in0(d27), .in1(i27), .out(w27));
-reg signed [17:0]     w0_27;
+reg signed [35:0]     w0_27;
 input  [17:0]     d28;
 input  [17:0]     i28;
-wire signed [17:0]     w28;
+wire signed [35:0]     w28;
 multiplier mult28 (.in0(d28), .in1(i28), .out(w28));
-reg signed [17:0]     w0_28;
+reg signed [35:0]     w0_28;
 input  [17:0]     d29;
 input  [17:0]     i29;
-wire signed [17:0]     w29;
+wire signed [35:0]     w29;
 multiplier mult29 (.in0(d29), .in1(i29), .out(w29));
-reg signed [17:0]     w0_29;
+reg signed [35:0]     w0_29;
 input  [17:0]     d30;
 input  [17:0]     i30;
-wire signed [17:0]     w30;
+wire signed [35:0]     w30;
 multiplier mult30 (.in0(d30), .in1(i30), .out(w30));
-reg signed [17:0]     w0_30;
+reg signed [35:0]     w0_30;
 input  [17:0]     d31;
 input  [17:0]     i31;
-wire signed [17:0]     w31;
+wire signed [35:0]     w31;
 multiplier mult31 (.in0(d31), .in1(i31), .out(w31));
-reg signed [17:0]     w0_31;
+reg signed [35:0]     w0_31;
 input  [17:0]     d32;
 input  [17:0]     i32;
-wire signed [17:0]     w32;
+wire signed [35:0]     w32;
 multiplier mult32 (.in0(d32), .in1(i32), .out(w32));
-reg signed [17:0]     w0_32;
+reg signed [35:0]     w0_32;
 input  [17:0]     d33;
 input  [17:0]     i33;
-wire signed [17:0]     w33;
+wire signed [35:0]     w33;
 multiplier mult33 (.in0(d33), .in1(i33), .out(w33));
-reg signed [17:0]     w0_33;
+reg signed [35:0]     w0_33;
 input  [17:0]     d34;
 input  [17:0]     i34;
-wire signed [17:0]     w34;
+wire signed [35:0]     w34;
 multiplier mult34 (.in0(d34), .in1(i34), .out(w34));
-reg signed [17:0]     w0_34;
+reg signed [35:0]     w0_34;
 input  [17:0]     d35;
 input  [17:0]     i35;
-wire signed [17:0]     w35;
+wire signed [35:0]     w35;
 multiplier mult35 (.in0(d35), .in1(i35), .out(w35));
-reg signed [17:0]     w0_35;
+reg signed [35:0]     w0_35;
 input  [17:0]     d36;
 input  [17:0]     i36;
-wire signed [17:0]     w36;
+wire signed [35:0]     w36;
 multiplier mult36 (.in0(d36), .in1(i36), .out(w36));
-reg signed [17:0]     w0_36;
+reg signed [35:0]     w0_36;
 input  [17:0]     d37;
 input  [17:0]     i37;
-wire signed [17:0]     w37;
+wire signed [35:0]     w37;
 multiplier mult37 (.in0(d37), .in1(i37), .out(w37));
-reg signed [17:0]     w0_37;
+reg signed [35:0]     w0_37;
 input  [17:0]     d38;
 input  [17:0]     i38;
-wire signed [17:0]     w38;
+wire signed [35:0]     w38;
 multiplier mult38 (.in0(d38), .in1(i38), .out(w38));
-reg signed [17:0]     w0_38;
+reg signed [35:0]     w0_38;
 input  [17:0]     d39;
 input  [17:0]     i39;
-wire signed [17:0]     w39;
+wire signed [35:0]     w39;
 multiplier mult39 (.in0(d39), .in1(i39), .out(w39));
-reg signed [17:0]     w0_39;
+reg signed [35:0]     w0_39;
 input  [17:0]     d40;
 input  [17:0]     i40;
-wire signed [17:0]     w40;
+wire signed [35:0]     w40;
 multiplier mult40 (.in0(d40), .in1(i40), .out(w40));
-reg signed [17:0]     w0_40;
+reg signed [35:0]     w0_40;
 input  [17:0]     d41;
 input  [17:0]     i41;
-wire signed [17:0]     w41;
+wire signed [35:0]     w41;
 multiplier mult41 (.in0(d41), .in1(i41), .out(w41));
-reg signed [17:0]     w0_41;
+reg signed [35:0]     w0_41;
 input  [17:0]     d42;
 input  [17:0]     i42;
-wire signed [17:0]     w42;
+wire signed [35:0]     w42;
 multiplier mult42 (.in0(d42), .in1(i42), .out(w42));
-reg signed [17:0]     w0_42;
+reg signed [35:0]     w0_42;
 input  [17:0]     d43;
 input  [17:0]     i43;
-wire signed [17:0]     w43;
+wire signed [35:0]     w43;
 multiplier mult43 (.in0(d43), .in1(i43), .out(w43));
-reg signed [17:0]     w0_43;
+reg signed [35:0]     w0_43;
 input  [17:0]     d44;
 input  [17:0]     i44;
-wire signed [17:0]     w44;
+wire signed [35:0]     w44;
 multiplier mult44 (.in0(d44), .in1(i44), .out(w44));
-reg signed [17:0]     w0_44;
+reg signed [35:0]     w0_44;
 input  [17:0]     d45;
 input  [17:0]     i45;
-wire signed [17:0]     w45;
+wire signed [35:0]     w45;
 multiplier mult45 (.in0(d45), .in1(i45), .out(w45));
-reg signed [17:0]     w0_45;
+reg signed [35:0]     w0_45;
 input  [17:0]     d46;
 input  [17:0]     i46;
-wire signed [17:0]     w46;
+wire signed [35:0]     w46;
 multiplier mult46 (.in0(d46), .in1(i46), .out(w46));
-reg signed [17:0]     w0_46;
+reg signed [35:0]     w0_46;
 input  [17:0]     d47;
 input  [17:0]     i47;
-wire signed [17:0]     w47;
+wire signed [35:0]     w47;
 multiplier mult47 (.in0(d47), .in1(i47), .out(w47));
-reg signed [17:0]     w0_47;
+reg signed [35:0]     w0_47;
 input  [17:0]     d48;
 input  [17:0]     i48;
-wire signed [17:0]     w48;
+wire signed [35:0]     w48;
 multiplier mult48 (.in0(d48), .in1(i48), .out(w48));
-reg signed [17:0]     w0_48;
+reg signed [35:0]     w0_48;
 input  [17:0]     d49;
 input  [17:0]     i49;
-wire signed [17:0]     w49;
+wire signed [35:0]     w49;
 multiplier mult49 (.in0(d49), .in1(i49), .out(w49));
-reg signed [17:0]     w0_49;
+reg signed [35:0]     w0_49;
 input  [17:0]     d50;
 input  [17:0]     i50;
-wire signed [17:0]     w50;
+wire signed [35:0]     w50;
 multiplier mult50 (.in0(d50), .in1(i50), .out(w50));
-reg signed [17:0]     w0_50;
+reg signed [35:0]     w0_50;
 input  [17:0]     d51;
 input  [17:0]     i51;
-wire signed [17:0]     w51;
+wire signed [35:0]     w51;
 multiplier mult51 (.in0(d51), .in1(i51), .out(w51));
-reg signed [17:0]     w0_51;
+reg signed [35:0]     w0_51;
 input  [17:0]     d52;
 input  [17:0]     i52;
-wire signed [17:0]     w52;
+wire signed [35:0]     w52;
 multiplier mult52 (.in0(d52), .in1(i52), .out(w52));
-reg signed [17:0]     w0_52;
+reg signed [35:0]     w0_52;
 input  [17:0]     d53;
 input  [17:0]     i53;
-wire signed [17:0]     w53;
+wire signed [35:0]     w53;
 multiplier mult53 (.in0(d53), .in1(i53), .out(w53));
-reg signed [17:0]     w0_53;
+reg signed [35:0]     w0_53;
 input  [17:0]     d54;
 input  [17:0]     i54;
-wire signed [17:0]     w54;
+wire signed [35:0]     w54;
 multiplier mult54 (.in0(d54), .in1(i54), .out(w54));
-reg signed [17:0]     w0_54;
+reg signed [35:0]     w0_54;
 input  [17:0]     d55;
 input  [17:0]     i55;
-wire signed [17:0]     w55;
+wire signed [35:0]     w55;
 multiplier mult55 (.in0(d55), .in1(i55), .out(w55));
-reg signed [17:0]     w0_55;
+reg signed [35:0]     w0_55;
 input  [17:0]     d56;
 input  [17:0]     i56;
-wire signed [17:0]     w56;
+wire signed [35:0]     w56;
 multiplier mult56 (.in0(d56), .in1(i56), .out(w56));
-reg signed [17:0]     w0_56;
+reg signed [35:0]     w0_56;
 input  [17:0]     d57;
 input  [17:0]     i57;
-wire signed [17:0]     w57;
+wire signed [35:0]     w57;
 multiplier mult57 (.in0(d57), .in1(i57), .out(w57));
-reg signed [17:0]     w0_57;
+reg signed [35:0]     w0_57;
 input  [17:0]     d58;
 input  [17:0]     i58;
-wire signed [17:0]     w58;
+wire signed [35:0]     w58;
 multiplier mult58 (.in0(d58), .in1(i58), .out(w58));
-reg signed [17:0]     w0_58;
+reg signed [35:0]     w0_58;
 input  [17:0]     d59;
 input  [17:0]     i59;
-wire signed [17:0]     w59;
+wire signed [35:0]     w59;
 multiplier mult59 (.in0(d59), .in1(i59), .out(w59));
-reg signed [17:0]     w0_59;
+reg signed [35:0]     w0_59;
 input  [17:0]     d60;
 input  [17:0]     i60;
-wire signed [17:0]     w60;
+wire signed [35:0]     w60;
 multiplier mult60 (.in0(d60), .in1(i60), .out(w60));
-reg signed [17:0]     w0_60;
+reg signed [35:0]     w0_60;
 input  [17:0]     d61;
 input  [17:0]     i61;
-wire signed [17:0]     w61;
+wire signed [35:0]     w61;
 multiplier mult61 (.in0(d61), .in1(i61), .out(w61));
-reg signed [17:0]     w0_61;
+reg signed [35:0]     w0_61;
 input  [17:0]     d62;
 input  [17:0]     i62;
-wire signed [17:0]     w62;
+wire signed [35:0]     w62;
 multiplier mult62 (.in0(d62), .in1(i62), .out(w62));
-reg signed [17:0]     w0_62;
+reg signed [35:0]     w0_62;
 input  [17:0]     d63;
 input  [17:0]     i63;
-wire signed [17:0]     w63;
+wire signed [35:0]     w63;
 multiplier mult63 (.in0(d63), .in1(i63), .out(w63));
-reg signed [17:0]     w0_63;
-wire signed [17:0]     w1_0 = w0_0 + w0_1;
-wire signed [17:0]     w1_1 = w0_2 + w0_3;
-wire signed [17:0]     w1_2 = w0_4 + w0_5;
-wire signed [17:0]     w1_3 = w0_6 + w0_7;
-wire signed [17:0]     w1_4 = w0_8 + w0_9;
-wire signed [17:0]     w1_5 = w0_10 + w0_11;
-wire signed [17:0]     w1_6 = w0_12 + w0_13;
-wire signed [17:0]     w1_7 = w0_14 + w0_15;
-wire signed [17:0]     w1_8 = w0_16 + w0_17;
-wire signed [17:0]     w1_9 = w0_18 + w0_19;
-wire signed [17:0]     w1_10 = w0_20 + w0_21;
-wire signed [17:0]     w1_11 = w0_22 + w0_23;
-wire signed [17:0]     w1_12 = w0_24 + w0_25;
-wire signed [17:0]     w1_13 = w0_26 + w0_27;
-wire signed [17:0]     w1_14 = w0_28 + w0_29;
-wire signed [17:0]     w1_15 = w0_30 + w0_31;
-wire signed [17:0]     w1_16 = w0_32 + w0_33;
-wire signed [17:0]     w1_17 = w0_34 + w0_35;
-wire signed [17:0]     w1_18 = w0_36 + w0_37;
-wire signed [17:0]     w1_19 = w0_38 + w0_39;
-wire signed [17:0]     w1_20 = w0_40 + w0_41;
-wire signed [17:0]     w1_21 = w0_42 + w0_43;
-wire signed [17:0]     w1_22 = w0_44 + w0_45;
-wire signed [17:0]     w1_23 = w0_46 + w0_47;
-wire signed [17:0]     w1_24 = w0_48 + w0_49;
-wire signed [17:0]     w1_25 = w0_50 + w0_51;
-wire signed [17:0]     w1_26 = w0_52 + w0_53;
-wire signed [17:0]     w1_27 = w0_54 + w0_55;
-wire signed [17:0]     w1_28 = w0_56 + w0_57;
-wire signed [17:0]     w1_29 = w0_58 + w0_59;
-wire signed [17:0]     w1_30 = w0_60 + w0_61;
-wire signed [17:0]     w1_31 = w0_62 + w0_63;
-reg signed [17:0]     w2_0;
-wire signed [17:0]     w2_0d = w1_0 + w1_1;
-reg signed [17:0]     w2_1;
-wire signed [17:0]     w2_1d = w1_2 + w1_3;
-reg signed [17:0]     w2_2;
-wire signed [17:0]     w2_2d = w1_4 + w1_5;
-reg signed [17:0]     w2_3;
-wire signed [17:0]     w2_3d = w1_6 + w1_7;
-reg signed [17:0]     w2_4;
-wire signed [17:0]     w2_4d = w1_8 + w1_9;
-reg signed [17:0]     w2_5;
-wire signed [17:0]     w2_5d = w1_10 + w1_11;
-reg signed [17:0]     w2_6;
-wire signed [17:0]     w2_6d = w1_12 + w1_13;
-reg signed [17:0]     w2_7;
-wire signed [17:0]     w2_7d = w1_14 + w1_15;
-reg signed [17:0]     w2_8;
-wire signed [17:0]     w2_8d = w1_16 + w1_17;
-reg signed [17:0]     w2_9;
-wire signed [17:0]     w2_9d = w1_18 + w1_19;
-reg signed [17:0]     w2_10;
-wire signed [17:0]     w2_10d = w1_20 + w1_21;
-reg signed [17:0]     w2_11;
-wire signed [17:0]     w2_11d = w1_22 + w1_23;
-reg signed [17:0]     w2_12;
-wire signed [17:0]     w2_12d = w1_24 + w1_25;
-reg signed [17:0]     w2_13;
-wire signed [17:0]     w2_13d = w1_26 + w1_27;
-reg signed [17:0]     w2_14;
-wire signed [17:0]     w2_14d = w1_28 + w1_29;
-reg signed [17:0]     w2_15;
-wire signed [17:0]     w2_15d = w1_30 + w1_31;
-wire signed [17:0]     w3_0 = w2_0 + w2_1;
-wire signed [17:0]     w3_1 = w2_2 + w2_3;
-wire signed [17:0]     w3_2 = w2_4 + w2_5;
-wire signed [17:0]     w3_3 = w2_6 + w2_7;
-wire signed [17:0]     w3_4 = w2_8 + w2_9;
-wire signed [17:0]     w3_5 = w2_10 + w2_11;
-wire signed [17:0]     w3_6 = w2_12 + w2_13;
-wire signed [17:0]     w3_7 = w2_14 + w2_15;
-reg signed [17:0]     w4_0;
-wire signed [17:0]     w4_0d = w3_0 + w3_1;
-reg signed [17:0]     w4_1;
-wire signed [17:0]     w4_1d = w3_2 + w3_3;
-reg signed [17:0]     w4_2;
-wire signed [17:0]     w4_2d = w3_4 + w3_5;
-reg signed [17:0]     w4_3;
-wire signed [17:0]     w4_3d = w3_6 + w3_7;
-wire signed [17:0]     w5_0 = w4_0 + w4_1;
-wire signed [17:0]     w5_1 = w4_2 + w4_3;
-wire signed [17:0]     w6_0 = w5_0 + w5_1;
+reg signed [35:0]     w0_63;
+wire signed [35:0]     w1_0 = w0_0 + w0_1;
+wire signed [35:0]     w1_1 = w0_2 + w0_3;
+wire signed [35:0]     w1_2 = w0_4 + w0_5;
+wire signed [35:0]     w1_3 = w0_6 + w0_7;
+wire signed [35:0]     w1_4 = w0_8 + w0_9;
+wire signed [35:0]     w1_5 = w0_10 + w0_11;
+wire signed [35:0]     w1_6 = w0_12 + w0_13;
+wire signed [35:0]     w1_7 = w0_14 + w0_15;
+wire signed [35:0]     w1_8 = w0_16 + w0_17;
+wire signed [35:0]     w1_9 = w0_18 + w0_19;
+wire signed [35:0]     w1_10 = w0_20 + w0_21;
+wire signed [35:0]     w1_11 = w0_22 + w0_23;
+wire signed [35:0]     w1_12 = w0_24 + w0_25;
+wire signed [35:0]     w1_13 = w0_26 + w0_27;
+wire signed [35:0]     w1_14 = w0_28 + w0_29;
+wire signed [35:0]     w1_15 = w0_30 + w0_31;
+wire signed [35:0]     w1_16 = w0_32 + w0_33;
+wire signed [35:0]     w1_17 = w0_34 + w0_35;
+wire signed [35:0]     w1_18 = w0_36 + w0_37;
+wire signed [35:0]     w1_19 = w0_38 + w0_39;
+wire signed [35:0]     w1_20 = w0_40 + w0_41;
+wire signed [35:0]     w1_21 = w0_42 + w0_43;
+wire signed [35:0]     w1_22 = w0_44 + w0_45;
+wire signed [35:0]     w1_23 = w0_46 + w0_47;
+wire signed [35:0]     w1_24 = w0_48 + w0_49;
+wire signed [35:0]     w1_25 = w0_50 + w0_51;
+wire signed [35:0]     w1_26 = w0_52 + w0_53;
+wire signed [35:0]     w1_27 = w0_54 + w0_55;
+wire signed [35:0]     w1_28 = w0_56 + w0_57;
+wire signed [35:0]     w1_29 = w0_58 + w0_59;
+wire signed [35:0]     w1_30 = w0_60 + w0_61;
+wire signed [35:0]     w1_31 = w0_62 + w0_63;
+reg signed [35:0]     w2_0;
+wire signed [35:0]     w2_0d = w1_0 + w1_1;
+reg signed [35:0]     w2_1;
+wire signed [35:0]     w2_1d = w1_2 + w1_3;
+reg signed [35:0]     w2_2;
+wire signed [35:0]     w2_2d = w1_4 + w1_5;
+reg signed [35:0]     w2_3;
+wire signed [35:0]     w2_3d = w1_6 + w1_7;
+reg signed [35:0]     w2_4;
+wire signed [35:0]     w2_4d = w1_8 + w1_9;
+reg signed [35:0]     w2_5;
+wire signed [35:0]     w2_5d = w1_10 + w1_11;
+reg signed [35:0]     w2_6;
+wire signed [35:0]     w2_6d = w1_12 + w1_13;
+reg signed [35:0]     w2_7;
+wire signed [35:0]     w2_7d = w1_14 + w1_15;
+reg signed [35:0]     w2_8;
+wire signed [35:0]     w2_8d = w1_16 + w1_17;
+reg signed [35:0]     w2_9;
+wire signed [35:0]     w2_9d = w1_18 + w1_19;
+reg signed [35:0]     w2_10;
+wire signed [35:0]     w2_10d = w1_20 + w1_21;
+reg signed [35:0]     w2_11;
+wire signed [35:0]     w2_11d = w1_22 + w1_23;
+reg signed [35:0]     w2_12;
+wire signed [35:0]     w2_12d = w1_24 + w1_25;
+reg signed [35:0]     w2_13;
+wire signed [35:0]     w2_13d = w1_26 + w1_27;
+reg signed [35:0]     w2_14;
+wire signed [35:0]     w2_14d = w1_28 + w1_29;
+reg signed [35:0]     w2_15;
+wire signed [35:0]     w2_15d = w1_30 + w1_31;
+wire signed [35:0]     w3_0 = w2_0 + w2_1;
+wire signed [35:0]     w3_1 = w2_2 + w2_3;
+wire signed [35:0]     w3_2 = w2_4 + w2_5;
+wire signed [35:0]     w3_3 = w2_6 + w2_7;
+wire signed [35:0]     w3_4 = w2_8 + w2_9;
+wire signed [35:0]     w3_5 = w2_10 + w2_11;
+wire signed [35:0]     w3_6 = w2_12 + w2_13;
+wire signed [35:0]     w3_7 = w2_14 + w2_15;
+reg signed [35:0]     w4_0;
+wire signed [35:0]     w4_0d = w3_0 + w3_1;
+reg signed [35:0]     w4_1;
+wire signed [35:0]     w4_1d = w3_2 + w3_3;
+reg signed [35:0]     w4_2;
+wire signed [35:0]     w4_2d = w3_4 + w3_5;
+reg signed [35:0]     w4_3;
+wire signed [35:0]     w4_3d = w3_6 + w3_7;
+wire signed [35:0]     w5_0 = w4_0 + w4_1;
+wire signed [35:0]     w5_1 = w4_2 + w4_3;
+wire signed [35:0]     w6_0 = w5_0 + w5_1;
 input clk;
 input rst;
-output  [17:0]    out;
+output  [35:0]    out;
 // end of submodule parameter
 assign out = w6_0;
 always @(posedge clk)
    begin
-      w0_0 <= rst ? w0 : 18'b0;
-      w0_1 <= rst ? w1 : 18'b0;
-      w0_2 <= rst ? w2 : 18'b0;
-      w0_3 <= rst ? w3 : 18'b0;
-      w0_4 <= rst ? w4 : 18'b0;
-      w0_5 <= rst ? w5 : 18'b0;
-      w0_6 <= rst ? w6 : 18'b0;
-      w0_7 <= rst ? w7 : 18'b0;
-      w0_8 <= rst ? w8 : 18'b0;
-      w0_9 <= rst ? w9 : 18'b0;
-      w0_10 <= rst ? w10 : 18'b0;
-      w0_11 <= rst ? w11 : 18'b0;
-      w0_12 <= rst ? w12 : 18'b0;
-      w0_13 <= rst ? w13 : 18'b0;
-      w0_14 <= rst ? w14 : 18'b0;
-      w0_15 <= rst ? w15 : 18'b0;
-      w0_16 <= rst ? w16 : 18'b0;
-      w0_17 <= rst ? w17 : 18'b0;
-      w0_18 <= rst ? w18 : 18'b0;
-      w0_19 <= rst ? w19 : 18'b0;
-      w0_20 <= rst ? w20 : 18'b0;
-      w0_21 <= rst ? w21 : 18'b0;
-      w0_22 <= rst ? w22 : 18'b0;
-      w0_23 <= rst ? w23 : 18'b0;
-      w0_24 <= rst ? w24 : 18'b0;
-      w0_25 <= rst ? w25 : 18'b0;
-      w0_26 <= rst ? w26 : 18'b0;
-      w0_27 <= rst ? w27 : 18'b0;
-      w0_28 <= rst ? w28 : 18'b0;
-      w0_29 <= rst ? w29 : 18'b0;
-      w0_30 <= rst ? w30 : 18'b0;
-      w0_31 <= rst ? w31 : 18'b0;
-      w0_32 <= rst ? w32 : 18'b0;
-      w0_33 <= rst ? w33 : 18'b0;
-      w0_34 <= rst ? w34 : 18'b0;
-      w0_35 <= rst ? w35 : 18'b0;
-      w0_36 <= rst ? w36 : 18'b0;
-      w0_37 <= rst ? w37 : 18'b0;
-      w0_38 <= rst ? w38 : 18'b0;
-      w0_39 <= rst ? w39 : 18'b0;
-      w0_40 <= rst ? w40 : 18'b0;
-      w0_41 <= rst ? w41 : 18'b0;
-      w0_42 <= rst ? w42 : 18'b0;
-      w0_43 <= rst ? w43 : 18'b0;
-      w0_44 <= rst ? w44 : 18'b0;
-      w0_45 <= rst ? w45 : 18'b0;
-      w0_46 <= rst ? w46 : 18'b0;
-      w0_47 <= rst ? w47 : 18'b0;
-      w0_48 <= rst ? w48 : 18'b0;
-      w0_49 <= rst ? w49 : 18'b0;
-      w0_50 <= rst ? w50 : 18'b0;
-      w0_51 <= rst ? w51 : 18'b0;
-      w0_52 <= rst ? w52 : 18'b0;
-      w0_53 <= rst ? w53 : 18'b0;
-      w0_54 <= rst ? w54 : 18'b0;
-      w0_55 <= rst ? w55 : 18'b0;
-      w0_56 <= rst ? w56 : 18'b0;
-      w0_57 <= rst ? w57 : 18'b0;
-      w0_58 <= rst ? w58 : 18'b0;
-      w0_59 <= rst ? w59 : 18'b0;
-      w0_60 <= rst ? w60 : 18'b0;
-      w0_61 <= rst ? w61 : 18'b0;
-      w0_62 <= rst ? w62 : 18'b0;
-      w0_63 <= rst ? w63 : 18'b0;
-      w2_0 <= rst ? w2_0d : 18'b0;
-      w2_1 <= rst ? w2_1d : 18'b0;
-      w2_2 <= rst ? w2_2d : 18'b0;
-      w2_3 <= rst ? w2_3d : 18'b0;
-      w2_4 <= rst ? w2_4d : 18'b0;
-      w2_5 <= rst ? w2_5d : 18'b0;
-      w2_6 <= rst ? w2_6d : 18'b0;
-      w2_7 <= rst ? w2_7d : 18'b0;
-      w2_8 <= rst ? w2_8d : 18'b0;
-      w2_9 <= rst ? w2_9d : 18'b0;
-      w2_10 <= rst ? w2_10d : 18'b0;
-      w2_11 <= rst ? w2_11d : 18'b0;
-      w2_12 <= rst ? w2_12d : 18'b0;
-      w2_13 <= rst ? w2_13d : 18'b0;
-      w2_14 <= rst ? w2_14d : 18'b0;
-      w2_15 <= rst ? w2_15d : 18'b0;
-      w4_0 <= rst ? w4_0d : 18'b0;
-      w4_1 <= rst ? w4_1d : 18'b0;
-      w4_2 <= rst ? w4_2d : 18'b0;
-      w4_3 <= rst ? w4_3d : 18'b0;
+      w0_0 <= rst ? w0 : 36'b0;
+      w0_1 <= rst ? w1 : 36'b0;
+      w0_2 <= rst ? w2 : 36'b0;
+      w0_3 <= rst ? w3 : 36'b0;
+      w0_4 <= rst ? w4 : 36'b0;
+      w0_5 <= rst ? w5 : 36'b0;
+      w0_6 <= rst ? w6 : 36'b0;
+      w0_7 <= rst ? w7 : 36'b0;
+      w0_8 <= rst ? w8 : 36'b0;
+      w0_9 <= rst ? w9 : 36'b0;
+      w0_10 <= rst ? w10 : 36'b0;
+      w0_11 <= rst ? w11 : 36'b0;
+      w0_12 <= rst ? w12 : 36'b0;
+      w0_13 <= rst ? w13 : 36'b0;
+      w0_14 <= rst ? w14 : 36'b0;
+      w0_15 <= rst ? w15 : 36'b0;
+      w0_16 <= rst ? w16 : 36'b0;
+      w0_17 <= rst ? w17 : 36'b0;
+      w0_18 <= rst ? w18 : 36'b0;
+      w0_19 <= rst ? w19 : 36'b0;
+      w0_20 <= rst ? w20 : 36'b0;
+      w0_21 <= rst ? w21 : 36'b0;
+      w0_22 <= rst ? w22 : 36'b0;
+      w0_23 <= rst ? w23 : 36'b0;
+      w0_24 <= rst ? w24 : 36'b0;
+      w0_25 <= rst ? w25 : 36'b0;
+      w0_26 <= rst ? w26 : 36'b0;
+      w0_27 <= rst ? w27 : 36'b0;
+      w0_28 <= rst ? w28 : 36'b0;
+      w0_29 <= rst ? w29 : 36'b0;
+      w0_30 <= rst ? w30 : 36'b0;
+      w0_31 <= rst ? w31 : 36'b0;
+      w0_32 <= rst ? w32 : 36'b0;
+      w0_33 <= rst ? w33 : 36'b0;
+      w0_34 <= rst ? w34 : 36'b0;
+      w0_35 <= rst ? w35 : 36'b0;
+      w0_36 <= rst ? w36 : 36'b0;
+      w0_37 <= rst ? w37 : 36'b0;
+      w0_38 <= rst ? w38 : 36'b0;
+      w0_39 <= rst ? w39 : 36'b0;
+      w0_40 <= rst ? w40 : 36'b0;
+      w0_41 <= rst ? w41 : 36'b0;
+      w0_42 <= rst ? w42 : 36'b0;
+      w0_43 <= rst ? w43 : 36'b0;
+      w0_44 <= rst ? w44 : 36'b0;
+      w0_45 <= rst ? w45 : 36'b0;
+      w0_46 <= rst ? w46 : 36'b0;
+      w0_47 <= rst ? w47 : 36'b0;
+      w0_48 <= rst ? w48 : 36'b0;
+      w0_49 <= rst ? w49 : 36'b0;
+      w0_50 <= rst ? w50 : 36'b0;
+      w0_51 <= rst ? w51 : 36'b0;
+      w0_52 <= rst ? w52 : 36'b0;
+      w0_53 <= rst ? w53 : 36'b0;
+      w0_54 <= rst ? w54 : 36'b0;
+      w0_55 <= rst ? w55 : 36'b0;
+      w0_56 <= rst ? w56 : 36'b0;
+      w0_57 <= rst ? w57 : 36'b0;
+      w0_58 <= rst ? w58 : 36'b0;
+      w0_59 <= rst ? w59 : 36'b0;
+      w0_60 <= rst ? w60 : 36'b0;
+      w0_61 <= rst ? w61 : 36'b0;
+      w0_62 <= rst ? w62 : 36'b0;
+      w0_63 <= rst ? w63 : 36'b0;
+      w2_0 <= rst ? w2_0d : 36'b0;
+      w2_1 <= rst ? w2_1d : 36'b0;
+      w2_2 <= rst ? w2_2d : 36'b0;
+      w2_3 <= rst ? w2_3d : 36'b0;
+      w2_4 <= rst ? w2_4d : 36'b0;
+      w2_5 <= rst ? w2_5d : 36'b0;
+      w2_6 <= rst ? w2_6d : 36'b0;
+      w2_7 <= rst ? w2_7d : 36'b0;
+      w2_8 <= rst ? w2_8d : 36'b0;
+      w2_9 <= rst ? w2_9d : 36'b0;
+      w2_10 <= rst ? w2_10d : 36'b0;
+      w2_11 <= rst ? w2_11d : 36'b0;
+      w2_12 <= rst ? w2_12d : 36'b0;
+      w2_13 <= rst ? w2_13d : 36'b0;
+      w2_14 <= rst ? w2_14d : 36'b0;
+      w2_15 <= rst ? w2_15d : 36'b0;
+      w4_0 <= rst ? w4_0d : 36'b0;
+      w4_1 <= rst ? w4_1d : 36'b0;
+      w4_2 <= rst ? w4_2d : 36'b0;
+      w4_3 <= rst ? w4_3d : 36'b0;
    end
 endmodule
 module multiplier(in0, in1, out);
 input [17:0] in0, in1;
 wire signed [35:0] outMem = in0 * in1;
-output [17:0] out;
-assign out = outMem[27:10];
+output [35:0] out;
+assign out = outMem;
 endmodule
 module mult2reg(in0, in1, sel, out, clk, rst);
-input [17:0] in0, in1;
+input [35:0] in0, in1;
 input sel, clk, rst;
-reg signed [17:0] outq;
-output [17:0] out;
+reg signed [35:0] outq;
+output [35:0] out;
 assign out = outq;
 always @(posedge clk)
    begin
-      outq <= rst ? (sel ? in1 : in0) : 18'b0;
+      outq <= rst ? (sel ? in1 : in0) : 36'b0;
    end
 endmodule

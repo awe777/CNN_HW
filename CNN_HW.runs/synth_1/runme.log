@@ -17,14 +17,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 24664 
+INFO: Helper process launched with PID 4052 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 413.891 ; gain = 112.934
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 413.211 ; gain = 110.258
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_wrapper' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/hdl/CNN_top_module_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/synth/CNN_top_module.v:13]
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_axi_cnn_0_0' [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_axi_cnn_0_0/synth/CNN_top_module_axi_cnn_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'axi_cnn' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:11]
+INFO: [Synth 8-6157] synthesizing module 'axi_cnn' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:12]
 	Parameter C_ADDR_BITS bound to: 24 - type: integer 
 	Parameter C_ADDR_REG0 bound to: 24'b000000000000000000000000 
 	Parameter C_ADDR_REG1 bound to: 24'b000000000000000000000100 
@@ -209,16 +209,16 @@ INFO: [Synth 8-6157] synthesizing module 'axi_cnn' [D:/Documents/FPGA_Projects/C
 	Parameter S_WRRESP bound to: 2'b10 
 	Parameter S_RDIDLE bound to: 2'b00 
 	Parameter S_RDDATA bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:572]
-INFO: [Synth 8-6157] synthesizing module 'convmultCore' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:2029]
-INFO: [Synth 8-6157] synthesizing module 'mult2reg' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7992]
-INFO: [Synth 8-6155] done synthesizing module 'mult2reg' (1#1) [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7992]
-INFO: [Synth 8-6157] synthesizing module 'multx' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7489]
-INFO: [Synth 8-6157] synthesizing module 'multiplier' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7986]
-INFO: [Synth 8-6155] done synthesizing module 'multiplier' (2#1) [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7986]
-INFO: [Synth 8-6155] done synthesizing module 'multx' (3#1) [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7489]
-INFO: [Synth 8-6155] done synthesizing module 'convmultCore' (4#1) [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:2029]
-INFO: [Synth 8-6155] done synthesizing module 'axi_cnn' (5#1) [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:11]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:573]
+INFO: [Synth 8-6157] synthesizing module 'convmultCore' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:2030]
+INFO: [Synth 8-6157] synthesizing module 'mult2reg' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7993]
+INFO: [Synth 8-6155] done synthesizing module 'mult2reg' (1#1) [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7993]
+INFO: [Synth 8-6157] synthesizing module 'multx' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7490]
+INFO: [Synth 8-6157] synthesizing module 'multiplier' [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7987]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier' (2#1) [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7987]
+INFO: [Synth 8-6155] done synthesizing module 'multx' (3#1) [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7490]
+INFO: [Synth 8-6155] done synthesizing module 'convmultCore' (4#1) [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:2030]
+INFO: [Synth 8-6155] done synthesizing module 'axi_cnn' (5#1) [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'CNN_top_module_axi_cnn_0_0' (6#1) [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_axi_cnn_0_0/synth/CNN_top_module_axi_cnn_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_processing_system7_0_0' [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/synth/CNN_top_module_processing_system7_0_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
@@ -1255,7 +1255,7 @@ WARNING: [Synth 8-3331] design axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm has
 WARNING: [Synth 8-3331] design axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm has unconnected port s_arlen[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:33 ; elapsed = 00:01:36 . Memory (MB): peak = 1059.324 ; gain = 758.367
+Finished RTL Elaboration : Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 1120.891 ; gain = 817.938
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1268,10 +1268,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1059.324 ; gain = 758.367
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:41 ; elapsed = 00:01:47 . Memory (MB): peak = 1120.891 ; gain = 817.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:36 ; elapsed = 00:01:40 . Memory (MB): peak = 1059.324 ; gain = 758.367
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:41 ; elapsed = 00:01:47 . Memory (MB): peak = 1120.891 ; gain = 817.938
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1288,24 +1288,24 @@ Parsing XDC File [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN
 Finished Parsing XDC File [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0_board.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
 Parsing XDC File [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
 Finished Parsing XDC File [d:/Documents/FPGA_Projects/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1446.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1554.719 ; gain = 0.000
 Parsing XDC File [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNN_top_module_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/CNN_top_module_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1446.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1554.719 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1446.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1554.719 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1446.855 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1446.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1554.719 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1554.719 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:02 ; elapsed = 00:02:05 . Memory (MB): peak = 1446.855 ; gain = 1145.898
+Finished Constraint Validation : Time (s): cpu = 00:02:17 ; elapsed = 00:02:21 . Memory (MB): peak = 1554.719 ; gain = 1251.766
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -1348,27 +1348,29 @@ INFO: [Synth 8-3354] encoded FSM with state register 'rstate_cs_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:28 ; elapsed = 00:02:32 . Memory (MB): peak = 1446.855 ; gain = 1145.898
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:46 ; elapsed = 00:02:51 . Memory (MB): peak = 1554.719 ; gain = 1251.766
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------------+------------+----------+
 |      |RTL Partition       |Replication |Instances |
 +------+--------------------+------------+----------+
-|1     |convmultCore__GB0   |           1|     30016|
-|2     |convmultCore__GB1   |           1|     19104|
-|3     |convmultCore__GB2   |           1|     19810|
-|4     |convmultCore__GB3   |           1|     17010|
-|5     |axi_cnn__GCB0       |           1|     40386|
-|6     |axi_cnn__GCB1       |           1|     12173|
-|7     |CNN_top_module__GC0 |           1|      3033|
+|1     |convmultCore__GB0   |           1|     34020|
+|2     |convmultCore__GB1   |           1|      9072|
+|3     |convmultCore__GB2   |           1|     11340|
+|4     |convmultCore__GB3   |           1|     24398|
+|5     |convmultCore__GB4   |           1|     18144|
+|6     |axi_cnn__GCB0       |           1|     38304|
+|7     |axi_cnn__GCB1       |           1|     11240|
+|8     |axi_cnn__GCB2       |           1|     15900|
+|9     |CNN_top_module__GC0 |           1|      3033|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   4 Input     18 Bit       Adders := 21    
+	   4 Input     36 Bit       Adders := 21    
 	   2 Input     12 Bit       Adders := 8     
 	   2 Input      9 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 1     
@@ -1380,10 +1382,11 @@ Detailed RTL Component Info :
 +---Registers : 
 	               66 Bit    Registers := 4     
 	               47 Bit    Registers := 2     
-	               32 Bit    Registers := 1     
+	               36 Bit    Registers := 148   
+	               32 Bit    Registers := 65    
 	               24 Bit    Registers := 1     
 	               20 Bit    Registers := 4     
-	               18 Bit    Registers := 326   
+	               18 Bit    Registers := 114   
 	               14 Bit    Registers := 2     
 	               12 Bit    Registers := 9     
 	                9 Bit    Registers := 2     
@@ -1398,115 +1401,116 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     66 Bit        Muxes := 4     
 	   2 Input     47 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 192   
 	   2 Input     35 Bit        Muxes := 64    
-	   2 Input     32 Bit        Muxes := 8     
+	   2 Input     32 Bit        Muxes := 72    
+	 177 Input     32 Bit        Muxes := 1     
+	 116 Input     32 Bit        Muxes := 1     
+	 161 Input     32 Bit        Muxes := 1     
+	 160 Input     32 Bit        Muxes := 1     
+	 118 Input     32 Bit        Muxes := 1     
+	 157 Input     32 Bit        Muxes := 1     
+	 120 Input     32 Bit        Muxes := 1     
+	 156 Input     32 Bit        Muxes := 1     
+	 153 Input     32 Bit        Muxes := 1     
+	 152 Input     32 Bit        Muxes := 1     
+	 121 Input     32 Bit        Muxes := 1     
+	 148 Input     32 Bit        Muxes := 1     
+	 146 Input     32 Bit        Muxes := 1     
+	 145 Input     32 Bit        Muxes := 1     
+	 144 Input     32 Bit        Muxes := 1     
+	 141 Input     32 Bit        Muxes := 1     
+	 140 Input     32 Bit        Muxes := 1     
+	 134 Input     32 Bit        Muxes := 1     
+	 133 Input     32 Bit        Muxes := 1     
+	 132 Input     32 Bit        Muxes := 1     
+	 131 Input     32 Bit        Muxes := 1     
+	 130 Input     32 Bit        Muxes := 1     
+	 135 Input     32 Bit        Muxes := 1     
+	 136 Input     32 Bit        Muxes := 1     
+	 137 Input     32 Bit        Muxes := 1     
+	 162 Input     32 Bit        Muxes := 1     
+	 164 Input     32 Bit        Muxes := 1     
+	 166 Input     32 Bit        Muxes := 1     
+	 167 Input     32 Bit        Muxes := 1     
+	 168 Input     32 Bit        Muxes := 1     
+	 169 Input     32 Bit        Muxes := 1     
+	 170 Input     32 Bit        Muxes := 1     
+	 171 Input     32 Bit        Muxes := 1     
+	 174 Input     32 Bit        Muxes := 1     
+	 175 Input     32 Bit        Muxes := 1     
+	 178 Input     32 Bit        Muxes := 1     
 	   4 Input     20 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 434   
-	   5 Input     18 Bit        Muxes := 1     
-	 171 Input     18 Bit        Muxes := 1     
-	 170 Input     18 Bit        Muxes := 1     
-	 168 Input     18 Bit        Muxes := 1     
-	  10 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 178   
+	 100 Input     18 Bit        Muxes := 1     
+	  97 Input     18 Bit        Muxes := 1     
+	 101 Input     18 Bit        Muxes := 1     
+	  93 Input     18 Bit        Muxes := 1     
+	 105 Input     18 Bit        Muxes := 1     
+	 107 Input     18 Bit        Muxes := 1     
 	  11 Input     18 Bit        Muxes := 1     
 	  12 Input     18 Bit        Muxes := 1     
-	 167 Input     18 Bit        Muxes := 1     
+	  89 Input     18 Bit        Muxes := 1     
 	  13 Input     18 Bit        Muxes := 1     
 	  14 Input     18 Bit        Muxes := 1     
-	 164 Input     18 Bit        Muxes := 1     
+	 109 Input     18 Bit        Muxes := 1     
 	  16 Input     18 Bit        Muxes := 1     
 	  18 Input     18 Bit        Muxes := 1     
 	  19 Input     18 Bit        Muxes := 1     
 	  20 Input     18 Bit        Muxes := 1     
-	 162 Input     18 Bit        Muxes := 1     
-	  21 Input     18 Bit        Muxes := 1     
+	 113 Input     18 Bit        Muxes := 1     
 	  22 Input     18 Bit        Muxes := 1     
-	  23 Input     18 Bit        Muxes := 1     
+	  84 Input     18 Bit        Muxes := 1     
+	 114 Input     18 Bit        Muxes := 1     
 	  24 Input     18 Bit        Muxes := 1     
-	 160 Input     18 Bit        Muxes := 1     
-	  25 Input     18 Bit        Muxes := 1     
 	  26 Input     18 Bit        Muxes := 1     
 	  27 Input     18 Bit        Muxes := 1     
-	  28 Input     18 Bit        Muxes := 1     
+	  81 Input     18 Bit        Muxes := 1     
 	  29 Input     18 Bit        Muxes := 1     
-	 157 Input     18 Bit        Muxes := 1     
-	 156 Input     18 Bit        Muxes := 1     
-	  34 Input     18 Bit        Muxes := 1     
-	 153 Input     18 Bit        Muxes := 1     
-	  35 Input     18 Bit        Muxes := 1     
+	  31 Input     18 Bit        Muxes := 1     
 	  36 Input     18 Bit        Muxes := 1     
-	 152 Input     18 Bit        Muxes := 1     
-	  37 Input     18 Bit        Muxes := 1     
+	  79 Input     18 Bit        Muxes := 1     
 	  39 Input     18 Bit        Muxes := 1     
 	  40 Input     18 Bit        Muxes := 1     
 	  41 Input     18 Bit        Muxes := 1     
-	  43 Input     18 Bit        Muxes := 1     
-	  45 Input     18 Bit        Muxes := 1     
+	  77 Input     18 Bit        Muxes := 1     
 	  47 Input     18 Bit        Muxes := 1     
 	  49 Input     18 Bit        Muxes := 1     
-	 146 Input     18 Bit        Muxes := 1     
 	  51 Input     18 Bit        Muxes := 1     
-	 145 Input     18 Bit        Muxes := 1     
-	  53 Input     18 Bit        Muxes := 1     
-	  54 Input     18 Bit        Muxes := 1     
-	  55 Input     18 Bit        Muxes := 1     
-	 144 Input     18 Bit        Muxes := 1     
 	  57 Input     18 Bit        Muxes := 1     
-	  61 Input     18 Bit        Muxes := 1     
-	 141 Input     18 Bit        Muxes := 1     
-	 140 Input     18 Bit        Muxes := 1     
 	  66 Input     18 Bit        Muxes := 1     
 	  67 Input     18 Bit        Muxes := 1     
-	 137 Input     18 Bit        Muxes := 1     
 	  68 Input     18 Bit        Muxes := 1     
 	  69 Input     18 Bit        Muxes := 1     
-	 136 Input     18 Bit        Muxes := 1     
-	  71 Input     18 Bit        Muxes := 1     
-	 134 Input     18 Bit        Muxes := 1     
 	  73 Input     18 Bit        Muxes := 1     
-	 132 Input     18 Bit        Muxes := 1     
-	 130 Input     18 Bit        Muxes := 1     
-	  77 Input     18 Bit        Muxes := 1     
-	  79 Input     18 Bit        Muxes := 1     
-	  81 Input     18 Bit        Muxes := 1     
-	  84 Input     18 Bit        Muxes := 1     
-	  85 Input     18 Bit        Muxes := 1     
-	  86 Input     18 Bit        Muxes := 1     
-	 120 Input     18 Bit        Muxes := 1     
-	  88 Input     18 Bit        Muxes := 1     
-	  89 Input     18 Bit        Muxes := 1     
-	 118 Input     18 Bit        Muxes := 1     
-	  93 Input     18 Bit        Muxes := 1     
-	 114 Input     18 Bit        Muxes := 1     
-	  97 Input     18 Bit        Muxes := 1     
-	 113 Input     18 Bit        Muxes := 1     
 	  98 Input     18 Bit        Muxes := 1     
-	 100 Input     18 Bit        Muxes := 1     
-	 101 Input     18 Bit        Muxes := 1     
 	 102 Input     18 Bit        Muxes := 1     
 	 104 Input     18 Bit        Muxes := 1     
-	 105 Input     18 Bit        Muxes := 1     
-	 109 Input     18 Bit        Muxes := 1     
-	 107 Input     18 Bit        Muxes := 1     
-	 116 Input     18 Bit        Muxes := 1     
-	 121 Input     18 Bit        Muxes := 1     
-	 131 Input     18 Bit        Muxes := 1     
-	 133 Input     18 Bit        Muxes := 1     
-	 135 Input     18 Bit        Muxes := 1     
-	 148 Input     18 Bit        Muxes := 1     
-	  31 Input     18 Bit        Muxes := 1     
-	 161 Input     18 Bit        Muxes := 1     
+	  88 Input     18 Bit        Muxes := 1     
+	  86 Input     18 Bit        Muxes := 1     
+	  85 Input     18 Bit        Muxes := 1     
+	  71 Input     18 Bit        Muxes := 1     
+	  61 Input     18 Bit        Muxes := 1     
+	  55 Input     18 Bit        Muxes := 1     
+	  54 Input     18 Bit        Muxes := 1     
+	  53 Input     18 Bit        Muxes := 1     
+	  45 Input     18 Bit        Muxes := 1     
+	  43 Input     18 Bit        Muxes := 1     
+	  37 Input     18 Bit        Muxes := 1     
+	  35 Input     18 Bit        Muxes := 1     
+	  34 Input     18 Bit        Muxes := 1     
+	  28 Input     18 Bit        Muxes := 1     
+	  25 Input     18 Bit        Muxes := 1     
+	  23 Input     18 Bit        Muxes := 1     
+	  21 Input     18 Bit        Muxes := 1     
 	  15 Input     18 Bit        Muxes := 1     
-	 166 Input     18 Bit        Muxes := 1     
-	 169 Input     18 Bit        Muxes := 1     
+	  10 Input     18 Bit        Muxes := 1     
 	   9 Input     18 Bit        Muxes := 1     
 	   8 Input     18 Bit        Muxes := 1     
 	   7 Input     18 Bit        Muxes := 1     
 	   6 Input     18 Bit        Muxes := 1     
-	 174 Input     18 Bit        Muxes := 1     
+	   5 Input     18 Bit        Muxes := 1     
 	   4 Input     18 Bit        Muxes := 1     
-	 175 Input     18 Bit        Muxes := 1     
-	 177 Input     18 Bit        Muxes := 1     
-	 178 Input     18 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 6     
 	   2 Input      9 Bit        Muxes := 4     
@@ -1527,6 +1531,102 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module mult2reg__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__8 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__9 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__10 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__11 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__12 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__13 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__14 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__15 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__16 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
 Module multiplier__1 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -1786,395 +1886,299 @@ Detailed RTL Component Info :
 Module multx 
 Detailed RTL Component Info : 
 +---Adders : 
-	   4 Input     18 Bit       Adders := 21    
+	   4 Input     36 Bit       Adders := 21    
 +---Registers : 
-	               18 Bit    Registers := 84    
+	               36 Bit    Registers := 84    
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 64    
-Module mult2reg__1 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__2 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__3 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__4 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__5 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__6 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__7 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__8 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__9 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__10 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__11 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__12 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__13 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__14 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__15 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
-Module mult2reg__16 
-Detailed RTL Component Info : 
-+---Registers : 
-	               18 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 64    
 Module mult2reg__17 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__18 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__19 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__20 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__21 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__22 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__23 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__24 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__25 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__26 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__27 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__28 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__29 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__30 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__31 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__32 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__33 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__34 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__35 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__36 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__37 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__38 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__39 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__40 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__41 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__42 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__43 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__44 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__45 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__46 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__47 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__48 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__49 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__50 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__51 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__52 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__53 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__54 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__55 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__56 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__57 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__58 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__59 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__60 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__61 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__62 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__63 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     36 Bit        Muxes := 2     
 Module convmultCore 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -2186,116 +2190,117 @@ Detailed RTL Component Info :
 Module axi_cnn 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               32 Bit    Registers := 65    
 	               24 Bit    Registers := 1     
-	               18 Bit    Registers := 178   
+	               18 Bit    Registers := 114   
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 178   
-	   5 Input     18 Bit        Muxes := 1     
-	 171 Input     18 Bit        Muxes := 1     
-	 170 Input     18 Bit        Muxes := 1     
-	 168 Input     18 Bit        Muxes := 1     
-	  10 Input     18 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 64    
+	 177 Input     32 Bit        Muxes := 1     
+	 116 Input     32 Bit        Muxes := 1     
+	 161 Input     32 Bit        Muxes := 1     
+	 160 Input     32 Bit        Muxes := 1     
+	 118 Input     32 Bit        Muxes := 1     
+	 157 Input     32 Bit        Muxes := 1     
+	 120 Input     32 Bit        Muxes := 1     
+	 156 Input     32 Bit        Muxes := 1     
+	 153 Input     32 Bit        Muxes := 1     
+	 152 Input     32 Bit        Muxes := 1     
+	 121 Input     32 Bit        Muxes := 1     
+	 148 Input     32 Bit        Muxes := 1     
+	 146 Input     32 Bit        Muxes := 1     
+	 145 Input     32 Bit        Muxes := 1     
+	 144 Input     32 Bit        Muxes := 1     
+	 141 Input     32 Bit        Muxes := 1     
+	 140 Input     32 Bit        Muxes := 1     
+	 134 Input     32 Bit        Muxes := 1     
+	 133 Input     32 Bit        Muxes := 1     
+	 132 Input     32 Bit        Muxes := 1     
+	 131 Input     32 Bit        Muxes := 1     
+	 130 Input     32 Bit        Muxes := 1     
+	 135 Input     32 Bit        Muxes := 1     
+	 136 Input     32 Bit        Muxes := 1     
+	 137 Input     32 Bit        Muxes := 1     
+	 162 Input     32 Bit        Muxes := 1     
+	 164 Input     32 Bit        Muxes := 1     
+	 166 Input     32 Bit        Muxes := 1     
+	 167 Input     32 Bit        Muxes := 1     
+	 168 Input     32 Bit        Muxes := 1     
+	 169 Input     32 Bit        Muxes := 1     
+	 170 Input     32 Bit        Muxes := 1     
+	 171 Input     32 Bit        Muxes := 1     
+	 174 Input     32 Bit        Muxes := 1     
+	 175 Input     32 Bit        Muxes := 1     
+	 178 Input     32 Bit        Muxes := 1     
+	 100 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 114   
+	  97 Input     18 Bit        Muxes := 1     
+	 101 Input     18 Bit        Muxes := 1     
+	  93 Input     18 Bit        Muxes := 1     
+	 105 Input     18 Bit        Muxes := 1     
+	 107 Input     18 Bit        Muxes := 1     
 	  11 Input     18 Bit        Muxes := 1     
 	  12 Input     18 Bit        Muxes := 1     
-	 167 Input     18 Bit        Muxes := 1     
+	  89 Input     18 Bit        Muxes := 1     
 	  13 Input     18 Bit        Muxes := 1     
 	  14 Input     18 Bit        Muxes := 1     
-	 164 Input     18 Bit        Muxes := 1     
+	 109 Input     18 Bit        Muxes := 1     
 	  16 Input     18 Bit        Muxes := 1     
 	  18 Input     18 Bit        Muxes := 1     
 	  19 Input     18 Bit        Muxes := 1     
 	  20 Input     18 Bit        Muxes := 1     
-	 162 Input     18 Bit        Muxes := 1     
-	  21 Input     18 Bit        Muxes := 1     
+	 113 Input     18 Bit        Muxes := 1     
 	  22 Input     18 Bit        Muxes := 1     
-	  23 Input     18 Bit        Muxes := 1     
+	  84 Input     18 Bit        Muxes := 1     
+	 114 Input     18 Bit        Muxes := 1     
 	  24 Input     18 Bit        Muxes := 1     
-	 160 Input     18 Bit        Muxes := 1     
-	  25 Input     18 Bit        Muxes := 1     
 	  26 Input     18 Bit        Muxes := 1     
 	  27 Input     18 Bit        Muxes := 1     
-	  28 Input     18 Bit        Muxes := 1     
+	  81 Input     18 Bit        Muxes := 1     
 	  29 Input     18 Bit        Muxes := 1     
-	 157 Input     18 Bit        Muxes := 1     
-	 156 Input     18 Bit        Muxes := 1     
-	  34 Input     18 Bit        Muxes := 1     
-	 153 Input     18 Bit        Muxes := 1     
-	  35 Input     18 Bit        Muxes := 1     
+	  31 Input     18 Bit        Muxes := 1     
 	  36 Input     18 Bit        Muxes := 1     
-	 152 Input     18 Bit        Muxes := 1     
-	  37 Input     18 Bit        Muxes := 1     
+	  79 Input     18 Bit        Muxes := 1     
 	  39 Input     18 Bit        Muxes := 1     
 	  40 Input     18 Bit        Muxes := 1     
 	  41 Input     18 Bit        Muxes := 1     
-	  43 Input     18 Bit        Muxes := 1     
-	  45 Input     18 Bit        Muxes := 1     
+	  77 Input     18 Bit        Muxes := 1     
 	  47 Input     18 Bit        Muxes := 1     
 	  49 Input     18 Bit        Muxes := 1     
-	 146 Input     18 Bit        Muxes := 1     
 	  51 Input     18 Bit        Muxes := 1     
-	 145 Input     18 Bit        Muxes := 1     
-	  53 Input     18 Bit        Muxes := 1     
-	  54 Input     18 Bit        Muxes := 1     
-	  55 Input     18 Bit        Muxes := 1     
-	 144 Input     18 Bit        Muxes := 1     
 	  57 Input     18 Bit        Muxes := 1     
-	  61 Input     18 Bit        Muxes := 1     
-	 141 Input     18 Bit        Muxes := 1     
-	 140 Input     18 Bit        Muxes := 1     
 	  66 Input     18 Bit        Muxes := 1     
 	  67 Input     18 Bit        Muxes := 1     
-	 137 Input     18 Bit        Muxes := 1     
 	  68 Input     18 Bit        Muxes := 1     
 	  69 Input     18 Bit        Muxes := 1     
-	 136 Input     18 Bit        Muxes := 1     
-	  71 Input     18 Bit        Muxes := 1     
-	 134 Input     18 Bit        Muxes := 1     
 	  73 Input     18 Bit        Muxes := 1     
-	 132 Input     18 Bit        Muxes := 1     
-	 130 Input     18 Bit        Muxes := 1     
-	  77 Input     18 Bit        Muxes := 1     
-	  79 Input     18 Bit        Muxes := 1     
-	  81 Input     18 Bit        Muxes := 1     
-	  84 Input     18 Bit        Muxes := 1     
-	  85 Input     18 Bit        Muxes := 1     
-	  86 Input     18 Bit        Muxes := 1     
-	 120 Input     18 Bit        Muxes := 1     
-	  88 Input     18 Bit        Muxes := 1     
-	  89 Input     18 Bit        Muxes := 1     
-	 118 Input     18 Bit        Muxes := 1     
-	  93 Input     18 Bit        Muxes := 1     
-	 114 Input     18 Bit        Muxes := 1     
-	  97 Input     18 Bit        Muxes := 1     
-	 113 Input     18 Bit        Muxes := 1     
 	  98 Input     18 Bit        Muxes := 1     
-	 100 Input     18 Bit        Muxes := 1     
-	 101 Input     18 Bit        Muxes := 1     
 	 102 Input     18 Bit        Muxes := 1     
 	 104 Input     18 Bit        Muxes := 1     
-	 105 Input     18 Bit        Muxes := 1     
-	 109 Input     18 Bit        Muxes := 1     
-	 107 Input     18 Bit        Muxes := 1     
-	 116 Input     18 Bit        Muxes := 1     
-	 121 Input     18 Bit        Muxes := 1     
-	 131 Input     18 Bit        Muxes := 1     
-	 133 Input     18 Bit        Muxes := 1     
-	 135 Input     18 Bit        Muxes := 1     
-	 148 Input     18 Bit        Muxes := 1     
-	  31 Input     18 Bit        Muxes := 1     
-	 161 Input     18 Bit        Muxes := 1     
+	  88 Input     18 Bit        Muxes := 1     
+	  86 Input     18 Bit        Muxes := 1     
+	  85 Input     18 Bit        Muxes := 1     
+	  71 Input     18 Bit        Muxes := 1     
+	  61 Input     18 Bit        Muxes := 1     
+	  55 Input     18 Bit        Muxes := 1     
+	  54 Input     18 Bit        Muxes := 1     
+	  53 Input     18 Bit        Muxes := 1     
+	  45 Input     18 Bit        Muxes := 1     
+	  43 Input     18 Bit        Muxes := 1     
+	  37 Input     18 Bit        Muxes := 1     
+	  35 Input     18 Bit        Muxes := 1     
+	  34 Input     18 Bit        Muxes := 1     
+	  28 Input     18 Bit        Muxes := 1     
+	  25 Input     18 Bit        Muxes := 1     
+	  23 Input     18 Bit        Muxes := 1     
+	  21 Input     18 Bit        Muxes := 1     
 	  15 Input     18 Bit        Muxes := 1     
-	 166 Input     18 Bit        Muxes := 1     
-	 169 Input     18 Bit        Muxes := 1     
+	  10 Input     18 Bit        Muxes := 1     
 	   9 Input     18 Bit        Muxes := 1     
 	   8 Input     18 Bit        Muxes := 1     
 	   7 Input     18 Bit        Muxes := 1     
 	   6 Input     18 Bit        Muxes := 1     
-	 174 Input     18 Bit        Muxes := 1     
+	   5 Input     18 Bit        Muxes := 1     
 	   4 Input     18 Bit        Muxes := 1     
-	 175 Input     18 Bit        Muxes := 1     
-	 177 Input     18 Bit        Muxes := 1     
-	 178 Input     18 Bit        Muxes := 1     
 	   3 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 3     
@@ -2739,7 +2744,7 @@ DSP Report: operator mult63/outMem is absorbed into DSP mult63/outMem.
 DSP Report: operator mult63/outMem is absorbed into DSP mult63/outMem.
 INFO: [Synth 8-5546] ROM "rdata" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:52 ; elapsed = 00:02:57 . Memory (MB): peak = 1446.855 ; gain = 1145.898
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:13 ; elapsed = 00:03:20 . Memory (MB): peak = 1554.719 ; gain = 1251.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2749,70 +2754,70 @@ DSP: Preliminary Mapping  Report (see note below)
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multiplier  | C+A*B       | 18     | 17     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multiplier  | C+A*B       | 18     | 17     | 35     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -2824,66 +2829,60 @@ Report RTL Partitions:
 +------+--------------------+------------+----------+
 |      |RTL Partition       |Replication |Instances |
 +------+--------------------+------------+----------+
-|1     |convmultCore__GB0   |           1|      6480|
-|2     |convmultCore__GB1   |           1|     13375|
-|3     |convmultCore__GB2   |           1|      9069|
-|4     |convmultCore__GB3   |           1|      5346|
-|5     |axi_cnn__GCB0       |           1|     11294|
-|6     |axi_cnn__GCB1       |           1|      2359|
-|7     |CNN_top_module__GC0 |           1|      2563|
+|1     |convmultCore__GB0   |           1|      6228|
+|2     |convmultCore__GB1   |           1|      4464|
+|3     |convmultCore__GB2   |           1|      4716|
+|4     |convmultCore__GB3   |           1|     25067|
+|5     |convmultCore__GB4   |           1|      5472|
+|6     |axi_cnn__GCB0       |           1|     10260|
+|7     |axi_cnn__GCB1       |           1|      1746|
+|8     |axi_cnn__GCB2       |           1|      5454|
+|9     |CNN_top_module__GC0 |           1|      2563|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:03 ; elapsed = 00:03:09 . Memory (MB): peak = 1446.855 ; gain = 1145.898
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:25 ; elapsed = 00:03:33 . Memory (MB): peak = 1554.719 ; gain = 1251.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/axi_cnn_0/insti_5/\rdata_reg[13] )
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:20 ; elapsed = 00:05:28 . Memory (MB): peak = 2573.789 ; gain = 2272.832
+Finished Timing Optimization : Time (s): cpu = 00:05:33 ; elapsed = 00:05:44 . Memory (MB): peak = 2248.379 ; gain = 1945.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+----------------------------------+------------+----------+
-|      |RTL Partition                     |Replication |Instances |
-+------+----------------------------------+------------+----------+
-|1     |CNN_top_module__GC0               |           1|      2563|
-|2     |CNN_top_module_axi_cnn_0_0_GT1    |           1|      2377|
-|3     |CNN_top_module_axi_cnn_0_0_GT0    |           1|     34755|
-|4     |CNN_top_module_axi_cnn_0_0_GT1__1 |           1|      6644|
-+------+----------------------------------+------------+----------+
++------+-------------------------------+------------+----------+
+|      |RTL Partition                  |Replication |Instances |
++------+-------------------------------+------------+----------+
+|1     |convmultCore__GB2              |           1|      4694|
+|2     |convmultCore__GB4              |           1|      5450|
+|3     |axi_cnn__GCB1                  |           1|      1744|
+|4     |CNN_top_module__GC0            |           1|      2563|
+|5     |CNN_top_module_axi_cnn_0_0_GT0 |           1|     10993|
+|6     |CNN_top_module_axi_cnn_0_0_GT1 |           1|     34125|
+|7     |CNN_top_module_axi_cnn_0_0_GT2 |           1|      4981|
++------+-------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:24 ; elapsed = 00:06:16 . Memory (MB): peak = 2573.789 ; gain = 2272.832
+Finished Technology Mapping : Time (s): cpu = 00:06:15 ; elapsed = 00:06:36 . Memory (MB): peak = 2248.379 ; gain = 1945.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+----------------------------------+------------+----------+
-|      |RTL Partition                     |Replication |Instances |
-+------+----------------------------------+------------+----------+
-|1     |CNN_top_module__GC0               |           1|      1515|
-|2     |CNN_top_module_axi_cnn_0_0_GT1    |           1|       937|
-|3     |CNN_top_module_axi_cnn_0_0_GT0    |           1|     11809|
-|4     |CNN_top_module_axi_cnn_0_0_GT1__1 |           1|      4461|
-+------+----------------------------------+------------+----------+
++------+-------------------------------+------------+----------+
+|      |RTL Partition                  |Replication |Instances |
++------+-------------------------------+------------+----------+
+|1     |convmultCore__GB2              |           1|      2404|
+|2     |convmultCore__GB4              |           1|      3154|
+|3     |axi_cnn__GCB1                  |           1|      1107|
+|4     |CNN_top_module__GC0            |           1|      1515|
+|5     |CNN_top_module_axi_cnn_0_0_GT0 |           1|      6228|
+|6     |CNN_top_module_axi_cnn_0_0_GT1 |           1|     11986|
+|7     |CNN_top_module_axi_cnn_0_0_GT2 |           1|      1871|
++------+-------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -2898,11 +2897,12 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[2] because some of its loads are not in same hierarchy as its driver   
 INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[3] because some of its loads are not in same hierarchy as its driver   
+INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[4] because some of its loads are not in same hierarchy as its driver   
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:27 ; elapsed = 00:06:19 . Memory (MB): peak = 2573.789 ; gain = 2272.832
+Finished IO Insertion : Time (s): cpu = 00:06:19 ; elapsed = 00:06:40 . Memory (MB): peak = 2248.379 ; gain = 1945.426
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2915,7 +2915,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:28 ; elapsed = 00:06:19 . Memory (MB): peak = 2573.789 ; gain = 2272.832
+Finished Renaming Generated Instances : Time (s): cpu = 00:06:19 ; elapsed = 00:06:40 . Memory (MB): peak = 2248.379 ; gain = 1945.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2927,25 +2927,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:28 ; elapsed = 00:06:20 . Memory (MB): peak = 2573.789 ; gain = 2272.832
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:21 ; elapsed = 00:06:41 . Memory (MB): peak = 2248.379 ; gain = 1945.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:05:29 ; elapsed = 00:06:21 . Memory (MB): peak = 2573.789 ; gain = 2272.832
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:21 ; elapsed = 00:06:41 . Memory (MB): peak = 2248.379 ; gain = 1945.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:29 ; elapsed = 00:06:21 . Memory (MB): peak = 2573.789 ; gain = 2272.832
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:21 ; elapsed = 00:06:42 . Memory (MB): peak = 2248.379 ; gain = 1945.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:05:29 ; elapsed = 00:06:21 . Memory (MB): peak = 2573.789 ; gain = 2272.832
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:21 ; elapsed = 00:06:42 . Memory (MB): peak = 2248.379 ; gain = 1945.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2978,21 +2978,21 @@ Report Cell Usage:
 +------+----------+------+
 |1     |BIBUF     |   130|
 |2     |BUFG      |     2|
-|3     |CARRY4    |   123|
+|3     |CARRY4    |   207|
 |4     |DSP48E1_1 |    64|
-|5     |LUT1      |   133|
-|6     |LUT2      |    63|
-|7     |LUT3      |  5002|
-|8     |LUT4      |   926|
-|9     |LUT5      |  1097|
-|10    |LUT6      |  5012|
-|11    |MUXF7     |   556|
-|12    |MUXF8     |   206|
+|5     |LUT1      |   134|
+|6     |LUT2      |   982|
+|7     |LUT3      |  6016|
+|8     |LUT4      |   335|
+|9     |LUT5      |  1087|
+|10    |LUT6      |  6528|
+|11    |MUXF7     |  1616|
+|12    |MUXF8     |   713|
 |13    |PS7       |     1|
 |14    |SRL16     |     1|
 |15    |SRLC32E   |    47|
 |16    |FDR       |     8|
-|17    |FDRE      |  5512|
+|17    |FDRE      |  7711|
 |18    |FDSE      |    21|
 +------+----------+------+
 
@@ -3000,140 +3000,140 @@ Report Instance Areas:
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 |      |Instance                                           |Module                                                         |Cells |
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
-|1     |top                                                |                                                               | 18904|
-|2     |  CNN_top_module_i                                 |CNN_top_module                                                 | 18904|
-|3     |    axi_cnn_0                                      |CNN_top_module_axi_cnn_0_0                                     | 17365|
-|4     |      inst                                         |axi_cnn                                                        | 17364|
-|5     |        coreInstance                               |convmultCore                                                   | 10313|
-|6     |          multxPrime                               |multx                                                          |  7752|
-|7     |            mult0                                  |multiplier                                                     |    29|
-|8     |            mult1                                  |multiplier_68                                                  |    42|
-|9     |            mult10                                 |multiplier_69                                                  |   214|
-|10    |            mult11                                 |multiplier_70                                                  |    33|
-|11    |            mult12                                 |multiplier_71                                                  |   486|
-|12    |            mult13                                 |multiplier_72                                                  |   499|
-|13    |            mult14                                 |multiplier_73                                                  |    69|
-|14    |            mult15                                 |multiplier_74                                                  |    56|
-|15    |            mult16                                 |multiplier_75                                                  |    54|
-|16    |            mult17                                 |multiplier_76                                                  |    67|
-|17    |            mult18                                 |multiplier_77                                                  |    69|
-|18    |            mult19                                 |multiplier_78                                                  |    89|
-|19    |            mult2                                  |multiplier_79                                                  |    44|
-|20    |            mult20                                 |multiplier_80                                                  |    54|
-|21    |            mult21                                 |multiplier_81                                                  |    67|
-|22    |            mult22                                 |multiplier_82                                                  |    69|
-|23    |            mult23                                 |multiplier_83                                                  |    22|
-|24    |            mult24                                 |multiplier_84                                                  |    54|
-|25    |            mult25                                 |multiplier_85                                                  |    67|
-|26    |            mult26                                 |multiplier_86                                                  |    69|
-|27    |            mult27                                 |multiplier_87                                                  |   145|
-|28    |            mult28                                 |multiplier_88                                                  |    73|
-|29    |            mult29                                 |multiplier_89                                                  |    53|
-|30    |            mult3                                  |multiplier_90                                                  |    33|
-|31    |            mult30                                 |multiplier_91                                                  |   121|
-|32    |            mult31                                 |multiplier_92                                                  |   135|
-|33    |            mult32                                 |multiplier_93                                                  |   118|
-|34    |            mult33                                 |multiplier_94                                                  |   131|
-|35    |            mult34                                 |multiplier_95                                                  |   133|
-|36    |            mult35                                 |multiplier_96                                                  |    89|
-|37    |            mult36                                 |multiplier_97                                                  |   118|
-|38    |            mult37                                 |multiplier_98                                                  |   131|
-|39    |            mult38                                 |multiplier_99                                                  |    70|
-|40    |            mult39                                 |multiplier_100                                                 |    22|
-|41    |            mult4                                  |multiplier_101                                                 |    29|
-|42    |            mult40                                 |multiplier_102                                                 |    39|
-|43    |            mult41                                 |multiplier_103                                                 |    52|
-|44    |            mult42                                 |multiplier_104                                                 |    54|
-|45    |            mult43                                 |multiplier_105                                                 |   125|
-|46    |            mult44                                 |multiplier_106                                                 |    40|
-|47    |            mult45                                 |multiplier_107                                                 |    65|
-|48    |            mult46                                 |multiplier_108                                                 |    55|
-|49    |            mult47                                 |multiplier_109                                                 |    45|
-|50    |            mult48                                 |multiplier_110                                                 |    39|
-|51    |            mult49                                 |multiplier_111                                                 |    51|
-|52    |            mult5                                  |multiplier_112                                                 |    42|
-|53    |            mult50                                 |multiplier_113                                                 |    53|
-|54    |            mult51                                 |multiplier_114                                                 |    59|
-|55    |            mult52                                 |multiplier_115                                                 |    39|
-|56    |            mult53                                 |multiplier_116                                                 |    51|
-|57    |            mult54                                 |multiplier_117                                                 |   131|
-|58    |            mult55                                 |multiplier_118                                                 |    56|
+|1     |top                                                |                                                               | 25603|
+|2     |  CNN_top_module_i                                 |CNN_top_module                                                 | 25603|
+|3     |    axi_cnn_0                                      |CNN_top_module_axi_cnn_0_0                                     | 24064|
+|4     |      inst                                         |axi_cnn                                                        | 24063|
+|5     |        coreInstance                               |convmultCore                                                   | 15653|
+|6     |          multxPrime                               |multx                                                          | 11235|
+|7     |            mult0                                  |multiplier                                                     |   144|
+|8     |            mult1                                  |multiplier_68                                                  |   167|
+|9     |            mult10                                 |multiplier_69                                                  |   179|
+|10    |            mult11                                 |multiplier_70                                                  |   150|
+|11    |            mult12                                 |multiplier_71                                                  |   144|
+|12    |            mult13                                 |multiplier_72                                                  |   167|
+|13    |            mult14                                 |multiplier_73                                                  |   179|
+|14    |            mult15                                 |multiplier_74                                                  |   147|
+|15    |            mult16                                 |multiplier_75                                                  |    72|
+|16    |            mult17                                 |multiplier_76                                                  |    95|
+|17    |            mult18                                 |multiplier_77                                                  |   107|
+|18    |            mult19                                 |multiplier_78                                                  |   108|
+|19    |            mult2                                  |multiplier_79                                                  |   179|
+|20    |            mult20                                 |multiplier_80                                                  |    72|
+|21    |            mult21                                 |multiplier_81                                                  |    95|
+|22    |            mult22                                 |multiplier_82                                                  |   107|
+|23    |            mult23                                 |multiplier_83                                                  |    79|
+|24    |            mult24                                 |multiplier_84                                                  |   144|
+|25    |            mult25                                 |multiplier_85                                                  |    64|
+|26    |            mult26                                 |multiplier_86                                                  |    76|
+|27    |            mult27                                 |multiplier_87                                                  |    74|
+|28    |            mult28                                 |multiplier_88                                                  |    48|
+|29    |            mult29                                 |multiplier_89                                                  |    64|
+|30    |            mult3                                  |multiplier_90                                                  |   174|
+|31    |            mult30                                 |multiplier_91                                                  |    76|
+|32    |            mult31                                 |multiplier_92                                                  |   113|
+|33    |            mult32                                 |multiplier_93                                                  |    36|
+|34    |            mult33                                 |multiplier_94                                                  |    59|
+|35    |            mult34                                 |multiplier_95                                                  |    71|
+|36    |            mult35                                 |multiplier_96                                                  |    71|
+|37    |            mult36                                 |multiplier_97                                                  |    36|
+|38    |            mult37                                 |multiplier_98                                                  |    59|
+|39    |            mult38                                 |multiplier_99                                                  |    71|
+|40    |            mult39                                 |multiplier_100                                                 |    45|
+|41    |            mult4                                  |multiplier_101                                                 |   144|
+|42    |            mult40                                 |multiplier_102                                                 |   198|
+|43    |            mult41                                 |multiplier_103                                                 |   136|
+|44    |            mult42                                 |multiplier_104                                                 |   148|
+|45    |            mult43                                 |multiplier_105                                                 |   115|
+|46    |            mult44                                 |multiplier_106                                                 |   113|
+|47    |            mult45                                 |multiplier_107                                                 |   136|
+|48    |            mult46                                 |multiplier_108                                                 |   148|
+|49    |            mult47                                 |multiplier_109                                                 |   198|
+|50    |            mult48                                 |multiplier_110                                                 |   396|
+|51    |            mult49                                 |multiplier_111                                                 |   419|
+|52    |            mult5                                  |multiplier_112                                                 |   167|
+|53    |            mult50                                 |multiplier_113                                                 |   431|
+|54    |            mult51                                 |multiplier_114                                                 |   387|
+|55    |            mult52                                 |multiplier_115                                                 |   108|
+|56    |            mult53                                 |multiplier_116                                                 |   131|
+|57    |            mult54                                 |multiplier_117                                                 |   143|
+|58    |            mult55                                 |multiplier_118                                                 |   113|
 |59    |            mult56                                 |multiplier_119                                                 |   103|
-|60    |            mult57                                 |multiplier_120                                                 |   116|
-|61    |            mult58                                 |multiplier_121                                                 |   118|
-|62    |            mult59                                 |multiplier_122                                                 |    58|
-|63    |            mult6                                  |multiplier_123                                                 |   486|
-|64    |            mult60                                 |multiplier_124                                                 |    69|
-|65    |            mult61                                 |multiplier_125                                                 |   102|
-|66    |            mult62                                 |multiplier_126                                                 |    33|
-|67    |            mult63                                 |multiplier_127                                                 |    57|
-|68    |            mult7                                  |multiplier_128                                                 |   328|
-|69    |            mult8                                  |multiplier_129                                                 |   199|
-|70    |            mult9                                  |multiplier_130                                                 |   212|
-|71    |          outMult0                                 |mult2reg                                                       |    37|
-|72    |          outMult1                                 |mult2reg_5                                                     |    37|
-|73    |          outMult10                                |mult2reg_6                                                     |    37|
-|74    |          outMult11                                |mult2reg_7                                                     |    37|
-|75    |          outMult12                                |mult2reg_8                                                     |    37|
-|76    |          outMult13                                |mult2reg_9                                                     |    37|
-|77    |          outMult14                                |mult2reg_10                                                    |    37|
-|78    |          outMult15                                |mult2reg_11                                                    |    37|
-|79    |          outMult16                                |mult2reg_12                                                    |    37|
-|80    |          outMult17                                |mult2reg_13                                                    |    37|
-|81    |          outMult18                                |mult2reg_14                                                    |    37|
-|82    |          outMult19                                |mult2reg_15                                                    |    37|
-|83    |          outMult2                                 |mult2reg_16                                                    |    37|
-|84    |          outMult20                                |mult2reg_17                                                    |    37|
-|85    |          outMult21                                |mult2reg_18                                                    |    37|
-|86    |          outMult22                                |mult2reg_19                                                    |    37|
-|87    |          outMult23                                |mult2reg_20                                                    |    37|
-|88    |          outMult24                                |mult2reg_21                                                    |    37|
-|89    |          outMult25                                |mult2reg_22                                                    |    37|
-|90    |          outMult26                                |mult2reg_23                                                    |    37|
-|91    |          outMult27                                |mult2reg_24                                                    |    37|
-|92    |          outMult28                                |mult2reg_25                                                    |    37|
-|93    |          outMult29                                |mult2reg_26                                                    |    37|
-|94    |          outMult3                                 |mult2reg_27                                                    |    37|
-|95    |          outMult30                                |mult2reg_28                                                    |    37|
-|96    |          outMult31                                |mult2reg_29                                                    |    37|
-|97    |          outMult32                                |mult2reg_30                                                    |    37|
-|98    |          outMult33                                |mult2reg_31                                                    |    37|
-|99    |          outMult34                                |mult2reg_32                                                    |    37|
-|100   |          outMult35                                |mult2reg_33                                                    |    37|
-|101   |          outMult36                                |mult2reg_34                                                    |    37|
-|102   |          outMult37                                |mult2reg_35                                                    |    37|
-|103   |          outMult38                                |mult2reg_36                                                    |    37|
-|104   |          outMult39                                |mult2reg_37                                                    |    37|
-|105   |          outMult4                                 |mult2reg_38                                                    |    37|
-|106   |          outMult40                                |mult2reg_39                                                    |    37|
-|107   |          outMult41                                |mult2reg_40                                                    |    37|
-|108   |          outMult42                                |mult2reg_41                                                    |    37|
-|109   |          outMult43                                |mult2reg_42                                                    |    37|
-|110   |          outMult44                                |mult2reg_43                                                    |    37|
-|111   |          outMult45                                |mult2reg_44                                                    |    37|
-|112   |          outMult46                                |mult2reg_45                                                    |    37|
-|113   |          outMult47                                |mult2reg_46                                                    |    38|
-|114   |          outMult48                                |mult2reg_47                                                    |    37|
-|115   |          outMult49                                |mult2reg_48                                                    |    37|
-|116   |          outMult5                                 |mult2reg_49                                                    |    37|
-|117   |          outMult50                                |mult2reg_50                                                    |    37|
-|118   |          outMult51                                |mult2reg_51                                                    |    37|
-|119   |          outMult52                                |mult2reg_52                                                    |    37|
-|120   |          outMult53                                |mult2reg_53                                                    |    37|
-|121   |          outMult54                                |mult2reg_54                                                    |    37|
-|122   |          outMult55                                |mult2reg_55                                                    |    37|
-|123   |          outMult56                                |mult2reg_56                                                    |    37|
-|124   |          outMult57                                |mult2reg_57                                                    |    37|
-|125   |          outMult58                                |mult2reg_58                                                    |    37|
-|126   |          outMult59                                |mult2reg_59                                                    |    37|
-|127   |          outMult6                                 |mult2reg_60                                                    |    37|
-|128   |          outMult60                                |mult2reg_61                                                    |    38|
-|129   |          outMult61                                |mult2reg_62                                                    |    38|
-|130   |          outMult62                                |mult2reg_63                                                    |    38|
-|131   |          outMult63                                |mult2reg_64                                                    |    38|
-|132   |          outMult7                                 |mult2reg_65                                                    |    37|
-|133   |          outMult8                                 |mult2reg_66                                                    |    37|
-|134   |          outMult9                                 |mult2reg_67                                                    |    37|
+|60    |            mult57                                 |multiplier_120                                                 |    58|
+|61    |            mult58                                 |multiplier_121                                                 |    70|
+|62    |            mult59                                 |multiplier_122                                                 |    45|
+|63    |            mult6                                  |multiplier_123                                                 |   179|
+|64    |            mult60                                 |multiplier_124                                                 |    35|
+|65    |            mult61                                 |multiplier_125                                                 |    58|
+|66    |            mult62                                 |multiplier_126                                                 |    70|
+|67    |            mult63                                 |multiplier_127                                                 |   148|
+|68    |            mult7                                  |multiplier_128                                                 |   147|
+|69    |            mult8                                  |multiplier_129                                                 |   144|
+|70    |            mult9                                  |multiplier_130                                                 |   167|
+|71    |          outMult0                                 |mult2reg                                                       |    65|
+|72    |          outMult1                                 |mult2reg_5                                                     |    65|
+|73    |          outMult10                                |mult2reg_6                                                     |    65|
+|74    |          outMult11                                |mult2reg_7                                                     |    65|
+|75    |          outMult12                                |mult2reg_8                                                     |    65|
+|76    |          outMult13                                |mult2reg_9                                                     |    65|
+|77    |          outMult14                                |mult2reg_10                                                    |    65|
+|78    |          outMult15                                |mult2reg_11                                                    |    65|
+|79    |          outMult16                                |mult2reg_12                                                    |    65|
+|80    |          outMult17                                |mult2reg_13                                                    |    65|
+|81    |          outMult18                                |mult2reg_14                                                    |    65|
+|82    |          outMult19                                |mult2reg_15                                                    |    65|
+|83    |          outMult2                                 |mult2reg_16                                                    |    65|
+|84    |          outMult20                                |mult2reg_17                                                    |    65|
+|85    |          outMult21                                |mult2reg_18                                                    |    65|
+|86    |          outMult22                                |mult2reg_19                                                    |    65|
+|87    |          outMult23                                |mult2reg_20                                                    |    65|
+|88    |          outMult24                                |mult2reg_21                                                    |    65|
+|89    |          outMult25                                |mult2reg_22                                                    |    65|
+|90    |          outMult26                                |mult2reg_23                                                    |    65|
+|91    |          outMult27                                |mult2reg_24                                                    |    65|
+|92    |          outMult28                                |mult2reg_25                                                    |    65|
+|93    |          outMult29                                |mult2reg_26                                                    |    65|
+|94    |          outMult3                                 |mult2reg_27                                                    |    66|
+|95    |          outMult30                                |mult2reg_28                                                    |    65|
+|96    |          outMult31                                |mult2reg_29                                                    |    65|
+|97    |          outMult32                                |mult2reg_30                                                    |    65|
+|98    |          outMult33                                |mult2reg_31                                                    |    65|
+|99    |          outMult34                                |mult2reg_32                                                    |    65|
+|100   |          outMult35                                |mult2reg_33                                                    |    65|
+|101   |          outMult36                                |mult2reg_34                                                    |    65|
+|102   |          outMult37                                |mult2reg_35                                                    |    65|
+|103   |          outMult38                                |mult2reg_36                                                    |    65|
+|104   |          outMult39                                |mult2reg_37                                                    |    65|
+|105   |          outMult4                                 |mult2reg_38                                                    |    65|
+|106   |          outMult40                                |mult2reg_39                                                    |    65|
+|107   |          outMult41                                |mult2reg_40                                                    |    65|
+|108   |          outMult42                                |mult2reg_41                                                    |    65|
+|109   |          outMult43                                |mult2reg_42                                                    |    65|
+|110   |          outMult44                                |mult2reg_43                                                    |    65|
+|111   |          outMult45                                |mult2reg_44                                                    |    65|
+|112   |          outMult46                                |mult2reg_45                                                    |    65|
+|113   |          outMult47                                |mult2reg_46                                                    |    65|
+|114   |          outMult48                                |mult2reg_47                                                    |    65|
+|115   |          outMult49                                |mult2reg_48                                                    |    65|
+|116   |          outMult5                                 |mult2reg_49                                                    |    65|
+|117   |          outMult50                                |mult2reg_50                                                    |    65|
+|118   |          outMult51                                |mult2reg_51                                                    |    65|
+|119   |          outMult52                                |mult2reg_52                                                    |    65|
+|120   |          outMult53                                |mult2reg_53                                                    |    65|
+|121   |          outMult54                                |mult2reg_54                                                    |    65|
+|122   |          outMult55                                |mult2reg_55                                                    |    65|
+|123   |          outMult56                                |mult2reg_56                                                    |    66|
+|124   |          outMult57                                |mult2reg_57                                                    |    65|
+|125   |          outMult58                                |mult2reg_58                                                    |    65|
+|126   |          outMult59                                |mult2reg_59                                                    |    65|
+|127   |          outMult6                                 |mult2reg_60                                                    |    65|
+|128   |          outMult60                                |mult2reg_61                                                    |    65|
+|129   |          outMult61                                |mult2reg_62                                                    |    66|
+|130   |          outMult62                                |mult2reg_63                                                    |    66|
+|131   |          outMult63                                |mult2reg_64                                                    |    65|
+|132   |          outMult7                                 |mult2reg_65                                                    |    65|
+|133   |          outMult8                                 |mult2reg_66                                                    |    65|
+|134   |          outMult9                                 |mult2reg_67                                                    |    65|
 |135   |    processing_system7_0                           |CNN_top_module_processing_system7_0_0                          |   244|
 |136   |      inst                                         |processing_system7_v5_5_processing_system7                     |   244|
 |137   |    ps7_0_axi_periph                               |CNN_top_module_ps7_0_axi_periph_0                              |  1225|
@@ -3171,29 +3171,29 @@ Report Instance Areas:
 |169   |          SEQ_COUNTER                              |upcnt_n                                                        |    13|
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:29 ; elapsed = 00:06:21 . Memory (MB): peak = 2573.789 ; gain = 2272.832
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:21 ; elapsed = 00:06:42 . Memory (MB): peak = 2248.379 ; gain = 1945.426
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:31 ; elapsed = 00:06:03 . Memory (MB): peak = 2573.789 ; gain = 1885.301
-Synthesis Optimization Complete : Time (s): cpu = 00:05:29 ; elapsed = 00:06:23 . Memory (MB): peak = 2573.789 ; gain = 2272.832
+Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:10 ; elapsed = 00:06:14 . Memory (MB): peak = 2248.379 ; gain = 1511.598
+Synthesis Optimization Complete : Time (s): cpu = 00:06:22 ; elapsed = 00:06:43 . Memory (MB): peak = 2248.379 ; gain = 1945.426
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 958 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 2609 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2573.789 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2248.379 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-191 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+178 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:05:33 ; elapsed = 00:06:29 . Memory (MB): peak = 2573.789 ; gain = 2280.098
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2573.789 ; gain = 0.000
+synth_design: Time (s): cpu = 00:06:28 ; elapsed = 00:06:49 . Memory (MB): peak = 2248.379 ; gain = 1952.688
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2248.379 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.runs/synth_1/CNN_top_module_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CNN_top_module_wrapper_utilization_synth.rpt -pb CNN_top_module_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Mar  2 09:31:03 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  7 00:02:08 2019...
