@@ -26,7 +26,7 @@ function generate(v, r) {
     bodyPrint(`// input data is a fixed-point fraction with ${dataLength - fixedPoint} integer bits and ${fixedPoint} fraction bits`)
     bodyPrint(`// output data is a fixed-point fraction with ${2 * (dataLength - fixedPoint)} integer bits and ${32 - 2 * (dataLength - fixedPoint)} fraction bits`)
     bodyPrint(`// accepted address range is [offset + 0x00000000, offset + 0x00ffffff) with jumps of 4 for each register`)
-    bodyPrint(`// there are ${2 * (v * v - v + 1)} registers in this AXI node`)
+    bodyPrint(`// there are ${2 * (v * v - v + 1)} registers in this AXI node, with ${(v - 1) * (3 * v + 1) + 3} memory locations`)
     bodyPrint(`// input from clock that drives this system is masterClock`)
     bodyPrint(`// input from reset that refreshes this system is masterReset`)
     r ? bodyPrint(`// the maximum amount of adder connected serially while not exceeding the delay of 1 multiplier is ${r}`) : null
