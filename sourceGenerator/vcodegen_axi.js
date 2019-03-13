@@ -213,7 +213,7 @@ function generate(v, r) {
     for(writeReg = 0; writeReg < 2 * (v * v - v + 1); writeReg++) {
         bodyPrint(`	else if (w_hs && waddr == C_ADDR_REG${writeReg})`);
         bodyPrint(`	   begin`);
-        bodyPrint(`		reg${writeReg}[${dataLength - 1}:0] <= (s_axi_wdata[31:${32 - dataLength}] & wmask) | (reg${writeReg}[${dataLength - 1}:0] & ~wmask);`);
+        bodyPrint(`		reg${writeReg}[${dataLength - 1}:0] <= (s_axi_wdata[31:${32 - dataLength}] & wmask[31:${32 - dataLength}]) | (reg${writeReg}[${dataLength - 1}:0] & ~wmask[31:${32 - dataLength}]);`);
         bodyPrint(`    end`);
     }
     // end change
