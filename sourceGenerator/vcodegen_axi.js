@@ -26,7 +26,7 @@ function generate(v, r) {
     bodyPrint(`// input data is a fixed-point fraction with ${dataLength - fixedPoint} integer bits and ${fixedPoint} fraction bits`)
     bodyPrint(`// output data is a fixed-point fraction with ${2 * (dataLength - fixedPoint)} integer bits and ${32 - 2 * (dataLength - fixedPoint)} fraction bits`)
     bodyPrint(`// accepted address range is [offset + 0x00000000, offset + 0x00ffffff) with jumps of 4 for each register`)
-    bodyPrint(`// there are ${(v - 1) * (3 * v + 1) + 3} registers in this AXI node`)
+    bodyPrint(`// there are ${2 * (v * v - v + 1)} registers in this AXI node`)
     bodyPrint(`// input from clock that drives this system is masterClock`)
     bodyPrint(`// input from reset that refreshes this system is masterReset`)
     r ? bodyPrint(`// the maximum amount of adder connected serially while not exceeding the delay of 1 multiplier is ${r}`) : null
@@ -93,10 +93,9 @@ function generate(v, r) {
     bodyPrint(`// reg0 will be control register; hardware will run if one of its bits are 1`)
     bodyPrint(`// reg1 to reg${v * v} will be image data input`)
     bodyPrint(`// reg${v * v + 1} to reg${2 * v * (v - 1) + 1} will be weight data input`)
-    bodyPrint(`// reg${2 * (v * v - v + 1)} to reg${(v - 1) * (3 * v + 1) + 2} will be processed data output`)
     // change to dynamic and change data length, if required
-    for(dataReg = 0; dataReg <= (v - 1) * (3 * v + 1) + 2; dataReg++) {
-        dataReg < 2 * (v * v - v + 1) ? bodyPrint(`reg [${dataLength - 1}:0] reg${dataReg};`) : bodyPrint(`reg [31:0] reg${dataReg};`)
+    for(dataReg = 0; dataReg < 2 * (v * v - v + 1); dataReg++) {
+        bodyPrint(`reg [${dataLength - 1}:0] reg${dataReg};`)
         dataReg < v * v ? bodyPrint(`wire [${2 * dataLength - 1}:0] output${dataReg};`) : null;
     }
     // end dynamic change
@@ -193,7 +192,7 @@ function generate(v, r) {
         if(readReg < 2 * (v * v - v + 1)) {
             bodyPrint(`             rdata <= {reg${readReg}, ${32 - dataLength}'b0};`);
         } else {
-            bodyPrint(`             rdata <= reg${readReg};`);
+            bodyPrint(`             rdata <= output${readReg - 2 * (v * v - v + 1)};`);
         }
     }
     // end change
@@ -205,20 +204,16 @@ function generate(v, r) {
     bodyPrint(`    if (!aresetn)`);
     bodyPrint(`    begin`);
     // change to dynamic
-    for(resetReg = 0; resetReg <= (v - 1) * (3 * v + 1) + 2; resetReg++) {
-        resetReg < 2 * (v * v - v + 1) ? bodyPrint(`        reg${resetReg} <= ${dataLength}'b0;`) : bodyPrint(`        reg${resetReg} <= 32'b0;`);
+    for(resetReg = 0; resetReg < 2 * (v * v - v + 1); resetReg++) {
+        bodyPrint(`        reg${resetReg} <= ${dataLength}'b0;`)
     }
     // end change
     bodyPrint(`    end`);
     // change to dynamic
-    for(writeReg = 0; writeReg <= (v - 1) * (3 * v + 1) + 2; writeReg++) {
+    for(writeReg = 0; writeReg < 2 * (v * v - v + 1); writeReg++) {
         bodyPrint(`	else if (w_hs && waddr == C_ADDR_REG${writeReg})`);
         bodyPrint(`	   begin`);
-        if(writeReg < 2 * (v * v - v + 1)) {
-            bodyPrint(`		reg${writeReg}[${dataLength - 1}:0] <= (s_axi_wdata[31:${32 - dataLength}] & wmask) | (reg${writeReg}[${dataLength - 1}:0] & ~wmask);`);
-        } else {
-            bodyPrint(`		reg${writeReg}[31:0] <= (s_axi_wdata[31:0] & wmask) | (output${writeReg - 2 * (v * v - v + 1)}[${2 * dataLength - 1}:${2 * dataLength - 32}] & ~wmask);`);
-        }
+        bodyPrint(`		reg${writeReg}[${dataLength - 1}:0] <= (s_axi_wdata[31:${32 - dataLength}] & wmask) | (reg${writeReg}[${dataLength - 1}:0] & ~wmask);`);
         bodyPrint(`    end`);
     }
     // end change
