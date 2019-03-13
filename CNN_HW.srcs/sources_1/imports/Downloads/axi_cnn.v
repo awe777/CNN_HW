@@ -4,7 +4,7 @@
 // input data is a fixed-point fraction with 8 integer bits and 10 fraction bits
 // output data is a fixed-point fraction with 16 integer bits and 16 fraction bits
 // accepted address range is [offset + 0x00000000, offset + 0x00ffffff) with jumps of 4 for each register
-// there are 178 registers in this AXI node
+// there are 114 registers in this AXI node, with 178 memory location
 // input from clock that drives this system is masterClock
 // input from reset that refreshes this system is masterReset
 // the maximum amount of adder connected serially while not exceeding the delay of 1 multiplier is 2
@@ -241,7 +241,6 @@ wire ar_hs;
 // reg0 will be control register; hardware will run if one of its bits are 1
 // reg1 to reg64 will be image data input
 // reg65 to reg113 will be weight data input
-// reg114 to reg177 will be processed data output
 reg [17:0] reg0;
 wire [35:0] output0;
 reg [17:0] reg1;
@@ -420,70 +419,6 @@ reg [17:0] reg110;
 reg [17:0] reg111;
 reg [17:0] reg112;
 reg [17:0] reg113;
-reg [31:0] reg114;
-reg [31:0] reg115;
-reg [31:0] reg116;
-reg [31:0] reg117;
-reg [31:0] reg118;
-reg [31:0] reg119;
-reg [31:0] reg120;
-reg [31:0] reg121;
-reg [31:0] reg122;
-reg [31:0] reg123;
-reg [31:0] reg124;
-reg [31:0] reg125;
-reg [31:0] reg126;
-reg [31:0] reg127;
-reg [31:0] reg128;
-reg [31:0] reg129;
-reg [31:0] reg130;
-reg [31:0] reg131;
-reg [31:0] reg132;
-reg [31:0] reg133;
-reg [31:0] reg134;
-reg [31:0] reg135;
-reg [31:0] reg136;
-reg [31:0] reg137;
-reg [31:0] reg138;
-reg [31:0] reg139;
-reg [31:0] reg140;
-reg [31:0] reg141;
-reg [31:0] reg142;
-reg [31:0] reg143;
-reg [31:0] reg144;
-reg [31:0] reg145;
-reg [31:0] reg146;
-reg [31:0] reg147;
-reg [31:0] reg148;
-reg [31:0] reg149;
-reg [31:0] reg150;
-reg [31:0] reg151;
-reg [31:0] reg152;
-reg [31:0] reg153;
-reg [31:0] reg154;
-reg [31:0] reg155;
-reg [31:0] reg156;
-reg [31:0] reg157;
-reg [31:0] reg158;
-reg [31:0] reg159;
-reg [31:0] reg160;
-reg [31:0] reg161;
-reg [31:0] reg162;
-reg [31:0] reg163;
-reg [31:0] reg164;
-reg [31:0] reg165;
-reg [31:0] reg166;
-reg [31:0] reg167;
-reg [31:0] reg168;
-reg [31:0] reg169;
-reg [31:0] reg170;
-reg [31:0] reg171;
-reg [31:0] reg172;
-reg [31:0] reg173;
-reg [31:0] reg174;
-reg [31:0] reg175;
-reg [31:0] reg176;
-reg [31:0] reg177;
 // ### AXI write ###########################################################
 assign s_axi_awready = (wstate_cs == S_WRIDLE);
 assign s_axi_wready = (wstate_cs == S_WRDATA);
@@ -800,133 +735,133 @@ begin
 			C_ADDR_REG113:
              rdata <= {reg113, 14'b0};
 			C_ADDR_REG114:
-             rdata <= reg114;
+             rdata <= output0[35:4];
 			C_ADDR_REG115:
-             rdata <= reg115;
+             rdata <= output1[35:4];
 			C_ADDR_REG116:
-             rdata <= reg116;
+             rdata <= output2[35:4];
 			C_ADDR_REG117:
-             rdata <= reg117;
+             rdata <= output3[35:4];
 			C_ADDR_REG118:
-             rdata <= reg118;
+             rdata <= output4[35:4];
 			C_ADDR_REG119:
-             rdata <= reg119;
+             rdata <= output5[35:4];
 			C_ADDR_REG120:
-             rdata <= reg120;
+             rdata <= output6[35:4];
 			C_ADDR_REG121:
-             rdata <= reg121;
+             rdata <= output7[35:4];
 			C_ADDR_REG122:
-             rdata <= reg122;
+             rdata <= output8[35:4];
 			C_ADDR_REG123:
-             rdata <= reg123;
+             rdata <= output9[35:4];
 			C_ADDR_REG124:
-             rdata <= reg124;
+             rdata <= output10[35:4];
 			C_ADDR_REG125:
-             rdata <= reg125;
+             rdata <= output11[35:4];
 			C_ADDR_REG126:
-             rdata <= reg126;
+             rdata <= output12[35:4];
 			C_ADDR_REG127:
-             rdata <= reg127;
+             rdata <= output13[35:4];
 			C_ADDR_REG128:
-             rdata <= reg128;
+             rdata <= output14[35:4];
 			C_ADDR_REG129:
-             rdata <= reg129;
+             rdata <= output15[35:4];
 			C_ADDR_REG130:
-             rdata <= reg130;
+             rdata <= output16[35:4];
 			C_ADDR_REG131:
-             rdata <= reg131;
+             rdata <= output17[35:4];
 			C_ADDR_REG132:
-             rdata <= reg132;
+             rdata <= output18[35:4];
 			C_ADDR_REG133:
-             rdata <= reg133;
+             rdata <= output19[35:4];
 			C_ADDR_REG134:
-             rdata <= reg134;
+             rdata <= output20[35:4];
 			C_ADDR_REG135:
-             rdata <= reg135;
+             rdata <= output21[35:4];
 			C_ADDR_REG136:
-             rdata <= reg136;
+             rdata <= output22[35:4];
 			C_ADDR_REG137:
-             rdata <= reg137;
+             rdata <= output23[35:4];
 			C_ADDR_REG138:
-             rdata <= reg138;
+             rdata <= output24[35:4];
 			C_ADDR_REG139:
-             rdata <= reg139;
+             rdata <= output25[35:4];
 			C_ADDR_REG140:
-             rdata <= reg140;
+             rdata <= output26[35:4];
 			C_ADDR_REG141:
-             rdata <= reg141;
+             rdata <= output27[35:4];
 			C_ADDR_REG142:
-             rdata <= reg142;
+             rdata <= output28[35:4];
 			C_ADDR_REG143:
-             rdata <= reg143;
+             rdata <= output29[35:4];
 			C_ADDR_REG144:
-             rdata <= reg144;
+             rdata <= output30[35:4];
 			C_ADDR_REG145:
-             rdata <= reg145;
+             rdata <= output31[35:4];
 			C_ADDR_REG146:
-             rdata <= reg146;
+             rdata <= output32[35:4];
 			C_ADDR_REG147:
-             rdata <= reg147;
+             rdata <= output33[35:4];
 			C_ADDR_REG148:
-             rdata <= reg148;
+             rdata <= output34[35:4];
 			C_ADDR_REG149:
-             rdata <= reg149;
+             rdata <= output35[35:4];
 			C_ADDR_REG150:
-             rdata <= reg150;
+             rdata <= output36[35:4];
 			C_ADDR_REG151:
-             rdata <= reg151;
+             rdata <= output37[35:4];
 			C_ADDR_REG152:
-             rdata <= reg152;
+             rdata <= output38[35:4];
 			C_ADDR_REG153:
-             rdata <= reg153;
+             rdata <= output39[35:4];
 			C_ADDR_REG154:
-             rdata <= reg154;
+             rdata <= output40[35:4];
 			C_ADDR_REG155:
-             rdata <= reg155;
+             rdata <= output41[35:4];
 			C_ADDR_REG156:
-             rdata <= reg156;
+             rdata <= output42[35:4];
 			C_ADDR_REG157:
-             rdata <= reg157;
+             rdata <= output43[35:4];
 			C_ADDR_REG158:
-             rdata <= reg158;
+             rdata <= output44[35:4];
 			C_ADDR_REG159:
-             rdata <= reg159;
+             rdata <= output45[35:4];
 			C_ADDR_REG160:
-             rdata <= reg160;
+             rdata <= output46[35:4];
 			C_ADDR_REG161:
-             rdata <= reg161;
+             rdata <= output47[35:4];
 			C_ADDR_REG162:
-             rdata <= reg162;
+             rdata <= output48[35:4];
 			C_ADDR_REG163:
-             rdata <= reg163;
+             rdata <= output49[35:4];
 			C_ADDR_REG164:
-             rdata <= reg164;
+             rdata <= output50[35:4];
 			C_ADDR_REG165:
-             rdata <= reg165;
+             rdata <= output51[35:4];
 			C_ADDR_REG166:
-             rdata <= reg166;
+             rdata <= output52[35:4];
 			C_ADDR_REG167:
-             rdata <= reg167;
+             rdata <= output53[35:4];
 			C_ADDR_REG168:
-             rdata <= reg168;
+             rdata <= output54[35:4];
 			C_ADDR_REG169:
-             rdata <= reg169;
+             rdata <= output55[35:4];
 			C_ADDR_REG170:
-             rdata <= reg170;
+             rdata <= output56[35:4];
 			C_ADDR_REG171:
-             rdata <= reg171;
+             rdata <= output57[35:4];
 			C_ADDR_REG172:
-             rdata <= reg172;
+             rdata <= output58[35:4];
 			C_ADDR_REG173:
-             rdata <= reg173;
+             rdata <= output59[35:4];
 			C_ADDR_REG174:
-             rdata <= reg174;
+             rdata <= output60[35:4];
 			C_ADDR_REG175:
-             rdata <= reg175;
+             rdata <= output61[35:4];
 			C_ADDR_REG176:
-             rdata <= reg176;
+             rdata <= output62[35:4];
 			C_ADDR_REG177:
-             rdata <= reg177;
+             rdata <= output63[35:4];
 		endcase
 end
 // ### Registers ############################################################
@@ -1048,782 +983,462 @@ begin
         reg111 <= 18'b0;
         reg112 <= 18'b0;
         reg113 <= 18'b0;
-        reg114 <= 32'b0;
-        reg115 <= 32'b0;
-        reg116 <= 32'b0;
-        reg117 <= 32'b0;
-        reg118 <= 32'b0;
-        reg119 <= 32'b0;
-        reg120 <= 32'b0;
-        reg121 <= 32'b0;
-        reg122 <= 32'b0;
-        reg123 <= 32'b0;
-        reg124 <= 32'b0;
-        reg125 <= 32'b0;
-        reg126 <= 32'b0;
-        reg127 <= 32'b0;
-        reg128 <= 32'b0;
-        reg129 <= 32'b0;
-        reg130 <= 32'b0;
-        reg131 <= 32'b0;
-        reg132 <= 32'b0;
-        reg133 <= 32'b0;
-        reg134 <= 32'b0;
-        reg135 <= 32'b0;
-        reg136 <= 32'b0;
-        reg137 <= 32'b0;
-        reg138 <= 32'b0;
-        reg139 <= 32'b0;
-        reg140 <= 32'b0;
-        reg141 <= 32'b0;
-        reg142 <= 32'b0;
-        reg143 <= 32'b0;
-        reg144 <= 32'b0;
-        reg145 <= 32'b0;
-        reg146 <= 32'b0;
-        reg147 <= 32'b0;
-        reg148 <= 32'b0;
-        reg149 <= 32'b0;
-        reg150 <= 32'b0;
-        reg151 <= 32'b0;
-        reg152 <= 32'b0;
-        reg153 <= 32'b0;
-        reg154 <= 32'b0;
-        reg155 <= 32'b0;
-        reg156 <= 32'b0;
-        reg157 <= 32'b0;
-        reg158 <= 32'b0;
-        reg159 <= 32'b0;
-        reg160 <= 32'b0;
-        reg161 <= 32'b0;
-        reg162 <= 32'b0;
-        reg163 <= 32'b0;
-        reg164 <= 32'b0;
-        reg165 <= 32'b0;
-        reg166 <= 32'b0;
-        reg167 <= 32'b0;
-        reg168 <= 32'b0;
-        reg169 <= 32'b0;
-        reg170 <= 32'b0;
-        reg171 <= 32'b0;
-        reg172 <= 32'b0;
-        reg173 <= 32'b0;
-        reg174 <= 32'b0;
-        reg175 <= 32'b0;
-        reg176 <= 32'b0;
-        reg177 <= 32'b0;
     end
 	else if (w_hs && waddr == C_ADDR_REG0)
 	   begin
-		reg0[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg0[17:0] & ~wmask);
+		reg0[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg0[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG1)
 	   begin
-		reg1[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg1[17:0] & ~wmask);
+		reg1[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg1[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG2)
 	   begin
-		reg2[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg2[17:0] & ~wmask);
+		reg2[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg2[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG3)
 	   begin
-		reg3[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg3[17:0] & ~wmask);
+		reg3[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg3[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG4)
 	   begin
-		reg4[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg4[17:0] & ~wmask);
+		reg4[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg4[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG5)
 	   begin
-		reg5[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg5[17:0] & ~wmask);
+		reg5[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg5[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG6)
 	   begin
-		reg6[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg6[17:0] & ~wmask);
+		reg6[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg6[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG7)
 	   begin
-		reg7[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg7[17:0] & ~wmask);
+		reg7[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg7[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG8)
 	   begin
-		reg8[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg8[17:0] & ~wmask);
+		reg8[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg8[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG9)
 	   begin
-		reg9[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg9[17:0] & ~wmask);
+		reg9[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg9[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG10)
 	   begin
-		reg10[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg10[17:0] & ~wmask);
+		reg10[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg10[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG11)
 	   begin
-		reg11[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg11[17:0] & ~wmask);
+		reg11[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg11[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG12)
 	   begin
-		reg12[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg12[17:0] & ~wmask);
+		reg12[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg12[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG13)
 	   begin
-		reg13[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg13[17:0] & ~wmask);
+		reg13[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg13[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG14)
 	   begin
-		reg14[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg14[17:0] & ~wmask);
+		reg14[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg14[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG15)
 	   begin
-		reg15[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg15[17:0] & ~wmask);
+		reg15[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg15[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG16)
 	   begin
-		reg16[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg16[17:0] & ~wmask);
+		reg16[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg16[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG17)
 	   begin
-		reg17[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg17[17:0] & ~wmask);
+		reg17[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg17[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG18)
 	   begin
-		reg18[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg18[17:0] & ~wmask);
+		reg18[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg18[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG19)
 	   begin
-		reg19[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg19[17:0] & ~wmask);
+		reg19[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg19[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG20)
 	   begin
-		reg20[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg20[17:0] & ~wmask);
+		reg20[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg20[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG21)
 	   begin
-		reg21[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg21[17:0] & ~wmask);
+		reg21[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg21[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG22)
 	   begin
-		reg22[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg22[17:0] & ~wmask);
+		reg22[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg22[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG23)
 	   begin
-		reg23[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg23[17:0] & ~wmask);
+		reg23[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg23[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG24)
 	   begin
-		reg24[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg24[17:0] & ~wmask);
+		reg24[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg24[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG25)
 	   begin
-		reg25[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg25[17:0] & ~wmask);
+		reg25[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg25[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG26)
 	   begin
-		reg26[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg26[17:0] & ~wmask);
+		reg26[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg26[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG27)
 	   begin
-		reg27[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg27[17:0] & ~wmask);
+		reg27[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg27[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG28)
 	   begin
-		reg28[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg28[17:0] & ~wmask);
+		reg28[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg28[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG29)
 	   begin
-		reg29[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg29[17:0] & ~wmask);
+		reg29[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg29[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG30)
 	   begin
-		reg30[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg30[17:0] & ~wmask);
+		reg30[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg30[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG31)
 	   begin
-		reg31[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg31[17:0] & ~wmask);
+		reg31[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg31[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG32)
 	   begin
-		reg32[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg32[17:0] & ~wmask);
+		reg32[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg32[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG33)
 	   begin
-		reg33[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg33[17:0] & ~wmask);
+		reg33[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg33[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG34)
 	   begin
-		reg34[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg34[17:0] & ~wmask);
+		reg34[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg34[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG35)
 	   begin
-		reg35[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg35[17:0] & ~wmask);
+		reg35[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg35[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG36)
 	   begin
-		reg36[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg36[17:0] & ~wmask);
+		reg36[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg36[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG37)
 	   begin
-		reg37[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg37[17:0] & ~wmask);
+		reg37[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg37[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG38)
 	   begin
-		reg38[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg38[17:0] & ~wmask);
+		reg38[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg38[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG39)
 	   begin
-		reg39[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg39[17:0] & ~wmask);
+		reg39[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg39[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG40)
 	   begin
-		reg40[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg40[17:0] & ~wmask);
+		reg40[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg40[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG41)
 	   begin
-		reg41[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg41[17:0] & ~wmask);
+		reg41[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg41[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG42)
 	   begin
-		reg42[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg42[17:0] & ~wmask);
+		reg42[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg42[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG43)
 	   begin
-		reg43[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg43[17:0] & ~wmask);
+		reg43[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg43[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG44)
 	   begin
-		reg44[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg44[17:0] & ~wmask);
+		reg44[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg44[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG45)
 	   begin
-		reg45[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg45[17:0] & ~wmask);
+		reg45[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg45[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG46)
 	   begin
-		reg46[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg46[17:0] & ~wmask);
+		reg46[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg46[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG47)
 	   begin
-		reg47[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg47[17:0] & ~wmask);
+		reg47[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg47[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG48)
 	   begin
-		reg48[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg48[17:0] & ~wmask);
+		reg48[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg48[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG49)
 	   begin
-		reg49[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg49[17:0] & ~wmask);
+		reg49[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg49[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG50)
 	   begin
-		reg50[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg50[17:0] & ~wmask);
+		reg50[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg50[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG51)
 	   begin
-		reg51[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg51[17:0] & ~wmask);
+		reg51[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg51[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG52)
 	   begin
-		reg52[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg52[17:0] & ~wmask);
+		reg52[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg52[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG53)
 	   begin
-		reg53[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg53[17:0] & ~wmask);
+		reg53[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg53[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG54)
 	   begin
-		reg54[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg54[17:0] & ~wmask);
+		reg54[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg54[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG55)
 	   begin
-		reg55[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg55[17:0] & ~wmask);
+		reg55[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg55[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG56)
 	   begin
-		reg56[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg56[17:0] & ~wmask);
+		reg56[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg56[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG57)
 	   begin
-		reg57[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg57[17:0] & ~wmask);
+		reg57[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg57[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG58)
 	   begin
-		reg58[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg58[17:0] & ~wmask);
+		reg58[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg58[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG59)
 	   begin
-		reg59[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg59[17:0] & ~wmask);
+		reg59[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg59[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG60)
 	   begin
-		reg60[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg60[17:0] & ~wmask);
+		reg60[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg60[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG61)
 	   begin
-		reg61[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg61[17:0] & ~wmask);
+		reg61[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg61[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG62)
 	   begin
-		reg62[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg62[17:0] & ~wmask);
+		reg62[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg62[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG63)
 	   begin
-		reg63[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg63[17:0] & ~wmask);
+		reg63[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg63[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG64)
 	   begin
-		reg64[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg64[17:0] & ~wmask);
+		reg64[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg64[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG65)
 	   begin
-		reg65[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg65[17:0] & ~wmask);
+		reg65[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg65[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG66)
 	   begin
-		reg66[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg66[17:0] & ~wmask);
+		reg66[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg66[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG67)
 	   begin
-		reg67[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg67[17:0] & ~wmask);
+		reg67[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg67[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG68)
 	   begin
-		reg68[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg68[17:0] & ~wmask);
+		reg68[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg68[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG69)
 	   begin
-		reg69[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg69[17:0] & ~wmask);
+		reg69[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg69[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG70)
 	   begin
-		reg70[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg70[17:0] & ~wmask);
+		reg70[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg70[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG71)
 	   begin
-		reg71[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg71[17:0] & ~wmask);
+		reg71[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg71[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG72)
 	   begin
-		reg72[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg72[17:0] & ~wmask);
+		reg72[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg72[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG73)
 	   begin
-		reg73[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg73[17:0] & ~wmask);
+		reg73[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg73[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG74)
 	   begin
-		reg74[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg74[17:0] & ~wmask);
+		reg74[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg74[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG75)
 	   begin
-		reg75[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg75[17:0] & ~wmask);
+		reg75[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg75[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG76)
 	   begin
-		reg76[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg76[17:0] & ~wmask);
+		reg76[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg76[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG77)
 	   begin
-		reg77[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg77[17:0] & ~wmask);
+		reg77[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg77[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG78)
 	   begin
-		reg78[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg78[17:0] & ~wmask);
+		reg78[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg78[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG79)
 	   begin
-		reg79[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg79[17:0] & ~wmask);
+		reg79[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg79[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG80)
 	   begin
-		reg80[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg80[17:0] & ~wmask);
+		reg80[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg80[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG81)
 	   begin
-		reg81[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg81[17:0] & ~wmask);
+		reg81[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg81[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG82)
 	   begin
-		reg82[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg82[17:0] & ~wmask);
+		reg82[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg82[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG83)
 	   begin
-		reg83[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg83[17:0] & ~wmask);
+		reg83[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg83[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG84)
 	   begin
-		reg84[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg84[17:0] & ~wmask);
+		reg84[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg84[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG85)
 	   begin
-		reg85[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg85[17:0] & ~wmask);
+		reg85[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg85[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG86)
 	   begin
-		reg86[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg86[17:0] & ~wmask);
+		reg86[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg86[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG87)
 	   begin
-		reg87[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg87[17:0] & ~wmask);
+		reg87[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg87[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG88)
 	   begin
-		reg88[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg88[17:0] & ~wmask);
+		reg88[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg88[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG89)
 	   begin
-		reg89[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg89[17:0] & ~wmask);
+		reg89[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg89[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG90)
 	   begin
-		reg90[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg90[17:0] & ~wmask);
+		reg90[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg90[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG91)
 	   begin
-		reg91[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg91[17:0] & ~wmask);
+		reg91[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg91[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG92)
 	   begin
-		reg92[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg92[17:0] & ~wmask);
+		reg92[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg92[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG93)
 	   begin
-		reg93[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg93[17:0] & ~wmask);
+		reg93[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg93[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG94)
 	   begin
-		reg94[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg94[17:0] & ~wmask);
+		reg94[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg94[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG95)
 	   begin
-		reg95[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg95[17:0] & ~wmask);
+		reg95[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg95[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG96)
 	   begin
-		reg96[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg96[17:0] & ~wmask);
+		reg96[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg96[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG97)
 	   begin
-		reg97[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg97[17:0] & ~wmask);
+		reg97[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg97[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG98)
 	   begin
-		reg98[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg98[17:0] & ~wmask);
+		reg98[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg98[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG99)
 	   begin
-		reg99[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg99[17:0] & ~wmask);
+		reg99[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg99[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG100)
 	   begin
-		reg100[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg100[17:0] & ~wmask);
+		reg100[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg100[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG101)
 	   begin
-		reg101[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg101[17:0] & ~wmask);
+		reg101[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg101[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG102)
 	   begin
-		reg102[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg102[17:0] & ~wmask);
+		reg102[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg102[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG103)
 	   begin
-		reg103[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg103[17:0] & ~wmask);
+		reg103[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg103[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG104)
 	   begin
-		reg104[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg104[17:0] & ~wmask);
+		reg104[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg104[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG105)
 	   begin
-		reg105[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg105[17:0] & ~wmask);
+		reg105[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg105[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG106)
 	   begin
-		reg106[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg106[17:0] & ~wmask);
+		reg106[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg106[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG107)
 	   begin
-		reg107[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg107[17:0] & ~wmask);
+		reg107[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg107[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG108)
 	   begin
-		reg108[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg108[17:0] & ~wmask);
+		reg108[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg108[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG109)
 	   begin
-		reg109[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg109[17:0] & ~wmask);
+		reg109[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg109[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG110)
 	   begin
-		reg110[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg110[17:0] & ~wmask);
+		reg110[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg110[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG111)
 	   begin
-		reg111[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg111[17:0] & ~wmask);
+		reg111[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg111[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG112)
 	   begin
-		reg112[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg112[17:0] & ~wmask);
+		reg112[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg112[17:0] & ~wmask[31:14]);
     end
 	else if (w_hs && waddr == C_ADDR_REG113)
 	   begin
-		reg113[17:0] <= (s_axi_wdata[31:14] & wmask) | (reg113[17:0] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG114)
-	   begin
-		reg114[31:0] <= (s_axi_wdata[31:0] & wmask) | (output0[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG115)
-	   begin
-		reg115[31:0] <= (s_axi_wdata[31:0] & wmask) | (output1[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG116)
-	   begin
-		reg116[31:0] <= (s_axi_wdata[31:0] & wmask) | (output2[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG117)
-	   begin
-		reg117[31:0] <= (s_axi_wdata[31:0] & wmask) | (output3[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG118)
-	   begin
-		reg118[31:0] <= (s_axi_wdata[31:0] & wmask) | (output4[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG119)
-	   begin
-		reg119[31:0] <= (s_axi_wdata[31:0] & wmask) | (output5[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG120)
-	   begin
-		reg120[31:0] <= (s_axi_wdata[31:0] & wmask) | (output6[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG121)
-	   begin
-		reg121[31:0] <= (s_axi_wdata[31:0] & wmask) | (output7[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG122)
-	   begin
-		reg122[31:0] <= (s_axi_wdata[31:0] & wmask) | (output8[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG123)
-	   begin
-		reg123[31:0] <= (s_axi_wdata[31:0] & wmask) | (output9[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG124)
-	   begin
-		reg124[31:0] <= (s_axi_wdata[31:0] & wmask) | (output10[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG125)
-	   begin
-		reg125[31:0] <= (s_axi_wdata[31:0] & wmask) | (output11[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG126)
-	   begin
-		reg126[31:0] <= (s_axi_wdata[31:0] & wmask) | (output12[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG127)
-	   begin
-		reg127[31:0] <= (s_axi_wdata[31:0] & wmask) | (output13[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG128)
-	   begin
-		reg128[31:0] <= (s_axi_wdata[31:0] & wmask) | (output14[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG129)
-	   begin
-		reg129[31:0] <= (s_axi_wdata[31:0] & wmask) | (output15[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG130)
-	   begin
-		reg130[31:0] <= (s_axi_wdata[31:0] & wmask) | (output16[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG131)
-	   begin
-		reg131[31:0] <= (s_axi_wdata[31:0] & wmask) | (output17[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG132)
-	   begin
-		reg132[31:0] <= (s_axi_wdata[31:0] & wmask) | (output18[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG133)
-	   begin
-		reg133[31:0] <= (s_axi_wdata[31:0] & wmask) | (output19[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG134)
-	   begin
-		reg134[31:0] <= (s_axi_wdata[31:0] & wmask) | (output20[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG135)
-	   begin
-		reg135[31:0] <= (s_axi_wdata[31:0] & wmask) | (output21[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG136)
-	   begin
-		reg136[31:0] <= (s_axi_wdata[31:0] & wmask) | (output22[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG137)
-	   begin
-		reg137[31:0] <= (s_axi_wdata[31:0] & wmask) | (output23[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG138)
-	   begin
-		reg138[31:0] <= (s_axi_wdata[31:0] & wmask) | (output24[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG139)
-	   begin
-		reg139[31:0] <= (s_axi_wdata[31:0] & wmask) | (output25[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG140)
-	   begin
-		reg140[31:0] <= (s_axi_wdata[31:0] & wmask) | (output26[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG141)
-	   begin
-		reg141[31:0] <= (s_axi_wdata[31:0] & wmask) | (output27[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG142)
-	   begin
-		reg142[31:0] <= (s_axi_wdata[31:0] & wmask) | (output28[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG143)
-	   begin
-		reg143[31:0] <= (s_axi_wdata[31:0] & wmask) | (output29[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG144)
-	   begin
-		reg144[31:0] <= (s_axi_wdata[31:0] & wmask) | (output30[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG145)
-	   begin
-		reg145[31:0] <= (s_axi_wdata[31:0] & wmask) | (output31[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG146)
-	   begin
-		reg146[31:0] <= (s_axi_wdata[31:0] & wmask) | (output32[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG147)
-	   begin
-		reg147[31:0] <= (s_axi_wdata[31:0] & wmask) | (output33[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG148)
-	   begin
-		reg148[31:0] <= (s_axi_wdata[31:0] & wmask) | (output34[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG149)
-	   begin
-		reg149[31:0] <= (s_axi_wdata[31:0] & wmask) | (output35[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG150)
-	   begin
-		reg150[31:0] <= (s_axi_wdata[31:0] & wmask) | (output36[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG151)
-	   begin
-		reg151[31:0] <= (s_axi_wdata[31:0] & wmask) | (output37[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG152)
-	   begin
-		reg152[31:0] <= (s_axi_wdata[31:0] & wmask) | (output38[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG153)
-	   begin
-		reg153[31:0] <= (s_axi_wdata[31:0] & wmask) | (output39[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG154)
-	   begin
-		reg154[31:0] <= (s_axi_wdata[31:0] & wmask) | (output40[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG155)
-	   begin
-		reg155[31:0] <= (s_axi_wdata[31:0] & wmask) | (output41[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG156)
-	   begin
-		reg156[31:0] <= (s_axi_wdata[31:0] & wmask) | (output42[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG157)
-	   begin
-		reg157[31:0] <= (s_axi_wdata[31:0] & wmask) | (output43[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG158)
-	   begin
-		reg158[31:0] <= (s_axi_wdata[31:0] & wmask) | (output44[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG159)
-	   begin
-		reg159[31:0] <= (s_axi_wdata[31:0] & wmask) | (output45[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG160)
-	   begin
-		reg160[31:0] <= (s_axi_wdata[31:0] & wmask) | (output46[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG161)
-	   begin
-		reg161[31:0] <= (s_axi_wdata[31:0] & wmask) | (output47[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG162)
-	   begin
-		reg162[31:0] <= (s_axi_wdata[31:0] & wmask) | (output48[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG163)
-	   begin
-		reg163[31:0] <= (s_axi_wdata[31:0] & wmask) | (output49[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG164)
-	   begin
-		reg164[31:0] <= (s_axi_wdata[31:0] & wmask) | (output50[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG165)
-	   begin
-		reg165[31:0] <= (s_axi_wdata[31:0] & wmask) | (output51[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG166)
-	   begin
-		reg166[31:0] <= (s_axi_wdata[31:0] & wmask) | (output52[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG167)
-	   begin
-		reg167[31:0] <= (s_axi_wdata[31:0] & wmask) | (output53[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG168)
-	   begin
-		reg168[31:0] <= (s_axi_wdata[31:0] & wmask) | (output54[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG169)
-	   begin
-		reg169[31:0] <= (s_axi_wdata[31:0] & wmask) | (output55[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG170)
-	   begin
-		reg170[31:0] <= (s_axi_wdata[31:0] & wmask) | (output56[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG171)
-	   begin
-		reg171[31:0] <= (s_axi_wdata[31:0] & wmask) | (output57[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG172)
-	   begin
-		reg172[31:0] <= (s_axi_wdata[31:0] & wmask) | (output58[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG173)
-	   begin
-		reg173[31:0] <= (s_axi_wdata[31:0] & wmask) | (output59[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG174)
-	   begin
-		reg174[31:0] <= (s_axi_wdata[31:0] & wmask) | (output60[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG175)
-	   begin
-		reg175[31:0] <= (s_axi_wdata[31:0] & wmask) | (output61[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG176)
-	   begin
-		reg176[31:0] <= (s_axi_wdata[31:0] & wmask) | (output62[35:4] & ~wmask);
-    end
-	else if (w_hs && waddr == C_ADDR_REG177)
-	   begin
-		reg177[31:0] <= (s_axi_wdata[31:0] & wmask) | (output63[35:4] & ~wmask);
+		reg113[17:0] <= (s_axi_wdata[31:14] & wmask[31:14]) | (reg113[17:0] & ~wmask[31:14]);
     end
 end    
 // core module instance

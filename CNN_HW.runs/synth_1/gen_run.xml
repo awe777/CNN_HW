@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1551891306">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1552456872">
   <File Type="PA-TCL" Name="CNN_top_module_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="CNN_top_module_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="CNN_top_module_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="CNN_top_module_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="CNN_top_module_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="CNN_top_module_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="CNN_top_module_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="CNN_top_module_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="CNN_top_module_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Downloads/axi_cnn.v">
@@ -52,16 +49,14 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2018">
-      <Desc>Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold</Desc>
-    </StratHandle>
+    <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design">
       <Option Id="ResourceSharing">2</Option>
-      <Option Id="ShregMinSize">5</Option>
       <Option Id="RepFanoutThreshold">400</Option>
+      <Option Id="ShregMinSize">5</Option>
       <Option Id="FsmExtraction">1</Option>
-      <Option Id="KeepEquivalentRegisters">1</Option>
       <Option Id="NoCombineLuts">1</Option>
+      <Option Id="KeepEquivalentRegisters">1</Option>
     </Step>
   </Strategy>
 </GenRun>

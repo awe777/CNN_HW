@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Mar  6 23:55:08 2019
-# Process ID: 23716
+# Start of session at: Wed Mar 13 13:01:16 2019
+# Process ID: 24768
 # Current directory: D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.runs/synth_1
 # Command line: vivado.exe -log CNN_top_module_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CNN_top_module_wrapper.tcl
 # Log file: D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.runs/synth_1/CNN_top_module_wrapper.vds
