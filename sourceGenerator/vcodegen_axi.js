@@ -82,7 +82,7 @@ function generate(v, r) {
     bodyPrint(`// *** AXI write ***`);
     bodyPrint(`reg [1:0] wstate_cs, wstate_ns;`);
     bodyPrint(`reg [C_ADDR_BITS-1:0] waddr;`);
-    bodyPrint(`wire [31:0] wmask;`);
+    bodyPrint(`wire [17:0] wmask;`);
     bodyPrint(`wire aw_hs, w_hs;`);
     bodyPrint(`// *** AXI read ***`);
     bodyPrint(`reg [1:0] rstate_cs, rstate_ns;`);
