@@ -192,7 +192,7 @@ function generate(v, r) {
         if(readReg < 2 * (v * v - v + 1)) {
             bodyPrint(`             rdata <= {reg${readReg}, ${32 - dataLength}'b0};`);
         } else {
-            bodyPrint(`             rdata <= output${readReg - 2 * (v * v - v + 1)};`);
+            bodyPrint(`             rdata <= output${readReg - 2 * (v * v - v + 1)}[${2 * dataLength - 1}:${2 * dataLength - 32}];`);
         }
     }
     // end change
