@@ -30,7 +30,13 @@ function generate(v, im = [], wg = []) {
       wgProc[count1] = (count1 % (v - 1) < control && count1 - (v - 1 - control) * Math.floor(count1 / (v - 1)) < wg.length) ? process(wg[count1 - (v - 1 - control) * Math.floor(count1 / (v - 1))]) : 0;
     }
   }
-
+  let softwareTime = Date.now();
+  const rsProc = imProc.map((value, indexOffset) => {
+    return wgProc.reduce((acc, currentValue, indexWeight) => {
+      return acc + (currentValue / 16777216) * (imProc[(indexOffset + (indexWeight % (v - 1)) % v + v * (Math.floor(indexOffset / v) + Math.floor(indexWeight / (v - 1))))] / 16777216);
+    }, 0)
+  })
+  softwareTime = Date.now() - softwareTime;
   bodyReset();
 
   bodyPrint(`#include <stdio.h>`);
@@ -68,5 +74,5 @@ function generate(v, im = [], wg = []) {
   bodyPrint(`  // MARKER = REPEAT from SIGN ad infinitum`)
   bodyPrint(`}`)
 
-  console.log(Date.now() - start)
+  console.log(`Hardware generation time: ${Date.now() - start - softwareTime}; Software JS processing time: ${softwareTime}`)
 }
