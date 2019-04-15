@@ -37,6 +37,7 @@ function generate(v, im = [], wg = []) {
     }, 0)
   })
   softwareTime = Date.now() - softwareTime;
+  console.log(rsProc);
   bodyReset();
 
   bodyPrint(`#include <stdio.h>`);
