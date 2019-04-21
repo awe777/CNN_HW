@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Joshua Adiel Wijaya" Host="KOMPUTERUTAMA" Pid="34664">
+    <Process Command="vivado.bat" Owner="ultim" Host="DESKTOP-I4SG0E1" Pid="7872">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Joshua Adiel Wijaya" Host="KOMPUTERUTAMA" Pid="9248">
+    <Process Command="vivado.bat" Owner="ultim" Host="DESKTOP-I4SG0E1" Pid="4536">
     </Process>
 </ProcessHandle>

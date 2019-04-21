@@ -1,43 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1552456874">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1555310690">
+  <File Type="BITSTR-BMM" Name="CNN_top_module_wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="CNN_top_module_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="CNN_top_module_wrapper_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="CNN_top_module_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="CNN_top_module_wrapper.tcl"/>
-  <File Type="BITSTR-BMM" Name="CNN_top_module_wrapper_bd.bmm"/>
+  <File Type="OPT-TIMING" Name="CNN_top_module_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="CNN_top_module_wrapper_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="CNN_top_module_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="CNN_top_module_wrapper_reports.tcl"/>
-  <File Type="OPT-DCP" Name="CNN_top_module_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="CNN_top_module_wrapper_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="CNN_top_module_wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="CNN_top_module_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="CNN_top_module_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="CNN_top_module_wrapper_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="CNN_top_module_wrapper_placed.dcp"/>
   <File Type="PLACE-IO" Name="CNN_top_module_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="CNN_top_module_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="CNN_top_module_wrapper_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="CNN_top_module_wrapper_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="CNN_top_module_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="CNN_top_module_wrapper_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="CNN_top_module_wrapper_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="CNN_top_module_wrapper.bgn"/>
+  <File Type="PLACE-TIMING" Name="CNN_top_module_wrapper_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="CNN_top_module_wrapper_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="CNN_top_module_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="CNN_top_module_wrapper_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="CNN_top_module_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="CNN_top_module_wrapper_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="CNN_top_module_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="CNN_top_module_wrapper_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="CNN_top_module_wrapper_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="CNN_top_module_wrapper_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="CNN_top_module_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="CNN_top_module_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="CNN_top_module_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="CNN_top_module_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="CNN_top_module_wrapper.ltx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="CNN_top_module_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="CNN_top_module_wrapper_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="CNN_top_module_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="CNN_top_module_wrapper_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="CNN_top_module_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="CNN_top_module_wrapper_methodology_drc_routed.pb"/>
   <File Type="BITSTR-SYSDEF" Name="CNN_top_module_wrapper.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="CNN_top_module_wrapper_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="CNN_top_module_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="CNN_top_module_wrapper_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="CNN_top_module_wrapper_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="CNN_top_module_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="CNN_top_module_wrapper_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="CNN_top_module_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="CNN_top_module_wrapper_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="CNN_top_module_wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="CNN_top_module_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="CNN_top_module_wrapper_bus_skew_routed.pb"/>
@@ -49,8 +62,8 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="CNN_top_module_wrapper_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="CNN_top_module_wrapper_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="CNN_top_module_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="CNN_top_module_wrapper_bus_skew_postroute_physopted.rpx"/>
   <File Type="BG-BIT" Name="CNN_top_module_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="CNN_top_module_wrapper_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="CNN_top_module_wrapper.rbt"/>
   <File Type="BITSTR-NKY" Name="CNN_top_module_wrapper.nky"/>
   <File Type="BG-DRC" Name="CNN_top_module_wrapper.drc"/>
@@ -99,7 +112,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Performance_ExploreWithRemap" Flow="Vivado Implementation 2018"/>
+    <StratHandle Name="Performance_ExploreWithRemap" Flow="Vivado Implementation 2018">
+      <Desc>Similar to Performance_ExplorePostRoutePhysOpt, but enables logic optimization step (opt_design) with the ExploreWithRemap directive.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design">
       <Option Id="Directive">6</Option>

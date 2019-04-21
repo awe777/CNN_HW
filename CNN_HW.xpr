@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="39" Path="D:/Documents/FPGA_Projects/CNN_HW/CNN_HW.xpr">
+<Project Version="7" Minor="39" Path="B:/Dokumen/CNN_HW/CNN_HW.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="40e77533ac4d435989af2987973545c9"/>
@@ -38,13 +38,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="9"/>
-    <Option Name="WTModelSimExportSim" Val="9"/>
-    <Option Name="WTQuestaExportSim" Val="9"/>
-    <Option Name="WTIesExportSim" Val="9"/>
-    <Option Name="WTVcsExportSim" Val="9"/>
-    <Option Name="WTRivieraExportSim" Val="9"/>
-    <Option Name="WTActivehdlExportSim" Val="9"/>
+    <Option Name="WTXSimExportSim" Val="10"/>
+    <Option Name="WTModelSimExportSim" Val="10"/>
+    <Option Name="WTQuestaExportSim" Val="10"/>
+    <Option Name="WTIesExportSim" Val="10"/>
+    <Option Name="WTVcsExportSim" Val="10"/>
+    <Option Name="WTRivieraExportSim" Val="10"/>
+    <Option Name="WTActivehdlExportSim" Val="10"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -134,13 +134,15 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2018"/>
+        <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2018">
+          <Desc>Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold</Desc>
+        </StratHandle>
         <Step Id="synth_design">
           <Option Id="ResourceSharing">2</Option>
-          <Option Id="RepFanoutThreshold">400</Option>
-          <Option Id="ShregMinSize">5</Option>
           <Option Id="FsmExtraction">1</Option>
+          <Option Id="RepFanoutThreshold">400</Option>
           <Option Id="NoCombineLuts">1</Option>
+          <Option Id="ShregMinSize">5</Option>
           <Option Id="KeepEquivalentRegisters">1</Option>
         </Step>
       </Strategy>
@@ -150,7 +152,9 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Similar to Performance_ExplorePostRoutePhysOpt, but enables logic optimization step (opt_design) with the ExploreWithRemap directive." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Performance_ExploreWithRemap" Flow="Vivado Implementation 2018"/>
+        <StratHandle Name="Performance_ExploreWithRemap" Flow="Vivado Implementation 2018">
+          <Desc>Similar to Performance_ExplorePostRoutePhysOpt, but enables logic optimization step (opt_design) with the ExploreWithRemap directive.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design">
           <Option Id="Directive">6</Option>

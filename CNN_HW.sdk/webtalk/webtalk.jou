@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Mon Apr 15 15:10:39 2019
+# Process ID: 1704
+# Current directory: B:/Dokumen/CNN_HW/CNN_HW.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: B:/Dokumen/CNN_HW/CNN_HW.sdk/webtalk/webtalk.log
+# Journal file: B:/Dokumen/CNN_HW/CNN_HW.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
