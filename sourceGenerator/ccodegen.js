@@ -11,23 +11,22 @@ function generate(v, im = [], wg = []) {
 
   const imProc = Array(v * v);
   const wgProc = Array((v - 1) * (v - 1));
-  let control;
+  let control = Math.ceil(Math.sqrt(im.length)) <= v ? Math.ceil(Math.sqrt(im.length)) : v;
 
   for(count0 = 0; count0 < imProc.length; count0++) {
-    control = Math.ceil(Math.sqrt(im.length)) <= v ? Math.ceil(Math.sqrt(im.length)) : v
-    if(count0 >= control * control) {
+    if(count0 >= control * v) {
       imProc[count0] = 0;
     } else {
-      imProc[count0] = (count0 % v < control && count0 - (v - control) * Math.floor(count0 / v) < im.length) ? process(im[count0 - (v - control) * Math.floor(count0 / v)]) : 0;
+      imProc[count0] = count0 % v < control ? process(im[count0 - (v - control) * Math.floor(count0 / v)]) : 0;
     }
   }
-
+  control = Math.ceil(Math.sqrt(wg.length)) <= (v - 1) ? Math.ceil(Math.sqrt(wg.length)) : v - 1;
   for(count1 = 0; count1 < wgProc.length; count1++) {
-    control = Math.ceil(Math.sqrt(wg.length)) <= (v - 1) ? Math.ceil(Math.sqrt(wg.length)) : v - 1;
-    if(count1 >= control * control) {
+    
+    if(count1 >= control * (v - 1)) {
       wgProc[count1] = 0;
     } else {
-      wgProc[count1] = (count1 % (v - 1) < control && count1 - (v - 1 - control) * Math.floor(count1 / (v - 1)) < wg.length) ? process(wg[count1 - (v - 1 - control) * Math.floor(count1 / (v - 1))]) : 0;
+      wgProc[count1] = count1 % (v - 1) < control ? process(wg[count1 - (v - 1 - control) * Math.floor(count1 / (v - 1))]) : 0;
     }
   }
   let softwareTime = Date.now();
@@ -74,6 +73,6 @@ function generate(v, im = [], wg = []) {
   }
   bodyPrint(`  // MARKER = REPEAT from SIGN ad infinitum`)
   bodyPrint(`}`)
-
+  bodyWrite()
   console.log(`Hardware generation time: ${Date.now() - start - softwareTime}; Software JS processing time: ${softwareTime}`)
 }

@@ -1,6 +1,11 @@
 <script>
+    let currentText = "";
     function bodyPrint(text ="") {
-        console.log(text);
+        currentText = currentText + text + "\n"
+    }
+
+    function bodyWrite() {
+        console.log(currentText)
     }
 
     function bodyReset() {
