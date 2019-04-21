@@ -2,7 +2,7 @@ function process(v = 0) {
   return (v < 128 && v >= -128) ? Math.floor(1024 * v) * 16384 : (v > 0) ? 0x7fffffff : 0xffffffff;
 }
 
-function generate(v, im = [], wg = []) {
+function generate(v, im = [], wg = [], ledControl = false) {
   const start = Date.now()
   v = +v > 1 ? +v : 0
   if(!v || !Array.isArray(im) || !Array.isArray(wg)) {
@@ -46,13 +46,13 @@ function generate(v, im = [], wg = []) {
   bodyPrint(`uint32_t *imArray = (uint32_t *) 0x40000004;`);
   bodyPrint(`uint32_t *wgArray = (uint32_t *) 0x${(0x40000000 + 4 * v * v).toString(16)}`)
   bodyPrint(`uint32_t *rsArray = (uint32_t *) 0x${(0x40000008 + 8 * v * (v - 1)).toString(16)}`)
-  bodyPrint(`uint32_t *ledCtrl = (uint32_t *) 0x41200000;`);
+  ledControl ? bodyPrint(`uint32_t *ledCtrl = (uint32_t *) 0x41200000;`) : null;
 
   bodyPrint(`int main() {`)
   bodyPrint(`  // deactivate hardware processing`)
   bodyPrint(`  *(control) = 0;`)
   bodyPrint(`  // MARKER = SIGN`)
-  bodyPrint(`  *(ledCtrl) = 0b0000;`)
+  ledControl ? bodyPrint(`  *(ledCtrl) = 0b0000;`) : null;
   bodyPrint(`  // input image data to image "array"`)
   for(count0 = 0; count0 < imProc.length; count0++) {
     bodyPrint(`  *(imArray + ${count0}) = ${imProc[count0]};`)
@@ -67,9 +67,9 @@ function generate(v, im = [], wg = []) {
   bodyPrint(`  nanosleep((const struct timespec[]){{0, ${12 * (v * v + Math.ceil(Math.log2(v * v)) - 2)}L}}, NULL);`)
   bodyPrint(`  // deactivate hardware processing`)
   bodyPrint(`  *(control) = 0;`)
-  bodyPrint(`  *(ledCtrl) = 0b1111;`)
+  ledControl ? bodyPrint(`  *(ledCtrl) = 0b1111;`) : null;
   for(count0 = 0; count0 < imProc.length; count0++) {
-    bodyPrint(`  printf("%d\n", *(rsArray + ${count0}));`)
+    bodyPrint(`  printf("%d\\n", *(rsArray + ${count0}));`)
   }
   bodyPrint(`  // MARKER = REPEAT from SIGN ad infinitum`)
   bodyPrint(`}`)
