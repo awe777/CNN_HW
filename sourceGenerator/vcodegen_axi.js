@@ -394,5 +394,5 @@ function generate(v, r) {
     bodyPrint(`   end`)
     bodyPrint(`endmodule`)
     console.log(Date.now() - start)
-    document.getElementById("saveButton") ? document.getElementById("saveButton").hidden = false : null;
+    bodyWrite();
 }

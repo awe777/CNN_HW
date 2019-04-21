@@ -24,13 +24,10 @@
     }
 
     function bodyPrint(string = "") {
-        // const current = document.createElement("pre")
-        // current.innerText = string
-        // container.appendChild(current)
+        memory = memory + string + "\n"
+    }
 
-        // console.log(string)
-
-        memory = memory + "\n" + string
+    function bodyWrite() {
         if(!document.getElementById("saveButton")) {
             const saveButton = document.createElement("button")
             saveButton.id = "saveButton"
