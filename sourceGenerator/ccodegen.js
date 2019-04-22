@@ -3,12 +3,14 @@ function process(v = 0) {
 }
 
 function generate(v, im = [], wg = [], ledControl = false) {
-  const start = Date.now()
   v = +v > 1 ? +v : 0
-  if(!v || !Array.isArray(im) || !Array.isArray(wg)) {
+  if(!v) {
     return -1;
   }
-
+  Array.isArray(im) && im.length ? null : im = new Array(Math.floor(v * v * Math.random())).fill().map((p) => 256 * Math.random() - 128); console.log(im)
+  Array.isArray(wg) && wg.length ? null : wg = new Array(Math.floor((v - 1) * (v - 1) * Math.random())).fill().map((p) => 256 * Math.random() - 128); console.log(wg)
+  const start = Date.now()
+  
   const imProc = Array(v * v);
   const wgProc = Array((v - 1) * (v - 1));
   let control = Math.ceil(Math.sqrt(im.length)) <= v ? Math.ceil(Math.sqrt(im.length)) : v;
