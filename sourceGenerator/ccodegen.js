@@ -8,7 +8,8 @@ function generate(v, im = [], wg = [], ledControl = false) {
     return -1;
   }
   Array.isArray(im) && im.length ? null : im = new Array(Math.floor(v * v * Math.random())).fill().map((p) => 256 * Math.random() - 128); console.log(im)
-  Array.isArray(wg) && wg.length ? null : wg = new Array(Math.floor((v - 1) * (v - 1) * Math.random())).fill().map((p) => 256 * Math.random() - 128); console.log(wg)
+  Array.isArray(wg) && wg.length ? null : wg = new Array(Math.floor(Math.min(v - 1, Math.floor(Math.sqrt(im.length))) * Math.min(v - 1, Math.floor(Math.sqrt(im.length))) * Math.random())).fill().map((p) => 256 * Math.random() - 128); console.log(wg)
+  bodyReset();
   const start = Date.now()
   
   const imProc = Array(v * v);
@@ -46,8 +47,8 @@ function generate(v, im = [], wg = [], ledControl = false) {
   bodyPrint(`#include <time.h>`);
   bodyPrint(`uint32_t *control = (uint32_t *) 0x40000000;`);
   bodyPrint(`uint32_t *imArray = (uint32_t *) 0x40000004;`);
-  bodyPrint(`uint32_t *wgArray = (uint32_t *) 0x${(0x40000000 + 4 * v * v).toString(16)}`)
-  bodyPrint(`uint32_t *rsArray = (uint32_t *) 0x${(0x40000008 + 8 * v * (v - 1)).toString(16)}`)
+  bodyPrint(`uint32_t *wgArray = (uint32_t *) 0x${(0x40000000 + 4 * v * v).toString(16)};`)
+  bodyPrint(`uint32_t *rsArray = (uint32_t *) 0x${(0x40000008 + 8 * v * (v - 1)).toString(16)};`)
   ledControl ? bodyPrint(`uint32_t *ledCtrl = (uint32_t *) 0x41200000;`) : null;
 
   bodyPrint(`int main() {`)
@@ -57,16 +58,16 @@ function generate(v, im = [], wg = [], ledControl = false) {
   ledControl ? bodyPrint(`  *(ledCtrl) = 0b0000;`) : null;
   bodyPrint(`  // input image data to image "array"`)
   for(count0 = 0; count0 < imProc.length; count0++) {
-    bodyPrint(`  *(imArray + ${count0}) = ${imProc[count0]};`)
+    bodyPrint(`  *(imArray + ${count0}) = ${imProc[count0]}; ${imProc[count0] ? "// " + (16384 * Math.floor(imProc[count0] / 16384) / 16777216) : ""}`)
   }
   bodyPrint(`  // input weight data to weight "array"`)
   for(count1 = 0; count1 < wgProc.length; count1++) {
-    bodyPrint(`  *(wgArray + ${count1}) = ${wgProc[count1]};`)
+    bodyPrint(`  *(wgArray + ${count1}) = ${wgProc[count1]}; ${wgProc[count1] ? "// " + (16384 * Math.floor(wgProc[count1] / 16384) / 16777216) : ""}`)
   }
   bodyPrint(`  // activate hardware processing`)
   bodyPrint(`  *(control) = 0xffffffff;`)
   bodyPrint(`  // sleep while hardware is processing, time slept given for the hardware is 120% of hardware processing time`)
-  bodyPrint(`  nanosleep((const struct timespec[]){{0, ${12 * (v * v + Math.ceil(Math.log2(v * v)) - 2)}L}}, NULL);`)
+  bodyPrint(`  nanosleep((const struct timespec[]){{0, ${12 * (v * (Math.ceil(Math.sqrt(im.length)) - Math.ceil(Math.sqrt(wg.length)) + 1) + Math.ceil(Math.log2(v * v)) - 2)}L}}, NULL);`)
   bodyPrint(`  // deactivate hardware processing`)
   bodyPrint(`  *(control) = 0;`)
   ledControl ? bodyPrint(`  *(ledCtrl) = 0b1111;`) : null;
