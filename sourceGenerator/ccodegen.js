@@ -72,7 +72,7 @@ function generate(v, im = [], wg = [], ledControl = false) {
   bodyPrint(`  *(control) = 0;`)
   ledControl ? bodyPrint(`  *(ledCtrl) = 0b1111;`) : null;
   for(count0 = 0; count0 < imProc.length; count0++) {
-    bodyPrint(`  printf("%d\\n", *(rsArray + ${count0}));`)
+    bodyPrint(`  printf("%d\\n", (int) *(rsArray + ${count0}));`)
   }
   bodyPrint(`  // MARKER = REPEAT from SIGN ad infinitum`)
   bodyPrint(`}`)
