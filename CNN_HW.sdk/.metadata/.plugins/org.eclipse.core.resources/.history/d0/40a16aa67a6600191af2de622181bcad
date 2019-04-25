@@ -10,7 +10,7 @@ int main() {
   *(control) = 0;
   // MARKER = SIGN
   // input image data to image "array"
-  printf("image = [\n");
+  printf("image\n");
   *(imArray + 0) = 50331648; // 3
   printf("%d,\n", (int) *(imArray + 0));
   *(imArray + 1) = 16777216; // 1
@@ -139,9 +139,8 @@ int main() {
   printf("%d,\n", (int) *(imArray + 62));
   *(imArray + 63) = 0;
   printf("%d,\n", (int) *(imArray + 63));
-  printf("]\n");
   // input weight data to weight "array"
-  printf("weight = [\n");
+  printf("weight\n");
   *(wgArray + 0) = 33554432; // 2
   printf("%d,\n", (int) *(wgArray + 0));
   *(wgArray + 1) = 67108864; // 4
@@ -240,14 +239,13 @@ int main() {
   printf("%d,\n", (int) *(wgArray + 47));
   *(wgArray + 48) = 0;
   printf("%d,\n", (int) *(wgArray + 48));
-  printf("]\n");
   // activate hardware processing
   *(control) = 0xffffffff;
   // sleep while hardware is processing, time slept given for the hardware is 120% of hardware processing time to the nearest us
   usleep(1);
   // deactivate hardware processing
   *(control) = 0;
-  printf("result = [\n");
+  printf("result\n");
   printf("%d,\n", (int) *(rsArray + 0));
   printf("%d,\n", (int) *(rsArray + 1));
   printf("%d,\n", (int) *(rsArray + 2));
@@ -312,6 +310,5 @@ int main() {
   printf("%d,\n", (int) *(rsArray + 61));
   printf("%d,\n", (int) *(rsArray + 62));
   printf("%d,\n", (int) *(rsArray + 63));
-  printf("]\n");
   // MARKER = REPEAT from SIGN ad infinitum
 }

@@ -10,12 +10,12 @@ int main() {
   *(control) = 0;
   // MARKER = SIGN
   // input image data to image "array"
-  printf("image = [\n");
-  *(imArray + 0) = 50331648; // 3
+  printf("image\n");
+  *(imArray + 0) = -403292160; // -24.0380859375
   printf("%d,\n", (int) *(imArray + 0));
-  *(imArray + 1) = 16777216; // 1
+  *(imArray + 1) = 1899085824; // 113.1943359375
   printf("%d,\n", (int) *(imArray + 1));
-  *(imArray + 2) = 33554432; // 2
+  *(imArray + 2) = 699285504; // 41.6806640625
   printf("%d,\n", (int) *(imArray + 2));
   *(imArray + 3) = 0;
   printf("%d,\n", (int) *(imArray + 3));
@@ -27,11 +27,11 @@ int main() {
   printf("%d,\n", (int) *(imArray + 6));
   *(imArray + 7) = 0;
   printf("%d,\n", (int) *(imArray + 7));
-  *(imArray + 8) = 117440512; // 7
+  *(imArray + 8) = -1449934848; // -86.4228515625
   printf("%d,\n", (int) *(imArray + 8));
-  *(imArray + 9) = 16777216; // 1
+  *(imArray + 9) = 752254976; // 44.837890625
   printf("%d,\n", (int) *(imArray + 9));
-  *(imArray + 10) = 67108864; // 4
+  *(imArray + 10) = -1349206016; // -80.4189453125
   printf("%d,\n", (int) *(imArray + 10));
   *(imArray + 11) = 0;
   printf("%d,\n", (int) *(imArray + 11));
@@ -45,9 +45,9 @@ int main() {
   printf("%d,\n", (int) *(imArray + 15));
   *(imArray + 16) = 0;
   printf("%d,\n", (int) *(imArray + 16));
-  *(imArray + 17) = 16777216; // 1
+  *(imArray + 17) = 0;
   printf("%d,\n", (int) *(imArray + 17));
-  *(imArray + 18) = 83886080; // 5
+  *(imArray + 18) = 0;
   printf("%d,\n", (int) *(imArray + 18));
   *(imArray + 19) = 0;
   printf("%d,\n", (int) *(imArray + 19));
@@ -139,12 +139,11 @@ int main() {
   printf("%d,\n", (int) *(imArray + 62));
   *(imArray + 63) = 0;
   printf("%d,\n", (int) *(imArray + 63));
-  printf("]\n");
   // input weight data to weight "array"
-  printf("weight = [\n");
-  *(wgArray + 0) = 33554432; // 2
+  printf("weight\n");
+  *(wgArray + 0) = 16777216; // 1
   printf("%d,\n", (int) *(wgArray + 0));
-  *(wgArray + 1) = 67108864; // 4
+  *(wgArray + 1) = 0;
   printf("%d,\n", (int) *(wgArray + 1));
   *(wgArray + 2) = 0;
   printf("%d,\n", (int) *(wgArray + 2));
@@ -156,9 +155,9 @@ int main() {
   printf("%d,\n", (int) *(wgArray + 5));
   *(wgArray + 6) = 0;
   printf("%d,\n", (int) *(wgArray + 6));
-  *(wgArray + 7) = 16777216; // 1
+  *(wgArray + 7) = 0;
   printf("%d,\n", (int) *(wgArray + 7));
-  *(wgArray + 8) = 33554432; // 2
+  *(wgArray + 8) = 0;
   printf("%d,\n", (int) *(wgArray + 8));
   *(wgArray + 9) = 0;
   printf("%d,\n", (int) *(wgArray + 9));
@@ -240,14 +239,13 @@ int main() {
   printf("%d,\n", (int) *(wgArray + 47));
   *(wgArray + 48) = 0;
   printf("%d,\n", (int) *(wgArray + 48));
-  printf("]\n");
   // activate hardware processing
   *(control) = 0xffffffff;
   // sleep while hardware is processing, time slept given for the hardware is 120% of hardware processing time to the nearest us
   usleep(1);
   // deactivate hardware processing
   *(control) = 0;
-  printf("result = [\n");
+  printf("result\n");
   printf("%d,\n", (int) *(rsArray + 0));
   printf("%d,\n", (int) *(rsArray + 1));
   printf("%d,\n", (int) *(rsArray + 2));
@@ -312,6 +310,5 @@ int main() {
   printf("%d,\n", (int) *(rsArray + 61));
   printf("%d,\n", (int) *(rsArray + 62));
   printf("%d,\n", (int) *(rsArray + 63));
-  printf("]\n");
   // MARKER = REPEAT from SIGN ad infinitum
 }
