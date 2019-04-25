@@ -2,7 +2,7 @@ function process(v = 0) {
   return (v < 128 && v >= -128) ? Math.floor(1024 * v) * 16384 : (v > 0) ? 0x7fffffff : 0xffffffff;
 }
 
-function generate(v, im = [], wg = [], ledControl = false) {
+function generate(v, im = [], wg = [], ledControl = false, debug = true) {
   v = +v > 1 ? +v : 0
   if(!v) {
     return -1;
@@ -44,7 +44,7 @@ function generate(v, im = [], wg = [], ledControl = false) {
 
   bodyPrint(`#include <stdio.h>`);
   bodyPrint(`#include <stdint.h>`);
-  bodyPrint(`#include <time.h>`);
+  bodyPrint(`#include <sleep.h>`);
   bodyPrint(`uint32_t *control = (uint32_t *) 0x40000000;`);
   bodyPrint(`uint32_t *imArray = (uint32_t *) 0x40000004;`);
   bodyPrint(`uint32_t *wgArray = (uint32_t *) 0x${(0x40000000 + 4 * v * v).toString(16)};`)
@@ -57,23 +57,31 @@ function generate(v, im = [], wg = [], ledControl = false) {
   bodyPrint(`  // MARKER = SIGN`)
   ledControl ? bodyPrint(`  *(ledCtrl) = 0b0000;`) : null;
   bodyPrint(`  // input image data to image "array"`)
+  debug ? bodyPrint(`  printf("image = [\\n");`) : null;
   for(count0 = 0; count0 < imProc.length; count0++) {
     bodyPrint(`  *(imArray + ${count0}) = ${imProc[count0]}; ${imProc[count0] ? "// " + (16384 * Math.floor(imProc[count0] / 16384) / 16777216) : ""}`)
+    debug ? bodyPrint(`  printf("%d,\\n", (int) *(imArray + ${count0}));`) : null;
   }
+  debug ? bodyPrint(`  printf("]\\n");`) : null
   bodyPrint(`  // input weight data to weight "array"`)
+  debug ? bodyPrint(`  printf("weight = [\\n");`) : null
   for(count1 = 0; count1 < wgProc.length; count1++) {
     bodyPrint(`  *(wgArray + ${count1}) = ${wgProc[count1]}; ${wgProc[count1] ? "// " + (16384 * Math.floor(wgProc[count1] / 16384) / 16777216) : ""}`)
+    bodyPrint(`  printf("%d,\\n", (int) *(wgArray + ${count1}));`)
   }
+  debug ? bodyPrint(`  printf("]\\n");`) : null
   bodyPrint(`  // activate hardware processing`)
   bodyPrint(`  *(control) = 0xffffffff;`)
-  bodyPrint(`  // sleep while hardware is processing, time slept given for the hardware is 120% of hardware processing time`)
-  bodyPrint(`  nanosleep((const struct timespec[]){{0, ${12 * (v * (Math.ceil(Math.sqrt(im.length)) - Math.ceil(Math.sqrt(wg.length)) + 1) + Math.ceil(Math.log2(v * v)) - 2)}L}}, NULL);`)
+  bodyPrint(`  // sleep while hardware is processing, time slept given for the hardware is 120% of hardware processing time to the nearest us`)
+  bodyPrint(`  usleep(${Math.ceil(12 / 1000 * (v * (Math.ceil(Math.sqrt(im.length)) - Math.ceil(Math.sqrt(wg.length)) + 1) + Math.ceil(Math.log2(v * v)) - 2))});`)
   bodyPrint(`  // deactivate hardware processing`)
   bodyPrint(`  *(control) = 0;`)
   ledControl ? bodyPrint(`  *(ledCtrl) = 0b1111;`) : null;
+  bodyPrint(`  printf("result = [\\n");`)
   for(count0 = 0; count0 < imProc.length; count0++) {
-    bodyPrint(`  printf("%d\\n", (int) *(rsArray + ${count0}));`)
+    bodyPrint(`  printf("%d,\\n", (int) *(rsArray + ${count0}));`)
   }
+  bodyPrint(`  printf("]\\n");`)
   bodyPrint(`  // MARKER = REPEAT from SIGN ad infinitum`)
   bodyPrint(`}`)
   bodyWrite()
