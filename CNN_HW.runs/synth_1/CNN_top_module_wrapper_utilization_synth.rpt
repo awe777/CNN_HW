@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Apr 15 13:49:54 2019
+| Date         : Fri Apr 26 14:43:18 2019
 | Host         : DESKTOP-I4SG0E1 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file CNN_top_module_wrapper_utilization_synth.rpt -pb CNN_top_module_wrapper_utilization_synth.pb
 | Design       : CNN_top_module_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 12824 |     0 |     17600 | 72.86 |
-|   LUT as Logic             | 12776 |     0 |     17600 | 72.59 |
+| Slice LUTs*                | 13303 |     0 |     17600 | 75.59 |
+|   LUT as Logic             | 13255 |     0 |     17600 | 75.31 |
 |   LUT as Memory            |    48 |     0 |      6000 |  0.80 |
 |     LUT as Distributed RAM |     0 |     0 |           |       |
 |     LUT as Shift Register  |    48 |     0 |           |       |
@@ -149,17 +149,17 @@ Table of Contents
 +----------+------+----------------------+
 | Ref Name | Used |  Functional Category |
 +----------+------+----------------------+
-| LUT6     | 6421 |                  LUT |
+| LUT6     | 6549 |                  LUT |
 | FDRE     | 5645 |         Flop & Latch |
-| LUT3     | 3968 |                  LUT |
+| LUT3     | 3825 |                  LUT |
+| LUT5     | 1524 |                  LUT |
 | MUXF7    | 1510 |                MuxFx |
-| LUT5     | 1071 |                  LUT |
-| LUT2     |  929 |                  LUT |
+| LUT4     |  765 |                  LUT |
 | MUXF8    |  676 |                MuxFx |
-| LUT4     |  267 |                  LUT |
+| LUT2     |  462 |                  LUT |
 | CARRY4   |  207 |           CarryLogic |
+| LUT1     |  133 |                  LUT |
 | BIBUF    |  130 |                   IO |
-| LUT1     |  123 |                  LUT |
 | DSP48E1  |   64 |     Block Arithmetic |
 | SRLC32E  |   47 |   Distributed Memory |
 | FDSE     |   22 |         Flop & Latch |

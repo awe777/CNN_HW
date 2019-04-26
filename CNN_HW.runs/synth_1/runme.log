@@ -17,14 +17,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8904 
+INFO: Helper process launched with PID 3600 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 414.082 ; gain = 111.973
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 412.777 ; gain = 112.363
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_wrapper' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/hdl/CNN_top_module_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/synth/CNN_top_module.v:13]
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_axi_cnn_0_0' [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_axi_cnn_0_0/synth/CNN_top_module_axi_cnn_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'axi_cnn' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:12]
+INFO: [Synth 8-6157] synthesizing module 'axi_cnn' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:11]
 	Parameter C_ADDR_BITS bound to: 24 - type: integer 
 	Parameter C_ADDR_REG0 bound to: 24'b000000000000000000000000 
 	Parameter C_ADDR_REG1 bound to: 24'b000000000000000000000100 
@@ -209,16 +209,16 @@ INFO: [Synth 8-6157] synthesizing module 'axi_cnn' [B:/Dokumen/CNN_HW/CNN_HW.src
 	Parameter S_WRRESP bound to: 2'b10 
 	Parameter S_RDIDLE bound to: 2'b00 
 	Parameter S_RDDATA bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:508]
-INFO: [Synth 8-6157] synthesizing module 'convmultCore' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:1645]
-INFO: [Synth 8-6157] synthesizing module 'mult2reg' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7608]
-INFO: [Synth 8-6155] done synthesizing module 'mult2reg' (1#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7608]
-INFO: [Synth 8-6157] synthesizing module 'multx' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7105]
-INFO: [Synth 8-6157] synthesizing module 'multiplier' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7602]
-INFO: [Synth 8-6155] done synthesizing module 'multiplier' (2#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7602]
-INFO: [Synth 8-6155] done synthesizing module 'multx' (3#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7105]
-INFO: [Synth 8-6155] done synthesizing module 'convmultCore' (4#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:1645]
-INFO: [Synth 8-6155] done synthesizing module 'axi_cnn' (5#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:12]
+INFO: [Synth 8-155] case statement is not full and has no default [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:507]
+INFO: [Synth 8-6157] synthesizing module 'convmultCore' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:1644]
+INFO: [Synth 8-6157] synthesizing module 'mult2reg' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7607]
+INFO: [Synth 8-6155] done synthesizing module 'mult2reg' (1#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7607]
+INFO: [Synth 8-6157] synthesizing module 'multx' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7104]
+INFO: [Synth 8-6157] synthesizing module 'multiplier' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7601]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier' (2#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7601]
+INFO: [Synth 8-6155] done synthesizing module 'multx' (3#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7104]
+INFO: [Synth 8-6155] done synthesizing module 'convmultCore' (4#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:1644]
+INFO: [Synth 8-6155] done synthesizing module 'axi_cnn' (5#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:11]
 INFO: [Synth 8-6155] done synthesizing module 'CNN_top_module_axi_cnn_0_0' (6#1) [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_axi_cnn_0_0/synth/CNN_top_module_axi_cnn_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_processing_system7_0_0' [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/synth/CNN_top_module_processing_system7_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
@@ -1255,7 +1255,7 @@ WARNING: [Synth 8-3331] design axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm has
 WARNING: [Synth 8-3331] design axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm has unconnected port s_arlen[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 787.156 ; gain = 485.047
+Finished RTL Elaboration : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 789.773 ; gain = 489.359
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1268,10 +1268,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 787.156 ; gain = 485.047
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 789.773 ; gain = 489.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 787.156 ; gain = 485.047
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 789.773 ; gain = 489.359
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1288,31 +1288,31 @@ Parsing XDC File [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/C
 Finished Parsing XDC File [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0_board.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
 Parsing XDC File [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
 Finished Parsing XDC File [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1129.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1127.906 ; gain = 0.000
 Parsing XDC File [B:/Dokumen/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [B:/Dokumen/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [B:/Dokumen/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNN_top_module_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/CNN_top_module_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1129.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1127.906 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1129.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1127.906 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1129.570 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1129.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1127.906 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1127.906 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:07 ; elapsed = 00:01:16 . Memory (MB): peak = 1129.570 ; gain = 827.461
+Finished Constraint Validation : Time (s): cpu = 00:01:08 ; elapsed = 00:01:15 . Memory (MB): peak = 1127.906 ; gain = 827.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:07 ; elapsed = 00:01:17 . Memory (MB): peak = 1129.570 ; gain = 827.461
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:08 ; elapsed = 00:01:15 . Memory (MB): peak = 1127.906 ; gain = 827.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1326,7 +1326,7 @@ Applied set_property DONT_TOUCH = true for CNN_top_module_i/ps7_0_axi_periph. (c
 Applied set_property DONT_TOUCH = true for CNN_top_module_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for CNN_top_module_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:17 . Memory (MB): peak = 1129.570 ; gain = 827.461
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 1127.906 ; gain = 827.492
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'wstate_cs_reg' in module 'axi_cnn'
 INFO: [Synth 8-802] inferred FSM for state register 'rstate_cs_reg' in module 'axi_cnn'
@@ -1364,7 +1364,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'rstate_cs_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:19 ; elapsed = 00:01:29 . Memory (MB): peak = 1129.570 ; gain = 827.461
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:21 ; elapsed = 00:01:30 . Memory (MB): peak = 1127.906 ; gain = 827.492
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1374,7 +1374,7 @@ Report RTL Partitions:
 |1     |convmultCore__GB0   |           1|     34020|
 |2     |convmultCore__GB1   |           1|      9072|
 |3     |convmultCore__GB2   |           1|     11340|
-|4     |convmultCore__GB3   |           1|     24398|
+|4     |convmultCore__GB3   |           1|     24401|
 |5     |convmultCore__GB4   |           1|     18144|
 |6     |axi_cnn__GC0        |           1|     33812|
 |7     |CNN_top_module__GC0 |           1|      3033|
@@ -2686,7 +2686,7 @@ DSP Report: operator mult63/outMem is absorbed into DSP mult63/outMem.
 DSP Report: operator mult63/outMem is absorbed into DSP mult63/outMem.
 INFO: [Synth 8-5546] ROM "rdata" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:46 ; elapsed = 00:02:07 . Memory (MB): peak = 1129.570 ; gain = 827.461
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:49 ; elapsed = 00:02:09 . Memory (MB): peak = 1127.906 ; gain = 827.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2774,7 +2774,7 @@ Report RTL Partitions:
 |1     |convmultCore__GB0   |           1|      6228|
 |2     |convmultCore__GB1   |           1|      4464|
 |3     |convmultCore__GB2   |           1|      4716|
-|4     |convmultCore__GB3   |           1|     25067|
+|4     |convmultCore__GB3   |           1|     25066|
 |5     |convmultCore__GB4   |           1|      5472|
 |6     |axi_cnn__GC0        |           1|     10592|
 |7     |CNN_top_module__GC0 |           1|      2563|
@@ -2783,13 +2783,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:00 ; elapsed = 00:02:21 . Memory (MB): peak = 1129.570 ; gain = 827.461
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:02 ; elapsed = 00:02:22 . Memory (MB): peak = 1127.906 ; gain = 827.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:21 ; elapsed = 00:03:44 . Memory (MB): peak = 2196.527 ; gain = 1894.418
+Finished Timing Optimization : Time (s): cpu = 00:03:25 ; elapsed = 00:03:47 . Memory (MB): peak = 2136.090 ; gain = 1835.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2800,13 +2800,13 @@ Report RTL Partitions:
 |2     |convmultCore__GB4              |           1|      5450|
 |3     |CNN_top_module__GC0            |           1|      2563|
 |4     |CNN_top_module_axi_cnn_0_0_GT1 |           1|     15648|
-|5     |CNN_top_module_axi_cnn_0_0_GT0 |           1|     29837|
+|5     |CNN_top_module_axi_cnn_0_0_GT0 |           1|     31516|
 +------+-------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:58 ; elapsed = 00:04:34 . Memory (MB): peak = 2196.527 ; gain = 1894.418
+Finished Technology Mapping : Time (s): cpu = 00:04:02 ; elapsed = 00:04:36 . Memory (MB): peak = 2136.090 ; gain = 1835.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2817,7 +2817,7 @@ Report RTL Partitions:
 |2     |convmultCore__GB4              |           1|      3154|
 |3     |CNN_top_module__GC0            |           1|      1515|
 |4     |CNN_top_module_axi_cnn_0_0_GT1 |           1|      7237|
-|5     |CNN_top_module_axi_cnn_0_0_GT0 |           1|      9632|
+|5     |CNN_top_module_axi_cnn_0_0_GT0 |           1|      9667|
 +------+-------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -2838,7 +2838,7 @@ INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[4] because some of i
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:01 ; elapsed = 00:04:38 . Memory (MB): peak = 2196.527 ; gain = 1894.418
+Finished IO Insertion : Time (s): cpu = 00:04:05 ; elapsed = 00:04:39 . Memory (MB): peak = 2136.090 ; gain = 1835.676
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2851,7 +2851,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:01 ; elapsed = 00:04:38 . Memory (MB): peak = 2196.527 ; gain = 1894.418
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:05 ; elapsed = 00:04:40 . Memory (MB): peak = 2136.090 ; gain = 1835.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2863,25 +2863,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:02 ; elapsed = 00:04:39 . Memory (MB): peak = 2196.527 ; gain = 1894.418
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:06 ; elapsed = 00:04:41 . Memory (MB): peak = 2136.090 ; gain = 1835.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:03 ; elapsed = 00:04:39 . Memory (MB): peak = 2196.527 ; gain = 1894.418
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:07 ; elapsed = 00:04:41 . Memory (MB): peak = 2136.090 ; gain = 1835.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:03 ; elapsed = 00:04:39 . Memory (MB): peak = 2196.527 ; gain = 1894.418
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:07 ; elapsed = 00:04:41 . Memory (MB): peak = 2136.090 ; gain = 1835.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:03 ; elapsed = 00:04:39 . Memory (MB): peak = 2196.527 ; gain = 1894.418
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:07 ; elapsed = 00:04:41 . Memory (MB): peak = 2136.090 ; gain = 1835.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2916,12 +2916,12 @@ Report Cell Usage:
 |2     |BUFG      |     2|
 |3     |CARRY4    |   207|
 |4     |DSP48E1_1 |    64|
-|5     |LUT1      |   123|
-|6     |LUT2      |   929|
-|7     |LUT3      |  3968|
-|8     |LUT4      |   267|
-|9     |LUT5      |  1071|
-|10    |LUT6      |  6421|
+|5     |LUT1      |   133|
+|6     |LUT2      |   462|
+|7     |LUT3      |  3825|
+|8     |LUT4      |   765|
+|9     |LUT5      |  1524|
+|10    |LUT6      |  6549|
 |11    |MUXF7     |  1510|
 |12    |MUXF8     |   676|
 |13    |PS7       |     1|
@@ -2936,21 +2936,21 @@ Report Instance Areas:
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 |      |Instance                                           |Module                                                         |Cells |
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
-|1     |top                                                |                                                               | 21084|
-|2     |  CNN_top_module_i                                 |CNN_top_module                                                 | 21084|
-|3     |    axi_cnn_0                                      |CNN_top_module_axi_cnn_0_0                                     | 19545|
-|4     |      inst                                         |axi_cnn                                                        | 19544|
-|5     |        coreInstance                               |convmultCore                                                   | 14268|
-|6     |          multxPrime                               |multx                                                          | 10952|
-|7     |            mult0                                  |multiplier                                                     |    72|
+|1     |top                                                |                                                               | 21563|
+|2     |  CNN_top_module_i                                 |CNN_top_module                                                 | 21563|
+|3     |    axi_cnn_0                                      |CNN_top_module_axi_cnn_0_0                                     | 20024|
+|4     |      inst                                         |axi_cnn                                                        | 20023|
+|5     |        coreInstance                               |convmultCore                                                   | 14747|
+|6     |          multxPrime                               |multx                                                          | 11431|
+|7     |            mult0                                  |multiplier                                                     |   129|
 |8     |            mult1                                  |multiplier_68                                                  |   167|
 |9     |            mult10                                 |multiplier_69                                                  |   179|
 |10    |            mult11                                 |multiplier_70                                                  |   150|
-|11    |            mult12                                 |multiplier_71                                                  |   144|
+|11    |            mult12                                 |multiplier_71                                                  |   143|
 |12    |            mult13                                 |multiplier_72                                                  |   167|
 |13    |            mult14                                 |multiplier_73                                                  |   179|
 |14    |            mult15                                 |multiplier_74                                                  |   147|
-|15    |            mult16                                 |multiplier_75                                                  |    54|
+|15    |            mult16                                 |multiplier_75                                                  |    74|
 |16    |            mult17                                 |multiplier_76                                                  |    60|
 |17    |            mult18                                 |multiplier_77                                                  |    72|
 |18    |            mult19                                 |multiplier_78                                                  |    74|
@@ -2958,53 +2958,53 @@ Report Instance Areas:
 |20    |            mult20                                 |multiplier_80                                                  |    37|
 |21    |            mult21                                 |multiplier_81                                                  |    60|
 |22    |            mult22                                 |multiplier_82                                                  |    72|
-|23    |            mult23                                 |multiplier_83                                                  |    62|
-|24    |            mult24                                 |multiplier_84                                                  |    54|
-|25    |            mult25                                 |multiplier_85                                                  |   115|
-|26    |            mult26                                 |multiplier_86                                                  |   127|
-|27    |            mult27                                 |multiplier_87                                                  |   108|
-|28    |            mult28                                 |multiplier_88                                                  |    98|
-|29    |            mult29                                 |multiplier_89                                                  |    99|
+|23    |            mult23                                 |multiplier_83                                                  |    66|
+|24    |            mult24                                 |multiplier_84                                                  |    77|
+|25    |            mult25                                 |multiplier_85                                                  |   395|
+|26    |            mult26                                 |multiplier_86                                                  |   392|
+|27    |            mult27                                 |multiplier_87                                                  |   368|
+|28    |            mult28                                 |multiplier_88                                                  |   378|
+|29    |            mult29                                 |multiplier_89                                                  |   152|
 |30    |            mult3                                  |multiplier_90                                                  |   174|
-|31    |            mult30                                 |multiplier_91                                                  |   111|
-|32    |            mult31                                 |multiplier_92                                                  |   147|
-|33    |            mult32                                 |multiplier_93                                                  |    36|
-|34    |            mult33                                 |multiplier_94                                                  |    59|
-|35    |            mult34                                 |multiplier_95                                                  |    71|
-|36    |            mult35                                 |multiplier_96                                                  |    71|
-|37    |            mult36                                 |multiplier_97                                                  |    36|
-|38    |            mult37                                 |multiplier_98                                                  |    59|
-|39    |            mult38                                 |multiplier_99                                                  |    71|
-|40    |            mult39                                 |multiplier_100                                                 |    45|
+|31    |            mult30                                 |multiplier_91                                                  |   165|
+|32    |            mult31                                 |multiplier_92                                                  |   141|
+|33    |            mult32                                 |multiplier_93                                                  |    52|
+|34    |            mult33                                 |multiplier_94                                                  |   123|
+|35    |            mult34                                 |multiplier_95                                                  |   136|
+|36    |            mult35                                 |multiplier_96                                                  |   126|
+|37    |            mult36                                 |multiplier_97                                                  |   108|
+|38    |            mult37                                 |multiplier_98                                                  |   130|
+|39    |            mult38                                 |multiplier_99                                                  |   145|
+|40    |            mult39                                 |multiplier_100                                                 |    59|
 |41    |            mult4                                  |multiplier_101                                                 |   144|
-|42    |            mult40                                 |multiplier_102                                                 |   198|
-|43    |            mult41                                 |multiplier_103                                                 |   408|
-|44    |            mult42                                 |multiplier_104                                                 |   420|
-|45    |            mult43                                 |multiplier_105                                                 |   387|
-|46    |            mult44                                 |multiplier_106                                                 |   385|
-|47    |            mult45                                 |multiplier_107                                                 |   136|
-|48    |            mult46                                 |multiplier_108                                                 |   148|
-|49    |            mult47                                 |multiplier_109                                                 |   198|
-|50    |            mult48                                 |multiplier_110                                                 |   108|
-|51    |            mult49                                 |multiplier_111                                                 |   131|
+|42    |            mult40                                 |multiplier_102                                                 |   173|
+|43    |            mult41                                 |multiplier_103                                                 |   124|
+|44    |            mult42                                 |multiplier_104                                                 |   143|
+|45    |            mult43                                 |multiplier_105                                                 |   107|
+|46    |            mult44                                 |multiplier_106                                                 |   100|
+|47    |            mult45                                 |multiplier_107                                                 |   124|
+|48    |            mult46                                 |multiplier_108                                                 |   134|
+|49    |            mult47                                 |multiplier_109                                                 |   188|
+|50    |            mult48                                 |multiplier_110                                                 |    92|
+|51    |            mult49                                 |multiplier_111                                                 |    68|
 |52    |            mult5                                  |multiplier_112                                                 |   167|
-|53    |            mult50                                 |multiplier_113                                                 |   143|
-|54    |            mult51                                 |multiplier_114                                                 |   115|
-|55    |            mult52                                 |multiplier_115                                                 |   108|
-|56    |            mult53                                 |multiplier_116                                                 |   131|
-|57    |            mult54                                 |multiplier_117                                                 |   143|
-|58    |            mult55                                 |multiplier_118                                                 |   113|
-|59    |            mult56                                 |multiplier_119                                                 |   137|
-|60    |            mult57                                 |multiplier_120                                                 |    58|
-|61    |            mult58                                 |multiplier_121                                                 |    70|
-|62    |            mult59                                 |multiplier_122                                                 |    45|
+|53    |            mult50                                 |multiplier_113                                                 |    83|
+|54    |            mult51                                 |multiplier_114                                                 |    61|
+|55    |            mult52                                 |multiplier_115                                                 |    39|
+|56    |            mult53                                 |multiplier_116                                                 |    60|
+|57    |            mult54                                 |multiplier_117                                                 |    74|
+|58    |            mult55                                 |multiplier_118                                                 |    99|
+|59    |            mult56                                 |multiplier_119                                                 |   133|
+|60    |            mult57                                 |multiplier_120                                                 |   118|
+|61    |            mult58                                 |multiplier_121                                                 |   136|
+|62    |            mult59                                 |multiplier_122                                                 |   125|
 |63    |            mult6                                  |multiplier_123                                                 |   179|
-|64    |            mult60                                 |multiplier_124                                                 |    35|
-|65    |            mult61                                 |multiplier_125                                                 |    58|
-|66    |            mult62                                 |multiplier_126                                                 |    70|
-|67    |            mult63                                 |multiplier_127                                                 |    63|
-|68    |            mult7                                  |multiplier_128                                                 |    79|
-|69    |            mult8                                  |multiplier_129                                                 |   144|
+|64    |            mult60                                 |multiplier_124                                                 |    96|
+|65    |            mult61                                 |multiplier_125                                                 |    72|
+|66    |            mult62                                 |multiplier_126                                                 |    84|
+|67    |            mult63                                 |multiplier_127                                                 |    81|
+|68    |            mult7                                  |multiplier_128                                                 |   133|
+|69    |            mult8                                  |multiplier_129                                                 |   143|
 |70    |            mult9                                  |multiplier_130                                                 |   167|
 |71    |          outMult0                                 |mult2reg                                                       |    33|
 |72    |          outMult1                                 |mult2reg_5                                                     |   105|
@@ -3029,7 +3029,7 @@ Report Instance Areas:
 |91    |          outMult27                                |mult2reg_24                                                    |    33|
 |92    |          outMult28                                |mult2reg_25                                                    |    33|
 |93    |          outMult29                                |mult2reg_26                                                    |    65|
-|94    |          outMult3                                 |mult2reg_27                                                    |    34|
+|94    |          outMult3                                 |mult2reg_27                                                    |    33|
 |95    |          outMult30                                |mult2reg_28                                                    |    33|
 |96    |          outMult31                                |mult2reg_29                                                    |    33|
 |97    |          outMult32                                |mult2reg_30                                                    |    33|
@@ -3058,7 +3058,7 @@ Report Instance Areas:
 |120   |          outMult53                                |mult2reg_53                                                    |    65|
 |121   |          outMult54                                |mult2reg_54                                                    |    33|
 |122   |          outMult55                                |mult2reg_55                                                    |    33|
-|123   |          outMult56                                |mult2reg_56                                                    |    34|
+|123   |          outMult56                                |mult2reg_56                                                    |    33|
 |124   |          outMult57                                |mult2reg_57                                                    |    97|
 |125   |          outMult58                                |mult2reg_58                                                    |    33|
 |126   |          outMult59                                |mult2reg_59                                                    |    33|
@@ -3066,7 +3066,7 @@ Report Instance Areas:
 |128   |          outMult60                                |mult2reg_61                                                    |    33|
 |129   |          outMult61                                |mult2reg_62                                                    |    66|
 |130   |          outMult62                                |mult2reg_63                                                    |    34|
-|131   |          outMult63                                |mult2reg_64                                                    |   115|
+|131   |          outMult63                                |mult2reg_64                                                    |   116|
 |132   |          outMult7                                 |mult2reg_65                                                    |    33|
 |133   |          outMult8                                 |mult2reg_66                                                    |    33|
 |134   |          outMult9                                 |mult2reg_67                                                    |    97|
@@ -3107,17 +3107,17 @@ Report Instance Areas:
 |169   |          SEQ_COUNTER                              |upcnt_n                                                        |    13|
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:03 ; elapsed = 00:04:39 . Memory (MB): peak = 2196.527 ; gain = 1894.418
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:07 ; elapsed = 00:04:41 . Memory (MB): peak = 2136.090 ; gain = 1835.676
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:59 ; elapsed = 00:04:23 . Memory (MB): peak = 2196.527 ; gain = 1552.004
-Synthesis Optimization Complete : Time (s): cpu = 00:04:03 ; elapsed = 00:04:44 . Memory (MB): peak = 2196.527 ; gain = 1894.418
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:02 ; elapsed = 00:04:28 . Memory (MB): peak = 2136.090 ; gain = 1497.543
+Synthesis Optimization Complete : Time (s): cpu = 00:04:07 ; elapsed = 00:04:46 . Memory (MB): peak = 2136.090 ; gain = 1835.676
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2466 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2196.527 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2136.090 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
@@ -3126,10 +3126,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 178 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:09 ; elapsed = 00:04:52 . Memory (MB): peak = 2196.527 ; gain = 1901.719
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2196.527 ; gain = 0.000
+synth_design: Time (s): cpu = 00:04:13 ; elapsed = 00:04:54 . Memory (MB): peak = 2136.090 ; gain = 1842.977
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2136.090 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'B:/Dokumen/CNN_HW/CNN_HW.runs/synth_1/CNN_top_module_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CNN_top_module_wrapper_utilization_synth.rpt -pb CNN_top_module_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 15 13:49:54 2019...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 26 14:43:18 2019...
