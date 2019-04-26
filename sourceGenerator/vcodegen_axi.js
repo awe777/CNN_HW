@@ -265,6 +265,13 @@ function generate(v, r) {
             output[k][l] = workspace[Math.floor(k / v) * v + Math.floor(l / v)][(k % v) * v + l % v];
         }
     } // O(n^4) with input = n
+	let acc = true;
+	for(debug0 = 0; debug0 < v * v && acc; debug0++) {
+		for(debug1 = debug0; debug1 < v * v && acc; debug1++) {
+			acc = acc && output[debug0][debug1] === output[debug1][debug0];
+		}
+	}
+	console.log(acc)
 
     // TODO -> rewrite:
     // FROM multiple modules for each out${index} using dynamic ${outx[m]} as image data and static wg${m} as weight data
@@ -274,7 +281,7 @@ function generate(v, r) {
         bodyPrint(`mult2reg outMult${something} (`)
         bodyPrint(`   .in0(out${something}),`)
         bodyPrint(`   .in1(outTemp),`)
-        bodyPrint(`   .sel(counter == ${ceilLog2(v * v) + 1}'d${something + ceilLog2(v * v) - 2}),`)
+        bodyPrint(`   .sel(counter == ${ceilLog2(v * v) + 1}'d${something + ceilLog2(v * v) - 3}),`)
         bodyPrint(`   .out(out${something}),`)
         bodyPrint(`   .clk(processedClock),`)
         bodyPrint(`   .rst(masterReset)`)

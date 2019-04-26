@@ -1,10 +1,9 @@
-
 // maximum matrix size is 8 by 8 for image data and 7 by 7 for weight data
 // input data word length is 18 bits, uses 18 bits of register for each entry
 // input data is a fixed-point fraction with 8 integer bits and 10 fraction bits
 // output data is a fixed-point fraction with 16 integer bits and 16 fraction bits
 // accepted address range is [offset + 0x00000000, offset + 0x00ffffff) with jumps of 4 for each register
-// there are 114 registers in this AXI node, with 178 memory location
+// there are 114 registers in this AXI node, with 178 memory locations
 // input from clock that drives this system is masterClock
 // input from reset that refreshes this system is masterReset
 // the maximum amount of adder connected serially while not exceeding the delay of 1 multiplier is 2
@@ -1908,7 +1907,7 @@ reg [6:0] counter;
 mult2reg outMult0 (
    .in0(out0),
    .in1(outTemp),
-   .sel(counter == 7'd4),
+   .sel(counter == 7'd3),
    .out(out0),
    .clk(processedClock),
    .rst(masterReset)
@@ -1916,7 +1915,7 @@ mult2reg outMult0 (
 mult2reg outMult1 (
    .in0(out1),
    .in1(outTemp),
-   .sel(counter == 7'd5),
+   .sel(counter == 7'd4),
    .out(out1),
    .clk(processedClock),
    .rst(masterReset)
@@ -1924,7 +1923,7 @@ mult2reg outMult1 (
 mult2reg outMult2 (
    .in0(out2),
    .in1(outTemp),
-   .sel(counter == 7'd6),
+   .sel(counter == 7'd5),
    .out(out2),
    .clk(processedClock),
    .rst(masterReset)
@@ -1932,7 +1931,7 @@ mult2reg outMult2 (
 mult2reg outMult3 (
    .in0(out3),
    .in1(outTemp),
-   .sel(counter == 7'd7),
+   .sel(counter == 7'd6),
    .out(out3),
    .clk(processedClock),
    .rst(masterReset)
@@ -1940,7 +1939,7 @@ mult2reg outMult3 (
 mult2reg outMult4 (
    .in0(out4),
    .in1(outTemp),
-   .sel(counter == 7'd8),
+   .sel(counter == 7'd7),
    .out(out4),
    .clk(processedClock),
    .rst(masterReset)
@@ -1948,7 +1947,7 @@ mult2reg outMult4 (
 mult2reg outMult5 (
    .in0(out5),
    .in1(outTemp),
-   .sel(counter == 7'd9),
+   .sel(counter == 7'd8),
    .out(out5),
    .clk(processedClock),
    .rst(masterReset)
@@ -1956,7 +1955,7 @@ mult2reg outMult5 (
 mult2reg outMult6 (
    .in0(out6),
    .in1(outTemp),
-   .sel(counter == 7'd10),
+   .sel(counter == 7'd9),
    .out(out6),
    .clk(processedClock),
    .rst(masterReset)
@@ -1964,7 +1963,7 @@ mult2reg outMult6 (
 mult2reg outMult7 (
    .in0(out7),
    .in1(outTemp),
-   .sel(counter == 7'd11),
+   .sel(counter == 7'd10),
    .out(out7),
    .clk(processedClock),
    .rst(masterReset)
@@ -1972,7 +1971,7 @@ mult2reg outMult7 (
 mult2reg outMult8 (
    .in0(out8),
    .in1(outTemp),
-   .sel(counter == 7'd12),
+   .sel(counter == 7'd11),
    .out(out8),
    .clk(processedClock),
    .rst(masterReset)
@@ -1980,7 +1979,7 @@ mult2reg outMult8 (
 mult2reg outMult9 (
    .in0(out9),
    .in1(outTemp),
-   .sel(counter == 7'd13),
+   .sel(counter == 7'd12),
    .out(out9),
    .clk(processedClock),
    .rst(masterReset)
@@ -1988,7 +1987,7 @@ mult2reg outMult9 (
 mult2reg outMult10 (
    .in0(out10),
    .in1(outTemp),
-   .sel(counter == 7'd14),
+   .sel(counter == 7'd13),
    .out(out10),
    .clk(processedClock),
    .rst(masterReset)
@@ -1996,7 +1995,7 @@ mult2reg outMult10 (
 mult2reg outMult11 (
    .in0(out11),
    .in1(outTemp),
-   .sel(counter == 7'd15),
+   .sel(counter == 7'd14),
    .out(out11),
    .clk(processedClock),
    .rst(masterReset)
@@ -2004,7 +2003,7 @@ mult2reg outMult11 (
 mult2reg outMult12 (
    .in0(out12),
    .in1(outTemp),
-   .sel(counter == 7'd16),
+   .sel(counter == 7'd15),
    .out(out12),
    .clk(processedClock),
    .rst(masterReset)
@@ -2012,7 +2011,7 @@ mult2reg outMult12 (
 mult2reg outMult13 (
    .in0(out13),
    .in1(outTemp),
-   .sel(counter == 7'd17),
+   .sel(counter == 7'd16),
    .out(out13),
    .clk(processedClock),
    .rst(masterReset)
@@ -2020,7 +2019,7 @@ mult2reg outMult13 (
 mult2reg outMult14 (
    .in0(out14),
    .in1(outTemp),
-   .sel(counter == 7'd18),
+   .sel(counter == 7'd17),
    .out(out14),
    .clk(processedClock),
    .rst(masterReset)
@@ -2028,7 +2027,7 @@ mult2reg outMult14 (
 mult2reg outMult15 (
    .in0(out15),
    .in1(outTemp),
-   .sel(counter == 7'd19),
+   .sel(counter == 7'd18),
    .out(out15),
    .clk(processedClock),
    .rst(masterReset)
@@ -2036,7 +2035,7 @@ mult2reg outMult15 (
 mult2reg outMult16 (
    .in0(out16),
    .in1(outTemp),
-   .sel(counter == 7'd20),
+   .sel(counter == 7'd19),
    .out(out16),
    .clk(processedClock),
    .rst(masterReset)
@@ -2044,7 +2043,7 @@ mult2reg outMult16 (
 mult2reg outMult17 (
    .in0(out17),
    .in1(outTemp),
-   .sel(counter == 7'd21),
+   .sel(counter == 7'd20),
    .out(out17),
    .clk(processedClock),
    .rst(masterReset)
@@ -2052,7 +2051,7 @@ mult2reg outMult17 (
 mult2reg outMult18 (
    .in0(out18),
    .in1(outTemp),
-   .sel(counter == 7'd22),
+   .sel(counter == 7'd21),
    .out(out18),
    .clk(processedClock),
    .rst(masterReset)
@@ -2060,7 +2059,7 @@ mult2reg outMult18 (
 mult2reg outMult19 (
    .in0(out19),
    .in1(outTemp),
-   .sel(counter == 7'd23),
+   .sel(counter == 7'd22),
    .out(out19),
    .clk(processedClock),
    .rst(masterReset)
@@ -2068,7 +2067,7 @@ mult2reg outMult19 (
 mult2reg outMult20 (
    .in0(out20),
    .in1(outTemp),
-   .sel(counter == 7'd24),
+   .sel(counter == 7'd23),
    .out(out20),
    .clk(processedClock),
    .rst(masterReset)
@@ -2076,7 +2075,7 @@ mult2reg outMult20 (
 mult2reg outMult21 (
    .in0(out21),
    .in1(outTemp),
-   .sel(counter == 7'd25),
+   .sel(counter == 7'd24),
    .out(out21),
    .clk(processedClock),
    .rst(masterReset)
@@ -2084,7 +2083,7 @@ mult2reg outMult21 (
 mult2reg outMult22 (
    .in0(out22),
    .in1(outTemp),
-   .sel(counter == 7'd26),
+   .sel(counter == 7'd25),
    .out(out22),
    .clk(processedClock),
    .rst(masterReset)
@@ -2092,7 +2091,7 @@ mult2reg outMult22 (
 mult2reg outMult23 (
    .in0(out23),
    .in1(outTemp),
-   .sel(counter == 7'd27),
+   .sel(counter == 7'd26),
    .out(out23),
    .clk(processedClock),
    .rst(masterReset)
@@ -2100,7 +2099,7 @@ mult2reg outMult23 (
 mult2reg outMult24 (
    .in0(out24),
    .in1(outTemp),
-   .sel(counter == 7'd28),
+   .sel(counter == 7'd27),
    .out(out24),
    .clk(processedClock),
    .rst(masterReset)
@@ -2108,7 +2107,7 @@ mult2reg outMult24 (
 mult2reg outMult25 (
    .in0(out25),
    .in1(outTemp),
-   .sel(counter == 7'd29),
+   .sel(counter == 7'd28),
    .out(out25),
    .clk(processedClock),
    .rst(masterReset)
@@ -2116,7 +2115,7 @@ mult2reg outMult25 (
 mult2reg outMult26 (
    .in0(out26),
    .in1(outTemp),
-   .sel(counter == 7'd30),
+   .sel(counter == 7'd29),
    .out(out26),
    .clk(processedClock),
    .rst(masterReset)
@@ -2124,7 +2123,7 @@ mult2reg outMult26 (
 mult2reg outMult27 (
    .in0(out27),
    .in1(outTemp),
-   .sel(counter == 7'd31),
+   .sel(counter == 7'd30),
    .out(out27),
    .clk(processedClock),
    .rst(masterReset)
@@ -2132,7 +2131,7 @@ mult2reg outMult27 (
 mult2reg outMult28 (
    .in0(out28),
    .in1(outTemp),
-   .sel(counter == 7'd32),
+   .sel(counter == 7'd31),
    .out(out28),
    .clk(processedClock),
    .rst(masterReset)
@@ -2140,7 +2139,7 @@ mult2reg outMult28 (
 mult2reg outMult29 (
    .in0(out29),
    .in1(outTemp),
-   .sel(counter == 7'd33),
+   .sel(counter == 7'd32),
    .out(out29),
    .clk(processedClock),
    .rst(masterReset)
@@ -2148,7 +2147,7 @@ mult2reg outMult29 (
 mult2reg outMult30 (
    .in0(out30),
    .in1(outTemp),
-   .sel(counter == 7'd34),
+   .sel(counter == 7'd33),
    .out(out30),
    .clk(processedClock),
    .rst(masterReset)
@@ -2156,7 +2155,7 @@ mult2reg outMult30 (
 mult2reg outMult31 (
    .in0(out31),
    .in1(outTemp),
-   .sel(counter == 7'd35),
+   .sel(counter == 7'd34),
    .out(out31),
    .clk(processedClock),
    .rst(masterReset)
@@ -2164,7 +2163,7 @@ mult2reg outMult31 (
 mult2reg outMult32 (
    .in0(out32),
    .in1(outTemp),
-   .sel(counter == 7'd36),
+   .sel(counter == 7'd35),
    .out(out32),
    .clk(processedClock),
    .rst(masterReset)
@@ -2172,7 +2171,7 @@ mult2reg outMult32 (
 mult2reg outMult33 (
    .in0(out33),
    .in1(outTemp),
-   .sel(counter == 7'd37),
+   .sel(counter == 7'd36),
    .out(out33),
    .clk(processedClock),
    .rst(masterReset)
@@ -2180,7 +2179,7 @@ mult2reg outMult33 (
 mult2reg outMult34 (
    .in0(out34),
    .in1(outTemp),
-   .sel(counter == 7'd38),
+   .sel(counter == 7'd37),
    .out(out34),
    .clk(processedClock),
    .rst(masterReset)
@@ -2188,7 +2187,7 @@ mult2reg outMult34 (
 mult2reg outMult35 (
    .in0(out35),
    .in1(outTemp),
-   .sel(counter == 7'd39),
+   .sel(counter == 7'd38),
    .out(out35),
    .clk(processedClock),
    .rst(masterReset)
@@ -2196,7 +2195,7 @@ mult2reg outMult35 (
 mult2reg outMult36 (
    .in0(out36),
    .in1(outTemp),
-   .sel(counter == 7'd40),
+   .sel(counter == 7'd39),
    .out(out36),
    .clk(processedClock),
    .rst(masterReset)
@@ -2204,7 +2203,7 @@ mult2reg outMult36 (
 mult2reg outMult37 (
    .in0(out37),
    .in1(outTemp),
-   .sel(counter == 7'd41),
+   .sel(counter == 7'd40),
    .out(out37),
    .clk(processedClock),
    .rst(masterReset)
@@ -2212,7 +2211,7 @@ mult2reg outMult37 (
 mult2reg outMult38 (
    .in0(out38),
    .in1(outTemp),
-   .sel(counter == 7'd42),
+   .sel(counter == 7'd41),
    .out(out38),
    .clk(processedClock),
    .rst(masterReset)
@@ -2220,7 +2219,7 @@ mult2reg outMult38 (
 mult2reg outMult39 (
    .in0(out39),
    .in1(outTemp),
-   .sel(counter == 7'd43),
+   .sel(counter == 7'd42),
    .out(out39),
    .clk(processedClock),
    .rst(masterReset)
@@ -2228,7 +2227,7 @@ mult2reg outMult39 (
 mult2reg outMult40 (
    .in0(out40),
    .in1(outTemp),
-   .sel(counter == 7'd44),
+   .sel(counter == 7'd43),
    .out(out40),
    .clk(processedClock),
    .rst(masterReset)
@@ -2236,7 +2235,7 @@ mult2reg outMult40 (
 mult2reg outMult41 (
    .in0(out41),
    .in1(outTemp),
-   .sel(counter == 7'd45),
+   .sel(counter == 7'd44),
    .out(out41),
    .clk(processedClock),
    .rst(masterReset)
@@ -2244,7 +2243,7 @@ mult2reg outMult41 (
 mult2reg outMult42 (
    .in0(out42),
    .in1(outTemp),
-   .sel(counter == 7'd46),
+   .sel(counter == 7'd45),
    .out(out42),
    .clk(processedClock),
    .rst(masterReset)
@@ -2252,7 +2251,7 @@ mult2reg outMult42 (
 mult2reg outMult43 (
    .in0(out43),
    .in1(outTemp),
-   .sel(counter == 7'd47),
+   .sel(counter == 7'd46),
    .out(out43),
    .clk(processedClock),
    .rst(masterReset)
@@ -2260,7 +2259,7 @@ mult2reg outMult43 (
 mult2reg outMult44 (
    .in0(out44),
    .in1(outTemp),
-   .sel(counter == 7'd48),
+   .sel(counter == 7'd47),
    .out(out44),
    .clk(processedClock),
    .rst(masterReset)
@@ -2268,7 +2267,7 @@ mult2reg outMult44 (
 mult2reg outMult45 (
    .in0(out45),
    .in1(outTemp),
-   .sel(counter == 7'd49),
+   .sel(counter == 7'd48),
    .out(out45),
    .clk(processedClock),
    .rst(masterReset)
@@ -2276,7 +2275,7 @@ mult2reg outMult45 (
 mult2reg outMult46 (
    .in0(out46),
    .in1(outTemp),
-   .sel(counter == 7'd50),
+   .sel(counter == 7'd49),
    .out(out46),
    .clk(processedClock),
    .rst(masterReset)
@@ -2284,7 +2283,7 @@ mult2reg outMult46 (
 mult2reg outMult47 (
    .in0(out47),
    .in1(outTemp),
-   .sel(counter == 7'd51),
+   .sel(counter == 7'd50),
    .out(out47),
    .clk(processedClock),
    .rst(masterReset)
@@ -2292,7 +2291,7 @@ mult2reg outMult47 (
 mult2reg outMult48 (
    .in0(out48),
    .in1(outTemp),
-   .sel(counter == 7'd52),
+   .sel(counter == 7'd51),
    .out(out48),
    .clk(processedClock),
    .rst(masterReset)
@@ -2300,7 +2299,7 @@ mult2reg outMult48 (
 mult2reg outMult49 (
    .in0(out49),
    .in1(outTemp),
-   .sel(counter == 7'd53),
+   .sel(counter == 7'd52),
    .out(out49),
    .clk(processedClock),
    .rst(masterReset)
@@ -2308,7 +2307,7 @@ mult2reg outMult49 (
 mult2reg outMult50 (
    .in0(out50),
    .in1(outTemp),
-   .sel(counter == 7'd54),
+   .sel(counter == 7'd53),
    .out(out50),
    .clk(processedClock),
    .rst(masterReset)
@@ -2316,7 +2315,7 @@ mult2reg outMult50 (
 mult2reg outMult51 (
    .in0(out51),
    .in1(outTemp),
-   .sel(counter == 7'd55),
+   .sel(counter == 7'd54),
    .out(out51),
    .clk(processedClock),
    .rst(masterReset)
@@ -2324,7 +2323,7 @@ mult2reg outMult51 (
 mult2reg outMult52 (
    .in0(out52),
    .in1(outTemp),
-   .sel(counter == 7'd56),
+   .sel(counter == 7'd55),
    .out(out52),
    .clk(processedClock),
    .rst(masterReset)
@@ -2332,7 +2331,7 @@ mult2reg outMult52 (
 mult2reg outMult53 (
    .in0(out53),
    .in1(outTemp),
-   .sel(counter == 7'd57),
+   .sel(counter == 7'd56),
    .out(out53),
    .clk(processedClock),
    .rst(masterReset)
@@ -2340,7 +2339,7 @@ mult2reg outMult53 (
 mult2reg outMult54 (
    .in0(out54),
    .in1(outTemp),
-   .sel(counter == 7'd58),
+   .sel(counter == 7'd57),
    .out(out54),
    .clk(processedClock),
    .rst(masterReset)
@@ -2348,7 +2347,7 @@ mult2reg outMult54 (
 mult2reg outMult55 (
    .in0(out55),
    .in1(outTemp),
-   .sel(counter == 7'd59),
+   .sel(counter == 7'd58),
    .out(out55),
    .clk(processedClock),
    .rst(masterReset)
@@ -2356,7 +2355,7 @@ mult2reg outMult55 (
 mult2reg outMult56 (
    .in0(out56),
    .in1(outTemp),
-   .sel(counter == 7'd60),
+   .sel(counter == 7'd59),
    .out(out56),
    .clk(processedClock),
    .rst(masterReset)
@@ -2364,7 +2363,7 @@ mult2reg outMult56 (
 mult2reg outMult57 (
    .in0(out57),
    .in1(outTemp),
-   .sel(counter == 7'd61),
+   .sel(counter == 7'd60),
    .out(out57),
    .clk(processedClock),
    .rst(masterReset)
@@ -2372,7 +2371,7 @@ mult2reg outMult57 (
 mult2reg outMult58 (
    .in0(out58),
    .in1(outTemp),
-   .sel(counter == 7'd62),
+   .sel(counter == 7'd61),
    .out(out58),
    .clk(processedClock),
    .rst(masterReset)
@@ -2380,7 +2379,7 @@ mult2reg outMult58 (
 mult2reg outMult59 (
    .in0(out59),
    .in1(outTemp),
-   .sel(counter == 7'd63),
+   .sel(counter == 7'd62),
    .out(out59),
    .clk(processedClock),
    .rst(masterReset)
@@ -2388,7 +2387,7 @@ mult2reg outMult59 (
 mult2reg outMult60 (
    .in0(out60),
    .in1(outTemp),
-   .sel(counter == 7'd64),
+   .sel(counter == 7'd63),
    .out(out60),
    .clk(processedClock),
    .rst(masterReset)
@@ -2396,7 +2395,7 @@ mult2reg outMult60 (
 mult2reg outMult61 (
    .in0(out61),
    .in1(outTemp),
-   .sel(counter == 7'd65),
+   .sel(counter == 7'd64),
    .out(out61),
    .clk(processedClock),
    .rst(masterReset)
@@ -2404,7 +2403,7 @@ mult2reg outMult61 (
 mult2reg outMult62 (
    .in0(out62),
    .in1(outTemp),
-   .sel(counter == 7'd66),
+   .sel(counter == 7'd65),
    .out(out62),
    .clk(processedClock),
    .rst(masterReset)
@@ -2412,7 +2411,7 @@ mult2reg outMult62 (
 mult2reg outMult63 (
    .in0(out63),
    .in1(outTemp),
-   .sel(counter == 7'd67),
+   .sel(counter == 7'd66),
    .out(out63),
    .clk(processedClock),
    .rst(masterReset)
