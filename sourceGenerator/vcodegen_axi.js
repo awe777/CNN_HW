@@ -8,7 +8,7 @@ function generate(v, r) {
     if(!v) {
         return;
     }
-    r = 2
+    r = +r; 
     bodyReset();
     const dataLength = 18; // because DSP48 only has 25x18 multiplier
     // dataLength MUST BE >= 16; dataLength > 18 will result in multiple (4 for dataLength <= 36) DSP48 instances for implementation of 1 multiplier
@@ -281,7 +281,7 @@ function generate(v, r) {
         bodyPrint(`mult2reg outMult${something} (`)
         bodyPrint(`   .in0(out${something}),`)
         bodyPrint(`   .in1(outTemp),`)
-        bodyPrint(`   .sel(counter == ${ceilLog2(v * v) + 1}'d${something + ceilLog2(v * v) - 3}),`)
+        bodyPrint(`   .sel(counter == ${ceilLog2(v * v) + 1}'d${something + Math.ceil(ceilLog2(v * v) / r)}),`)
         bodyPrint(`   .out(out${something}),`)
         bodyPrint(`   .clk(processedClock),`)
         bodyPrint(`   .rst(masterReset)`)
