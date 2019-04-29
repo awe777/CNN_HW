@@ -583,3 +583,354 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
+15:37:19 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: cnn_sdk.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cnn_sdk.elf  |tee "cnn_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82860	   2580	  23328	 108768	  1a8e0	cnn_sdk.elf
+'Finished building: cnn_sdk.elf.size'
+' '
+15:37:53 **** Incremental Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:48:06 **** Incremental Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:48:27 **** Incremental Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:48:48 **** Incremental Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:49:11 **** Incremental Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+16:28:26 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:245:3: warning: implicit declaration of function 'nanosleep'; did you mean 'sleep'? [-Wimplicit-function-declaration]
+   nanosleep();
+   ^~~~~~~~~
+   sleep
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+B:\Dokumen\CNN_HW\CNN_HW.sdk\cnn_sdk\Debug/../src/helloworld.c:245: undefined reference to `nanosleep'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: cnn_sdk.elf] Error 1
+16:28:42 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: cnn_sdk.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cnn_sdk.elf  |tee "cnn_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82860	   2580	  23328	 108768	  1a8e0	cnn_sdk.elf
+'Finished building: cnn_sdk.elf.size'
+' '
+16:35:20 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: cnn_sdk.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cnn_sdk.elf  |tee "cnn_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82860	   2580	  23328	 108768	  1a8e0	cnn_sdk.elf
+'Finished building: cnn_sdk.elf.size'
+' '
+16:45:01 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: cnn_sdk.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cnn_sdk.elf  |tee "cnn_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82860	   2580	  23328	 108768	  1a8e0	cnn_sdk.elf
+'Finished building: cnn_sdk.elf.size'
+' '
+16:50:07 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:6:1: error: unknown type name 'timespec'; use 'struct' keyword to refer to the type
+ timespec contime;
+ ^~~~~~~~
+ struct 
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+16:51:35 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'nmsleep':
+../src/helloworld.c:11:2: error: unknown type name 'ldiv_t'; did you mean 'dev_t'?
+  ldiv_t d;
+  ^~~~~~
+  dev_t
+../src/helloworld.c:13:6: warning: implicit declaration of function 'ldiv'; did you mean 'ldr'? [-Wimplicit-function-declaration]
+  d = ldiv(msecs, 1000);
+      ^~~~
+      ldr
+../src/helloworld.c:14:18: error: request for member 'quot' in something not a structure or union
+  tleft.tv_sec = d.quot;
+                  ^
+../src/helloworld.c:15:19: error: request for member 'rem' in something not a structure or union
+  tleft.tv_nsec = d.rem * 1000000;
+                   ^
+../src/helloworld.c:19:9: warning: implicit declaration of function 'nanosleep'; did you mean 'nmsleep'? [-Wimplicit-function-declaration]
+   ret = nanosleep(&twait, &tleft);
+         ^~~~~~~~~
+         nmsleep
+../src/helloworld.c:20:24: error: 'errno' undeclared (first use in this function)
+  } while (ret == -1 && errno == EINTR);
+                        ^~~~~
+../src/helloworld.c:20:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:20:33: error: 'EINTR' undeclared (first use in this function); did you mean 'UINTPTR'?
+  } while (ret == -1 && errno == EINTR);
+                                 ^~~~~
+                                 UINTPTR
+../src/helloworld.c:11:9: warning: variable 'd' set but not used [-Wunused-but-set-variable]
+  ldiv_t d;
+         ^
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+16:54:37 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'nmsleep':
+../src/helloworld.c:16:9: warning: implicit declaration of function 'nanosleep'; did you mean 'nmsleep'? [-Wimplicit-function-declaration]
+   ret = nanosleep(&twait, &tleft);
+         ^~~~~~~~~
+         nmsleep
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `nmsleep':
+B:\Dokumen\CNN_HW\CNN_HW.sdk\cnn_sdk\Debug/../src/helloworld.c:16: undefined reference to `nanosleep'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: cnn_sdk.elf] Error 1
+16:55:53 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'nmsleep':
+../src/helloworld.c:18:9: warning: implicit declaration of function 'nanosleep'; did you mean 'nmsleep'? [-Wimplicit-function-declaration]
+   ret = nanosleep(&twait, &tleft);
+         ^~~~~~~~~
+         nmsleep
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `nmsleep':
+B:\Dokumen\CNN_HW\CNN_HW.sdk\cnn_sdk\Debug/../src/helloworld.c:18: undefined reference to `nanosleep'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: cnn_sdk.elf] Error 1
+16:59:15 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: cnn_sdk.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cnn_sdk.elf  |tee "cnn_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82860	   2580	  23328	 108768	  1a8e0	cnn_sdk.elf
+'Finished building: cnn_sdk.elf.size'
+' '
+17:01:20 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:9:3: warning: implicit declaration of function 'nanosleep'; did you mean 'sleep'? [-Wimplicit-function-declaration]
+   nanosleep((const struct timespec[]){{0, 500000000L}}, NULL);
+   ^~~~~~~~~
+   sleep
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+B:\Dokumen\CNN_HW\CNN_HW.sdk\cnn_sdk\Debug/../src/helloworld.c:9: undefined reference to `nanosleep'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: cnn_sdk.elf] Error 1
+17:03:30 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:10:3: warning: implicit declaration of function 'nanosleep'; did you mean 'sleep'? [-Wimplicit-function-declaration]
+   nanosleep(&ts, NULL);
+   ^~~~~~~~~
+   sleep
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+B:\Dokumen\CNN_HW\CNN_HW.sdk\cnn_sdk\Debug/../src/helloworld.c:10: undefined reference to `nanosleep'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: cnn_sdk.elf] Error 1
+17:03:53 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:10:13: warning: implicit declaration of function 'nanosleep'; did you mean 'sleep'? [-Wimplicit-function-declaration]
+   int res = nanosleep(&ts, NULL);
+             ^~~~~~~~~
+             sleep
+../src/helloworld.c:10:7: warning: unused variable 'res' [-Wunused-variable]
+   int res = nanosleep(&ts, NULL);
+       ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+B:\Dokumen\CNN_HW\CNN_HW.sdk\cnn_sdk\Debug/../src/helloworld.c:10: undefined reference to `nanosleep'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: cnn_sdk.elf] Error 1
+17:04:43 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:10:3: warning: statement with no effect [-Wunused-value]
+   2;
+   ^
+../src/helloworld.c:9:19: warning: unused variable 'ts' [-Wunused-variable]
+   struct timespec ts = {0, 50L};
+                   ^~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: cnn_sdk.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cnn_sdk.elf  |tee "cnn_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82860	   2580	  23328	 108768	  1a8e0	cnn_sdk.elf
+'Finished building: cnn_sdk.elf.size'
+' '
+17:05:24 **** Auto Build of configuration Debug for project cnn_sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../cnn_sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: cnn_sdk.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cnn_sdk_bsp/ps7_cortexa9_0/lib -o "cnn_sdk.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: cnn_sdk.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cnn_sdk.elf  |tee "cnn_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82860	   2580	  23328	 108768	  1a8e0	cnn_sdk.elf
+'Finished building: cnn_sdk.elf.size'
+' '

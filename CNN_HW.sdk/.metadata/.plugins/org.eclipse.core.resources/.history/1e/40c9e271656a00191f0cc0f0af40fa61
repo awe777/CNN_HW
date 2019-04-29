@@ -1,7 +1,24 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <sleep.h>
+
+#include <time.h>
+#include <errno.h>
 uint32_t *control = (uint32_t *) 0x40000000;
+
+void nmsleep(unsigned int nsecs)
+{
+	struct timespec twait, tleft;
+	int ret;
+	tleft.tv_sec = 0;
+	tleft.tv_nsec = nsecs;
+	do {
+		twait.tv_sec = tleft.tv_sec;
+		twait.tv_nsec = tleft.tv_nsec;
+		ret = nanosleep(&twait, &tleft);
+	} while (ret == -1 && errno == EINTR);
+}
+
 int main() {
   // deactivate hardware processing
   *(control) = 0;

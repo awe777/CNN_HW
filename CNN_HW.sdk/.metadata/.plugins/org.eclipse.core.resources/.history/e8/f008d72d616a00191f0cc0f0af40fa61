@@ -242,6 +242,7 @@ int main() {
   *(control) = 0xffffffff;
   // sleep while hardware is processing, time slept given for the hardware is 120% of hardware processing time to the nearest us
   usleep(1);
+  nanosleep();
   // deactivate hardware processing
   *(control) = 0;
   printf("result = [\n");

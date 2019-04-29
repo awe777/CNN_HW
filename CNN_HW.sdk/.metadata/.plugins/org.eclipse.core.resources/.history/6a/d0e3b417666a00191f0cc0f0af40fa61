@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <sleep.h>
+#include <time.h>
+
 uint32_t *control = (uint32_t *) 0x40000000;
 int main() {
   // deactivate hardware processing
+  struct timespec ts = {0, 50L};
+  nanosleep(&ts, NULL);
   *(control) = 0;
   // MARKER = SIGN
   // input image data to image "array"
