@@ -59,7 +59,7 @@ function generate(v, im = [], wg = [], ledControl = false, debug = true) {
   }
   debug ? bodyPrint(`  printf("image = [\\n");`) : null;
   for(count0 = 0; count0 < imProc.length; count0++) {
-    debug ? bodyPrint(`  printf("%d,\\n", (int) *(control + ${count0 + 1}) >> 24);`) : null;
+    debug ? bodyPrint(`  printf("%f,\\n", (double) *(control + ${count0 + 1}) / 16777216);`) : null;
   }
 
   debug ? bodyPrint(`  printf("]\\n");`) : null
@@ -69,7 +69,7 @@ function generate(v, im = [], wg = [], ledControl = false, debug = true) {
   }
   debug ? bodyPrint(`  printf("weight = [\\n");`) : null
   for(count1 = 0; count1 < wgProc.length; count1++) {
-    bodyPrint(`  printf("%d,\\n", (int) *(control + ${count1 + 1 + imProc.length}) >> 24);`)
+    bodyPrint(`  printf("%f,\\n", (double) *(control + ${count1 + 1 + imProc.length}) / 16777216);`)
   }
   debug ? bodyPrint(`  printf("]\\n");`) : null
   bodyPrint(`  // activate hardware processing`)
@@ -81,7 +81,7 @@ function generate(v, im = [], wg = [], ledControl = false, debug = true) {
   ledControl ? bodyPrint(`  *(ledCtrl) = 0b1111;`) : null;
   bodyPrint(`  printf("result = [\\n");`)
   for(count0 = 0; count0 < imProc.length; count0++) {
-    bodyPrint(`  printf("%d,\\n", (int) *(control + ${count0 + 1 + imProc.length + wgProc.length}) >> 16);`)
+    bodyPrint(`  printf("%f,\\n", (double) *(control + ${count0 + 1 + imProc.length + wgProc.length}) / 65536);`)
   }
   bodyPrint(`  printf("]\\n");`)
   bodyPrint(`  // MARKER = REPEAT from SIGN ad infinitum`)
