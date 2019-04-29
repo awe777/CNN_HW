@@ -229,7 +229,8 @@ function generate(v, r) {
         }
         bodyPrint(`    .out${eachIO}(output${eachIO}),`)
     }
-    bodyPrint(`    .enabler(|reg0),`)
+    bodyPrint(`    .enabler(|reg0[${Math.floor(dataLength / 2) - 1}:0]),`)
+    bodyPrint(`    .adderMode(|reg0[${dataLength - 1}:${Math.floor(dataLength / 2)}]),`)
     bodyPrint(`    .masterClock(aclk),`)
     bodyPrint(`    .masterReset(aresetn)`)
     bodyPrint(`);`)
@@ -242,9 +243,9 @@ function generate(v, r) {
         opening = opening + `in${o}, wg${o}, out${o}, `
         ioList = ioList + `input [${dataLength - 1}:0] in${o};` + "\n" + `input [${dataLength - 1}:0] wg${o};` + "\n" + `output [${2 * dataLength - 1}:0] out${o};` + "\n"
     }
-    bodyPrint(opening + `enabler, masterClock, masterReset);`)
+    bodyPrint(opening + `enabler, adderMode, masterClock, masterReset);`)
     
-    bodyPrint(ioList + `input masterClock;` + "\n" + `input masterReset;` + "\n" + `input enabler;` + "\n" + `wire processedClock = enabler && masterClock;`)
+    bodyPrint(ioList + `input masterClock;` + "\n" + `input masterReset;` + "\n" + `input enabler, adderMode;` + "\n" + `wire processedClock = enabler && masterClock;`)
     for(iny = 0; iny < v * v; iny++){
         bodyPrint(`reg [${dataLength - 1}:0] multxInput${iny};`)
     }
@@ -291,9 +292,10 @@ function generate(v, r) {
     bodyPrint(`// begin writing submodule instance`)
     bodyPrint(`multx multxPrime (`)
     for(m = 0; m < v * v; m++) {
-        bodyPrint(`   .d${m} (wg${m}),`)
+        bodyPrint(`   .d${m} (adderMode ? wg${m} : ${dataLength}'b${new Array(dataLength - fixedPoint - 1).fill("0").join(``)}1${new Array(fixedPoint).fill("0").join(``)}),`)
         bodyPrint(`   .i${m} (multxInput${m}),`)
     }
+    bodyPrint(`   .adderMode (adderMode),`)
     bodyPrint(`   .out (outTemp),`)
     bodyPrint(`   .clk (processedClock),`)
     bodyPrint(`   .rst (masterReset)`)
@@ -326,7 +328,7 @@ function generate(v, r) {
     for(n = 0; n < v * v; n++) {
         opening2 = opening2 + `d${n}, i${n}, `
     }
-    bodyPrint(opening2 + `out, clk, rst);`)
+    bodyPrint(opening2 + `adderMode, out, clk, rst);`)
     for(n = 0; n < v * v; n++) {
         bodyPrint(`input  [${dataLength - 1}:0]     d${n};`)
         bodyPrint(`input  [${dataLength - 1}:0]     i${n};`)
@@ -345,11 +347,11 @@ function generate(v, r) {
             if(2 * y + 1 < previous) {
                 if(r && !((x + 1) % r) && (x + 1) != layerCount) {
                     bodyPrint(`reg signed [${2 * dataLength - 1}:0]     w${x + 1}_${y};`)
-                    bodyPrint(`wire signed [${2 * dataLength - 1}:0]     w${x + 1}_${y}d = w${x}_${2 * y} + w${x}_${2 * y + 1};`)
+                    bodyPrint(`wire signed [${2 * dataLength - 1}:0]     w${x + 1}_${y}d = adderMode ? w${x}_${2 * y} + w${x}_${2 * y + 1} : (w${x}_${2 * y} > w${x}_${2 * y + 1} ? w${x}_${2 * y} : w${x}_${2 * y + 1});`)
                     lhs.push(`w${x + 1}_${y}`)
                     rhs.push(`w${x + 1}_${y}d`)
                 } else {
-                    bodyPrint(`wire signed [${2 * dataLength - 1}:0]     w${x + 1}_${y} = w${x}_${2 * y} + w${x}_${2 * y + 1};`)
+                    bodyPrint(`wire signed [${2 * dataLength - 1}:0]     w${x + 1}_${y} = adderMode ? w${x}_${2 * y} + w${x}_${2 * y + 1} : (w${x}_${2 * y} > w${x}_${2 * y + 1} ? w${x}_${2 * y} : w${x}_${2 * y + 1});`)
                 }
             } else {
                 if(r && !((x + 1) % r) && (x + 1) != layerCount) {
@@ -363,6 +365,7 @@ function generate(v, r) {
         }
         previous = current;
     }
+    bodyPrint(`input adderMode;`)
     bodyPrint(`input clk;`)
     bodyPrint(`input rst;`)
     bodyPrint(`output  [${2 * dataLength - 1}:0]    out;`)
