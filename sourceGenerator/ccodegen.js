@@ -58,8 +58,8 @@ function generate(v, im = [], wg = [], ledControl = false, debug = true) {
     bodyPrint(`  *(control + ${count0 + 1}) = ${imProc[count0]}; ${imProc[count0] ? "// " + (16384 * Math.floor(imProc[count0] / 16384) / 16777216) : ""}`)
   }
   debug ? bodyPrint(`  printf("image = [\\n");`) : null;
-  for(count0 = 0; count0 < imProc.length; count0++) {
-    debug ? bodyPrint(`  printf("%f,\\n", (double) *(control + ${count0 + 1}) / 16777216);`) : null;
+  for(count0 = 0; count0 < imProc.length && debug; count0++) {
+    bodyPrint(`  printf("%f,\\n", (double) *(control + ${count0 + 1}) / 16777216);`);
   }
 
   debug ? bodyPrint(`  printf("]\\n");`) : null
@@ -68,7 +68,7 @@ function generate(v, im = [], wg = [], ledControl = false, debug = true) {
     bodyPrint(`  *(control + ${count1 + 1 + imProc.length}) = ${wgProc[count1]}; ${wgProc[count1] ? "// " + (16384 * Math.floor(wgProc[count1] / 16384) / 16777216) : ""}`)
   }
   debug ? bodyPrint(`  printf("weight = [\\n");`) : null
-  for(count1 = 0; count1 < wgProc.length; count1++) {
+  for(count1 = 0; count1 < wgProc.length && debug; count1++) {
     bodyPrint(`  printf("%f,\\n", (double) *(control + ${count1 + 1 + imProc.length}) / 16777216);`)
   }
   debug ? bodyPrint(`  printf("]\\n");`) : null
