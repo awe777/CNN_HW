@@ -292,7 +292,7 @@ function generate(v, r) {
     bodyPrint(`// begin writing submodule instance`)
     bodyPrint(`multx multxPrime (`)
     for(m = 0; m < v * v; m++) {
-        bodyPrint(`   .d${m} (adderMode ? wg${m} : ${dataLength}'b${new Array(dataLength - fixedPoint - 1).fill("0").join(``)}1${new Array(fixedPoint).fill("0").join(``)}),`)
+        bodyPrint(`   .d${m} (wg${m}),`)
         bodyPrint(`   .i${m} (multxInput${m}),`)
     }
     bodyPrint(`   .adderMode (adderMode),`)
