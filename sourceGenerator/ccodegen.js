@@ -75,7 +75,7 @@ function generate(v, im = [], wg = [], ledControl = false, debug = true) {
   bodyPrint(`  // activate hardware processing`)
   bodyPrint(`  *(control) = 0xffffffff;`)
   bodyPrint(`  // sleep while hardware is processing, time slept given for the hardware is 120% of hardware processing time to the nearest us`)
-  bodyPrint(`  usleep(${Math.ceil(12 / 1000 * (v * (Math.ceil(Math.sqrt(im.length)) - Math.ceil(Math.sqrt(wg.length)) + 1) + Math.ceil(Math.log2(v * v)) - 2))});`)
+  bodyPrint(`  usleep(${Math.ceil(18 / 1000 * (v * (Math.ceil(Math.sqrt(im.length)) - Math.ceil(Math.sqrt(wg.length)) + 1) + Math.ceil(Math.log2(v * v)) - 2))});`)
   bodyPrint(`  // deactivate hardware processing`)
   bodyPrint(`  *(control) = 0;`)
   ledControl ? bodyPrint(`  *(ledCtrl) = 0b1111;`) : null;
