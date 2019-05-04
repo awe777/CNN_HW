@@ -329,6 +329,7 @@ function generate(v, r) {
         opening2 = opening2 + `d${n}, i${n}, `
     }
     bodyPrint(opening2 + `adderMode, out, clk, rst);`)
+    bodyPrint(`input adderMode;`)
     for(n = 0; n < v * v; n++) {
         bodyPrint(`input  [${dataLength - 1}:0]     d${n};`)
         bodyPrint(`input  [${dataLength - 1}:0]     i${n};`)
@@ -365,7 +366,7 @@ function generate(v, r) {
         }
         previous = current;
     }
-    bodyPrint(`input adderMode;`)
+    
     bodyPrint(`input clk;`)
     bodyPrint(`input rst;`)
     bodyPrint(`output  [${2 * dataLength - 1}:0]    out;`)
