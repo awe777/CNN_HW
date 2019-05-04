@@ -2,7 +2,7 @@ function ceilLog2(v) {
     return +v > 1 ? Math.ceil(Math.log2(+v)) : (+v - 1 ? NaN : 0)
 }
 
-function generate(v, r) {
+function generate(v, r, softwareControl = true) {
     const start = Date.now()
     v = +v > 0 ? +v : 0
     if(!v) {
@@ -292,7 +292,7 @@ function generate(v, r) {
     bodyPrint(`// begin writing submodule instance`)
     bodyPrint(`multx multxPrime (`)
     for(m = 0; m < v * v; m++) {
-        bodyPrint(`   .d${m} (wg${m}),`)
+        softwareControl ? bodyPrint(`   .d${m} (wg${m}),`) : bodyPrint(`   .d${m} (adderMode || ~|wg${m} ? wg${m} : ${dataLength}'b${new Array(dataLength - fixedPoint - 1).fill("0").join(``)}1${new Array(fixedPoint).fill("0").join(``)}),`)
         bodyPrint(`   .i${m} (multxInput${m}),`)
     }
     bodyPrint(`   .adderMode (adderMode),`)
