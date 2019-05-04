@@ -9,13 +9,6 @@
   "B:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/clk_vip_if.sv" \
   "B:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
--makelib ies_lib/xil_defaultlib -sv \
-  "B:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-  "B:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
--endlib
--makelib ies_lib/xpm \
-  "B:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
--endlib
 -makelib ies_lib/axi_infrastructure_v1_1_0 \
   "../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 -endlib
@@ -37,9 +30,6 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/sim/CNN_top_module_rst_ps7_0_50M_0.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/CNN_top_module/sim/CNN_top_module.v" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
   "../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -64,6 +54,7 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/CNN_top_module/ip/CNN_top_module_auto_pc_0/sim/CNN_top_module_auto_pc_0.v" \
+  "../../../bd/CNN_top_module/sim/CNN_top_module.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

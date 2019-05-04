@@ -2,11 +2,10 @@ vlib work
 vlib activehdl
 
 vlib activehdl/xilinx_vip
-vlib activehdl/xil_defaultlib
-vlib activehdl/xpm
 vlib activehdl/axi_infrastructure_v1_1_0
 vlib activehdl/axi_vip_v1_1_4
 vlib activehdl/processing_system7_vip_v1_0_6
+vlib activehdl/xil_defaultlib
 vlib activehdl/lib_cdc_v1_0_2
 vlib activehdl/proc_sys_reset_v5_0_13
 vlib activehdl/generic_baseblocks_v2_1_0
@@ -16,11 +15,10 @@ vlib activehdl/axi_register_slice_v2_1_18
 vlib activehdl/axi_protocol_converter_v2_1_18
 
 vmap xilinx_vip activehdl/xilinx_vip
-vmap xil_defaultlib activehdl/xil_defaultlib
-vmap xpm activehdl/xpm
 vmap axi_infrastructure_v1_1_0 activehdl/axi_infrastructure_v1_1_0
 vmap axi_vip_v1_1_4 activehdl/axi_vip_v1_1_4
 vmap processing_system7_vip_v1_0_6 activehdl/processing_system7_vip_v1_0_6
+vmap xil_defaultlib activehdl/xil_defaultlib
 vmap lib_cdc_v1_0_2 activehdl/lib_cdc_v1_0_2
 vmap proc_sys_reset_v5_0_13 activehdl/proc_sys_reset_v5_0_13
 vmap generic_baseblocks_v2_1_0 activehdl/generic_baseblocks_v2_1_0
@@ -39,13 +37,6 @@ vlog -work xilinx_vip  -sv2k12 "+incdir+B:/Xilinx/Vivado/2018.3/data/xilinx_vip/
 "B:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_if.sv" \
 "B:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/clk_vip_if.sv" \
 "B:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/rst_vip_if.sv" \
-
-vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/ec67/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/70cf/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0" "+incdir+B:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"B:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-"B:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
-
-vcom -work xpm -93 \
-"B:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work axi_infrastructure_v1_1_0  -v2k5 "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/ec67/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/70cf/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0" "+incdir+B:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
@@ -68,9 +59,6 @@ vcom -work proc_sys_reset_v5_0_13 -93 \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/sim/CNN_top_module_rst_ps7_0_50M_0.vhd" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/ec67/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/70cf/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0" "+incdir+B:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../bd/CNN_top_module/sim/CNN_top_module.v" \
 
 vlog -work generic_baseblocks_v2_1_0  -v2k5 "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/ec67/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/70cf/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0" "+incdir+B:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -95,6 +83,7 @@ vlog -work axi_protocol_converter_v2_1_18  -v2k5 "+incdir+../../../../CNN_HW.src
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/ec67/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/70cf/hdl" "+incdir+../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0" "+incdir+B:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/CNN_top_module/ip/CNN_top_module_auto_pc_0/sim/CNN_top_module_auto_pc_0.v" \
+"../../../bd/CNN_top_module/sim/CNN_top_module.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"
