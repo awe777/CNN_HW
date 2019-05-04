@@ -128,8 +128,8 @@
       <Option Id="Directive">0</Option>
     </Step>
     <Step Id="route_design">
-      <Option Id="MoreOptsStr"><![CDATA[-tns_cleanup]]></Option>
       <Option Id="Directive">1</Option>
+      <Option Id="MoreOptsStr"><![CDATA[-tns_cleanup]]></Option>
     </Step>
     <Step Id="post_route_phys_opt_design" EnableStepBool="1">
       <Option Id="Directive">0</Option>
