@@ -1634,14 +1634,15 @@ convmultCore coreInstance(
     .in63(reg64[17:0]),
     .wg63(18'b0),
     .out63(output63),
-    .enabler(|reg0),
+    .enabler(|reg0[8:0]),
+    .adderMode(|reg0[17:9]),
     .masterClock(aclk),
     .masterReset(aresetn)
 );
 // end of instance
 endmodule
 // Alert: main module - convmultCore
-module convmultCore(in0, wg0, out0, in1, wg1, out1, in2, wg2, out2, in3, wg3, out3, in4, wg4, out4, in5, wg5, out5, in6, wg6, out6, in7, wg7, out7, in8, wg8, out8, in9, wg9, out9, in10, wg10, out10, in11, wg11, out11, in12, wg12, out12, in13, wg13, out13, in14, wg14, out14, in15, wg15, out15, in16, wg16, out16, in17, wg17, out17, in18, wg18, out18, in19, wg19, out19, in20, wg20, out20, in21, wg21, out21, in22, wg22, out22, in23, wg23, out23, in24, wg24, out24, in25, wg25, out25, in26, wg26, out26, in27, wg27, out27, in28, wg28, out28, in29, wg29, out29, in30, wg30, out30, in31, wg31, out31, in32, wg32, out32, in33, wg33, out33, in34, wg34, out34, in35, wg35, out35, in36, wg36, out36, in37, wg37, out37, in38, wg38, out38, in39, wg39, out39, in40, wg40, out40, in41, wg41, out41, in42, wg42, out42, in43, wg43, out43, in44, wg44, out44, in45, wg45, out45, in46, wg46, out46, in47, wg47, out47, in48, wg48, out48, in49, wg49, out49, in50, wg50, out50, in51, wg51, out51, in52, wg52, out52, in53, wg53, out53, in54, wg54, out54, in55, wg55, out55, in56, wg56, out56, in57, wg57, out57, in58, wg58, out58, in59, wg59, out59, in60, wg60, out60, in61, wg61, out61, in62, wg62, out62, in63, wg63, out63, enabler, masterClock, masterReset);
+module convmultCore(in0, wg0, out0, in1, wg1, out1, in2, wg2, out2, in3, wg3, out3, in4, wg4, out4, in5, wg5, out5, in6, wg6, out6, in7, wg7, out7, in8, wg8, out8, in9, wg9, out9, in10, wg10, out10, in11, wg11, out11, in12, wg12, out12, in13, wg13, out13, in14, wg14, out14, in15, wg15, out15, in16, wg16, out16, in17, wg17, out17, in18, wg18, out18, in19, wg19, out19, in20, wg20, out20, in21, wg21, out21, in22, wg22, out22, in23, wg23, out23, in24, wg24, out24, in25, wg25, out25, in26, wg26, out26, in27, wg27, out27, in28, wg28, out28, in29, wg29, out29, in30, wg30, out30, in31, wg31, out31, in32, wg32, out32, in33, wg33, out33, in34, wg34, out34, in35, wg35, out35, in36, wg36, out36, in37, wg37, out37, in38, wg38, out38, in39, wg39, out39, in40, wg40, out40, in41, wg41, out41, in42, wg42, out42, in43, wg43, out43, in44, wg44, out44, in45, wg45, out45, in46, wg46, out46, in47, wg47, out47, in48, wg48, out48, in49, wg49, out49, in50, wg50, out50, in51, wg51, out51, in52, wg52, out52, in53, wg53, out53, in54, wg54, out54, in55, wg55, out55, in56, wg56, out56, in57, wg57, out57, in58, wg58, out58, in59, wg59, out59, in60, wg60, out60, in61, wg61, out61, in62, wg62, out62, in63, wg63, out63, enabler, adderMode, masterClock, masterReset);
 input [17:0] in0;
 input [17:0] wg0;
 output [35:0] out0;
@@ -1836,7 +1837,7 @@ input [17:0] wg63;
 output [35:0] out63;
 input masterClock;
 input masterReset;
-input enabler;
+input enabler, adderMode;
 wire processedClock = enabler && masterClock;
 reg [17:0] multxInput0;
 reg [17:0] multxInput1;
@@ -2546,6 +2547,7 @@ multx multxPrime (
    .i62 (multxInput62),
    .d63 (wg63),
    .i63 (multxInput63),
+   .adderMode (adderMode),
    .out (outTemp),
    .clk (processedClock),
    .rst (masterReset)
@@ -7101,7 +7103,7 @@ always @(posedge masterClock)
    end
 endmodule
 // end alert
-module multx(d0, i0, d1, i1, d2, i2, d3, i3, d4, i4, d5, i5, d6, i6, d7, i7, d8, i8, d9, i9, d10, i10, d11, i11, d12, i12, d13, i13, d14, i14, d15, i15, d16, i16, d17, i17, d18, i18, d19, i19, d20, i20, d21, i21, d22, i22, d23, i23, d24, i24, d25, i25, d26, i26, d27, i27, d28, i28, d29, i29, d30, i30, d31, i31, d32, i32, d33, i33, d34, i34, d35, i35, d36, i36, d37, i37, d38, i38, d39, i39, d40, i40, d41, i41, d42, i42, d43, i43, d44, i44, d45, i45, d46, i46, d47, i47, d48, i48, d49, i49, d50, i50, d51, i51, d52, i52, d53, i53, d54, i54, d55, i55, d56, i56, d57, i57, d58, i58, d59, i59, d60, i60, d61, i61, d62, i62, d63, i63, out, clk, rst);
+module multx(d0, i0, d1, i1, d2, i2, d3, i3, d4, i4, d5, i5, d6, i6, d7, i7, d8, i8, d9, i9, d10, i10, d11, i11, d12, i12, d13, i13, d14, i14, d15, i15, d16, i16, d17, i17, d18, i18, d19, i19, d20, i20, d21, i21, d22, i22, d23, i23, d24, i24, d25, i25, d26, i26, d27, i27, d28, i28, d29, i29, d30, i30, d31, i31, d32, i32, d33, i33, d34, i34, d35, i35, d36, i36, d37, i37, d38, i38, d39, i39, d40, i40, d41, i41, d42, i42, d43, i43, d44, i44, d45, i45, d46, i46, d47, i47, d48, i48, d49, i49, d50, i50, d51, i51, d52, i52, d53, i53, d54, i54, d55, i55, d56, i56, d57, i57, d58, i58, d59, i59, d60, i60, d61, i61, d62, i62, d63, i63, adderMode, out, clk, rst);
 input  [17:0]     d0;
 input  [17:0]     i0;
 wire signed [35:0]     w0;
@@ -7422,89 +7424,90 @@ input  [17:0]     i63;
 wire signed [35:0]     w63;
 multiplier mult63 (.in0(d63), .in1(i63), .out(w63));
 reg signed [35:0]     w0_63;
-wire signed [35:0]     w1_0 = w0_0 + w0_1;
-wire signed [35:0]     w1_1 = w0_2 + w0_3;
-wire signed [35:0]     w1_2 = w0_4 + w0_5;
-wire signed [35:0]     w1_3 = w0_6 + w0_7;
-wire signed [35:0]     w1_4 = w0_8 + w0_9;
-wire signed [35:0]     w1_5 = w0_10 + w0_11;
-wire signed [35:0]     w1_6 = w0_12 + w0_13;
-wire signed [35:0]     w1_7 = w0_14 + w0_15;
-wire signed [35:0]     w1_8 = w0_16 + w0_17;
-wire signed [35:0]     w1_9 = w0_18 + w0_19;
-wire signed [35:0]     w1_10 = w0_20 + w0_21;
-wire signed [35:0]     w1_11 = w0_22 + w0_23;
-wire signed [35:0]     w1_12 = w0_24 + w0_25;
-wire signed [35:0]     w1_13 = w0_26 + w0_27;
-wire signed [35:0]     w1_14 = w0_28 + w0_29;
-wire signed [35:0]     w1_15 = w0_30 + w0_31;
-wire signed [35:0]     w1_16 = w0_32 + w0_33;
-wire signed [35:0]     w1_17 = w0_34 + w0_35;
-wire signed [35:0]     w1_18 = w0_36 + w0_37;
-wire signed [35:0]     w1_19 = w0_38 + w0_39;
-wire signed [35:0]     w1_20 = w0_40 + w0_41;
-wire signed [35:0]     w1_21 = w0_42 + w0_43;
-wire signed [35:0]     w1_22 = w0_44 + w0_45;
-wire signed [35:0]     w1_23 = w0_46 + w0_47;
-wire signed [35:0]     w1_24 = w0_48 + w0_49;
-wire signed [35:0]     w1_25 = w0_50 + w0_51;
-wire signed [35:0]     w1_26 = w0_52 + w0_53;
-wire signed [35:0]     w1_27 = w0_54 + w0_55;
-wire signed [35:0]     w1_28 = w0_56 + w0_57;
-wire signed [35:0]     w1_29 = w0_58 + w0_59;
-wire signed [35:0]     w1_30 = w0_60 + w0_61;
-wire signed [35:0]     w1_31 = w0_62 + w0_63;
+wire signed [35:0]     w1_0 = adderMode ? w0_0 + w0_1 : (w0_0 > w0_1 ? w0_0 : w0_1);
+wire signed [35:0]     w1_1 = adderMode ? w0_2 + w0_3 : (w0_2 > w0_3 ? w0_2 : w0_3);
+wire signed [35:0]     w1_2 = adderMode ? w0_4 + w0_5 : (w0_4 > w0_5 ? w0_4 : w0_5);
+wire signed [35:0]     w1_3 = adderMode ? w0_6 + w0_7 : (w0_6 > w0_7 ? w0_6 : w0_7);
+wire signed [35:0]     w1_4 = adderMode ? w0_8 + w0_9 : (w0_8 > w0_9 ? w0_8 : w0_9);
+wire signed [35:0]     w1_5 = adderMode ? w0_10 + w0_11 : (w0_10 > w0_11 ? w0_10 : w0_11);
+wire signed [35:0]     w1_6 = adderMode ? w0_12 + w0_13 : (w0_12 > w0_13 ? w0_12 : w0_13);
+wire signed [35:0]     w1_7 = adderMode ? w0_14 + w0_15 : (w0_14 > w0_15 ? w0_14 : w0_15);
+wire signed [35:0]     w1_8 = adderMode ? w0_16 + w0_17 : (w0_16 > w0_17 ? w0_16 : w0_17);
+wire signed [35:0]     w1_9 = adderMode ? w0_18 + w0_19 : (w0_18 > w0_19 ? w0_18 : w0_19);
+wire signed [35:0]     w1_10 = adderMode ? w0_20 + w0_21 : (w0_20 > w0_21 ? w0_20 : w0_21);
+wire signed [35:0]     w1_11 = adderMode ? w0_22 + w0_23 : (w0_22 > w0_23 ? w0_22 : w0_23);
+wire signed [35:0]     w1_12 = adderMode ? w0_24 + w0_25 : (w0_24 > w0_25 ? w0_24 : w0_25);
+wire signed [35:0]     w1_13 = adderMode ? w0_26 + w0_27 : (w0_26 > w0_27 ? w0_26 : w0_27);
+wire signed [35:0]     w1_14 = adderMode ? w0_28 + w0_29 : (w0_28 > w0_29 ? w0_28 : w0_29);
+wire signed [35:0]     w1_15 = adderMode ? w0_30 + w0_31 : (w0_30 > w0_31 ? w0_30 : w0_31);
+wire signed [35:0]     w1_16 = adderMode ? w0_32 + w0_33 : (w0_32 > w0_33 ? w0_32 : w0_33);
+wire signed [35:0]     w1_17 = adderMode ? w0_34 + w0_35 : (w0_34 > w0_35 ? w0_34 : w0_35);
+wire signed [35:0]     w1_18 = adderMode ? w0_36 + w0_37 : (w0_36 > w0_37 ? w0_36 : w0_37);
+wire signed [35:0]     w1_19 = adderMode ? w0_38 + w0_39 : (w0_38 > w0_39 ? w0_38 : w0_39);
+wire signed [35:0]     w1_20 = adderMode ? w0_40 + w0_41 : (w0_40 > w0_41 ? w0_40 : w0_41);
+wire signed [35:0]     w1_21 = adderMode ? w0_42 + w0_43 : (w0_42 > w0_43 ? w0_42 : w0_43);
+wire signed [35:0]     w1_22 = adderMode ? w0_44 + w0_45 : (w0_44 > w0_45 ? w0_44 : w0_45);
+wire signed [35:0]     w1_23 = adderMode ? w0_46 + w0_47 : (w0_46 > w0_47 ? w0_46 : w0_47);
+wire signed [35:0]     w1_24 = adderMode ? w0_48 + w0_49 : (w0_48 > w0_49 ? w0_48 : w0_49);
+wire signed [35:0]     w1_25 = adderMode ? w0_50 + w0_51 : (w0_50 > w0_51 ? w0_50 : w0_51);
+wire signed [35:0]     w1_26 = adderMode ? w0_52 + w0_53 : (w0_52 > w0_53 ? w0_52 : w0_53);
+wire signed [35:0]     w1_27 = adderMode ? w0_54 + w0_55 : (w0_54 > w0_55 ? w0_54 : w0_55);
+wire signed [35:0]     w1_28 = adderMode ? w0_56 + w0_57 : (w0_56 > w0_57 ? w0_56 : w0_57);
+wire signed [35:0]     w1_29 = adderMode ? w0_58 + w0_59 : (w0_58 > w0_59 ? w0_58 : w0_59);
+wire signed [35:0]     w1_30 = adderMode ? w0_60 + w0_61 : (w0_60 > w0_61 ? w0_60 : w0_61);
+wire signed [35:0]     w1_31 = adderMode ? w0_62 + w0_63 : (w0_62 > w0_63 ? w0_62 : w0_63);
 reg signed [35:0]     w2_0;
-wire signed [35:0]     w2_0d = w1_0 + w1_1;
+wire signed [35:0]     w2_0d = adderMode ? w1_0 + w1_1 : (w1_0 > w1_1 ? w1_0 : w1_1);
 reg signed [35:0]     w2_1;
-wire signed [35:0]     w2_1d = w1_2 + w1_3;
+wire signed [35:0]     w2_1d = adderMode ? w1_2 + w1_3 : (w1_2 > w1_3 ? w1_2 : w1_3);
 reg signed [35:0]     w2_2;
-wire signed [35:0]     w2_2d = w1_4 + w1_5;
+wire signed [35:0]     w2_2d = adderMode ? w1_4 + w1_5 : (w1_4 > w1_5 ? w1_4 : w1_5);
 reg signed [35:0]     w2_3;
-wire signed [35:0]     w2_3d = w1_6 + w1_7;
+wire signed [35:0]     w2_3d = adderMode ? w1_6 + w1_7 : (w1_6 > w1_7 ? w1_6 : w1_7);
 reg signed [35:0]     w2_4;
-wire signed [35:0]     w2_4d = w1_8 + w1_9;
+wire signed [35:0]     w2_4d = adderMode ? w1_8 + w1_9 : (w1_8 > w1_9 ? w1_8 : w1_9);
 reg signed [35:0]     w2_5;
-wire signed [35:0]     w2_5d = w1_10 + w1_11;
+wire signed [35:0]     w2_5d = adderMode ? w1_10 + w1_11 : (w1_10 > w1_11 ? w1_10 : w1_11);
 reg signed [35:0]     w2_6;
-wire signed [35:0]     w2_6d = w1_12 + w1_13;
+wire signed [35:0]     w2_6d = adderMode ? w1_12 + w1_13 : (w1_12 > w1_13 ? w1_12 : w1_13);
 reg signed [35:0]     w2_7;
-wire signed [35:0]     w2_7d = w1_14 + w1_15;
+wire signed [35:0]     w2_7d = adderMode ? w1_14 + w1_15 : (w1_14 > w1_15 ? w1_14 : w1_15);
 reg signed [35:0]     w2_8;
-wire signed [35:0]     w2_8d = w1_16 + w1_17;
+wire signed [35:0]     w2_8d = adderMode ? w1_16 + w1_17 : (w1_16 > w1_17 ? w1_16 : w1_17);
 reg signed [35:0]     w2_9;
-wire signed [35:0]     w2_9d = w1_18 + w1_19;
+wire signed [35:0]     w2_9d = adderMode ? w1_18 + w1_19 : (w1_18 > w1_19 ? w1_18 : w1_19);
 reg signed [35:0]     w2_10;
-wire signed [35:0]     w2_10d = w1_20 + w1_21;
+wire signed [35:0]     w2_10d = adderMode ? w1_20 + w1_21 : (w1_20 > w1_21 ? w1_20 : w1_21);
 reg signed [35:0]     w2_11;
-wire signed [35:0]     w2_11d = w1_22 + w1_23;
+wire signed [35:0]     w2_11d = adderMode ? w1_22 + w1_23 : (w1_22 > w1_23 ? w1_22 : w1_23);
 reg signed [35:0]     w2_12;
-wire signed [35:0]     w2_12d = w1_24 + w1_25;
+wire signed [35:0]     w2_12d = adderMode ? w1_24 + w1_25 : (w1_24 > w1_25 ? w1_24 : w1_25);
 reg signed [35:0]     w2_13;
-wire signed [35:0]     w2_13d = w1_26 + w1_27;
+wire signed [35:0]     w2_13d = adderMode ? w1_26 + w1_27 : (w1_26 > w1_27 ? w1_26 : w1_27);
 reg signed [35:0]     w2_14;
-wire signed [35:0]     w2_14d = w1_28 + w1_29;
+wire signed [35:0]     w2_14d = adderMode ? w1_28 + w1_29 : (w1_28 > w1_29 ? w1_28 : w1_29);
 reg signed [35:0]     w2_15;
-wire signed [35:0]     w2_15d = w1_30 + w1_31;
-wire signed [35:0]     w3_0 = w2_0 + w2_1;
-wire signed [35:0]     w3_1 = w2_2 + w2_3;
-wire signed [35:0]     w3_2 = w2_4 + w2_5;
-wire signed [35:0]     w3_3 = w2_6 + w2_7;
-wire signed [35:0]     w3_4 = w2_8 + w2_9;
-wire signed [35:0]     w3_5 = w2_10 + w2_11;
-wire signed [35:0]     w3_6 = w2_12 + w2_13;
-wire signed [35:0]     w3_7 = w2_14 + w2_15;
+wire signed [35:0]     w2_15d = adderMode ? w1_30 + w1_31 : (w1_30 > w1_31 ? w1_30 : w1_31);
+wire signed [35:0]     w3_0 = adderMode ? w2_0 + w2_1 : (w2_0 > w2_1 ? w2_0 : w2_1);
+wire signed [35:0]     w3_1 = adderMode ? w2_2 + w2_3 : (w2_2 > w2_3 ? w2_2 : w2_3);
+wire signed [35:0]     w3_2 = adderMode ? w2_4 + w2_5 : (w2_4 > w2_5 ? w2_4 : w2_5);
+wire signed [35:0]     w3_3 = adderMode ? w2_6 + w2_7 : (w2_6 > w2_7 ? w2_6 : w2_7);
+wire signed [35:0]     w3_4 = adderMode ? w2_8 + w2_9 : (w2_8 > w2_9 ? w2_8 : w2_9);
+wire signed [35:0]     w3_5 = adderMode ? w2_10 + w2_11 : (w2_10 > w2_11 ? w2_10 : w2_11);
+wire signed [35:0]     w3_6 = adderMode ? w2_12 + w2_13 : (w2_12 > w2_13 ? w2_12 : w2_13);
+wire signed [35:0]     w3_7 = adderMode ? w2_14 + w2_15 : (w2_14 > w2_15 ? w2_14 : w2_15);
 reg signed [35:0]     w4_0;
-wire signed [35:0]     w4_0d = w3_0 + w3_1;
+wire signed [35:0]     w4_0d = adderMode ? w3_0 + w3_1 : (w3_0 > w3_1 ? w3_0 : w3_1);
 reg signed [35:0]     w4_1;
-wire signed [35:0]     w4_1d = w3_2 + w3_3;
+wire signed [35:0]     w4_1d = adderMode ? w3_2 + w3_3 : (w3_2 > w3_3 ? w3_2 : w3_3);
 reg signed [35:0]     w4_2;
-wire signed [35:0]     w4_2d = w3_4 + w3_5;
+wire signed [35:0]     w4_2d = adderMode ? w3_4 + w3_5 : (w3_4 > w3_5 ? w3_4 : w3_5);
 reg signed [35:0]     w4_3;
-wire signed [35:0]     w4_3d = w3_6 + w3_7;
-wire signed [35:0]     w5_0 = w4_0 + w4_1;
-wire signed [35:0]     w5_1 = w4_2 + w4_3;
-wire signed [35:0]     w6_0 = w5_0 + w5_1;
+wire signed [35:0]     w4_3d = adderMode ? w3_6 + w3_7 : (w3_6 > w3_7 ? w3_6 : w3_7);
+wire signed [35:0]     w5_0 = adderMode ? w4_0 + w4_1 : (w4_0 > w4_1 ? w4_0 : w4_1);
+wire signed [35:0]     w5_1 = adderMode ? w4_2 + w4_3 : (w4_2 > w4_3 ? w4_2 : w4_3);
+wire signed [35:0]     w6_0 = adderMode ? w5_0 + w5_1 : (w5_0 > w5_1 ? w5_0 : w5_1);
+input adderMode;
 input clk;
 input rst;
 output  [35:0]    out;

@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log CNN_top_module_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source CNN_top_module_wrapper.tcl -notrace
 
 

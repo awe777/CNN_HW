@@ -1,7 +1,7 @@
 set_property SRC_FILE_INFO {cfile:b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/CNN_top_module_processing_system7_0_0.xdc rfile:../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/CNN_top_module_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:CNN_top_module_i/processing_system7_0/inst} [current_design]
 current_instance CNN_top_module_i/processing_system7_0/inst
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
-set_input_jitter clk_fpga_0 0.3
+set_input_jitter clk_fpga_0 0.46875
 set_property src_info {type:SCOPED_XDC file:1 line:30 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN "H5" [get_ports "DDR_VRP"]
 set_property src_info {type:SCOPED_XDC file:1 line:34 export:INPUT save:INPUT read:READ} [current_design]

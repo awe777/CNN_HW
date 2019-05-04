@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Fri Apr 26 14:38:14 2019
-# Process ID: 9156
+# Start of session at: Sat May  4 15:40:55 2019
+# Process ID: 1464
 # Current directory: B:/Dokumen/CNN_HW/CNN_HW.runs/synth_1
 # Command line: vivado.exe -log CNN_top_module_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CNN_top_module_wrapper.tcl
 # Log file: B:/Dokumen/CNN_HW/CNN_HW.runs/synth_1/CNN_top_module_wrapper.vds
@@ -13,14 +13,14 @@ source CNN_top_module_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'B:/Xilinx/Vivado/2018.3/data/ip'.
-Command: synth_design -top CNN_top_module_wrapper -part xc7z010clg400-1 -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Command: synth_design -top CNN_top_module_wrapper -part xc7z010clg400-1 -directive AreaOptimized_high -control_set_opt_threshold 1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3600 
+INFO: Helper process launched with PID 10592 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 412.777 ; gain = 112.363
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 414.180 ; gain = 113.004
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_wrapper' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/hdl/CNN_top_module_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/synth/CNN_top_module.v:13]
@@ -211,18 +211,18 @@ INFO: [Synth 8-6157] synthesizing module 'axi_cnn' [B:/Dokumen/CNN_HW/CNN_HW.src
 	Parameter S_RDIDLE bound to: 2'b00 
 	Parameter S_RDDATA bound to: 2'b01 
 INFO: [Synth 8-155] case statement is not full and has no default [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:507]
-INFO: [Synth 8-6157] synthesizing module 'convmultCore' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:1644]
-INFO: [Synth 8-6157] synthesizing module 'mult2reg' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7607]
-INFO: [Synth 8-6155] done synthesizing module 'mult2reg' (1#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7607]
-INFO: [Synth 8-6157] synthesizing module 'multx' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7104]
-INFO: [Synth 8-6157] synthesizing module 'multiplier' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7601]
-INFO: [Synth 8-6155] done synthesizing module 'multiplier' (2#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7601]
-INFO: [Synth 8-6155] done synthesizing module 'multx' (3#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7104]
-INFO: [Synth 8-6155] done synthesizing module 'convmultCore' (4#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:1644]
+INFO: [Synth 8-6157] synthesizing module 'convmultCore' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:1645]
+INFO: [Synth 8-6157] synthesizing module 'mult2reg' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7610]
+INFO: [Synth 8-6155] done synthesizing module 'mult2reg' (1#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7610]
+INFO: [Synth 8-6157] synthesizing module 'multx' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7106]
+INFO: [Synth 8-6157] synthesizing module 'multiplier' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7604]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier' (2#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7604]
+INFO: [Synth 8-6155] done synthesizing module 'multx' (3#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:7106]
+INFO: [Synth 8-6155] done synthesizing module 'convmultCore' (4#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:1645]
 INFO: [Synth 8-6155] done synthesizing module 'axi_cnn' (5#1) [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/imports/Downloads/axi_cnn.v:11]
 INFO: [Synth 8-6155] done synthesizing module 'CNN_top_module_axi_cnn_0_0' (6#1) [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_axi_cnn_0_0/synth/CNN_top_module_axi_cnn_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_processing_system7_0_0' [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/synth/CNN_top_module_processing_system7_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
+INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_processing_system7_0_0' [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/synth/CNN_top_module_processing_system7_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
 	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
 	Parameter C_S_AXI_ACP_ARUSER_VAL bound to: 31 - type: integer 
 	Parameter C_S_AXI_ACP_AWUSER_VAL bound to: 31 - type: integer 
@@ -279,17 +279,17 @@ INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_sys
 	Parameter C_USE_S_AXI_ACP bound to: 0 - type: integer 
 	Parameter C_GP0_EN_MODIFIABLE_TXN bound to: 1 - type: integer 
 	Parameter C_GP1_EN_MODIFIABLE_TXN bound to: 1 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1342]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1343]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1347]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1348]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [B:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (7#1) [B:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
 INFO: [Synth 8-6157] synthesizing module 'BIBUF' [B:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:270]
 INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (8#1) [B:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:270]
 INFO: [Synth 8-6157] synthesizing module 'PS7' [B:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41553]
 INFO: [Synth 8-6155] done synthesizing module 'PS7' (9#1) [B:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41553]
-INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (10#1) [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
-WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/synth/CNN_top_module_processing_system7_0_0.v:316]
-INFO: [Synth 8-6155] done synthesizing module 'CNN_top_module_processing_system7_0_0' (11#1) [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/synth/CNN_top_module_processing_system7_0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (10#1) [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
+WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/synth/CNN_top_module_processing_system7_0_0.v:320]
+INFO: [Synth 8-6155] done synthesizing module 'CNN_top_module_processing_system7_0_0' (11#1) [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_processing_system7_0_0/synth/CNN_top_module_processing_system7_0_0.v:60]
 WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'CNN_top_module_processing_system7_0_0' requires 64 connections, but only 63 given [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/synth/CNN_top_module.v:157]
 INFO: [Synth 8-6157] synthesizing module 'CNN_top_module_ps7_0_axi_periph_0' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/synth/CNN_top_module.v:292]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1P3FK6S' [B:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/synth/CNN_top_module.v:597]
@@ -1256,7 +1256,7 @@ WARNING: [Synth 8-3331] design axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm has
 WARNING: [Synth 8-3331] design axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm has unconnected port s_arlen[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 789.773 ; gain = 489.359
+Finished RTL Elaboration : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 792.785 ; gain = 491.609
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1269,10 +1269,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 789.773 ; gain = 489.359
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 792.785 ; gain = 491.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 789.773 ; gain = 489.359
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 792.785 ; gain = 491.609
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1289,31 +1289,31 @@ Parsing XDC File [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/C
 Finished Parsing XDC File [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0_board.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
 Parsing XDC File [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
 Finished Parsing XDC File [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ip/CNN_top_module_rst_ps7_0_50M_0/CNN_top_module_rst_ps7_0_50M_0.xdc] for cell 'CNN_top_module_i/rst_ps7_0_50M/U0'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1127.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1141.672 ; gain = 0.000
 Parsing XDC File [B:/Dokumen/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [B:/Dokumen/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [B:/Dokumen/CNN_HW/CNN_HW.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNN_top_module_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/CNN_top_module_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1127.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1141.672 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1127.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1141.672 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1127.906 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1127.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1141.672 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1141.672 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:08 ; elapsed = 00:01:15 . Memory (MB): peak = 1127.906 ; gain = 827.492
+Finished Constraint Validation : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1141.672 ; gain = 840.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:08 ; elapsed = 00:01:15 . Memory (MB): peak = 1127.906 ; gain = 827.492
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1141.672 ; gain = 840.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1327,7 +1327,7 @@ Applied set_property DONT_TOUCH = true for CNN_top_module_i/ps7_0_axi_periph. (c
 Applied set_property DONT_TOUCH = true for CNN_top_module_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for CNN_top_module_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 1127.906 ; gain = 827.492
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1141.672 ; gain = 840.496
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'wstate_cs_reg' in module 'axi_cnn'
 INFO: [Synth 8-802] inferred FSM for state register 'rstate_cs_reg' in module 'axi_cnn'
@@ -1340,6 +1340,9 @@ INFO: [Synth 8-5544] ROM "wstate_ns" won't be mapped to Block RAM because addres
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm'
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2870]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2870]
+INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1351,47 +1354,49 @@ INFO: [Synth 8-3354] encoded FSM with state register 'wstate_cs_reg' using encod
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                S_RDIDLE |                               01 |                               00
-                S_RDDATA |                               10 |                               01
+                S_RDIDLE |                                0 |                               00
+                S_RDDATA |                                1 |                               01
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'rstate_cs_reg' using encoding 'one-hot' in module 'axi_cnn'
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_cs_reg' using encoding 'sequential' in module 'axi_cnn'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                 SM_IDLE |                             0010 |                               00
-               SM_CMD_EN |                             1000 |                               01
-         SM_CMD_ACCEPTED |                             0100 |                               10
-                 SM_DONE |                             0001 |                               11
+                 SM_IDLE |                               01 |                               00
+               SM_CMD_EN |                               11 |                               01
+         SM_CMD_ACCEPTED |                               10 |                               10
+                 SM_DONE |                               00 |                               11
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:21 ; elapsed = 00:01:30 . Memory (MB): peak = 1127.906 ; gain = 827.492
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 1141.672 ; gain = 840.496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------------+------------+----------+
 |      |RTL Partition       |Replication |Instances |
 +------+--------------------+------------+----------+
-|1     |convmultCore__GB0   |           1|     34020|
-|2     |convmultCore__GB1   |           1|      9072|
-|3     |convmultCore__GB2   |           1|     11340|
-|4     |convmultCore__GB3   |           1|     24401|
-|5     |convmultCore__GB4   |           1|     18144|
-|6     |axi_cnn__GC0        |           1|     33812|
-|7     |CNN_top_module__GC0 |           1|      3033|
+|1     |multx__GB0          |           1|     20668|
+|2     |multx__GB1          |           1|     10347|
+|3     |convmultCore__GCB0  |           1|     32493|
+|4     |convmultCore__GCB1  |           1|      8071|
+|5     |convmultCore__GCB2  |           1|     10377|
+|6     |convmultCore__GCB3  |           1|     13836|
+|7     |convmultCore__GCB4  |           1|     16142|
+|8     |axi_cnn__GC0        |           1|     34363|
+|9     |CNN_top_module__GC0 |           1|      2802|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   4 Input     36 Bit       Adders := 21    
+	   2 Input     36 Bit       Adders := 63    
 	   2 Input     12 Bit       Adders := 8     
 	   2 Input      9 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 5     
+	   2 Input      5 Bit       Adders := 4     
 	   2 Input      4 Bit       Adders := 4     
 	   2 Input      2 Bit       Adders := 2     
 +---Registers : 
@@ -1400,7 +1405,6 @@ Detailed RTL Component Info :
 	               36 Bit    Registers := 148   
 	               32 Bit    Registers := 1     
 	               24 Bit    Registers := 1     
-	               20 Bit    Registers := 4     
 	               18 Bit    Registers := 114   
 	               14 Bit    Registers := 2     
 	               12 Bit    Registers := 9     
@@ -1411,15 +1415,15 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 4     
 	                4 Bit    Registers := 6     
 	                3 Bit    Registers := 3     
-	                2 Bit    Registers := 12    
-	                1 Bit    Registers := 37    
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 36    
 +---Muxes : 
 	   2 Input     66 Bit        Muxes := 4     
 	   2 Input     47 Bit        Muxes := 2     
-	   2 Input     36 Bit        Muxes := 192   
+	   2 Input     36 Bit        Muxes := 338   
 	   2 Input     35 Bit        Muxes := 64    
+	 179 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 8     
-	   4 Input     20 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 178   
 	   4 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
@@ -1446,7 +1450,9 @@ Detailed RTL Component Info :
 	  27 Input     18 Bit        Muxes := 1     
 	  28 Input     18 Bit        Muxes := 1     
 	  29 Input     18 Bit        Muxes := 1     
+	  30 Input     18 Bit        Muxes := 1     
 	  31 Input     18 Bit        Muxes := 1     
+	  32 Input     18 Bit        Muxes := 1     
 	  34 Input     18 Bit        Muxes := 1     
 	  35 Input     18 Bit        Muxes := 1     
 	  36 Input     18 Bit        Muxes := 1     
@@ -1457,13 +1463,20 @@ Detailed RTL Component Info :
 	  43 Input     18 Bit        Muxes := 1     
 	  45 Input     18 Bit        Muxes := 1     
 	  47 Input     18 Bit        Muxes := 1     
+	  48 Input     18 Bit        Muxes := 1     
 	  49 Input     18 Bit        Muxes := 1     
 	  51 Input     18 Bit        Muxes := 1     
 	  53 Input     18 Bit        Muxes := 1     
 	  54 Input     18 Bit        Muxes := 1     
 	  55 Input     18 Bit        Muxes := 1     
 	  57 Input     18 Bit        Muxes := 1     
+	  58 Input     18 Bit        Muxes := 1     
+	  59 Input     18 Bit        Muxes := 1     
+	  60 Input     18 Bit        Muxes := 1     
 	  61 Input     18 Bit        Muxes := 1     
+	  62 Input     18 Bit        Muxes := 1     
+	  63 Input     18 Bit        Muxes := 1     
+	  64 Input     18 Bit        Muxes := 1     
 	  66 Input     18 Bit        Muxes := 1     
 	  67 Input     18 Bit        Muxes := 1     
 	  68 Input     18 Bit        Muxes := 1     
@@ -1472,13 +1485,19 @@ Detailed RTL Component Info :
 	  73 Input     18 Bit        Muxes := 1     
 	  77 Input     18 Bit        Muxes := 1     
 	  79 Input     18 Bit        Muxes := 1     
+	  80 Input     18 Bit        Muxes := 1     
 	  81 Input     18 Bit        Muxes := 1     
 	  84 Input     18 Bit        Muxes := 1     
 	  85 Input     18 Bit        Muxes := 1     
 	  86 Input     18 Bit        Muxes := 1     
 	  88 Input     18 Bit        Muxes := 1     
 	  89 Input     18 Bit        Muxes := 1     
+	  90 Input     18 Bit        Muxes := 1     
+	  92 Input     18 Bit        Muxes := 1     
 	  93 Input     18 Bit        Muxes := 1     
+	  94 Input     18 Bit        Muxes := 1     
+	  95 Input     18 Bit        Muxes := 1     
+	  96 Input     18 Bit        Muxes := 1     
 	  97 Input     18 Bit        Muxes := 1     
 	  98 Input     18 Bit        Muxes := 1     
 	 100 Input     18 Bit        Muxes := 1     
@@ -1486,23 +1505,26 @@ Detailed RTL Component Info :
 	 102 Input     18 Bit        Muxes := 1     
 	 104 Input     18 Bit        Muxes := 1     
 	 105 Input     18 Bit        Muxes := 1     
+	 106 Input     18 Bit        Muxes := 1     
 	 107 Input     18 Bit        Muxes := 1     
+	 108 Input     18 Bit        Muxes := 1     
 	 109 Input     18 Bit        Muxes := 1     
+	 110 Input     18 Bit        Muxes := 1     
+	 112 Input     18 Bit        Muxes := 1     
 	 113 Input     18 Bit        Muxes := 1     
 	 114 Input     18 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 6     
 	   2 Input      9 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 5     
-	   2 Input      4 Bit        Muxes := 22    
-	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 18    
 	   3 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 12    
+	   2 Input      2 Bit        Muxes := 14    
 	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 34    
 	 179 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 30    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1510,102 +1532,6 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module mult2reg__1 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__2 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__3 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__4 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__5 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__6 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__7 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__8 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__9 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__10 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__11 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__12 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__13 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__14 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__15 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
-Module mult2reg__16 
-Detailed RTL Component Info : 
-+---Registers : 
-	               36 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     36 Bit        Muxes := 2     
 Module multiplier__1 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -1865,11 +1791,107 @@ Detailed RTL Component Info :
 Module multx 
 Detailed RTL Component Info : 
 +---Adders : 
-	   4 Input     36 Bit       Adders := 21    
+	   2 Input     36 Bit       Adders := 63    
 +---Registers : 
 	               36 Bit    Registers := 84    
 +---Muxes : 
-	   2 Input     36 Bit        Muxes := 64    
+	   2 Input     36 Bit        Muxes := 210   
+Module mult2reg__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__8 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__9 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__10 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__11 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__12 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__13 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__14 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__15 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+Module mult2reg__16 
+Detailed RTL Component Info : 
++---Registers : 
+	               36 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
 Module mult2reg__17 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -2173,6 +2195,7 @@ Detailed RTL Component Info :
 	               24 Bit    Registers := 1     
 	               18 Bit    Registers := 114   
 +---Muxes : 
+	 179 Input     32 Bit        Muxes := 1     
 	   2 Input     18 Bit        Muxes := 114   
 	   4 Input     18 Bit        Muxes := 1     
 	   5 Input     18 Bit        Muxes := 1     
@@ -2199,7 +2222,9 @@ Detailed RTL Component Info :
 	  27 Input     18 Bit        Muxes := 1     
 	  28 Input     18 Bit        Muxes := 1     
 	  29 Input     18 Bit        Muxes := 1     
+	  30 Input     18 Bit        Muxes := 1     
 	  31 Input     18 Bit        Muxes := 1     
+	  32 Input     18 Bit        Muxes := 1     
 	  34 Input     18 Bit        Muxes := 1     
 	  35 Input     18 Bit        Muxes := 1     
 	  36 Input     18 Bit        Muxes := 1     
@@ -2210,13 +2235,20 @@ Detailed RTL Component Info :
 	  43 Input     18 Bit        Muxes := 1     
 	  45 Input     18 Bit        Muxes := 1     
 	  47 Input     18 Bit        Muxes := 1     
+	  48 Input     18 Bit        Muxes := 1     
 	  49 Input     18 Bit        Muxes := 1     
 	  51 Input     18 Bit        Muxes := 1     
 	  53 Input     18 Bit        Muxes := 1     
 	  54 Input     18 Bit        Muxes := 1     
 	  55 Input     18 Bit        Muxes := 1     
 	  57 Input     18 Bit        Muxes := 1     
+	  58 Input     18 Bit        Muxes := 1     
+	  59 Input     18 Bit        Muxes := 1     
+	  60 Input     18 Bit        Muxes := 1     
 	  61 Input     18 Bit        Muxes := 1     
+	  62 Input     18 Bit        Muxes := 1     
+	  63 Input     18 Bit        Muxes := 1     
+	  64 Input     18 Bit        Muxes := 1     
 	  66 Input     18 Bit        Muxes := 1     
 	  67 Input     18 Bit        Muxes := 1     
 	  68 Input     18 Bit        Muxes := 1     
@@ -2225,13 +2257,19 @@ Detailed RTL Component Info :
 	  73 Input     18 Bit        Muxes := 1     
 	  77 Input     18 Bit        Muxes := 1     
 	  79 Input     18 Bit        Muxes := 1     
+	  80 Input     18 Bit        Muxes := 1     
 	  81 Input     18 Bit        Muxes := 1     
 	  84 Input     18 Bit        Muxes := 1     
 	  85 Input     18 Bit        Muxes := 1     
 	  86 Input     18 Bit        Muxes := 1     
 	  88 Input     18 Bit        Muxes := 1     
 	  89 Input     18 Bit        Muxes := 1     
+	  90 Input     18 Bit        Muxes := 1     
+	  92 Input     18 Bit        Muxes := 1     
 	  93 Input     18 Bit        Muxes := 1     
+	  94 Input     18 Bit        Muxes := 1     
+	  95 Input     18 Bit        Muxes := 1     
+	  96 Input     18 Bit        Muxes := 1     
 	  97 Input     18 Bit        Muxes := 1     
 	  98 Input     18 Bit        Muxes := 1     
 	 100 Input     18 Bit        Muxes := 1     
@@ -2239,15 +2277,18 @@ Detailed RTL Component Info :
 	 102 Input     18 Bit        Muxes := 1     
 	 104 Input     18 Bit        Muxes := 1     
 	 105 Input     18 Bit        Muxes := 1     
+	 106 Input     18 Bit        Muxes := 1     
 	 107 Input     18 Bit        Muxes := 1     
+	 108 Input     18 Bit        Muxes := 1     
 	 109 Input     18 Bit        Muxes := 1     
+	 110 Input     18 Bit        Muxes := 1     
+	 112 Input     18 Bit        Muxes := 1     
 	 113 Input     18 Bit        Muxes := 1     
 	 114 Input     18 Bit        Muxes := 1     
 	   3 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
 	 179 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 Module axi_protocol_converter_v2_1_18_b2s_incr_cmd 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -2304,10 +2345,8 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               20 Bit    Registers := 4     
 	                2 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input     20 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module axi_protocol_converter_v2_1_18_b2s_simple_fifo__parameterized0 
@@ -2315,10 +2354,9 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	                2 Bit    Registers := 5     
+	                2 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      2 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module axi_protocol_converter_v2_1_18_b2s_b_channel 
 Detailed RTL Component Info : 
@@ -2370,10 +2408,8 @@ Detailed RTL Component Info :
 Module axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 4     
-	   2 Input      2 Bit        Muxes := 2     
-	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 2     
 Module axi_protocol_converter_v2_1_18_b2s_ar_channel 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -2381,11 +2417,11 @@ Detailed RTL Component Info :
 Module axi_protocol_converter_v2_1_18_b2s_simple_fifo__parameterized1 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      5 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
 +---Registers : 
 	                5 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module axi_protocol_converter_v2_1_18_b2s_simple_fifo__parameterized2 
 Detailed RTL Component Info : 
@@ -2454,7 +2490,7 @@ Module sequence_psr
 Detailed RTL Component Info : 
 +---Registers : 
 	                3 Bit    Registers := 3     
-	                1 Bit    Registers := 6     
+	                1 Bit    Registers := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -2473,170 +2509,20 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [b:/Dokumen/CNN_HW/CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[0][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[0][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[0][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[0][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[1][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[1][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[1][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[1][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[2][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[2][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[2][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[2][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (CNN_top_module_i/i_0/ps7_0_axi_periph/\s00_couplers/auto_pc /\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][5] )
+INFO: [Synth 8-3886] merging instance 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/r.r_pipe/aresetn_d_reg[0]' (FDR) to 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/aresetn_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/aresetn_d_reg[0]' (FDR) to 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/aresetn_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/aresetn_d_reg[1]' (FDR) to 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/r.r_pipe/aresetn_d_reg[1]' (FDR) to 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/aresetn_d_reg[0]' (FDR) to 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/aresetn_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'CNN_top_module_i/i_0/rst_ps7_0_50M/U0/SEQ/pr_dec_reg[1]' (FD) to 'CNN_top_module_i/i_0/rst_ps7_0_50M/U0/SEQ/bsr_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'CNN_top_module_i/i_0/rst_ps7_0_50M/U0/SEQ/bsr_dec_reg[1]' (FD) to 'CNN_top_module_i/i_0/rst_ps7_0_50M/U0/SEQ/core_dec_reg[1]'
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
-DSP Report: Generating DSP mult0/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult0/outMem is absorbed into DSP mult0/outMem.
-DSP Report: operator mult0/outMem is absorbed into DSP mult0/outMem.
-DSP Report: Generating DSP mult1/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult1/outMem is absorbed into DSP mult1/outMem.
-DSP Report: operator mult1/outMem is absorbed into DSP mult1/outMem.
-DSP Report: Generating DSP mult2/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult2/outMem is absorbed into DSP mult2/outMem.
-DSP Report: operator mult2/outMem is absorbed into DSP mult2/outMem.
-DSP Report: Generating DSP mult3/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult3/outMem is absorbed into DSP mult3/outMem.
-DSP Report: operator mult3/outMem is absorbed into DSP mult3/outMem.
-DSP Report: Generating DSP mult4/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult4/outMem is absorbed into DSP mult4/outMem.
-DSP Report: operator mult4/outMem is absorbed into DSP mult4/outMem.
-DSP Report: Generating DSP mult5/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult5/outMem is absorbed into DSP mult5/outMem.
-DSP Report: operator mult5/outMem is absorbed into DSP mult5/outMem.
-DSP Report: Generating DSP mult6/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult6/outMem is absorbed into DSP mult6/outMem.
-DSP Report: operator mult6/outMem is absorbed into DSP mult6/outMem.
-DSP Report: Generating DSP mult7/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult7/outMem is absorbed into DSP mult7/outMem.
-DSP Report: operator mult7/outMem is absorbed into DSP mult7/outMem.
-DSP Report: Generating DSP mult8/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult8/outMem is absorbed into DSP mult8/outMem.
-DSP Report: operator mult8/outMem is absorbed into DSP mult8/outMem.
-DSP Report: Generating DSP mult9/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult9/outMem is absorbed into DSP mult9/outMem.
-DSP Report: operator mult9/outMem is absorbed into DSP mult9/outMem.
-DSP Report: Generating DSP mult10/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult10/outMem is absorbed into DSP mult10/outMem.
-DSP Report: operator mult10/outMem is absorbed into DSP mult10/outMem.
-DSP Report: Generating DSP mult11/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult11/outMem is absorbed into DSP mult11/outMem.
-DSP Report: operator mult11/outMem is absorbed into DSP mult11/outMem.
-DSP Report: Generating DSP mult12/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult12/outMem is absorbed into DSP mult12/outMem.
-DSP Report: operator mult12/outMem is absorbed into DSP mult12/outMem.
-DSP Report: Generating DSP mult13/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult13/outMem is absorbed into DSP mult13/outMem.
-DSP Report: operator mult13/outMem is absorbed into DSP mult13/outMem.
-DSP Report: Generating DSP mult14/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult14/outMem is absorbed into DSP mult14/outMem.
-DSP Report: operator mult14/outMem is absorbed into DSP mult14/outMem.
-DSP Report: Generating DSP mult15/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult15/outMem is absorbed into DSP mult15/outMem.
-DSP Report: operator mult15/outMem is absorbed into DSP mult15/outMem.
-DSP Report: Generating DSP mult16/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult16/outMem is absorbed into DSP mult16/outMem.
-DSP Report: operator mult16/outMem is absorbed into DSP mult16/outMem.
-DSP Report: Generating DSP mult17/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult17/outMem is absorbed into DSP mult17/outMem.
-DSP Report: operator mult17/outMem is absorbed into DSP mult17/outMem.
-DSP Report: Generating DSP mult18/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult18/outMem is absorbed into DSP mult18/outMem.
-DSP Report: operator mult18/outMem is absorbed into DSP mult18/outMem.
-DSP Report: Generating DSP mult19/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult19/outMem is absorbed into DSP mult19/outMem.
-DSP Report: operator mult19/outMem is absorbed into DSP mult19/outMem.
-DSP Report: Generating DSP mult20/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult20/outMem is absorbed into DSP mult20/outMem.
-DSP Report: operator mult20/outMem is absorbed into DSP mult20/outMem.
-DSP Report: Generating DSP mult21/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult21/outMem is absorbed into DSP mult21/outMem.
-DSP Report: operator mult21/outMem is absorbed into DSP mult21/outMem.
-DSP Report: Generating DSP mult22/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult22/outMem is absorbed into DSP mult22/outMem.
-DSP Report: operator mult22/outMem is absorbed into DSP mult22/outMem.
-DSP Report: Generating DSP mult23/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult23/outMem is absorbed into DSP mult23/outMem.
-DSP Report: operator mult23/outMem is absorbed into DSP mult23/outMem.
-DSP Report: Generating DSP mult24/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult24/outMem is absorbed into DSP mult24/outMem.
-DSP Report: operator mult24/outMem is absorbed into DSP mult24/outMem.
-DSP Report: Generating DSP mult25/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult25/outMem is absorbed into DSP mult25/outMem.
-DSP Report: operator mult25/outMem is absorbed into DSP mult25/outMem.
-DSP Report: Generating DSP mult26/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult26/outMem is absorbed into DSP mult26/outMem.
-DSP Report: operator mult26/outMem is absorbed into DSP mult26/outMem.
-DSP Report: Generating DSP mult27/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult27/outMem is absorbed into DSP mult27/outMem.
-DSP Report: operator mult27/outMem is absorbed into DSP mult27/outMem.
-DSP Report: Generating DSP mult28/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult28/outMem is absorbed into DSP mult28/outMem.
-DSP Report: operator mult28/outMem is absorbed into DSP mult28/outMem.
-DSP Report: Generating DSP mult29/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult29/outMem is absorbed into DSP mult29/outMem.
-DSP Report: operator mult29/outMem is absorbed into DSP mult29/outMem.
-DSP Report: Generating DSP mult30/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult30/outMem is absorbed into DSP mult30/outMem.
-DSP Report: operator mult30/outMem is absorbed into DSP mult30/outMem.
-DSP Report: Generating DSP mult31/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult31/outMem is absorbed into DSP mult31/outMem.
-DSP Report: operator mult31/outMem is absorbed into DSP mult31/outMem.
-DSP Report: Generating DSP mult32/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult32/outMem is absorbed into DSP mult32/outMem.
-DSP Report: operator mult32/outMem is absorbed into DSP mult32/outMem.
-DSP Report: Generating DSP mult33/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult33/outMem is absorbed into DSP mult33/outMem.
-DSP Report: operator mult33/outMem is absorbed into DSP mult33/outMem.
-DSP Report: Generating DSP mult34/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult34/outMem is absorbed into DSP mult34/outMem.
-DSP Report: operator mult34/outMem is absorbed into DSP mult34/outMem.
-DSP Report: Generating DSP mult35/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult35/outMem is absorbed into DSP mult35/outMem.
-DSP Report: operator mult35/outMem is absorbed into DSP mult35/outMem.
-DSP Report: Generating DSP mult36/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult36/outMem is absorbed into DSP mult36/outMem.
-DSP Report: operator mult36/outMem is absorbed into DSP mult36/outMem.
-DSP Report: Generating DSP mult37/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult37/outMem is absorbed into DSP mult37/outMem.
-DSP Report: operator mult37/outMem is absorbed into DSP mult37/outMem.
-DSP Report: Generating DSP mult38/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult38/outMem is absorbed into DSP mult38/outMem.
-DSP Report: operator mult38/outMem is absorbed into DSP mult38/outMem.
-DSP Report: Generating DSP mult39/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult39/outMem is absorbed into DSP mult39/outMem.
-DSP Report: operator mult39/outMem is absorbed into DSP mult39/outMem.
-DSP Report: Generating DSP mult40/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult40/outMem is absorbed into DSP mult40/outMem.
-DSP Report: operator mult40/outMem is absorbed into DSP mult40/outMem.
-DSP Report: Generating DSP mult41/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult41/outMem is absorbed into DSP mult41/outMem.
-DSP Report: operator mult41/outMem is absorbed into DSP mult41/outMem.
-DSP Report: Generating DSP mult42/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult42/outMem is absorbed into DSP mult42/outMem.
-DSP Report: operator mult42/outMem is absorbed into DSP mult42/outMem.
-DSP Report: Generating DSP mult43/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult43/outMem is absorbed into DSP mult43/outMem.
-DSP Report: operator mult43/outMem is absorbed into DSP mult43/outMem.
-DSP Report: Generating DSP mult44/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult44/outMem is absorbed into DSP mult44/outMem.
-DSP Report: operator mult44/outMem is absorbed into DSP mult44/outMem.
-DSP Report: Generating DSP mult45/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult45/outMem is absorbed into DSP mult45/outMem.
-DSP Report: operator mult45/outMem is absorbed into DSP mult45/outMem.
-DSP Report: Generating DSP mult46/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult46/outMem is absorbed into DSP mult46/outMem.
-DSP Report: operator mult46/outMem is absorbed into DSP mult46/outMem.
-DSP Report: Generating DSP mult47/outMem, operation Mode is: C+A*B.
-DSP Report: operator mult47/outMem is absorbed into DSP mult47/outMem.
-DSP Report: operator mult47/outMem is absorbed into DSP mult47/outMem.
+INFO: [Synth 8-3886] merging instance 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg' (FDSE) to 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/sel_first_reg'
+INFO: [Synth 8-3886] merging instance 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg' (FDSE) to 'CNN_top_module_i/i_0/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/wrap_cmd_0/sel_first_reg'
 DSP Report: Generating DSP mult48/outMem, operation Mode is: C+A*B.
 DSP Report: operator mult48/outMem is absorbed into DSP mult48/outMem.
 DSP Report: operator mult48/outMem is absorbed into DSP mult48/outMem.
@@ -2685,9 +2571,153 @@ DSP Report: operator mult62/outMem is absorbed into DSP mult62/outMem.
 DSP Report: Generating DSP mult63/outMem, operation Mode is: C+A*B.
 DSP Report: operator mult63/outMem is absorbed into DSP mult63/outMem.
 DSP Report: operator mult63/outMem is absorbed into DSP mult63/outMem.
+DSP Report: Generating DSP mult47/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult47/outMem is absorbed into DSP mult47/outMem.
+DSP Report: operator mult47/outMem is absorbed into DSP mult47/outMem.
+DSP Report: Generating DSP mult46/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult46/outMem is absorbed into DSP mult46/outMem.
+DSP Report: operator mult46/outMem is absorbed into DSP mult46/outMem.
+DSP Report: Generating DSP mult45/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult45/outMem is absorbed into DSP mult45/outMem.
+DSP Report: operator mult45/outMem is absorbed into DSP mult45/outMem.
+DSP Report: Generating DSP mult44/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult44/outMem is absorbed into DSP mult44/outMem.
+DSP Report: operator mult44/outMem is absorbed into DSP mult44/outMem.
+DSP Report: Generating DSP mult43/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult43/outMem is absorbed into DSP mult43/outMem.
+DSP Report: operator mult43/outMem is absorbed into DSP mult43/outMem.
+DSP Report: Generating DSP mult42/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult42/outMem is absorbed into DSP mult42/outMem.
+DSP Report: operator mult42/outMem is absorbed into DSP mult42/outMem.
+DSP Report: Generating DSP mult41/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult41/outMem is absorbed into DSP mult41/outMem.
+DSP Report: operator mult41/outMem is absorbed into DSP mult41/outMem.
+DSP Report: Generating DSP mult40/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult40/outMem is absorbed into DSP mult40/outMem.
+DSP Report: operator mult40/outMem is absorbed into DSP mult40/outMem.
+DSP Report: Generating DSP mult39/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult39/outMem is absorbed into DSP mult39/outMem.
+DSP Report: operator mult39/outMem is absorbed into DSP mult39/outMem.
+DSP Report: Generating DSP mult38/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult38/outMem is absorbed into DSP mult38/outMem.
+DSP Report: operator mult38/outMem is absorbed into DSP mult38/outMem.
+DSP Report: Generating DSP mult37/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult37/outMem is absorbed into DSP mult37/outMem.
+DSP Report: operator mult37/outMem is absorbed into DSP mult37/outMem.
+DSP Report: Generating DSP mult36/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult36/outMem is absorbed into DSP mult36/outMem.
+DSP Report: operator mult36/outMem is absorbed into DSP mult36/outMem.
+DSP Report: Generating DSP mult35/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult35/outMem is absorbed into DSP mult35/outMem.
+DSP Report: operator mult35/outMem is absorbed into DSP mult35/outMem.
+DSP Report: Generating DSP mult34/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult34/outMem is absorbed into DSP mult34/outMem.
+DSP Report: operator mult34/outMem is absorbed into DSP mult34/outMem.
+DSP Report: Generating DSP mult33/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult33/outMem is absorbed into DSP mult33/outMem.
+DSP Report: operator mult33/outMem is absorbed into DSP mult33/outMem.
+DSP Report: Generating DSP mult32/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult32/outMem is absorbed into DSP mult32/outMem.
+DSP Report: operator mult32/outMem is absorbed into DSP mult32/outMem.
+DSP Report: Generating DSP mult31/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult31/outMem is absorbed into DSP mult31/outMem.
+DSP Report: operator mult31/outMem is absorbed into DSP mult31/outMem.
+DSP Report: Generating DSP mult30/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult30/outMem is absorbed into DSP mult30/outMem.
+DSP Report: operator mult30/outMem is absorbed into DSP mult30/outMem.
+DSP Report: Generating DSP mult29/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult29/outMem is absorbed into DSP mult29/outMem.
+DSP Report: operator mult29/outMem is absorbed into DSP mult29/outMem.
+DSP Report: Generating DSP mult28/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult28/outMem is absorbed into DSP mult28/outMem.
+DSP Report: operator mult28/outMem is absorbed into DSP mult28/outMem.
+DSP Report: Generating DSP mult27/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult27/outMem is absorbed into DSP mult27/outMem.
+DSP Report: operator mult27/outMem is absorbed into DSP mult27/outMem.
+DSP Report: Generating DSP mult26/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult26/outMem is absorbed into DSP mult26/outMem.
+DSP Report: operator mult26/outMem is absorbed into DSP mult26/outMem.
+DSP Report: Generating DSP mult25/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult25/outMem is absorbed into DSP mult25/outMem.
+DSP Report: operator mult25/outMem is absorbed into DSP mult25/outMem.
+DSP Report: Generating DSP mult24/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult24/outMem is absorbed into DSP mult24/outMem.
+DSP Report: operator mult24/outMem is absorbed into DSP mult24/outMem.
+DSP Report: Generating DSP mult23/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult23/outMem is absorbed into DSP mult23/outMem.
+DSP Report: operator mult23/outMem is absorbed into DSP mult23/outMem.
+DSP Report: Generating DSP mult22/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult22/outMem is absorbed into DSP mult22/outMem.
+DSP Report: operator mult22/outMem is absorbed into DSP mult22/outMem.
+DSP Report: Generating DSP mult21/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult21/outMem is absorbed into DSP mult21/outMem.
+DSP Report: operator mult21/outMem is absorbed into DSP mult21/outMem.
+DSP Report: Generating DSP mult20/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult20/outMem is absorbed into DSP mult20/outMem.
+DSP Report: operator mult20/outMem is absorbed into DSP mult20/outMem.
+DSP Report: Generating DSP mult19/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult19/outMem is absorbed into DSP mult19/outMem.
+DSP Report: operator mult19/outMem is absorbed into DSP mult19/outMem.
+DSP Report: Generating DSP mult18/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult18/outMem is absorbed into DSP mult18/outMem.
+DSP Report: operator mult18/outMem is absorbed into DSP mult18/outMem.
+DSP Report: Generating DSP mult17/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult17/outMem is absorbed into DSP mult17/outMem.
+DSP Report: operator mult17/outMem is absorbed into DSP mult17/outMem.
+DSP Report: Generating DSP mult16/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult16/outMem is absorbed into DSP mult16/outMem.
+DSP Report: operator mult16/outMem is absorbed into DSP mult16/outMem.
+DSP Report: Generating DSP mult15/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult15/outMem is absorbed into DSP mult15/outMem.
+DSP Report: operator mult15/outMem is absorbed into DSP mult15/outMem.
+DSP Report: Generating DSP mult14/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult14/outMem is absorbed into DSP mult14/outMem.
+DSP Report: operator mult14/outMem is absorbed into DSP mult14/outMem.
+DSP Report: Generating DSP mult13/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult13/outMem is absorbed into DSP mult13/outMem.
+DSP Report: operator mult13/outMem is absorbed into DSP mult13/outMem.
+DSP Report: Generating DSP mult12/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult12/outMem is absorbed into DSP mult12/outMem.
+DSP Report: operator mult12/outMem is absorbed into DSP mult12/outMem.
+DSP Report: Generating DSP mult11/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult11/outMem is absorbed into DSP mult11/outMem.
+DSP Report: operator mult11/outMem is absorbed into DSP mult11/outMem.
+DSP Report: Generating DSP mult10/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult10/outMem is absorbed into DSP mult10/outMem.
+DSP Report: operator mult10/outMem is absorbed into DSP mult10/outMem.
+DSP Report: Generating DSP mult9/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult9/outMem is absorbed into DSP mult9/outMem.
+DSP Report: operator mult9/outMem is absorbed into DSP mult9/outMem.
+DSP Report: Generating DSP mult8/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult8/outMem is absorbed into DSP mult8/outMem.
+DSP Report: operator mult8/outMem is absorbed into DSP mult8/outMem.
+DSP Report: Generating DSP mult7/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult7/outMem is absorbed into DSP mult7/outMem.
+DSP Report: operator mult7/outMem is absorbed into DSP mult7/outMem.
+DSP Report: Generating DSP mult6/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult6/outMem is absorbed into DSP mult6/outMem.
+DSP Report: operator mult6/outMem is absorbed into DSP mult6/outMem.
+DSP Report: Generating DSP mult5/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult5/outMem is absorbed into DSP mult5/outMem.
+DSP Report: operator mult5/outMem is absorbed into DSP mult5/outMem.
+DSP Report: Generating DSP mult4/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult4/outMem is absorbed into DSP mult4/outMem.
+DSP Report: operator mult4/outMem is absorbed into DSP mult4/outMem.
+DSP Report: Generating DSP mult3/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult3/outMem is absorbed into DSP mult3/outMem.
+DSP Report: operator mult3/outMem is absorbed into DSP mult3/outMem.
+DSP Report: Generating DSP mult2/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult2/outMem is absorbed into DSP mult2/outMem.
+DSP Report: operator mult2/outMem is absorbed into DSP mult2/outMem.
+DSP Report: Generating DSP mult1/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult1/outMem is absorbed into DSP mult1/outMem.
+DSP Report: operator mult1/outMem is absorbed into DSP mult1/outMem.
+DSP Report: Generating DSP mult0/outMem, operation Mode is: C+A*B.
+DSP Report: operator mult0/outMem is absorbed into DSP mult0/outMem.
+DSP Report: operator mult0/outMem is absorbed into DSP mult0/outMem.
 INFO: [Synth 8-5546] ROM "rdata" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:49 ; elapsed = 00:02:09 . Memory (MB): peak = 1127.906 ; gain = 827.492
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:37 ; elapsed = 00:04:58 . Memory (MB): peak = 1141.672 ; gain = 840.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2772,54 +2802,58 @@ Report RTL Partitions:
 +------+--------------------+------------+----------+
 |      |RTL Partition       |Replication |Instances |
 +------+--------------------+------------+----------+
-|1     |convmultCore__GB0   |           1|      6228|
-|2     |convmultCore__GB1   |           1|      4464|
-|3     |convmultCore__GB2   |           1|      4716|
-|4     |convmultCore__GB3   |           1|     25066|
-|5     |convmultCore__GB4   |           1|      5472|
-|6     |axi_cnn__GC0        |           1|     10592|
-|7     |CNN_top_module__GC0 |           1|      2563|
+|1     |multx__GB0          |           1|     20812|
+|2     |multx__GB1          |           1|     10392|
+|3     |convmultCore__GCB0  |           1|     14433|
+|4     |convmultCore__GCB1  |           1|      4176|
+|5     |convmultCore__GCB2  |           1|      4536|
+|6     |convmultCore__GCB3  |           1|      4968|
+|7     |convmultCore__GCB4  |           1|      5328|
+|8     |axi_cnn__GC0        |           1|     12212|
+|9     |CNN_top_module__GC0 |           1|      2180|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:02 ; elapsed = 00:02:22 . Memory (MB): peak = 1127.906 ; gain = 827.492
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:50 ; elapsed = 00:05:11 . Memory (MB): peak = 1141.672 ; gain = 840.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:25 ; elapsed = 00:03:47 . Memory (MB): peak = 2136.090 ; gain = 1835.676
+Finished Timing Optimization : Time (s): cpu = 00:08:51 ; elapsed = 00:09:14 . Memory (MB): peak = 2179.938 ; gain = 1878.762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-------------------------------+------------+----------+
-|      |RTL Partition                  |Replication |Instances |
-+------+-------------------------------+------------+----------+
-|1     |convmultCore__GB1              |           1|      4434|
-|2     |convmultCore__GB4              |           1|      5450|
-|3     |CNN_top_module__GC0            |           1|      2563|
-|4     |CNN_top_module_axi_cnn_0_0_GT1 |           1|     15648|
-|5     |CNN_top_module_axi_cnn_0_0_GT0 |           1|     31516|
-+------+-------------------------------+------------+----------+
++------+----------------------------------+------------+----------+
+|      |RTL Partition                     |Replication |Instances |
++------+----------------------------------+------------+----------+
+|1     |convmultCore__GCB1                |           1|      4144|
+|2     |convmultCore__GCB2                |           1|      4528|
+|3     |CNN_top_module__GC0               |           1|      2180|
+|4     |CNN_top_module_axi_cnn_0_0_GT0    |           1|     21958|
+|5     |CNN_top_module_axi_cnn_0_0_GT0__1 |           1|      2593|
+|6     |CNN_top_module_axi_cnn_0_0_GT1    |           1|     41653|
++------+----------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:02 ; elapsed = 00:04:36 . Memory (MB): peak = 2136.090 ; gain = 1835.676
+Finished Technology Mapping : Time (s): cpu = 00:10:06 ; elapsed = 00:11:14 . Memory (MB): peak = 2179.938 ; gain = 1878.762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-------------------------------+------------+----------+
-|      |RTL Partition                  |Replication |Instances |
-+------+-------------------------------+------------+----------+
-|1     |convmultCore__GB1              |           1|      2158|
-|2     |convmultCore__GB4              |           1|      3154|
-|3     |CNN_top_module__GC0            |           1|      1515|
-|4     |CNN_top_module_axi_cnn_0_0_GT1 |           1|      7237|
-|5     |CNN_top_module_axi_cnn_0_0_GT0 |           1|      9667|
-+------+-------------------------------+------------+----------+
++------+----------------------------------+------------+----------+
+|      |RTL Partition                     |Replication |Instances |
++------+----------------------------------+------------+----------+
+|1     |convmultCore__GCB1                |           1|      2154|
+|2     |convmultCore__GCB2                |           1|      2188|
+|3     |CNN_top_module__GC0               |           1|      1405|
+|4     |CNN_top_module_axi_cnn_0_0_GT0    |           1|      8223|
+|5     |CNN_top_module_axi_cnn_0_0_GT0__1 |           1|       867|
+|6     |CNN_top_module_axi_cnn_0_0_GT1    |           1|     15979|
++------+----------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -2832,14 +2866,11 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[2] because some of its loads are not in same hierarchy as its driver   
-INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[3] because some of its loads are not in same hierarchy as its driver   
-INFO: [Synth 8-5777] Ignored max_fanout on net m_axi_araddr[4] because some of its loads are not in same hierarchy as its driver   
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:05 ; elapsed = 00:04:39 . Memory (MB): peak = 2136.090 ; gain = 1835.676
+Finished IO Insertion : Time (s): cpu = 00:10:10 ; elapsed = 00:11:18 . Memory (MB): peak = 2179.938 ; gain = 1878.762
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2852,7 +2883,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:05 ; elapsed = 00:04:40 . Memory (MB): peak = 2136.090 ; gain = 1835.676
+Finished Renaming Generated Instances : Time (s): cpu = 00:10:10 ; elapsed = 00:11:19 . Memory (MB): peak = 2179.938 ; gain = 1878.762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2864,25 +2895,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:06 ; elapsed = 00:04:41 . Memory (MB): peak = 2136.090 ; gain = 1835.676
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:10:15 ; elapsed = 00:11:23 . Memory (MB): peak = 2179.938 ; gain = 1878.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:07 ; elapsed = 00:04:41 . Memory (MB): peak = 2136.090 ; gain = 1835.676
+Finished Renaming Generated Ports : Time (s): cpu = 00:10:15 ; elapsed = 00:11:23 . Memory (MB): peak = 2179.938 ; gain = 1878.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:07 ; elapsed = 00:04:41 . Memory (MB): peak = 2136.090 ; gain = 1835.676
+Finished Handling Custom Attributes : Time (s): cpu = 00:10:16 ; elapsed = 00:11:24 . Memory (MB): peak = 2179.938 ; gain = 1878.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:07 ; elapsed = 00:04:41 . Memory (MB): peak = 2136.090 ; gain = 1835.676
+Finished Renaming Generated Nets : Time (s): cpu = 00:10:16 ; elapsed = 00:11:24 . Memory (MB): peak = 2179.938 ; gain = 1878.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2892,8 +2923,10 @@ Dynamic Shift Register Report:
 +------------+----------------+--------+------------+--------+---------+--------+--------+--------+
 |Module Name | RTL Name       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
 +------------+----------------+--------+------------+--------+---------+--------+--------+--------+
-|dsrl        | memory_reg[31] | 34     | 34         | 0      | 34      | 0      | 0      | 0      | 
-|dsrl__1     | memory_reg[31] | 13     | 13         | 0      | 13      | 0      | 0      | 0      | 
+|dsrl        | memory_reg[3]  | 20     | 20         | 20     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | memory_reg[3]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | memory_reg[31] | 34     | 34         | 0      | 34      | 0      | 0      | 0      | 
+|dsrl__3     | memory_reg[31] | 13     | 13         | 0      | 13      | 0      | 0      | 0      | 
 +------------+----------------+--------+------------+--------+---------+--------+--------+--------+
 
 ---------------------------------------------------------------------------------
@@ -2915,222 +2948,224 @@ Report Cell Usage:
 +------+----------+------+
 |1     |BIBUF     |   130|
 |2     |BUFG      |     2|
-|3     |CARRY4    |   207|
-|4     |DSP48E1_1 |    64|
-|5     |LUT1      |   133|
-|6     |LUT2      |   462|
-|7     |LUT3      |  3825|
-|8     |LUT4      |   765|
-|9     |LUT5      |  1524|
-|10    |LUT6      |  6549|
-|11    |MUXF7     |  1510|
-|12    |MUXF8     |   676|
-|13    |PS7       |     1|
-|14    |SRL16     |     1|
-|15    |SRLC32E   |    47|
-|16    |FDR       |     8|
-|17    |FDRE      |  5637|
-|18    |FDSE      |    22|
+|3     |CARRY4    |   900|
+|4     |DSP48E1_1 |    46|
+|5     |DSP48E1_2 |    18|
+|6     |LUT1      |   141|
+|7     |LUT2      |  2177|
+|8     |LUT3      |  7077|
+|9     |LUT4      |  2810|
+|10    |LUT5      |  1778|
+|11    |LUT6      |  5860|
+|12    |MUXF7     |   983|
+|13    |MUXF8     |   140|
+|14    |PS7       |     1|
+|15    |SRL16     |     1|
+|16    |SRL16E    |    18|
+|17    |SRLC32E   |    47|
+|18    |FDR       |     8|
+|19    |FDRE      |  6215|
+|20    |FDSE      |    20|
 +------+----------+------+
 
 Report Instance Areas: 
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 |      |Instance                                           |Module                                                         |Cells |
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
-|1     |top                                                |                                                               | 21563|
-|2     |  CNN_top_module_i                                 |CNN_top_module                                                 | 21563|
-|3     |    axi_cnn_0                                      |CNN_top_module_axi_cnn_0_0                                     | 20024|
-|4     |      inst                                         |axi_cnn                                                        | 20023|
-|5     |        coreInstance                               |convmultCore                                                   | 14747|
-|6     |          multxPrime                               |multx                                                          | 11431|
-|7     |            mult0                                  |multiplier                                                     |   129|
-|8     |            mult1                                  |multiplier_68                                                  |   167|
-|9     |            mult10                                 |multiplier_69                                                  |   179|
-|10    |            mult11                                 |multiplier_70                                                  |   150|
-|11    |            mult12                                 |multiplier_71                                                  |   143|
-|12    |            mult13                                 |multiplier_72                                                  |   167|
-|13    |            mult14                                 |multiplier_73                                                  |   179|
-|14    |            mult15                                 |multiplier_74                                                  |   147|
-|15    |            mult16                                 |multiplier_75                                                  |    74|
-|16    |            mult17                                 |multiplier_76                                                  |    60|
-|17    |            mult18                                 |multiplier_77                                                  |    72|
-|18    |            mult19                                 |multiplier_78                                                  |    74|
-|19    |            mult2                                  |multiplier_79                                                  |   179|
-|20    |            mult20                                 |multiplier_80                                                  |    37|
-|21    |            mult21                                 |multiplier_81                                                  |    60|
-|22    |            mult22                                 |multiplier_82                                                  |    72|
-|23    |            mult23                                 |multiplier_83                                                  |    66|
-|24    |            mult24                                 |multiplier_84                                                  |    77|
-|25    |            mult25                                 |multiplier_85                                                  |   395|
-|26    |            mult26                                 |multiplier_86                                                  |   392|
-|27    |            mult27                                 |multiplier_87                                                  |   368|
-|28    |            mult28                                 |multiplier_88                                                  |   378|
-|29    |            mult29                                 |multiplier_89                                                  |   152|
-|30    |            mult3                                  |multiplier_90                                                  |   174|
-|31    |            mult30                                 |multiplier_91                                                  |   165|
-|32    |            mult31                                 |multiplier_92                                                  |   141|
-|33    |            mult32                                 |multiplier_93                                                  |    52|
-|34    |            mult33                                 |multiplier_94                                                  |   123|
-|35    |            mult34                                 |multiplier_95                                                  |   136|
-|36    |            mult35                                 |multiplier_96                                                  |   126|
-|37    |            mult36                                 |multiplier_97                                                  |   108|
-|38    |            mult37                                 |multiplier_98                                                  |   130|
-|39    |            mult38                                 |multiplier_99                                                  |   145|
-|40    |            mult39                                 |multiplier_100                                                 |    59|
-|41    |            mult4                                  |multiplier_101                                                 |   144|
-|42    |            mult40                                 |multiplier_102                                                 |   173|
-|43    |            mult41                                 |multiplier_103                                                 |   124|
-|44    |            mult42                                 |multiplier_104                                                 |   143|
-|45    |            mult43                                 |multiplier_105                                                 |   107|
-|46    |            mult44                                 |multiplier_106                                                 |   100|
-|47    |            mult45                                 |multiplier_107                                                 |   124|
-|48    |            mult46                                 |multiplier_108                                                 |   134|
-|49    |            mult47                                 |multiplier_109                                                 |   188|
-|50    |            mult48                                 |multiplier_110                                                 |    92|
-|51    |            mult49                                 |multiplier_111                                                 |    68|
-|52    |            mult5                                  |multiplier_112                                                 |   167|
-|53    |            mult50                                 |multiplier_113                                                 |    83|
-|54    |            mult51                                 |multiplier_114                                                 |    61|
-|55    |            mult52                                 |multiplier_115                                                 |    39|
-|56    |            mult53                                 |multiplier_116                                                 |    60|
-|57    |            mult54                                 |multiplier_117                                                 |    74|
-|58    |            mult55                                 |multiplier_118                                                 |    99|
-|59    |            mult56                                 |multiplier_119                                                 |   133|
-|60    |            mult57                                 |multiplier_120                                                 |   118|
-|61    |            mult58                                 |multiplier_121                                                 |   136|
-|62    |            mult59                                 |multiplier_122                                                 |   125|
-|63    |            mult6                                  |multiplier_123                                                 |   179|
-|64    |            mult60                                 |multiplier_124                                                 |    96|
-|65    |            mult61                                 |multiplier_125                                                 |    72|
-|66    |            mult62                                 |multiplier_126                                                 |    84|
-|67    |            mult63                                 |multiplier_127                                                 |    81|
-|68    |            mult7                                  |multiplier_128                                                 |   133|
-|69    |            mult8                                  |multiplier_129                                                 |   143|
-|70    |            mult9                                  |multiplier_130                                                 |   167|
-|71    |          outMult0                                 |mult2reg                                                       |    33|
-|72    |          outMult1                                 |mult2reg_5                                                     |   105|
-|73    |          outMult10                                |mult2reg_6                                                     |    33|
-|74    |          outMult11                                |mult2reg_7                                                     |    33|
-|75    |          outMult12                                |mult2reg_8                                                     |    33|
+|1     |top                                                |                                                               | 28372|
+|2     |  CNN_top_module_i                                 |CNN_top_module                                                 | 28372|
+|3     |    axi_cnn_0                                      |CNN_top_module_axi_cnn_0_0                                     | 26943|
+|4     |      inst                                         |axi_cnn                                                        | 26942|
+|5     |        coreInstance                               |convmultCore                                                   | 22739|
+|6     |          multxPrime                               |multx                                                          | 18344|
+|7     |            mult0                                  |multiplier                                                     |   263|
+|8     |            mult1                                  |multiplier_68                                                  |    63|
+|9     |            mult10                                 |multiplier_69                                                  |    88|
+|10    |            mult11                                 |multiplier_70                                                  |    55|
+|11    |            mult12                                 |multiplier_71                                                  |    88|
+|12    |            mult13                                 |multiplier_72                                                  |   125|
+|13    |            mult14                                 |multiplier_73                                                  |   155|
+|14    |            mult15                                 |multiplier_74                                                  |   346|
+|15    |            mult16                                 |multiplier_75                                                  |   110|
+|16    |            mult17                                 |multiplier_76                                                  |    74|
+|17    |            mult18                                 |multiplier_77                                                  |    75|
+|18    |            mult19                                 |multiplier_78                                                  |    85|
+|19    |            mult2                                  |multiplier_79                                                  |   386|
+|20    |            mult20                                 |multiplier_80                                                  |    74|
+|21    |            mult21                                 |multiplier_81                                                  |   173|
+|22    |            mult22                                 |multiplier_82                                                  |   142|
+|23    |            mult23                                 |multiplier_83                                                  |   429|
+|24    |            mult24                                 |multiplier_84                                                  |   106|
+|25    |            mult25                                 |multiplier_85                                                  |    98|
+|26    |            mult26                                 |multiplier_86                                                  |    98|
+|27    |            mult27                                 |multiplier_87                                                  |   431|
+|28    |            mult28                                 |multiplier_88                                                  |    99|
+|29    |            mult29                                 |multiplier_89                                                  |   456|
+|30    |            mult3                                  |multiplier_90                                                  |   127|
+|31    |            mult30                                 |multiplier_91                                                  |   442|
+|32    |            mult31                                 |multiplier_92                                                  |    36|
+|33    |            mult32                                 |multiplier_93                                                  |   345|
+|34    |            mult33                                 |multiplier_94                                                  |    80|
+|35    |            mult34                                 |multiplier_95                                                  |   606|
+|36    |            mult35                                 |multiplier_96                                                  |   102|
+|37    |            mult36                                 |multiplier_97                                                  |   527|
+|38    |            mult37                                 |multiplier_98                                                  |    77|
+|39    |            mult38                                 |multiplier_99                                                  |   289|
+|40    |            mult39                                 |multiplier_100                                                 |   104|
+|41    |            mult4                                  |multiplier_101                                                 |   405|
+|42    |            mult40                                 |multiplier_102                                                 |   347|
+|43    |            mult41                                 |multiplier_103                                                 |    57|
+|44    |            mult42                                 |multiplier_104                                                 |   282|
+|45    |            mult43                                 |multiplier_105                                                 |    77|
+|46    |            mult44                                 |multiplier_106                                                 |   299|
+|47    |            mult45                                 |multiplier_107                                                 |   110|
+|48    |            mult46                                 |multiplier_108                                                 |   318|
+|49    |            mult47                                 |multiplier_109                                                 |    36|
+|50    |            mult48                                 |multiplier_110                                                 |   388|
+|51    |            mult49                                 |multiplier_111                                                 |   107|
+|52    |            mult5                                  |multiplier_112                                                 |    37|
+|53    |            mult50                                 |multiplier_113                                                 |   211|
+|54    |            mult51                                 |multiplier_114                                                 |   370|
+|55    |            mult52                                 |multiplier_115                                                 |   329|
+|56    |            mult53                                 |multiplier_116                                                 |   382|
+|57    |            mult54                                 |multiplier_117                                                 |   324|
+|58    |            mult55                                 |multiplier_118                                                 |    19|
+|59    |            mult56                                 |multiplier_119                                                 |   425|
+|60    |            mult57                                 |multiplier_120                                                 |   172|
+|61    |            mult58                                 |multiplier_121                                                 |   318|
+|62    |            mult59                                 |multiplier_122                                                 |   104|
+|63    |            mult6                                  |multiplier_123                                                 |   245|
+|64    |            mult60                                 |multiplier_124                                                 |   382|
+|65    |            mult61                                 |multiplier_125                                                 |    53|
+|66    |            mult62                                 |multiplier_126                                                 |   226|
+|67    |            mult63                                 |multiplier_127                                                 |   240|
+|68    |            mult7                                  |multiplier_128                                                 |    68|
+|69    |            mult8                                  |multiplier_129                                                 |   186|
+|70    |            mult9                                  |multiplier_130                                                 |    85|
+|71    |          outMult0                                 |mult2reg                                                       |   107|
+|72    |          outMult1                                 |mult2reg_5                                                     |   107|
+|73    |          outMult10                                |mult2reg_6                                                     |    65|
+|74    |          outMult11                                |mult2reg_7                                                     |    65|
+|75    |          outMult12                                |mult2reg_8                                                     |    65|
 |76    |          outMult13                                |mult2reg_9                                                     |    65|
-|77    |          outMult14                                |mult2reg_10                                                    |    33|
-|78    |          outMult15                                |mult2reg_11                                                    |    33|
-|79    |          outMult16                                |mult2reg_12                                                    |    33|
-|80    |          outMult17                                |mult2reg_13                                                    |   129|
-|81    |          outMult18                                |mult2reg_14                                                    |    33|
-|82    |          outMult19                                |mult2reg_15                                                    |    33|
-|83    |          outMult2                                 |mult2reg_16                                                    |    33|
-|84    |          outMult20                                |mult2reg_17                                                    |    33|
-|85    |          outMult21                                |mult2reg_18                                                    |    65|
-|86    |          outMult22                                |mult2reg_19                                                    |    33|
-|87    |          outMult23                                |mult2reg_20                                                    |    33|
-|88    |          outMult24                                |mult2reg_21                                                    |    33|
-|89    |          outMult25                                |mult2reg_22                                                    |    97|
-|90    |          outMult26                                |mult2reg_23                                                    |    33|
-|91    |          outMult27                                |mult2reg_24                                                    |    33|
-|92    |          outMult28                                |mult2reg_25                                                    |    33|
-|93    |          outMult29                                |mult2reg_26                                                    |    65|
-|94    |          outMult3                                 |mult2reg_27                                                    |    33|
-|95    |          outMult30                                |mult2reg_28                                                    |    33|
-|96    |          outMult31                                |mult2reg_29                                                    |    33|
-|97    |          outMult32                                |mult2reg_30                                                    |    33|
-|98    |          outMult33                                |mult2reg_31                                                    |   129|
-|99    |          outMult34                                |mult2reg_32                                                    |    33|
-|100   |          outMult35                                |mult2reg_33                                                    |    33|
-|101   |          outMult36                                |mult2reg_34                                                    |    33|
-|102   |          outMult37                                |mult2reg_35                                                    |    65|
-|103   |          outMult38                                |mult2reg_36                                                    |    33|
-|104   |          outMult39                                |mult2reg_37                                                    |    33|
-|105   |          outMult4                                 |mult2reg_38                                                    |    33|
-|106   |          outMult40                                |mult2reg_39                                                    |    33|
-|107   |          outMult41                                |mult2reg_40                                                    |    97|
-|108   |          outMult42                                |mult2reg_41                                                    |    33|
-|109   |          outMult43                                |mult2reg_42                                                    |    33|
-|110   |          outMult44                                |mult2reg_43                                                    |    33|
-|111   |          outMult45                                |mult2reg_44                                                    |    65|
-|112   |          outMult46                                |mult2reg_45                                                    |    33|
-|113   |          outMult47                                |mult2reg_46                                                    |    33|
-|114   |          outMult48                                |mult2reg_47                                                    |    33|
-|115   |          outMult49                                |mult2reg_48                                                    |   129|
-|116   |          outMult5                                 |mult2reg_49                                                    |   107|
-|117   |          outMult50                                |mult2reg_50                                                    |    33|
-|118   |          outMult51                                |mult2reg_51                                                    |    33|
-|119   |          outMult52                                |mult2reg_52                                                    |    33|
-|120   |          outMult53                                |mult2reg_53                                                    |    65|
-|121   |          outMult54                                |mult2reg_54                                                    |    33|
-|122   |          outMult55                                |mult2reg_55                                                    |    33|
-|123   |          outMult56                                |mult2reg_56                                                    |    33|
-|124   |          outMult57                                |mult2reg_57                                                    |    97|
-|125   |          outMult58                                |mult2reg_58                                                    |    33|
-|126   |          outMult59                                |mult2reg_59                                                    |    33|
-|127   |          outMult6                                 |mult2reg_60                                                    |    33|
-|128   |          outMult60                                |mult2reg_61                                                    |    33|
-|129   |          outMult61                                |mult2reg_62                                                    |    66|
-|130   |          outMult62                                |mult2reg_63                                                    |    34|
-|131   |          outMult63                                |mult2reg_64                                                    |   116|
-|132   |          outMult7                                 |mult2reg_65                                                    |    33|
-|133   |          outMult8                                 |mult2reg_66                                                    |    33|
-|134   |          outMult9                                 |mult2reg_67                                                    |    97|
+|77    |          outMult14                                |mult2reg_10                                                    |    87|
+|78    |          outMult15                                |mult2reg_11                                                    |    87|
+|79    |          outMult16                                |mult2reg_12                                                    |    69|
+|80    |          outMult17                                |mult2reg_13                                                    |    69|
+|81    |          outMult18                                |mult2reg_14                                                    |    69|
+|82    |          outMult19                                |mult2reg_15                                                    |    69|
+|83    |          outMult2                                 |mult2reg_16                                                    |    79|
+|84    |          outMult20                                |mult2reg_17                                                    |    69|
+|85    |          outMult21                                |mult2reg_18                                                    |    69|
+|86    |          outMult22                                |mult2reg_19                                                    |    69|
+|87    |          outMult23                                |mult2reg_20                                                    |    69|
+|88    |          outMult24                                |mult2reg_21                                                    |    69|
+|89    |          outMult25                                |mult2reg_22                                                    |    69|
+|90    |          outMult26                                |mult2reg_23                                                    |    69|
+|91    |          outMult27                                |mult2reg_24                                                    |    70|
+|92    |          outMult28                                |mult2reg_25                                                    |    70|
+|93    |          outMult29                                |mult2reg_26                                                    |    69|
+|94    |          outMult3                                 |mult2reg_27                                                    |    79|
+|95    |          outMult30                                |mult2reg_28                                                    |    97|
+|96    |          outMult31                                |mult2reg_29                                                    |    97|
+|97    |          outMult32                                |mult2reg_30                                                    |    51|
+|98    |          outMult33                                |mult2reg_31                                                    |    51|
+|99    |          outMult34                                |mult2reg_32                                                    |    51|
+|100   |          outMult35                                |mult2reg_33                                                    |    51|
+|101   |          outMult36                                |mult2reg_34                                                    |    51|
+|102   |          outMult37                                |mult2reg_35                                                    |    51|
+|103   |          outMult38                                |mult2reg_36                                                    |    51|
+|104   |          outMult39                                |mult2reg_37                                                    |    51|
+|105   |          outMult4                                 |mult2reg_38                                                    |    79|
+|106   |          outMult40                                |mult2reg_39                                                    |    51|
+|107   |          outMult41                                |mult2reg_40                                                    |    51|
+|108   |          outMult42                                |mult2reg_41                                                    |    51|
+|109   |          outMult43                                |mult2reg_42                                                    |    51|
+|110   |          outMult44                                |mult2reg_43                                                    |    51|
+|111   |          outMult45                                |mult2reg_44                                                    |    51|
+|112   |          outMult46                                |mult2reg_45                                                    |    51|
+|113   |          outMult47                                |mult2reg_46                                                    |    51|
+|114   |          outMult48                                |mult2reg_47                                                    |    51|
+|115   |          outMult49                                |mult2reg_48                                                    |    51|
+|116   |          outMult5                                 |mult2reg_49                                                    |    79|
+|117   |          outMult50                                |mult2reg_50                                                    |    51|
+|118   |          outMult51                                |mult2reg_51                                                    |    51|
+|119   |          outMult52                                |mult2reg_52                                                    |    51|
+|120   |          outMult53                                |mult2reg_53                                                    |    51|
+|121   |          outMult54                                |mult2reg_54                                                    |    83|
+|122   |          outMult55                                |mult2reg_55                                                    |    83|
+|123   |          outMult56                                |mult2reg_56                                                    |    69|
+|124   |          outMult57                                |mult2reg_57                                                    |    69|
+|125   |          outMult58                                |mult2reg_58                                                    |    51|
+|126   |          outMult59                                |mult2reg_59                                                    |    51|
+|127   |          outMult6                                 |mult2reg_60                                                    |    66|
+|128   |          outMult60                                |mult2reg_61                                                    |    51|
+|129   |          outMult61                                |mult2reg_62                                                    |    51|
+|130   |          outMult62                                |mult2reg_63                                                    |    84|
+|131   |          outMult63                                |mult2reg_64                                                    |    65|
+|132   |          outMult7                                 |mult2reg_65                                                    |    65|
+|133   |          outMult8                                 |mult2reg_66                                                    |    65|
+|134   |          outMult9                                 |mult2reg_67                                                    |    65|
 |135   |    processing_system7_0                           |CNN_top_module_processing_system7_0_0                          |   244|
 |136   |      inst                                         |processing_system7_v5_5_processing_system7                     |   244|
-|137   |    ps7_0_axi_periph                               |CNN_top_module_ps7_0_axi_periph_0                              |  1225|
-|138   |      s00_couplers                                 |s00_couplers_imp_1P3FK6S                                       |  1225|
-|139   |        auto_pc                                    |CNN_top_module_auto_pc_0                                       |  1225|
-|140   |          inst                                     |axi_protocol_converter_v2_1_18_axi_protocol_converter          |  1225|
-|141   |            \gen_axilite.gen_b2s_conv.axilite_b2s  |axi_protocol_converter_v2_1_18_b2s                             |  1225|
-|142   |              \RD.ar_channel_0                     |axi_protocol_converter_v2_1_18_b2s_ar_channel                  |   176|
-|143   |                ar_cmd_fsm_0                       |axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm                  |    15|
-|144   |                cmd_translator_0                   |axi_protocol_converter_v2_1_18_b2s_cmd_translator_2            |   149|
-|145   |                  incr_cmd_0                       |axi_protocol_converter_v2_1_18_b2s_incr_cmd_3                  |    68|
-|146   |                  wrap_cmd_0                       |axi_protocol_converter_v2_1_18_b2s_wrap_cmd_4                  |    73|
-|147   |              \RD.r_channel_0                      |axi_protocol_converter_v2_1_18_b2s_r_channel                   |    96|
-|148   |                rd_data_fifo_0                     |axi_protocol_converter_v2_1_18_b2s_simple_fifo__parameterized1 |    55|
-|149   |                transaction_fifo_0                 |axi_protocol_converter_v2_1_18_b2s_simple_fifo__parameterized2 |    27|
-|150   |              SI_REG                               |axi_register_slice_v2_1_18_axi_register_slice                  |   630|
-|151   |                \ar.ar_pipe                        |axi_register_slice_v2_1_18_axic_register_slice                 |   225|
-|152   |                \aw.aw_pipe                        |axi_register_slice_v2_1_18_axic_register_slice_1               |   220|
-|153   |                \b.b_pipe                          |axi_register_slice_v2_1_18_axic_register_slice__parameterized1 |    36|
-|154   |                \r.r_pipe                          |axi_register_slice_v2_1_18_axic_register_slice__parameterized2 |   149|
-|155   |              \WR.aw_channel_0                     |axi_protocol_converter_v2_1_18_b2s_aw_channel                  |   175|
-|156   |                aw_cmd_fsm_0                       |axi_protocol_converter_v2_1_18_b2s_wr_cmd_fsm                  |    31|
-|157   |                cmd_translator_0                   |axi_protocol_converter_v2_1_18_b2s_cmd_translator              |   128|
-|158   |                  incr_cmd_0                       |axi_protocol_converter_v2_1_18_b2s_incr_cmd                    |    63|
-|159   |                  wrap_cmd_0                       |axi_protocol_converter_v2_1_18_b2s_wrap_cmd                    |    61|
-|160   |              \WR.b_channel_0                      |axi_protocol_converter_v2_1_18_b2s_b_channel                   |   147|
-|161   |                bid_fifo_0                         |axi_protocol_converter_v2_1_18_b2s_simple_fifo                 |   102|
-|162   |                bresp_fifo_0                       |axi_protocol_converter_v2_1_18_b2s_simple_fifo__parameterized0 |    21|
-|163   |    rst_ps7_0_50M                                  |CNN_top_module_rst_ps7_0_50M_0                                 |    70|
-|164   |      U0                                           |proc_sys_reset                                                 |    70|
+|137   |    ps7_0_axi_periph                               |CNN_top_module_ps7_0_axi_periph_0                              |  1119|
+|138   |      s00_couplers                                 |s00_couplers_imp_1P3FK6S                                       |  1119|
+|139   |        auto_pc                                    |CNN_top_module_auto_pc_0                                       |  1119|
+|140   |          inst                                     |axi_protocol_converter_v2_1_18_axi_protocol_converter          |  1119|
+|141   |            \gen_axilite.gen_b2s_conv.axilite_b2s  |axi_protocol_converter_v2_1_18_b2s                             |  1119|
+|142   |              \RD.ar_channel_0                     |axi_protocol_converter_v2_1_18_b2s_ar_channel                  |   178|
+|143   |                ar_cmd_fsm_0                       |axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm                  |    14|
+|144   |                cmd_translator_0                   |axi_protocol_converter_v2_1_18_b2s_cmd_translator_2            |   152|
+|145   |                  incr_cmd_0                       |axi_protocol_converter_v2_1_18_b2s_incr_cmd_3                  |    48|
+|146   |                  wrap_cmd_0                       |axi_protocol_converter_v2_1_18_b2s_wrap_cmd_4                  |    99|
+|147   |              \RD.r_channel_0                      |axi_protocol_converter_v2_1_18_b2s_r_channel                   |    92|
+|148   |                rd_data_fifo_0                     |axi_protocol_converter_v2_1_18_b2s_simple_fifo__parameterized1 |    52|
+|149   |                transaction_fifo_0                 |axi_protocol_converter_v2_1_18_b2s_simple_fifo__parameterized2 |    26|
+|150   |              SI_REG                               |axi_register_slice_v2_1_18_axi_register_slice                  |   604|
+|151   |                \ar.ar_pipe                        |axi_register_slice_v2_1_18_axic_register_slice                 |   206|
+|152   |                \aw.aw_pipe                        |axi_register_slice_v2_1_18_axic_register_slice_1               |   205|
+|153   |                \b.b_pipe                          |axi_register_slice_v2_1_18_axic_register_slice__parameterized1 |    47|
+|154   |                \r.r_pipe                          |axi_register_slice_v2_1_18_axic_register_slice__parameterized2 |   146|
+|155   |              \WR.aw_channel_0                     |axi_protocol_converter_v2_1_18_b2s_aw_channel                  |   184|
+|156   |                aw_cmd_fsm_0                       |axi_protocol_converter_v2_1_18_b2s_wr_cmd_fsm                  |    20|
+|157   |                cmd_translator_0                   |axi_protocol_converter_v2_1_18_b2s_cmd_translator              |   148|
+|158   |                  incr_cmd_0                       |axi_protocol_converter_v2_1_18_b2s_incr_cmd                    |    47|
+|159   |                  wrap_cmd_0                       |axi_protocol_converter_v2_1_18_b2s_wrap_cmd                    |    97|
+|160   |              \WR.b_channel_0                      |axi_protocol_converter_v2_1_18_b2s_b_channel                   |    60|
+|161   |                bid_fifo_0                         |axi_protocol_converter_v2_1_18_b2s_simple_fifo                 |    28|
+|162   |                bresp_fifo_0                       |axi_protocol_converter_v2_1_18_b2s_simple_fifo__parameterized0 |     9|
+|163   |    rst_ps7_0_50M                                  |CNN_top_module_rst_ps7_0_50M_0                                 |    66|
+|164   |      U0                                           |proc_sys_reset                                                 |    66|
 |165   |        EXT_LPF                                    |lpf                                                            |    23|
-|166   |          \ACTIVE_LOW_AUX.ACT_LO_AUX               |cdc_sync                                                       |     6|
-|167   |          \ACTIVE_LOW_EXT.ACT_LO_EXT               |cdc_sync_0                                                     |     6|
-|168   |        SEQ                                        |sequence_psr                                                   |    42|
+|166   |          \ACTIVE_LOW_AUX.ACT_LO_AUX               |cdc_sync                                                       |     5|
+|167   |          \ACTIVE_LOW_EXT.ACT_LO_EXT               |cdc_sync_0                                                     |     5|
+|168   |        SEQ                                        |sequence_psr                                                   |    38|
 |169   |          SEQ_COUNTER                              |upcnt_n                                                        |    13|
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:07 ; elapsed = 00:04:41 . Memory (MB): peak = 2136.090 ; gain = 1835.676
+Finished Writing Synthesis Report : Time (s): cpu = 00:10:16 ; elapsed = 00:11:24 . Memory (MB): peak = 2179.938 ; gain = 1878.762
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:02 ; elapsed = 00:04:28 . Memory (MB): peak = 2136.090 ; gain = 1497.543
-Synthesis Optimization Complete : Time (s): cpu = 00:04:07 ; elapsed = 00:04:46 . Memory (MB): peak = 2136.090 ; gain = 1835.676
+Synthesis Optimization Runtime : Time (s): cpu = 00:09:12 ; elapsed = 00:11:11 . Memory (MB): peak = 2179.938 ; gain = 1529.875
+Synthesis Optimization Complete : Time (s): cpu = 00:10:16 ; elapsed = 00:11:25 . Memory (MB): peak = 2179.938 ; gain = 1878.762
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 2466 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 2096 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2136.090 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2179.938 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-178 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+172 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:13 ; elapsed = 00:04:54 . Memory (MB): peak = 2136.090 ; gain = 1842.977
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2136.090 ; gain = 0.000
+synth_design: Time (s): cpu = 00:10:23 ; elapsed = 00:11:32 . Memory (MB): peak = 2179.938 ; gain = 1886.063
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2179.938 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'B:/Dokumen/CNN_HW/CNN_HW.runs/synth_1/CNN_top_module_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CNN_top_module_wrapper_utilization_synth.rpt -pb CNN_top_module_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 26 14:43:18 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat May  4 15:52:39 2019...
