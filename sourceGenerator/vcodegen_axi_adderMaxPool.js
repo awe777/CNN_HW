@@ -95,8 +95,8 @@ function generate(v, r, softwareControl = true) {
     bodyPrint(`// reg${v * v + 1} to reg${2 * v * (v - 1) + 1} will be weight data input`)
     // change to dynamic and change data length, if required
     for(dataReg = 0; dataReg < 2 * (v * v - v + 1); dataReg++) {
-        bodyPrint(`reg [${dataLength - 1}:0] reg${dataReg};`)
-        dataReg < v * v ? bodyPrint(`wire [${2 * dataLength - 1}:0] output${dataReg};`) : null;
+        bodyPrint(`reg${dataReg ? " signed" : ""} [${dataLength - 1}:0] reg${dataReg};`)
+        dataReg < v * v ? bodyPrint(`wire signed [${2 * dataLength - 1}:0] output${dataReg};`) : null;
     }
     // end dynamic change
     bodyPrint(`// ### AXI write ###########################################################`);
@@ -241,15 +241,15 @@ function generate(v, r, softwareControl = true) {
     let ioList = ""
     for(o = 0; o < v * v; o++) {
         opening = opening + `in${o}, wg${o}, out${o}, `
-        ioList = ioList + `input [${dataLength - 1}:0] in${o};` + "\n" + `input [${dataLength - 1}:0] wg${o};` + "\n" + `output [${2 * dataLength - 1}:0] out${o};` + "\n"
+        ioList = ioList + `input signed [${dataLength - 1}:0] in${o};` + "\n" + `input signed [${dataLength - 1}:0] wg${o};` + "\n" + `output signed [${2 * dataLength - 1}:0] out${o};` + "\n"
     }
     bodyPrint(opening + `enabler, adderMode, masterClock, masterReset);`)
     
     bodyPrint(ioList + `input masterClock;` + "\n" + `input masterReset;` + "\n" + `input enabler, adderMode;` + "\n" + `wire processedClock = enabler && masterClock;`)
     for(iny = 0; iny < v * v; iny++){
-        bodyPrint(`reg [${dataLength - 1}:0] multxInput${iny};`)
+        bodyPrint(`reg signed [${dataLength - 1}:0] multxInput${iny};`)
     }
-    bodyPrint(`wire [${2 * dataLength - 1}:0] outTemp;`)
+    bodyPrint(`wire signed [${2 * dataLength - 1}:0] outTemp;`)
     bodyPrint(`reg [${ceilLog2(v * v)}:0] counter;`)
     const workspace = new Array(v * v);
     for(i = 0; i < workspace.length; i++) {
@@ -310,7 +310,7 @@ function generate(v, r, softwareControl = true) {
         for(currentCase = 0; currentCase < v * v; currentCase++) {
             bodyPrint(`         ${currentCase}: multxInput${currentMultiplexer} = ${output[currentMultiplexer][currentCase]};`)
         }
-        bodyPrint(`         default: multxInput${currentMultiplexer} = ${dataLength}'b0;`)
+        bodyPrint(`         default: multxInput${currentMultiplexer} = ${dataLength}'sb0;`)
         bodyPrint(`      endcase`)
         bodyPrint(`   end`)
     }
@@ -331,8 +331,8 @@ function generate(v, r, softwareControl = true) {
     bodyPrint(opening2 + `adderMode, out, clk, rst);`)
     bodyPrint(`input adderMode;`)
     for(n = 0; n < v * v; n++) {
-        bodyPrint(`input  [${dataLength - 1}:0]     d${n};`)
-        bodyPrint(`input  [${dataLength - 1}:0]     i${n};`)
+        bodyPrint(`input signed  [${dataLength - 1}:0]     d${n};`)
+        bodyPrint(`input signed  [${dataLength - 1}:0]     i${n};`)
         bodyPrint(`wire signed [${2 * dataLength - 1}:0]     w${n};`)
         bodyPrint(`multiplier mult${n} (.in0(d${n}), .in1(i${n}), .out(w${n}));`)
         bodyPrint(`reg signed [${2 * dataLength - 1}:0]     w0_${n};`)
@@ -386,14 +386,14 @@ function generate(v, r, softwareControl = true) {
     bodyPrint(`endmodule`)
     
     bodyPrint(`module multiplier(in0, in1, out);`)
-    bodyPrint(`input [${dataLength - 1}:0] in0, in1;`)
+    bodyPrint(`input signed [${dataLength - 1}:0] in0, in1;`)
     bodyPrint(`wire signed [${2 * dataLength - 1}:0] outMem = in0 * in1;`)
-    bodyPrint(`output [${2 * dataLength - 1}:0] out;`)
+    bodyPrint(`output signed [${2 * dataLength - 1}:0] out;`)
     bodyPrint(`assign out = outMem;`)
     bodyPrint(`endmodule`)
 
     bodyPrint(`module mult2reg(in0, in1, sel, out, clk, rst);`)
-    bodyPrint(`input [${2 * dataLength - 1}:0] in0, in1;`)
+    bodyPrint(`input signed [${2 * dataLength - 1}:0] in0, in1;`)
     bodyPrint(`input sel, clk, rst;`)
     bodyPrint(`reg signed [${2 * dataLength - 1}:0] outq;`)
     bodyPrint(`output [${2 * dataLength - 1}:0] out;`)
