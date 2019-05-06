@@ -9,6 +9,13 @@
   "B:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/clk_vip_if.sv" \
   "B:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
+-makelib ies_lib/xil_defaultlib -sv \
+  "B:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "B:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+-endlib
+-makelib ies_lib/xpm \
+  "B:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
+-endlib
 -makelib ies_lib/axi_infrastructure_v1_1_0 \
   "../../../../CNN_HW.srcs/sources_1/bd/CNN_top_module/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 -endlib

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat May  4 19:52:27 2019
+| Date         : Mon May  6 21:43:16 2019
 | Host         : DESKTOP-I4SG0E1 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file CNN_top_module_wrapper_clock_utilization_routed.rpt
 | Design       : CNN_top_module_wrapper
@@ -47,8 +47,8 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+------------+--------------------------------------------------------------------------------+--------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock      | Driver Pin                                                                     | Net                                                    |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+------------+--------------------------------------------------------------------------------+--------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 4 |        3462 |               0 |       14.999 | clk_fpga_0 | CNN_top_module_i/axi_cnn_0/outMem_i_1__62/O                                    | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y15 | n/a          |                 4 |        2847 |               1 |       14.999 | clk_fpga_0 | CNN_top_module_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0   |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 4 |        2832 |               0 |       13.750 | clk_fpga_0 | CNN_top_module_i/axi_cnn_0/outMem_i_1__62/O                                    | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y15 | n/a          |                 4 |        2828 |               1 |       13.750 | clk_fpga_0 | CNN_top_module_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0   |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+------------+--------------------------------------------------------------------------------+--------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -60,8 +60,8 @@ Table of Contents
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+-------------------------------------------------------------+-------------------------------------------------------------------+
 | Source Id | Global Id | Driver Type/Pin | Constraint | Site         | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin                                                  | Net                                                               |
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+-------------------------------------------------------------+-------------------------------------------------------------------+
-| src0      | g0        | LUT2/O          | None       | SLICE_X23Y48 | X1Y0         |           1 |               0 |              14.999 | clk_fpga_0   | CNN_top_module_i/axi_cnn_0/inst/outMem_i_20__34/O           | CNN_top_module_i/axi_cnn_0/inst/reg0_reg[0]_0                     |
-| src1      | g1        | PS7/FCLKCLK[0]  | PS7_X0Y0   | PS7_X0Y0     | X0Y1         |           1 |               0 |              14.999 | clk_fpga_0   | CNN_top_module_i/processing_system7_0/inst/PS7_i/FCLKCLK[0] | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |
+| src0      | g0        | LUT2/O          | None       | SLICE_X21Y49 | X0Y0         |           1 |               0 |              13.750 | clk_fpga_0   | CNN_top_module_i/axi_cnn_0/inst/outMem_i_20__23/O           | CNN_top_module_i/axi_cnn_0/inst/reg0_reg[0]_0                     |
+| src1      | g1        | PS7/FCLKCLK[0]  | PS7_X0Y0   | PS7_X0Y0     | X0Y1         |           1 |               0 |              13.750 | clk_fpga_0   | CNN_top_module_i/processing_system7_0/inst/PS7_i/FCLKCLK[0] | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+-------------------------------------------------------------+-------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -75,10 +75,10 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1950 |  1100 |  723 |   400 |    0 |    20 |    0 |    10 |   19 |    20 |
-| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1747 |  1100 |  565 |   350 |    0 |    40 |    0 |    20 |   14 |    20 |
-| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1425 |  1100 |  519 |   400 |    0 |    20 |    0 |    10 |   15 |    20 |
-| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1060 |  1100 |  340 |   350 |    0 |    40 |    0 |    20 |   16 |    20 |
+| X0Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1896 |  1100 |  680 |   400 |    0 |    20 |    0 |    10 |   17 |    20 |
+| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1494 |  1100 |  484 |   350 |    0 |    40 |    0 |    20 |   17 |    20 |
+| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1418 |  1100 |  505 |   400 |    0 |    20 |    0 |    10 |   14 |    20 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  725 |  1100 |  227 |   350 |    0 |    40 |    0 |    20 |   16 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -101,7 +101,7 @@ All Modules
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                    |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------+
-| g0        | BUFG/O          | n/a               | clk_fpga_0 |      14.999 | {0.000 7.499} |        3462 |        0 |              0 |        0 | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
+| g0        | BUFG/O          | n/a               | clk_fpga_0 |      13.750 | {0.000 6.875} |        2832 |        0 |              0 |        0 | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -109,12 +109,12 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-------+-------+
-|    | X0    | X1    |
-+----+-------+-------+
-| Y1 |   747 |   430 |
-| Y0 |  1059 |  1226 |
-+----+-------+-------+
++----+-------+------+
+|    | X0    | X1   |
++----+-------+------+
+| Y1 |   757 |  253 |
+| Y0 |  1019 |  803 |
++----+-------+------+
 
 
 7. Device Cell Placement Summary for Global Clock g1
@@ -123,7 +123,7 @@ All Modules
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                  |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------+
-| g1        | BUFG/O          | n/a               | clk_fpga_0 |      14.999 | {0.000 7.499} |        2848 |        0 |              0 |        0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | BUFG/O          | n/a               | clk_fpga_0 |      13.750 | {0.000 6.875} |        2829 |        0 |              0 |        0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0 |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -134,8 +134,8 @@ All Modules
 +----+------+------+
 |    | X0   | X1   |
 +----+------+------+
-| Y1 |  705 |  646 |
-| Y0 |  961 |  536 |
+| Y1 |  688 |  488 |
+| Y0 |  944 |  709 |
 +----+------+------+
 
 
@@ -145,8 +145,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                    |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1059 |               0 | 1045 |      0 |    0 |  14 |  0 |    0 |   0 |       0 | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
-| g1        | n/a   | BUFG/O          | None       |         961 |               0 |  905 |     51 |    0 |   5 |  0 |    0 |   0 |       0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0   |
+| g0        | n/a   | BUFG/O          | None       |        1019 |               0 | 1002 |      0 |    0 |  17 |  0 |    0 |   0 |       0 | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
+| g1        | n/a   | BUFG/O          | None       |         943 |               1 |  894 |     49 |    0 |   0 |  0 |    0 |   0 |       0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0   |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -156,12 +156,12 @@ All Modules
 9. Clock Region Cell Placement per Global Clock: Region X1Y0
 ------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                    |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1226 |               0 | 1223 |      0 |    0 |   3 |  0 |    0 |   0 |       0 | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
-| g1        | n/a   | BUFG/O          | None       |         535 |               1 |  524 |      0 |    0 |  11 |  0 |    0 |   0 |       0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0   |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                    |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         803 |               0 | 786 |      0 |    0 |  17 |  0 |    0 |   0 |       0 | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
+| g1        | n/a   | BUFG/O          | None       |         709 |               0 | 708 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0   |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -173,8 +173,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                    |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         747 |               0 | 732 |      0 |    0 |  15 |  0 |    0 |   0 |       0 | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
-| g1        | n/a   | BUFG/O          | None       |         705 |               0 | 693 |     11 |    0 |   0 |  0 |    0 |   0 |       0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0   |
+| g0        | n/a   | BUFG/O          | None       |         757 |               0 | 743 |      0 |    0 |  14 |  0 |    0 |   0 |       0 | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
+| g1        | n/a   | BUFG/O          | None       |         688 |               0 | 675 |     12 |    0 |   0 |  0 |    0 |   0 |       0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0   |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -187,8 +187,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                    |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         430 |               0 | 416 |      0 |    0 |  14 |  0 |    0 |   0 |       0 | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
-| g1        | n/a   | BUFG/O          | None       |         646 |               0 | 644 |      0 |    0 |   2 |  0 |    0 |   0 |       0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0   |
+| g0        | n/a   | BUFG/O          | None       |         253 |               0 | 237 |      0 |    0 |  16 |  0 |    0 |   0 |       0 | CNN_top_module_i/axi_cnn_0/coreInstance/processedClock |
+| g1        | n/a   | BUFG/O          | None       |         488 |               0 | 488 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | CNN_top_module_i/processing_system7_0/inst/FCLK_CLK0   |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)

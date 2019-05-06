@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat May  4 18:53:06 2019
+| Date         : Mon May  6 21:30:24 2019
 | Host         : DESKTOP-I4SG0E1 running 64-bit major release  (build 9200)
 | Command      : report_drc -file CNN_top_module_wrapper_drc_opted.rpt -pb CNN_top_module_wrapper_drc_opted.pb -rpx CNN_top_module_wrapper_drc_opted.rpx
 | Design       : CNN_top_module_wrapper
@@ -24,15 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 226
-+---------+----------+-----------------------------+------------+
-| Rule    | Severity | Description                 | Violations |
-+---------+----------+-----------------------------+------------+
-| DPIP-1  | Warning  | Input pipelining            | 126        |
-| DPOP-1  | Warning  | PREG Output pipelining      | 18         |
-| DPOP-2  | Warning  | MREG Output pipelining      | 64         |
-| DPREG-4 | Warning  | DSP48E1_PregDynOpmodeZmuxP: | 18         |
-+---------+----------+-----------------------------+------------+
+             Violations found: 177
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| DPIP-1 | Warning  | Input pipelining       | 113        |
+| DPOP-2 | Warning  | MREG Output pipelining | 64         |
++--------+----------+------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -48,27 +46,27 @@ Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult0/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult0/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult1/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult1/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult1/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult1/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult1/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult1/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#5 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult1/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult1/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult10/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult10/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#6 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult1/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult1/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult10/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult10/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#7 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult10/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult10/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult11/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult11/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#8 Warning
@@ -78,302 +76,302 @@ Related violations: <none>
 
 DPIP-1#9 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult12/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult12/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult12/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult12/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#10 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult13/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult13/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult12/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult12/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#11 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult14/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult14/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult13/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult13/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#12 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult15/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult15/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult13/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult13/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#13 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult16/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult16/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult14/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult14/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#14 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult17/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult17/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult14/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult14/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#15 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult18/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult18/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult15/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult15/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#16 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult19/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult19/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult16/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult16/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#17 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult2/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult2/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult16/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult16/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#18 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult2/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult2/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult17/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult17/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#19 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult2/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult2/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult17/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult17/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#20 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult20/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult20/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult18/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult18/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#21 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult21/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult21/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult18/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult18/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#22 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult22/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult22/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult19/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult19/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#23 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult23/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult23/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult19/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult19/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#24 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult24/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult24/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult2/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult2/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#25 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult25/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult25/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult2/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult2/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#26 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult26/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult26/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult20/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult20/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#27 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult27/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult27/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult20/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult20/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#28 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult27/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult27/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult21/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult21/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#29 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult27/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult27/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult21/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult21/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#30 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult28/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult28/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult22/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult22/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#31 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult29/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult29/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult22/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult22/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#32 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult29/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult29/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult23/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult23/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#33 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult29/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult29/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult24/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult24/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#34 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult3/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult3/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult24/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult24/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#35 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult3/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult3/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult25/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult25/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#36 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult3/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult3/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult25/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult25/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#37 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult30/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult30/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult26/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult26/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#38 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult30/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult30/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult26/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult26/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#39 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult30/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult30/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult27/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult27/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#40 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult31/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult31/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult27/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult27/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#41 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult32/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult32/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult28/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult28/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#42 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult32/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult32/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult28/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult28/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#43 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult32/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult32/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult29/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult29/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#44 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult33/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult33/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult29/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult29/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#45 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult33/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult33/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult3/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult3/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#46 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult33/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult33/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult3/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult3/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#47 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult34/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult34/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult30/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult30/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#48 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult34/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult34/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult30/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult30/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#49 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult34/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult34/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult31/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult31/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#50 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult35/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult35/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult32/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult32/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#51 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult35/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult35/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult32/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult32/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#52 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult35/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult35/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult33/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult33/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#53 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult36/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult36/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult33/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult33/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#54 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult36/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult36/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult34/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult34/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#55 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult36/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult36/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult34/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult34/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#56 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult37/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult37/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult35/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult35/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#57 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult37/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult37/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult35/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult35/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#58 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult37/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult37/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult36/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult36/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#59 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult38/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult38/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult36/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult36/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#60 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult38/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult38/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult37/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult37/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#61 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult38/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult38/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult37/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult37/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#62 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult39/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult39/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult38/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult38/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#63 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult4/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult4/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult38/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult38/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#64 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult4/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult4/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult39/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult39/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#65 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult4/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult4/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult4/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult4/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#66 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult40/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult40/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult4/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult4/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#67 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult40/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult40/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult40/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult40/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#68 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult40/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult40/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult40/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult40/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#69 Warning
@@ -388,372 +386,217 @@ Related violations: <none>
 
 DPIP-1#71 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult41/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult41/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult42/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult42/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#72 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult42/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult42/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult42/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult42/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#73 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult42/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult42/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult43/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult43/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#74 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult42/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult42/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult43/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult43/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#75 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult43/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult43/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult44/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult44/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#76 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult43/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult43/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult44/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult44/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#77 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult43/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult43/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult45/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult45/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#78 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult44/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult44/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult45/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult45/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#79 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult44/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult44/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult46/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult46/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#80 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult44/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult44/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult46/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult46/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#81 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult45/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult45/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult47/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult47/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#82 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult45/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult45/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult48/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult48/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#83 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult45/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult45/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult48/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult48/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#84 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult46/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult46/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult49/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult49/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#85 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult46/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult46/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult49/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult49/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#86 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult46/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult46/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult5/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult5/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#87 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult47/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult47/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult5/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult5/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#88 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult48/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult48/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult50/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult50/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#89 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult48/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult48/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult50/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult50/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#90 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult48/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult48/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult51/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult51/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#91 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult49/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult49/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult51/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult51/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#92 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult49/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult49/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult52/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult52/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#93 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult49/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult49/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult52/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult52/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#94 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult5/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult5/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult53/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult53/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#95 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult5/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult5/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult53/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult53/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#96 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult5/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult5/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult54/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult54/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#97 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult50/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult50/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult54/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult54/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#98 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult50/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult50/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult55/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult55/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#99 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult50/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult50/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult56/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult56/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#100 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult51/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult51/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult57/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult57/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#101 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult51/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult51/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult58/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult58/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#102 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult51/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult51/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult59/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult59/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#103 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult52/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult52/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult6/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult6/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#104 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult52/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult52/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult6/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult6/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#105 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult52/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult52/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult60/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult60/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#106 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult53/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult53/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult61/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult61/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#107 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult53/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult53/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult62/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult62/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#108 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult53/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult53/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult63/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult63/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#109 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult54/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult54/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult7/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult7/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#110 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult54/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult54/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult8/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult8/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#111 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult54/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult54/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult8/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult8/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#112 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult55/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult55/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult9/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult9/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#113 Warning
 Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult56/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult56/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#114 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult57/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult57/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#115 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult58/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult58/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#116 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult59/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult59/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#117 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult6/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult6/outMem/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#118 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult6/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult6/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#119 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult6/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult6/outMem/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#120 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult60/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult60/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#121 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult61/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult61/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#122 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult62/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult62/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#123 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult63/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult63/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#124 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult7/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult7/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#125 Warning
-Input pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult8/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult8/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#126 Warning
-Input pipelining  
 DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult9/outMem input CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult9/outMem/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPOP-1#1 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult10/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult10/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#2 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult11/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult11/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#3 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult12/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult12/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#4 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult13/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult13/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#5 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult14/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult14/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#6 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult16/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult16/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#7 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult17/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult17/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#8 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult18/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult18/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#9 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult19/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult19/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#10 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult20/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult20/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#11 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult21/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult21/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#12 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult22/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult22/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#13 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult24/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult24/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#14 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult25/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult25/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#15 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult26/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult26/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#16 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult28/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult28/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#17 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult8/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult8/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#18 Warning
-PREG Output pipelining  
-DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult9/outMem output CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult9/outMem/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-2#1 Warning
@@ -1074,96 +917,6 @@ Related violations: <none>
 DPOP-2#64 Warning
 MREG Output pipelining  
 DSP CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult9/outMem multiplier stage CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult9/outMem/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPREG-4#1 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult10/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#2 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult11/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#3 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult12/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#4 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult13/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#5 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult14/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#6 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult16/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#7 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult17/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#8 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult18/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#9 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult19/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#10 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult20/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#11 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult21/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#12 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult22/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#13 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult24/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#14 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult25/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#15 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult26/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#16 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult28/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#17 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult8/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-4#18 Warning
-DSP48E1_PregDynOpmodeZmuxP:  
-The DSP48E1 cell CNN_top_module_i/axi_cnn_0/inst/coreInstance/multxPrime/mult9/outMem with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
 Related violations: <none>
 
 
