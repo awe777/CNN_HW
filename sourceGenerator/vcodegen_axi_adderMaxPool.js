@@ -205,7 +205,7 @@ function generate(v, r, softwareControl = true) {
     bodyPrint(`    begin`);
     // change to dynamic
     for(resetReg = 0; resetReg < 2 * (v * v - v + 1); resetReg++) {
-        bodyPrint(`        reg${resetReg} <= ${dataLength}'b0;`)
+        bodyPrint(`        reg${resetReg} <= ${dataLength}'d0;`)
     }
     // end change
     bodyPrint(`    end`);
@@ -225,7 +225,7 @@ function generate(v, r, softwareControl = true) {
         if((eachIO + 1) % v && eachIO / v < (v - 1)) {
             bodyPrint(`    .wg${eachIO}(reg${eachIO + v * v + 1 - Math.floor(eachIO / 8)}[${dataLength - 1}:0]),`)
         } else {
-            bodyPrint(`    .wg${eachIO}(${dataLength}'b0),`)
+            bodyPrint(`    .wg${eachIO}(${dataLength}'d0),`)
         }
         bodyPrint(`    .out${eachIO}(output${eachIO}),`)
     }
@@ -377,10 +377,10 @@ function generate(v, r, softwareControl = true) {
     bodyPrint(`always @(posedge clk)`)
     bodyPrint(`   begin`)
     for(c = 0; c < v * v; c++) {
-        bodyPrint(`      w0_${c} <= rst ? w${c} : ${2 * dataLength}'b0;`)
+        bodyPrint(`      w0_${c} <= rst ? w${c} : ${2 * dataLength}'d0;`)
     }
     lhs.forEach((entry, index) => {
-        bodyPrint(`      ${entry} <= rst ? ${rhs[index]} : ${2 * dataLength}'b0;`)
+        bodyPrint(`      ${entry} <= rst ? ${rhs[index]} : ${2 * dataLength}'d0;`)
     })
     bodyPrint(`   end`)
     bodyPrint(`endmodule`)
@@ -401,7 +401,7 @@ function generate(v, r, softwareControl = true) {
 
     bodyPrint(`always @(posedge clk)`)
     bodyPrint(`   begin`)
-    bodyPrint(`      outq <= rst ? (sel ? in1 : in0) : ${2 * dataLength}'b0;`)
+    bodyPrint(`      outq <= rst ? (sel ? in1 : in0) : ${2 * dataLength}'d0;`)
     bodyPrint(`   end`)
     bodyPrint(`endmodule`)
     console.log(Date.now() - start)

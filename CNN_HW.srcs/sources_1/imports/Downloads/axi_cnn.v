@@ -241,183 +241,183 @@ wire ar_hs;
 // reg1 to reg64 will be image data input
 // reg65 to reg113 will be weight data input
 reg [17:0] reg0;
-wire [35:0] output0;
-reg [17:0] reg1;
-wire [35:0] output1;
-reg [17:0] reg2;
-wire [35:0] output2;
-reg [17:0] reg3;
-wire [35:0] output3;
-reg [17:0] reg4;
-wire [35:0] output4;
-reg [17:0] reg5;
-wire [35:0] output5;
-reg [17:0] reg6;
-wire [35:0] output6;
-reg [17:0] reg7;
-wire [35:0] output7;
-reg [17:0] reg8;
-wire [35:0] output8;
-reg [17:0] reg9;
-wire [35:0] output9;
-reg [17:0] reg10;
-wire [35:0] output10;
-reg [17:0] reg11;
-wire [35:0] output11;
-reg [17:0] reg12;
-wire [35:0] output12;
-reg [17:0] reg13;
-wire [35:0] output13;
-reg [17:0] reg14;
-wire [35:0] output14;
-reg [17:0] reg15;
-wire [35:0] output15;
-reg [17:0] reg16;
-wire [35:0] output16;
-reg [17:0] reg17;
-wire [35:0] output17;
-reg [17:0] reg18;
-wire [35:0] output18;
-reg [17:0] reg19;
-wire [35:0] output19;
-reg [17:0] reg20;
-wire [35:0] output20;
-reg [17:0] reg21;
-wire [35:0] output21;
-reg [17:0] reg22;
-wire [35:0] output22;
-reg [17:0] reg23;
-wire [35:0] output23;
-reg [17:0] reg24;
-wire [35:0] output24;
-reg [17:0] reg25;
-wire [35:0] output25;
-reg [17:0] reg26;
-wire [35:0] output26;
-reg [17:0] reg27;
-wire [35:0] output27;
-reg [17:0] reg28;
-wire [35:0] output28;
-reg [17:0] reg29;
-wire [35:0] output29;
-reg [17:0] reg30;
-wire [35:0] output30;
-reg [17:0] reg31;
-wire [35:0] output31;
-reg [17:0] reg32;
-wire [35:0] output32;
-reg [17:0] reg33;
-wire [35:0] output33;
-reg [17:0] reg34;
-wire [35:0] output34;
-reg [17:0] reg35;
-wire [35:0] output35;
-reg [17:0] reg36;
-wire [35:0] output36;
-reg [17:0] reg37;
-wire [35:0] output37;
-reg [17:0] reg38;
-wire [35:0] output38;
-reg [17:0] reg39;
-wire [35:0] output39;
-reg [17:0] reg40;
-wire [35:0] output40;
-reg [17:0] reg41;
-wire [35:0] output41;
-reg [17:0] reg42;
-wire [35:0] output42;
-reg [17:0] reg43;
-wire [35:0] output43;
-reg [17:0] reg44;
-wire [35:0] output44;
-reg [17:0] reg45;
-wire [35:0] output45;
-reg [17:0] reg46;
-wire [35:0] output46;
-reg [17:0] reg47;
-wire [35:0] output47;
-reg [17:0] reg48;
-wire [35:0] output48;
-reg [17:0] reg49;
-wire [35:0] output49;
-reg [17:0] reg50;
-wire [35:0] output50;
-reg [17:0] reg51;
-wire [35:0] output51;
-reg [17:0] reg52;
-wire [35:0] output52;
-reg [17:0] reg53;
-wire [35:0] output53;
-reg [17:0] reg54;
-wire [35:0] output54;
-reg [17:0] reg55;
-wire [35:0] output55;
-reg [17:0] reg56;
-wire [35:0] output56;
-reg [17:0] reg57;
-wire [35:0] output57;
-reg [17:0] reg58;
-wire [35:0] output58;
-reg [17:0] reg59;
-wire [35:0] output59;
-reg [17:0] reg60;
-wire [35:0] output60;
-reg [17:0] reg61;
-wire [35:0] output61;
-reg [17:0] reg62;
-wire [35:0] output62;
-reg [17:0] reg63;
-wire [35:0] output63;
-reg [17:0] reg64;
-reg [17:0] reg65;
-reg [17:0] reg66;
-reg [17:0] reg67;
-reg [17:0] reg68;
-reg [17:0] reg69;
-reg [17:0] reg70;
-reg [17:0] reg71;
-reg [17:0] reg72;
-reg [17:0] reg73;
-reg [17:0] reg74;
-reg [17:0] reg75;
-reg [17:0] reg76;
-reg [17:0] reg77;
-reg [17:0] reg78;
-reg [17:0] reg79;
-reg [17:0] reg80;
-reg [17:0] reg81;
-reg [17:0] reg82;
-reg [17:0] reg83;
-reg [17:0] reg84;
-reg [17:0] reg85;
-reg [17:0] reg86;
-reg [17:0] reg87;
-reg [17:0] reg88;
-reg [17:0] reg89;
-reg [17:0] reg90;
-reg [17:0] reg91;
-reg [17:0] reg92;
-reg [17:0] reg93;
-reg [17:0] reg94;
-reg [17:0] reg95;
-reg [17:0] reg96;
-reg [17:0] reg97;
-reg [17:0] reg98;
-reg [17:0] reg99;
-reg [17:0] reg100;
-reg [17:0] reg101;
-reg [17:0] reg102;
-reg [17:0] reg103;
-reg [17:0] reg104;
-reg [17:0] reg105;
-reg [17:0] reg106;
-reg [17:0] reg107;
-reg [17:0] reg108;
-reg [17:0] reg109;
-reg [17:0] reg110;
-reg [17:0] reg111;
-reg [17:0] reg112;
-reg [17:0] reg113;
+wire signed [35:0] output0;
+reg signed [17:0] reg1;
+wire signed [35:0] output1;
+reg signed [17:0] reg2;
+wire signed [35:0] output2;
+reg signed [17:0] reg3;
+wire signed [35:0] output3;
+reg signed [17:0] reg4;
+wire signed [35:0] output4;
+reg signed [17:0] reg5;
+wire signed [35:0] output5;
+reg signed [17:0] reg6;
+wire signed [35:0] output6;
+reg signed [17:0] reg7;
+wire signed [35:0] output7;
+reg signed [17:0] reg8;
+wire signed [35:0] output8;
+reg signed [17:0] reg9;
+wire signed [35:0] output9;
+reg signed [17:0] reg10;
+wire signed [35:0] output10;
+reg signed [17:0] reg11;
+wire signed [35:0] output11;
+reg signed [17:0] reg12;
+wire signed [35:0] output12;
+reg signed [17:0] reg13;
+wire signed [35:0] output13;
+reg signed [17:0] reg14;
+wire signed [35:0] output14;
+reg signed [17:0] reg15;
+wire signed [35:0] output15;
+reg signed [17:0] reg16;
+wire signed [35:0] output16;
+reg signed [17:0] reg17;
+wire signed [35:0] output17;
+reg signed [17:0] reg18;
+wire signed [35:0] output18;
+reg signed [17:0] reg19;
+wire signed [35:0] output19;
+reg signed [17:0] reg20;
+wire signed [35:0] output20;
+reg signed [17:0] reg21;
+wire signed [35:0] output21;
+reg signed [17:0] reg22;
+wire signed [35:0] output22;
+reg signed [17:0] reg23;
+wire signed [35:0] output23;
+reg signed [17:0] reg24;
+wire signed [35:0] output24;
+reg signed [17:0] reg25;
+wire signed [35:0] output25;
+reg signed [17:0] reg26;
+wire signed [35:0] output26;
+reg signed [17:0] reg27;
+wire signed [35:0] output27;
+reg signed [17:0] reg28;
+wire signed [35:0] output28;
+reg signed [17:0] reg29;
+wire signed [35:0] output29;
+reg signed [17:0] reg30;
+wire signed [35:0] output30;
+reg signed [17:0] reg31;
+wire signed [35:0] output31;
+reg signed [17:0] reg32;
+wire signed [35:0] output32;
+reg signed [17:0] reg33;
+wire signed [35:0] output33;
+reg signed [17:0] reg34;
+wire signed [35:0] output34;
+reg signed [17:0] reg35;
+wire signed [35:0] output35;
+reg signed [17:0] reg36;
+wire signed [35:0] output36;
+reg signed [17:0] reg37;
+wire signed [35:0] output37;
+reg signed [17:0] reg38;
+wire signed [35:0] output38;
+reg signed [17:0] reg39;
+wire signed [35:0] output39;
+reg signed [17:0] reg40;
+wire signed [35:0] output40;
+reg signed [17:0] reg41;
+wire signed [35:0] output41;
+reg signed [17:0] reg42;
+wire signed [35:0] output42;
+reg signed [17:0] reg43;
+wire signed [35:0] output43;
+reg signed [17:0] reg44;
+wire signed [35:0] output44;
+reg signed [17:0] reg45;
+wire signed [35:0] output45;
+reg signed [17:0] reg46;
+wire signed [35:0] output46;
+reg signed [17:0] reg47;
+wire signed [35:0] output47;
+reg signed [17:0] reg48;
+wire signed [35:0] output48;
+reg signed [17:0] reg49;
+wire signed [35:0] output49;
+reg signed [17:0] reg50;
+wire signed [35:0] output50;
+reg signed [17:0] reg51;
+wire signed [35:0] output51;
+reg signed [17:0] reg52;
+wire signed [35:0] output52;
+reg signed [17:0] reg53;
+wire signed [35:0] output53;
+reg signed [17:0] reg54;
+wire signed [35:0] output54;
+reg signed [17:0] reg55;
+wire signed [35:0] output55;
+reg signed [17:0] reg56;
+wire signed [35:0] output56;
+reg signed [17:0] reg57;
+wire signed [35:0] output57;
+reg signed [17:0] reg58;
+wire signed [35:0] output58;
+reg signed [17:0] reg59;
+wire signed [35:0] output59;
+reg signed [17:0] reg60;
+wire signed [35:0] output60;
+reg signed [17:0] reg61;
+wire signed [35:0] output61;
+reg signed [17:0] reg62;
+wire signed [35:0] output62;
+reg signed [17:0] reg63;
+wire signed [35:0] output63;
+reg signed [17:0] reg64;
+reg signed [17:0] reg65;
+reg signed [17:0] reg66;
+reg signed [17:0] reg67;
+reg signed [17:0] reg68;
+reg signed [17:0] reg69;
+reg signed [17:0] reg70;
+reg signed [17:0] reg71;
+reg signed [17:0] reg72;
+reg signed [17:0] reg73;
+reg signed [17:0] reg74;
+reg signed [17:0] reg75;
+reg signed [17:0] reg76;
+reg signed [17:0] reg77;
+reg signed [17:0] reg78;
+reg signed [17:0] reg79;
+reg signed [17:0] reg80;
+reg signed [17:0] reg81;
+reg signed [17:0] reg82;
+reg signed [17:0] reg83;
+reg signed [17:0] reg84;
+reg signed [17:0] reg85;
+reg signed [17:0] reg86;
+reg signed [17:0] reg87;
+reg signed [17:0] reg88;
+reg signed [17:0] reg89;
+reg signed [17:0] reg90;
+reg signed [17:0] reg91;
+reg signed [17:0] reg92;
+reg signed [17:0] reg93;
+reg signed [17:0] reg94;
+reg signed [17:0] reg95;
+reg signed [17:0] reg96;
+reg signed [17:0] reg97;
+reg signed [17:0] reg98;
+reg signed [17:0] reg99;
+reg signed [17:0] reg100;
+reg signed [17:0] reg101;
+reg signed [17:0] reg102;
+reg signed [17:0] reg103;
+reg signed [17:0] reg104;
+reg signed [17:0] reg105;
+reg signed [17:0] reg106;
+reg signed [17:0] reg107;
+reg signed [17:0] reg108;
+reg signed [17:0] reg109;
+reg signed [17:0] reg110;
+reg signed [17:0] reg111;
+reg signed [17:0] reg112;
+reg signed [17:0] reg113;
 // ### AXI write ###########################################################
 assign s_axi_awready = (wstate_cs == S_WRIDLE);
 assign s_axi_wready = (wstate_cs == S_WRDATA);
@@ -868,120 +868,120 @@ always @(posedge aclk)
 begin
     if (!aresetn)
     begin
-        reg0 <= 18'b0;
-        reg1 <= 18'b0;
-        reg2 <= 18'b0;
-        reg3 <= 18'b0;
-        reg4 <= 18'b0;
-        reg5 <= 18'b0;
-        reg6 <= 18'b0;
-        reg7 <= 18'b0;
-        reg8 <= 18'b0;
-        reg9 <= 18'b0;
-        reg10 <= 18'b0;
-        reg11 <= 18'b0;
-        reg12 <= 18'b0;
-        reg13 <= 18'b0;
-        reg14 <= 18'b0;
-        reg15 <= 18'b0;
-        reg16 <= 18'b0;
-        reg17 <= 18'b0;
-        reg18 <= 18'b0;
-        reg19 <= 18'b0;
-        reg20 <= 18'b0;
-        reg21 <= 18'b0;
-        reg22 <= 18'b0;
-        reg23 <= 18'b0;
-        reg24 <= 18'b0;
-        reg25 <= 18'b0;
-        reg26 <= 18'b0;
-        reg27 <= 18'b0;
-        reg28 <= 18'b0;
-        reg29 <= 18'b0;
-        reg30 <= 18'b0;
-        reg31 <= 18'b0;
-        reg32 <= 18'b0;
-        reg33 <= 18'b0;
-        reg34 <= 18'b0;
-        reg35 <= 18'b0;
-        reg36 <= 18'b0;
-        reg37 <= 18'b0;
-        reg38 <= 18'b0;
-        reg39 <= 18'b0;
-        reg40 <= 18'b0;
-        reg41 <= 18'b0;
-        reg42 <= 18'b0;
-        reg43 <= 18'b0;
-        reg44 <= 18'b0;
-        reg45 <= 18'b0;
-        reg46 <= 18'b0;
-        reg47 <= 18'b0;
-        reg48 <= 18'b0;
-        reg49 <= 18'b0;
-        reg50 <= 18'b0;
-        reg51 <= 18'b0;
-        reg52 <= 18'b0;
-        reg53 <= 18'b0;
-        reg54 <= 18'b0;
-        reg55 <= 18'b0;
-        reg56 <= 18'b0;
-        reg57 <= 18'b0;
-        reg58 <= 18'b0;
-        reg59 <= 18'b0;
-        reg60 <= 18'b0;
-        reg61 <= 18'b0;
-        reg62 <= 18'b0;
-        reg63 <= 18'b0;
-        reg64 <= 18'b0;
-        reg65 <= 18'b0;
-        reg66 <= 18'b0;
-        reg67 <= 18'b0;
-        reg68 <= 18'b0;
-        reg69 <= 18'b0;
-        reg70 <= 18'b0;
-        reg71 <= 18'b0;
-        reg72 <= 18'b0;
-        reg73 <= 18'b0;
-        reg74 <= 18'b0;
-        reg75 <= 18'b0;
-        reg76 <= 18'b0;
-        reg77 <= 18'b0;
-        reg78 <= 18'b0;
-        reg79 <= 18'b0;
-        reg80 <= 18'b0;
-        reg81 <= 18'b0;
-        reg82 <= 18'b0;
-        reg83 <= 18'b0;
-        reg84 <= 18'b0;
-        reg85 <= 18'b0;
-        reg86 <= 18'b0;
-        reg87 <= 18'b0;
-        reg88 <= 18'b0;
-        reg89 <= 18'b0;
-        reg90 <= 18'b0;
-        reg91 <= 18'b0;
-        reg92 <= 18'b0;
-        reg93 <= 18'b0;
-        reg94 <= 18'b0;
-        reg95 <= 18'b0;
-        reg96 <= 18'b0;
-        reg97 <= 18'b0;
-        reg98 <= 18'b0;
-        reg99 <= 18'b0;
-        reg100 <= 18'b0;
-        reg101 <= 18'b0;
-        reg102 <= 18'b0;
-        reg103 <= 18'b0;
-        reg104 <= 18'b0;
-        reg105 <= 18'b0;
-        reg106 <= 18'b0;
-        reg107 <= 18'b0;
-        reg108 <= 18'b0;
-        reg109 <= 18'b0;
-        reg110 <= 18'b0;
-        reg111 <= 18'b0;
-        reg112 <= 18'b0;
-        reg113 <= 18'b0;
+        reg0 <= 18'd0;
+        reg1 <= 18'd0;
+        reg2 <= 18'd0;
+        reg3 <= 18'd0;
+        reg4 <= 18'd0;
+        reg5 <= 18'd0;
+        reg6 <= 18'd0;
+        reg7 <= 18'd0;
+        reg8 <= 18'd0;
+        reg9 <= 18'd0;
+        reg10 <= 18'd0;
+        reg11 <= 18'd0;
+        reg12 <= 18'd0;
+        reg13 <= 18'd0;
+        reg14 <= 18'd0;
+        reg15 <= 18'd0;
+        reg16 <= 18'd0;
+        reg17 <= 18'd0;
+        reg18 <= 18'd0;
+        reg19 <= 18'd0;
+        reg20 <= 18'd0;
+        reg21 <= 18'd0;
+        reg22 <= 18'd0;
+        reg23 <= 18'd0;
+        reg24 <= 18'd0;
+        reg25 <= 18'd0;
+        reg26 <= 18'd0;
+        reg27 <= 18'd0;
+        reg28 <= 18'd0;
+        reg29 <= 18'd0;
+        reg30 <= 18'd0;
+        reg31 <= 18'd0;
+        reg32 <= 18'd0;
+        reg33 <= 18'd0;
+        reg34 <= 18'd0;
+        reg35 <= 18'd0;
+        reg36 <= 18'd0;
+        reg37 <= 18'd0;
+        reg38 <= 18'd0;
+        reg39 <= 18'd0;
+        reg40 <= 18'd0;
+        reg41 <= 18'd0;
+        reg42 <= 18'd0;
+        reg43 <= 18'd0;
+        reg44 <= 18'd0;
+        reg45 <= 18'd0;
+        reg46 <= 18'd0;
+        reg47 <= 18'd0;
+        reg48 <= 18'd0;
+        reg49 <= 18'd0;
+        reg50 <= 18'd0;
+        reg51 <= 18'd0;
+        reg52 <= 18'd0;
+        reg53 <= 18'd0;
+        reg54 <= 18'd0;
+        reg55 <= 18'd0;
+        reg56 <= 18'd0;
+        reg57 <= 18'd0;
+        reg58 <= 18'd0;
+        reg59 <= 18'd0;
+        reg60 <= 18'd0;
+        reg61 <= 18'd0;
+        reg62 <= 18'd0;
+        reg63 <= 18'd0;
+        reg64 <= 18'd0;
+        reg65 <= 18'd0;
+        reg66 <= 18'd0;
+        reg67 <= 18'd0;
+        reg68 <= 18'd0;
+        reg69 <= 18'd0;
+        reg70 <= 18'd0;
+        reg71 <= 18'd0;
+        reg72 <= 18'd0;
+        reg73 <= 18'd0;
+        reg74 <= 18'd0;
+        reg75 <= 18'd0;
+        reg76 <= 18'd0;
+        reg77 <= 18'd0;
+        reg78 <= 18'd0;
+        reg79 <= 18'd0;
+        reg80 <= 18'd0;
+        reg81 <= 18'd0;
+        reg82 <= 18'd0;
+        reg83 <= 18'd0;
+        reg84 <= 18'd0;
+        reg85 <= 18'd0;
+        reg86 <= 18'd0;
+        reg87 <= 18'd0;
+        reg88 <= 18'd0;
+        reg89 <= 18'd0;
+        reg90 <= 18'd0;
+        reg91 <= 18'd0;
+        reg92 <= 18'd0;
+        reg93 <= 18'd0;
+        reg94 <= 18'd0;
+        reg95 <= 18'd0;
+        reg96 <= 18'd0;
+        reg97 <= 18'd0;
+        reg98 <= 18'd0;
+        reg99 <= 18'd0;
+        reg100 <= 18'd0;
+        reg101 <= 18'd0;
+        reg102 <= 18'd0;
+        reg103 <= 18'd0;
+        reg104 <= 18'd0;
+        reg105 <= 18'd0;
+        reg106 <= 18'd0;
+        reg107 <= 18'd0;
+        reg108 <= 18'd0;
+        reg109 <= 18'd0;
+        reg110 <= 18'd0;
+        reg111 <= 18'd0;
+        reg112 <= 18'd0;
+        reg113 <= 18'd0;
     end
 	else if (w_hs && waddr == C_ADDR_REG0)
 	   begin
@@ -1464,7 +1464,7 @@ convmultCore coreInstance(
     .wg6(reg71[17:0]),
     .out6(output6),
     .in7(reg8[17:0]),
-    .wg7(18'b0),
+    .wg7(18'd0),
     .out7(output7),
     .in8(reg9[17:0]),
     .wg8(reg72[17:0]),
@@ -1488,7 +1488,7 @@ convmultCore coreInstance(
     .wg14(reg78[17:0]),
     .out14(output14),
     .in15(reg16[17:0]),
-    .wg15(18'b0),
+    .wg15(18'd0),
     .out15(output15),
     .in16(reg17[17:0]),
     .wg16(reg79[17:0]),
@@ -1512,7 +1512,7 @@ convmultCore coreInstance(
     .wg22(reg85[17:0]),
     .out22(output22),
     .in23(reg24[17:0]),
-    .wg23(18'b0),
+    .wg23(18'd0),
     .out23(output23),
     .in24(reg25[17:0]),
     .wg24(reg86[17:0]),
@@ -1536,7 +1536,7 @@ convmultCore coreInstance(
     .wg30(reg92[17:0]),
     .out30(output30),
     .in31(reg32[17:0]),
-    .wg31(18'b0),
+    .wg31(18'd0),
     .out31(output31),
     .in32(reg33[17:0]),
     .wg32(reg93[17:0]),
@@ -1560,7 +1560,7 @@ convmultCore coreInstance(
     .wg38(reg99[17:0]),
     .out38(output38),
     .in39(reg40[17:0]),
-    .wg39(18'b0),
+    .wg39(18'd0),
     .out39(output39),
     .in40(reg41[17:0]),
     .wg40(reg100[17:0]),
@@ -1584,7 +1584,7 @@ convmultCore coreInstance(
     .wg46(reg106[17:0]),
     .out46(output46),
     .in47(reg48[17:0]),
-    .wg47(18'b0),
+    .wg47(18'd0),
     .out47(output47),
     .in48(reg49[17:0]),
     .wg48(reg107[17:0]),
@@ -1608,31 +1608,31 @@ convmultCore coreInstance(
     .wg54(reg113[17:0]),
     .out54(output54),
     .in55(reg56[17:0]),
-    .wg55(18'b0),
+    .wg55(18'd0),
     .out55(output55),
     .in56(reg57[17:0]),
-    .wg56(18'b0),
+    .wg56(18'd0),
     .out56(output56),
     .in57(reg58[17:0]),
-    .wg57(18'b0),
+    .wg57(18'd0),
     .out57(output57),
     .in58(reg59[17:0]),
-    .wg58(18'b0),
+    .wg58(18'd0),
     .out58(output58),
     .in59(reg60[17:0]),
-    .wg59(18'b0),
+    .wg59(18'd0),
     .out59(output59),
     .in60(reg61[17:0]),
-    .wg60(18'b0),
+    .wg60(18'd0),
     .out60(output60),
     .in61(reg62[17:0]),
-    .wg61(18'b0),
+    .wg61(18'd0),
     .out61(output61),
     .in62(reg63[17:0]),
-    .wg62(18'b0),
+    .wg62(18'd0),
     .out62(output62),
     .in63(reg64[17:0]),
-    .wg63(18'b0),
+    .wg63(18'd0),
     .out63(output63),
     .enabler(|reg0[8:0]),
     .adderMode(|reg0[17:9]),
@@ -1643,267 +1643,267 @@ convmultCore coreInstance(
 endmodule
 // Alert: main module - convmultCore
 module convmultCore(in0, wg0, out0, in1, wg1, out1, in2, wg2, out2, in3, wg3, out3, in4, wg4, out4, in5, wg5, out5, in6, wg6, out6, in7, wg7, out7, in8, wg8, out8, in9, wg9, out9, in10, wg10, out10, in11, wg11, out11, in12, wg12, out12, in13, wg13, out13, in14, wg14, out14, in15, wg15, out15, in16, wg16, out16, in17, wg17, out17, in18, wg18, out18, in19, wg19, out19, in20, wg20, out20, in21, wg21, out21, in22, wg22, out22, in23, wg23, out23, in24, wg24, out24, in25, wg25, out25, in26, wg26, out26, in27, wg27, out27, in28, wg28, out28, in29, wg29, out29, in30, wg30, out30, in31, wg31, out31, in32, wg32, out32, in33, wg33, out33, in34, wg34, out34, in35, wg35, out35, in36, wg36, out36, in37, wg37, out37, in38, wg38, out38, in39, wg39, out39, in40, wg40, out40, in41, wg41, out41, in42, wg42, out42, in43, wg43, out43, in44, wg44, out44, in45, wg45, out45, in46, wg46, out46, in47, wg47, out47, in48, wg48, out48, in49, wg49, out49, in50, wg50, out50, in51, wg51, out51, in52, wg52, out52, in53, wg53, out53, in54, wg54, out54, in55, wg55, out55, in56, wg56, out56, in57, wg57, out57, in58, wg58, out58, in59, wg59, out59, in60, wg60, out60, in61, wg61, out61, in62, wg62, out62, in63, wg63, out63, enabler, adderMode, masterClock, masterReset);
-input [17:0] in0;
-input [17:0] wg0;
-output [35:0] out0;
-input [17:0] in1;
-input [17:0] wg1;
-output [35:0] out1;
-input [17:0] in2;
-input [17:0] wg2;
-output [35:0] out2;
-input [17:0] in3;
-input [17:0] wg3;
-output [35:0] out3;
-input [17:0] in4;
-input [17:0] wg4;
-output [35:0] out4;
-input [17:0] in5;
-input [17:0] wg5;
-output [35:0] out5;
-input [17:0] in6;
-input [17:0] wg6;
-output [35:0] out6;
-input [17:0] in7;
-input [17:0] wg7;
-output [35:0] out7;
-input [17:0] in8;
-input [17:0] wg8;
-output [35:0] out8;
-input [17:0] in9;
-input [17:0] wg9;
-output [35:0] out9;
-input [17:0] in10;
-input [17:0] wg10;
-output [35:0] out10;
-input [17:0] in11;
-input [17:0] wg11;
-output [35:0] out11;
-input [17:0] in12;
-input [17:0] wg12;
-output [35:0] out12;
-input [17:0] in13;
-input [17:0] wg13;
-output [35:0] out13;
-input [17:0] in14;
-input [17:0] wg14;
-output [35:0] out14;
-input [17:0] in15;
-input [17:0] wg15;
-output [35:0] out15;
-input [17:0] in16;
-input [17:0] wg16;
-output [35:0] out16;
-input [17:0] in17;
-input [17:0] wg17;
-output [35:0] out17;
-input [17:0] in18;
-input [17:0] wg18;
-output [35:0] out18;
-input [17:0] in19;
-input [17:0] wg19;
-output [35:0] out19;
-input [17:0] in20;
-input [17:0] wg20;
-output [35:0] out20;
-input [17:0] in21;
-input [17:0] wg21;
-output [35:0] out21;
-input [17:0] in22;
-input [17:0] wg22;
-output [35:0] out22;
-input [17:0] in23;
-input [17:0] wg23;
-output [35:0] out23;
-input [17:0] in24;
-input [17:0] wg24;
-output [35:0] out24;
-input [17:0] in25;
-input [17:0] wg25;
-output [35:0] out25;
-input [17:0] in26;
-input [17:0] wg26;
-output [35:0] out26;
-input [17:0] in27;
-input [17:0] wg27;
-output [35:0] out27;
-input [17:0] in28;
-input [17:0] wg28;
-output [35:0] out28;
-input [17:0] in29;
-input [17:0] wg29;
-output [35:0] out29;
-input [17:0] in30;
-input [17:0] wg30;
-output [35:0] out30;
-input [17:0] in31;
-input [17:0] wg31;
-output [35:0] out31;
-input [17:0] in32;
-input [17:0] wg32;
-output [35:0] out32;
-input [17:0] in33;
-input [17:0] wg33;
-output [35:0] out33;
-input [17:0] in34;
-input [17:0] wg34;
-output [35:0] out34;
-input [17:0] in35;
-input [17:0] wg35;
-output [35:0] out35;
-input [17:0] in36;
-input [17:0] wg36;
-output [35:0] out36;
-input [17:0] in37;
-input [17:0] wg37;
-output [35:0] out37;
-input [17:0] in38;
-input [17:0] wg38;
-output [35:0] out38;
-input [17:0] in39;
-input [17:0] wg39;
-output [35:0] out39;
-input [17:0] in40;
-input [17:0] wg40;
-output [35:0] out40;
-input [17:0] in41;
-input [17:0] wg41;
-output [35:0] out41;
-input [17:0] in42;
-input [17:0] wg42;
-output [35:0] out42;
-input [17:0] in43;
-input [17:0] wg43;
-output [35:0] out43;
-input [17:0] in44;
-input [17:0] wg44;
-output [35:0] out44;
-input [17:0] in45;
-input [17:0] wg45;
-output [35:0] out45;
-input [17:0] in46;
-input [17:0] wg46;
-output [35:0] out46;
-input [17:0] in47;
-input [17:0] wg47;
-output [35:0] out47;
-input [17:0] in48;
-input [17:0] wg48;
-output [35:0] out48;
-input [17:0] in49;
-input [17:0] wg49;
-output [35:0] out49;
-input [17:0] in50;
-input [17:0] wg50;
-output [35:0] out50;
-input [17:0] in51;
-input [17:0] wg51;
-output [35:0] out51;
-input [17:0] in52;
-input [17:0] wg52;
-output [35:0] out52;
-input [17:0] in53;
-input [17:0] wg53;
-output [35:0] out53;
-input [17:0] in54;
-input [17:0] wg54;
-output [35:0] out54;
-input [17:0] in55;
-input [17:0] wg55;
-output [35:0] out55;
-input [17:0] in56;
-input [17:0] wg56;
-output [35:0] out56;
-input [17:0] in57;
-input [17:0] wg57;
-output [35:0] out57;
-input [17:0] in58;
-input [17:0] wg58;
-output [35:0] out58;
-input [17:0] in59;
-input [17:0] wg59;
-output [35:0] out59;
-input [17:0] in60;
-input [17:0] wg60;
-output [35:0] out60;
-input [17:0] in61;
-input [17:0] wg61;
-output [35:0] out61;
-input [17:0] in62;
-input [17:0] wg62;
-output [35:0] out62;
-input [17:0] in63;
-input [17:0] wg63;
-output [35:0] out63;
+input signed [17:0] in0;
+input signed [17:0] wg0;
+output signed [35:0] out0;
+input signed [17:0] in1;
+input signed [17:0] wg1;
+output signed [35:0] out1;
+input signed [17:0] in2;
+input signed [17:0] wg2;
+output signed [35:0] out2;
+input signed [17:0] in3;
+input signed [17:0] wg3;
+output signed [35:0] out3;
+input signed [17:0] in4;
+input signed [17:0] wg4;
+output signed [35:0] out4;
+input signed [17:0] in5;
+input signed [17:0] wg5;
+output signed [35:0] out5;
+input signed [17:0] in6;
+input signed [17:0] wg6;
+output signed [35:0] out6;
+input signed [17:0] in7;
+input signed [17:0] wg7;
+output signed [35:0] out7;
+input signed [17:0] in8;
+input signed [17:0] wg8;
+output signed [35:0] out8;
+input signed [17:0] in9;
+input signed [17:0] wg9;
+output signed [35:0] out9;
+input signed [17:0] in10;
+input signed [17:0] wg10;
+output signed [35:0] out10;
+input signed [17:0] in11;
+input signed [17:0] wg11;
+output signed [35:0] out11;
+input signed [17:0] in12;
+input signed [17:0] wg12;
+output signed [35:0] out12;
+input signed [17:0] in13;
+input signed [17:0] wg13;
+output signed [35:0] out13;
+input signed [17:0] in14;
+input signed [17:0] wg14;
+output signed [35:0] out14;
+input signed [17:0] in15;
+input signed [17:0] wg15;
+output signed [35:0] out15;
+input signed [17:0] in16;
+input signed [17:0] wg16;
+output signed [35:0] out16;
+input signed [17:0] in17;
+input signed [17:0] wg17;
+output signed [35:0] out17;
+input signed [17:0] in18;
+input signed [17:0] wg18;
+output signed [35:0] out18;
+input signed [17:0] in19;
+input signed [17:0] wg19;
+output signed [35:0] out19;
+input signed [17:0] in20;
+input signed [17:0] wg20;
+output signed [35:0] out20;
+input signed [17:0] in21;
+input signed [17:0] wg21;
+output signed [35:0] out21;
+input signed [17:0] in22;
+input signed [17:0] wg22;
+output signed [35:0] out22;
+input signed [17:0] in23;
+input signed [17:0] wg23;
+output signed [35:0] out23;
+input signed [17:0] in24;
+input signed [17:0] wg24;
+output signed [35:0] out24;
+input signed [17:0] in25;
+input signed [17:0] wg25;
+output signed [35:0] out25;
+input signed [17:0] in26;
+input signed [17:0] wg26;
+output signed [35:0] out26;
+input signed [17:0] in27;
+input signed [17:0] wg27;
+output signed [35:0] out27;
+input signed [17:0] in28;
+input signed [17:0] wg28;
+output signed [35:0] out28;
+input signed [17:0] in29;
+input signed [17:0] wg29;
+output signed [35:0] out29;
+input signed [17:0] in30;
+input signed [17:0] wg30;
+output signed [35:0] out30;
+input signed [17:0] in31;
+input signed [17:0] wg31;
+output signed [35:0] out31;
+input signed [17:0] in32;
+input signed [17:0] wg32;
+output signed [35:0] out32;
+input signed [17:0] in33;
+input signed [17:0] wg33;
+output signed [35:0] out33;
+input signed [17:0] in34;
+input signed [17:0] wg34;
+output signed [35:0] out34;
+input signed [17:0] in35;
+input signed [17:0] wg35;
+output signed [35:0] out35;
+input signed [17:0] in36;
+input signed [17:0] wg36;
+output signed [35:0] out36;
+input signed [17:0] in37;
+input signed [17:0] wg37;
+output signed [35:0] out37;
+input signed [17:0] in38;
+input signed [17:0] wg38;
+output signed [35:0] out38;
+input signed [17:0] in39;
+input signed [17:0] wg39;
+output signed [35:0] out39;
+input signed [17:0] in40;
+input signed [17:0] wg40;
+output signed [35:0] out40;
+input signed [17:0] in41;
+input signed [17:0] wg41;
+output signed [35:0] out41;
+input signed [17:0] in42;
+input signed [17:0] wg42;
+output signed [35:0] out42;
+input signed [17:0] in43;
+input signed [17:0] wg43;
+output signed [35:0] out43;
+input signed [17:0] in44;
+input signed [17:0] wg44;
+output signed [35:0] out44;
+input signed [17:0] in45;
+input signed [17:0] wg45;
+output signed [35:0] out45;
+input signed [17:0] in46;
+input signed [17:0] wg46;
+output signed [35:0] out46;
+input signed [17:0] in47;
+input signed [17:0] wg47;
+output signed [35:0] out47;
+input signed [17:0] in48;
+input signed [17:0] wg48;
+output signed [35:0] out48;
+input signed [17:0] in49;
+input signed [17:0] wg49;
+output signed [35:0] out49;
+input signed [17:0] in50;
+input signed [17:0] wg50;
+output signed [35:0] out50;
+input signed [17:0] in51;
+input signed [17:0] wg51;
+output signed [35:0] out51;
+input signed [17:0] in52;
+input signed [17:0] wg52;
+output signed [35:0] out52;
+input signed [17:0] in53;
+input signed [17:0] wg53;
+output signed [35:0] out53;
+input signed [17:0] in54;
+input signed [17:0] wg54;
+output signed [35:0] out54;
+input signed [17:0] in55;
+input signed [17:0] wg55;
+output signed [35:0] out55;
+input signed [17:0] in56;
+input signed [17:0] wg56;
+output signed [35:0] out56;
+input signed [17:0] in57;
+input signed [17:0] wg57;
+output signed [35:0] out57;
+input signed [17:0] in58;
+input signed [17:0] wg58;
+output signed [35:0] out58;
+input signed [17:0] in59;
+input signed [17:0] wg59;
+output signed [35:0] out59;
+input signed [17:0] in60;
+input signed [17:0] wg60;
+output signed [35:0] out60;
+input signed [17:0] in61;
+input signed [17:0] wg61;
+output signed [35:0] out61;
+input signed [17:0] in62;
+input signed [17:0] wg62;
+output signed [35:0] out62;
+input signed [17:0] in63;
+input signed [17:0] wg63;
+output signed [35:0] out63;
 input masterClock;
 input masterReset;
 input enabler, adderMode;
 wire processedClock = enabler && masterClock;
-reg [17:0] multxInput0;
-reg [17:0] multxInput1;
-reg [17:0] multxInput2;
-reg [17:0] multxInput3;
-reg [17:0] multxInput4;
-reg [17:0] multxInput5;
-reg [17:0] multxInput6;
-reg [17:0] multxInput7;
-reg [17:0] multxInput8;
-reg [17:0] multxInput9;
-reg [17:0] multxInput10;
-reg [17:0] multxInput11;
-reg [17:0] multxInput12;
-reg [17:0] multxInput13;
-reg [17:0] multxInput14;
-reg [17:0] multxInput15;
-reg [17:0] multxInput16;
-reg [17:0] multxInput17;
-reg [17:0] multxInput18;
-reg [17:0] multxInput19;
-reg [17:0] multxInput20;
-reg [17:0] multxInput21;
-reg [17:0] multxInput22;
-reg [17:0] multxInput23;
-reg [17:0] multxInput24;
-reg [17:0] multxInput25;
-reg [17:0] multxInput26;
-reg [17:0] multxInput27;
-reg [17:0] multxInput28;
-reg [17:0] multxInput29;
-reg [17:0] multxInput30;
-reg [17:0] multxInput31;
-reg [17:0] multxInput32;
-reg [17:0] multxInput33;
-reg [17:0] multxInput34;
-reg [17:0] multxInput35;
-reg [17:0] multxInput36;
-reg [17:0] multxInput37;
-reg [17:0] multxInput38;
-reg [17:0] multxInput39;
-reg [17:0] multxInput40;
-reg [17:0] multxInput41;
-reg [17:0] multxInput42;
-reg [17:0] multxInput43;
-reg [17:0] multxInput44;
-reg [17:0] multxInput45;
-reg [17:0] multxInput46;
-reg [17:0] multxInput47;
-reg [17:0] multxInput48;
-reg [17:0] multxInput49;
-reg [17:0] multxInput50;
-reg [17:0] multxInput51;
-reg [17:0] multxInput52;
-reg [17:0] multxInput53;
-reg [17:0] multxInput54;
-reg [17:0] multxInput55;
-reg [17:0] multxInput56;
-reg [17:0] multxInput57;
-reg [17:0] multxInput58;
-reg [17:0] multxInput59;
-reg [17:0] multxInput60;
-reg [17:0] multxInput61;
-reg [17:0] multxInput62;
-reg [17:0] multxInput63;
-wire [35:0] outTemp;
+reg signed [17:0] multxInput0;
+reg signed [17:0] multxInput1;
+reg signed [17:0] multxInput2;
+reg signed [17:0] multxInput3;
+reg signed [17:0] multxInput4;
+reg signed [17:0] multxInput5;
+reg signed [17:0] multxInput6;
+reg signed [17:0] multxInput7;
+reg signed [17:0] multxInput8;
+reg signed [17:0] multxInput9;
+reg signed [17:0] multxInput10;
+reg signed [17:0] multxInput11;
+reg signed [17:0] multxInput12;
+reg signed [17:0] multxInput13;
+reg signed [17:0] multxInput14;
+reg signed [17:0] multxInput15;
+reg signed [17:0] multxInput16;
+reg signed [17:0] multxInput17;
+reg signed [17:0] multxInput18;
+reg signed [17:0] multxInput19;
+reg signed [17:0] multxInput20;
+reg signed [17:0] multxInput21;
+reg signed [17:0] multxInput22;
+reg signed [17:0] multxInput23;
+reg signed [17:0] multxInput24;
+reg signed [17:0] multxInput25;
+reg signed [17:0] multxInput26;
+reg signed [17:0] multxInput27;
+reg signed [17:0] multxInput28;
+reg signed [17:0] multxInput29;
+reg signed [17:0] multxInput30;
+reg signed [17:0] multxInput31;
+reg signed [17:0] multxInput32;
+reg signed [17:0] multxInput33;
+reg signed [17:0] multxInput34;
+reg signed [17:0] multxInput35;
+reg signed [17:0] multxInput36;
+reg signed [17:0] multxInput37;
+reg signed [17:0] multxInput38;
+reg signed [17:0] multxInput39;
+reg signed [17:0] multxInput40;
+reg signed [17:0] multxInput41;
+reg signed [17:0] multxInput42;
+reg signed [17:0] multxInput43;
+reg signed [17:0] multxInput44;
+reg signed [17:0] multxInput45;
+reg signed [17:0] multxInput46;
+reg signed [17:0] multxInput47;
+reg signed [17:0] multxInput48;
+reg signed [17:0] multxInput49;
+reg signed [17:0] multxInput50;
+reg signed [17:0] multxInput51;
+reg signed [17:0] multxInput52;
+reg signed [17:0] multxInput53;
+reg signed [17:0] multxInput54;
+reg signed [17:0] multxInput55;
+reg signed [17:0] multxInput56;
+reg signed [17:0] multxInput57;
+reg signed [17:0] multxInput58;
+reg signed [17:0] multxInput59;
+reg signed [17:0] multxInput60;
+reg signed [17:0] multxInput61;
+reg signed [17:0] multxInput62;
+reg signed [17:0] multxInput63;
+wire signed [35:0] outTemp;
 reg [6:0] counter;
 mult2reg outMult0 (
    .in0(out0),
@@ -2621,7 +2621,7 @@ always @(*)
          61: multxInput0 = in61;
          62: multxInput0 = in62;
          63: multxInput0 = in63;
-         default: multxInput0 = 18'b0;
+         default: multxInput0 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput1
@@ -2692,7 +2692,7 @@ always @(*)
          61: multxInput1 = in62;
          62: multxInput1 = in63;
          63: multxInput1 = in56;
-         default: multxInput1 = 18'b0;
+         default: multxInput1 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput2
@@ -2763,7 +2763,7 @@ always @(*)
          61: multxInput2 = in63;
          62: multxInput2 = in56;
          63: multxInput2 = in57;
-         default: multxInput2 = 18'b0;
+         default: multxInput2 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput3
@@ -2834,7 +2834,7 @@ always @(*)
          61: multxInput3 = in56;
          62: multxInput3 = in57;
          63: multxInput3 = in58;
-         default: multxInput3 = 18'b0;
+         default: multxInput3 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput4
@@ -2905,7 +2905,7 @@ always @(*)
          61: multxInput4 = in57;
          62: multxInput4 = in58;
          63: multxInput4 = in59;
-         default: multxInput4 = 18'b0;
+         default: multxInput4 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput5
@@ -2976,7 +2976,7 @@ always @(*)
          61: multxInput5 = in58;
          62: multxInput5 = in59;
          63: multxInput5 = in60;
-         default: multxInput5 = 18'b0;
+         default: multxInput5 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput6
@@ -3047,7 +3047,7 @@ always @(*)
          61: multxInput6 = in59;
          62: multxInput6 = in60;
          63: multxInput6 = in61;
-         default: multxInput6 = 18'b0;
+         default: multxInput6 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput7
@@ -3118,7 +3118,7 @@ always @(*)
          61: multxInput7 = in60;
          62: multxInput7 = in61;
          63: multxInput7 = in62;
-         default: multxInput7 = 18'b0;
+         default: multxInput7 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput8
@@ -3189,7 +3189,7 @@ always @(*)
          61: multxInput8 = in5;
          62: multxInput8 = in6;
          63: multxInput8 = in7;
-         default: multxInput8 = 18'b0;
+         default: multxInput8 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput9
@@ -3260,7 +3260,7 @@ always @(*)
          61: multxInput9 = in6;
          62: multxInput9 = in7;
          63: multxInput9 = in0;
-         default: multxInput9 = 18'b0;
+         default: multxInput9 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput10
@@ -3331,7 +3331,7 @@ always @(*)
          61: multxInput10 = in7;
          62: multxInput10 = in0;
          63: multxInput10 = in1;
-         default: multxInput10 = 18'b0;
+         default: multxInput10 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput11
@@ -3402,7 +3402,7 @@ always @(*)
          61: multxInput11 = in0;
          62: multxInput11 = in1;
          63: multxInput11 = in2;
-         default: multxInput11 = 18'b0;
+         default: multxInput11 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput12
@@ -3473,7 +3473,7 @@ always @(*)
          61: multxInput12 = in1;
          62: multxInput12 = in2;
          63: multxInput12 = in3;
-         default: multxInput12 = 18'b0;
+         default: multxInput12 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput13
@@ -3544,7 +3544,7 @@ always @(*)
          61: multxInput13 = in2;
          62: multxInput13 = in3;
          63: multxInput13 = in4;
-         default: multxInput13 = 18'b0;
+         default: multxInput13 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput14
@@ -3615,7 +3615,7 @@ always @(*)
          61: multxInput14 = in3;
          62: multxInput14 = in4;
          63: multxInput14 = in5;
-         default: multxInput14 = 18'b0;
+         default: multxInput14 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput15
@@ -3686,7 +3686,7 @@ always @(*)
          61: multxInput15 = in4;
          62: multxInput15 = in5;
          63: multxInput15 = in6;
-         default: multxInput15 = 18'b0;
+         default: multxInput15 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput16
@@ -3757,7 +3757,7 @@ always @(*)
          61: multxInput16 = in13;
          62: multxInput16 = in14;
          63: multxInput16 = in15;
-         default: multxInput16 = 18'b0;
+         default: multxInput16 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput17
@@ -3828,7 +3828,7 @@ always @(*)
          61: multxInput17 = in14;
          62: multxInput17 = in15;
          63: multxInput17 = in8;
-         default: multxInput17 = 18'b0;
+         default: multxInput17 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput18
@@ -3899,7 +3899,7 @@ always @(*)
          61: multxInput18 = in15;
          62: multxInput18 = in8;
          63: multxInput18 = in9;
-         default: multxInput18 = 18'b0;
+         default: multxInput18 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput19
@@ -3970,7 +3970,7 @@ always @(*)
          61: multxInput19 = in8;
          62: multxInput19 = in9;
          63: multxInput19 = in10;
-         default: multxInput19 = 18'b0;
+         default: multxInput19 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput20
@@ -4041,7 +4041,7 @@ always @(*)
          61: multxInput20 = in9;
          62: multxInput20 = in10;
          63: multxInput20 = in11;
-         default: multxInput20 = 18'b0;
+         default: multxInput20 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput21
@@ -4112,7 +4112,7 @@ always @(*)
          61: multxInput21 = in10;
          62: multxInput21 = in11;
          63: multxInput21 = in12;
-         default: multxInput21 = 18'b0;
+         default: multxInput21 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput22
@@ -4183,7 +4183,7 @@ always @(*)
          61: multxInput22 = in11;
          62: multxInput22 = in12;
          63: multxInput22 = in13;
-         default: multxInput22 = 18'b0;
+         default: multxInput22 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput23
@@ -4254,7 +4254,7 @@ always @(*)
          61: multxInput23 = in12;
          62: multxInput23 = in13;
          63: multxInput23 = in14;
-         default: multxInput23 = 18'b0;
+         default: multxInput23 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput24
@@ -4325,7 +4325,7 @@ always @(*)
          61: multxInput24 = in21;
          62: multxInput24 = in22;
          63: multxInput24 = in23;
-         default: multxInput24 = 18'b0;
+         default: multxInput24 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput25
@@ -4396,7 +4396,7 @@ always @(*)
          61: multxInput25 = in22;
          62: multxInput25 = in23;
          63: multxInput25 = in16;
-         default: multxInput25 = 18'b0;
+         default: multxInput25 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput26
@@ -4467,7 +4467,7 @@ always @(*)
          61: multxInput26 = in23;
          62: multxInput26 = in16;
          63: multxInput26 = in17;
-         default: multxInput26 = 18'b0;
+         default: multxInput26 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput27
@@ -4538,7 +4538,7 @@ always @(*)
          61: multxInput27 = in16;
          62: multxInput27 = in17;
          63: multxInput27 = in18;
-         default: multxInput27 = 18'b0;
+         default: multxInput27 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput28
@@ -4609,7 +4609,7 @@ always @(*)
          61: multxInput28 = in17;
          62: multxInput28 = in18;
          63: multxInput28 = in19;
-         default: multxInput28 = 18'b0;
+         default: multxInput28 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput29
@@ -4680,7 +4680,7 @@ always @(*)
          61: multxInput29 = in18;
          62: multxInput29 = in19;
          63: multxInput29 = in20;
-         default: multxInput29 = 18'b0;
+         default: multxInput29 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput30
@@ -4751,7 +4751,7 @@ always @(*)
          61: multxInput30 = in19;
          62: multxInput30 = in20;
          63: multxInput30 = in21;
-         default: multxInput30 = 18'b0;
+         default: multxInput30 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput31
@@ -4822,7 +4822,7 @@ always @(*)
          61: multxInput31 = in20;
          62: multxInput31 = in21;
          63: multxInput31 = in22;
-         default: multxInput31 = 18'b0;
+         default: multxInput31 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput32
@@ -4893,7 +4893,7 @@ always @(*)
          61: multxInput32 = in29;
          62: multxInput32 = in30;
          63: multxInput32 = in31;
-         default: multxInput32 = 18'b0;
+         default: multxInput32 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput33
@@ -4964,7 +4964,7 @@ always @(*)
          61: multxInput33 = in30;
          62: multxInput33 = in31;
          63: multxInput33 = in24;
-         default: multxInput33 = 18'b0;
+         default: multxInput33 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput34
@@ -5035,7 +5035,7 @@ always @(*)
          61: multxInput34 = in31;
          62: multxInput34 = in24;
          63: multxInput34 = in25;
-         default: multxInput34 = 18'b0;
+         default: multxInput34 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput35
@@ -5106,7 +5106,7 @@ always @(*)
          61: multxInput35 = in24;
          62: multxInput35 = in25;
          63: multxInput35 = in26;
-         default: multxInput35 = 18'b0;
+         default: multxInput35 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput36
@@ -5177,7 +5177,7 @@ always @(*)
          61: multxInput36 = in25;
          62: multxInput36 = in26;
          63: multxInput36 = in27;
-         default: multxInput36 = 18'b0;
+         default: multxInput36 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput37
@@ -5248,7 +5248,7 @@ always @(*)
          61: multxInput37 = in26;
          62: multxInput37 = in27;
          63: multxInput37 = in28;
-         default: multxInput37 = 18'b0;
+         default: multxInput37 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput38
@@ -5319,7 +5319,7 @@ always @(*)
          61: multxInput38 = in27;
          62: multxInput38 = in28;
          63: multxInput38 = in29;
-         default: multxInput38 = 18'b0;
+         default: multxInput38 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput39
@@ -5390,7 +5390,7 @@ always @(*)
          61: multxInput39 = in28;
          62: multxInput39 = in29;
          63: multxInput39 = in30;
-         default: multxInput39 = 18'b0;
+         default: multxInput39 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput40
@@ -5461,7 +5461,7 @@ always @(*)
          61: multxInput40 = in37;
          62: multxInput40 = in38;
          63: multxInput40 = in39;
-         default: multxInput40 = 18'b0;
+         default: multxInput40 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput41
@@ -5532,7 +5532,7 @@ always @(*)
          61: multxInput41 = in38;
          62: multxInput41 = in39;
          63: multxInput41 = in32;
-         default: multxInput41 = 18'b0;
+         default: multxInput41 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput42
@@ -5603,7 +5603,7 @@ always @(*)
          61: multxInput42 = in39;
          62: multxInput42 = in32;
          63: multxInput42 = in33;
-         default: multxInput42 = 18'b0;
+         default: multxInput42 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput43
@@ -5674,7 +5674,7 @@ always @(*)
          61: multxInput43 = in32;
          62: multxInput43 = in33;
          63: multxInput43 = in34;
-         default: multxInput43 = 18'b0;
+         default: multxInput43 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput44
@@ -5745,7 +5745,7 @@ always @(*)
          61: multxInput44 = in33;
          62: multxInput44 = in34;
          63: multxInput44 = in35;
-         default: multxInput44 = 18'b0;
+         default: multxInput44 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput45
@@ -5816,7 +5816,7 @@ always @(*)
          61: multxInput45 = in34;
          62: multxInput45 = in35;
          63: multxInput45 = in36;
-         default: multxInput45 = 18'b0;
+         default: multxInput45 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput46
@@ -5887,7 +5887,7 @@ always @(*)
          61: multxInput46 = in35;
          62: multxInput46 = in36;
          63: multxInput46 = in37;
-         default: multxInput46 = 18'b0;
+         default: multxInput46 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput47
@@ -5958,7 +5958,7 @@ always @(*)
          61: multxInput47 = in36;
          62: multxInput47 = in37;
          63: multxInput47 = in38;
-         default: multxInput47 = 18'b0;
+         default: multxInput47 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput48
@@ -6029,7 +6029,7 @@ always @(*)
          61: multxInput48 = in45;
          62: multxInput48 = in46;
          63: multxInput48 = in47;
-         default: multxInput48 = 18'b0;
+         default: multxInput48 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput49
@@ -6100,7 +6100,7 @@ always @(*)
          61: multxInput49 = in46;
          62: multxInput49 = in47;
          63: multxInput49 = in40;
-         default: multxInput49 = 18'b0;
+         default: multxInput49 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput50
@@ -6171,7 +6171,7 @@ always @(*)
          61: multxInput50 = in47;
          62: multxInput50 = in40;
          63: multxInput50 = in41;
-         default: multxInput50 = 18'b0;
+         default: multxInput50 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput51
@@ -6242,7 +6242,7 @@ always @(*)
          61: multxInput51 = in40;
          62: multxInput51 = in41;
          63: multxInput51 = in42;
-         default: multxInput51 = 18'b0;
+         default: multxInput51 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput52
@@ -6313,7 +6313,7 @@ always @(*)
          61: multxInput52 = in41;
          62: multxInput52 = in42;
          63: multxInput52 = in43;
-         default: multxInput52 = 18'b0;
+         default: multxInput52 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput53
@@ -6384,7 +6384,7 @@ always @(*)
          61: multxInput53 = in42;
          62: multxInput53 = in43;
          63: multxInput53 = in44;
-         default: multxInput53 = 18'b0;
+         default: multxInput53 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput54
@@ -6455,7 +6455,7 @@ always @(*)
          61: multxInput54 = in43;
          62: multxInput54 = in44;
          63: multxInput54 = in45;
-         default: multxInput54 = 18'b0;
+         default: multxInput54 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput55
@@ -6526,7 +6526,7 @@ always @(*)
          61: multxInput55 = in44;
          62: multxInput55 = in45;
          63: multxInput55 = in46;
-         default: multxInput55 = 18'b0;
+         default: multxInput55 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput56
@@ -6597,7 +6597,7 @@ always @(*)
          61: multxInput56 = in53;
          62: multxInput56 = in54;
          63: multxInput56 = in55;
-         default: multxInput56 = 18'b0;
+         default: multxInput56 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput57
@@ -6668,7 +6668,7 @@ always @(*)
          61: multxInput57 = in54;
          62: multxInput57 = in55;
          63: multxInput57 = in48;
-         default: multxInput57 = 18'b0;
+         default: multxInput57 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput58
@@ -6739,7 +6739,7 @@ always @(*)
          61: multxInput58 = in55;
          62: multxInput58 = in48;
          63: multxInput58 = in49;
-         default: multxInput58 = 18'b0;
+         default: multxInput58 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput59
@@ -6810,7 +6810,7 @@ always @(*)
          61: multxInput59 = in48;
          62: multxInput59 = in49;
          63: multxInput59 = in50;
-         default: multxInput59 = 18'b0;
+         default: multxInput59 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput60
@@ -6881,7 +6881,7 @@ always @(*)
          61: multxInput60 = in49;
          62: multxInput60 = in50;
          63: multxInput60 = in51;
-         default: multxInput60 = 18'b0;
+         default: multxInput60 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput61
@@ -6952,7 +6952,7 @@ always @(*)
          61: multxInput61 = in50;
          62: multxInput61 = in51;
          63: multxInput61 = in52;
-         default: multxInput61 = 18'b0;
+         default: multxInput61 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput62
@@ -7023,7 +7023,7 @@ always @(*)
          61: multxInput62 = in51;
          62: multxInput62 = in52;
          63: multxInput62 = in53;
-         default: multxInput62 = 18'b0;
+         default: multxInput62 = 18'sb0;
       endcase
    end
 // multiplexer with output of multxInput63
@@ -7094,7 +7094,7 @@ always @(*)
          61: multxInput63 = in52;
          62: multxInput63 = in53;
          63: multxInput63 = in54;
-         default: multxInput63 = 18'b0;
+         default: multxInput63 = 18'sb0;
       endcase
    end
 always @(posedge masterClock)
@@ -7104,323 +7104,324 @@ always @(posedge masterClock)
 endmodule
 // end alert
 module multx(d0, i0, d1, i1, d2, i2, d3, i3, d4, i4, d5, i5, d6, i6, d7, i7, d8, i8, d9, i9, d10, i10, d11, i11, d12, i12, d13, i13, d14, i14, d15, i15, d16, i16, d17, i17, d18, i18, d19, i19, d20, i20, d21, i21, d22, i22, d23, i23, d24, i24, d25, i25, d26, i26, d27, i27, d28, i28, d29, i29, d30, i30, d31, i31, d32, i32, d33, i33, d34, i34, d35, i35, d36, i36, d37, i37, d38, i38, d39, i39, d40, i40, d41, i41, d42, i42, d43, i43, d44, i44, d45, i45, d46, i46, d47, i47, d48, i48, d49, i49, d50, i50, d51, i51, d52, i52, d53, i53, d54, i54, d55, i55, d56, i56, d57, i57, d58, i58, d59, i59, d60, i60, d61, i61, d62, i62, d63, i63, adderMode, out, clk, rst);
-input  [17:0]     d0;
-input  [17:0]     i0;
+input adderMode;
+input signed  [17:0]     d0;
+input signed  [17:0]     i0;
 wire signed [35:0]     w0;
 multiplier mult0 (.in0(d0), .in1(i0), .out(w0));
 reg signed [35:0]     w0_0;
-input  [17:0]     d1;
-input  [17:0]     i1;
+input signed  [17:0]     d1;
+input signed  [17:0]     i1;
 wire signed [35:0]     w1;
 multiplier mult1 (.in0(d1), .in1(i1), .out(w1));
 reg signed [35:0]     w0_1;
-input  [17:0]     d2;
-input  [17:0]     i2;
+input signed  [17:0]     d2;
+input signed  [17:0]     i2;
 wire signed [35:0]     w2;
 multiplier mult2 (.in0(d2), .in1(i2), .out(w2));
 reg signed [35:0]     w0_2;
-input  [17:0]     d3;
-input  [17:0]     i3;
+input signed  [17:0]     d3;
+input signed  [17:0]     i3;
 wire signed [35:0]     w3;
 multiplier mult3 (.in0(d3), .in1(i3), .out(w3));
 reg signed [35:0]     w0_3;
-input  [17:0]     d4;
-input  [17:0]     i4;
+input signed  [17:0]     d4;
+input signed  [17:0]     i4;
 wire signed [35:0]     w4;
 multiplier mult4 (.in0(d4), .in1(i4), .out(w4));
 reg signed [35:0]     w0_4;
-input  [17:0]     d5;
-input  [17:0]     i5;
+input signed  [17:0]     d5;
+input signed  [17:0]     i5;
 wire signed [35:0]     w5;
 multiplier mult5 (.in0(d5), .in1(i5), .out(w5));
 reg signed [35:0]     w0_5;
-input  [17:0]     d6;
-input  [17:0]     i6;
+input signed  [17:0]     d6;
+input signed  [17:0]     i6;
 wire signed [35:0]     w6;
 multiplier mult6 (.in0(d6), .in1(i6), .out(w6));
 reg signed [35:0]     w0_6;
-input  [17:0]     d7;
-input  [17:0]     i7;
+input signed  [17:0]     d7;
+input signed  [17:0]     i7;
 wire signed [35:0]     w7;
 multiplier mult7 (.in0(d7), .in1(i7), .out(w7));
 reg signed [35:0]     w0_7;
-input  [17:0]     d8;
-input  [17:0]     i8;
+input signed  [17:0]     d8;
+input signed  [17:0]     i8;
 wire signed [35:0]     w8;
 multiplier mult8 (.in0(d8), .in1(i8), .out(w8));
 reg signed [35:0]     w0_8;
-input  [17:0]     d9;
-input  [17:0]     i9;
+input signed  [17:0]     d9;
+input signed  [17:0]     i9;
 wire signed [35:0]     w9;
 multiplier mult9 (.in0(d9), .in1(i9), .out(w9));
 reg signed [35:0]     w0_9;
-input  [17:0]     d10;
-input  [17:0]     i10;
+input signed  [17:0]     d10;
+input signed  [17:0]     i10;
 wire signed [35:0]     w10;
 multiplier mult10 (.in0(d10), .in1(i10), .out(w10));
 reg signed [35:0]     w0_10;
-input  [17:0]     d11;
-input  [17:0]     i11;
+input signed  [17:0]     d11;
+input signed  [17:0]     i11;
 wire signed [35:0]     w11;
 multiplier mult11 (.in0(d11), .in1(i11), .out(w11));
 reg signed [35:0]     w0_11;
-input  [17:0]     d12;
-input  [17:0]     i12;
+input signed  [17:0]     d12;
+input signed  [17:0]     i12;
 wire signed [35:0]     w12;
 multiplier mult12 (.in0(d12), .in1(i12), .out(w12));
 reg signed [35:0]     w0_12;
-input  [17:0]     d13;
-input  [17:0]     i13;
+input signed  [17:0]     d13;
+input signed  [17:0]     i13;
 wire signed [35:0]     w13;
 multiplier mult13 (.in0(d13), .in1(i13), .out(w13));
 reg signed [35:0]     w0_13;
-input  [17:0]     d14;
-input  [17:0]     i14;
+input signed  [17:0]     d14;
+input signed  [17:0]     i14;
 wire signed [35:0]     w14;
 multiplier mult14 (.in0(d14), .in1(i14), .out(w14));
 reg signed [35:0]     w0_14;
-input  [17:0]     d15;
-input  [17:0]     i15;
+input signed  [17:0]     d15;
+input signed  [17:0]     i15;
 wire signed [35:0]     w15;
 multiplier mult15 (.in0(d15), .in1(i15), .out(w15));
 reg signed [35:0]     w0_15;
-input  [17:0]     d16;
-input  [17:0]     i16;
+input signed  [17:0]     d16;
+input signed  [17:0]     i16;
 wire signed [35:0]     w16;
 multiplier mult16 (.in0(d16), .in1(i16), .out(w16));
 reg signed [35:0]     w0_16;
-input  [17:0]     d17;
-input  [17:0]     i17;
+input signed  [17:0]     d17;
+input signed  [17:0]     i17;
 wire signed [35:0]     w17;
 multiplier mult17 (.in0(d17), .in1(i17), .out(w17));
 reg signed [35:0]     w0_17;
-input  [17:0]     d18;
-input  [17:0]     i18;
+input signed  [17:0]     d18;
+input signed  [17:0]     i18;
 wire signed [35:0]     w18;
 multiplier mult18 (.in0(d18), .in1(i18), .out(w18));
 reg signed [35:0]     w0_18;
-input  [17:0]     d19;
-input  [17:0]     i19;
+input signed  [17:0]     d19;
+input signed  [17:0]     i19;
 wire signed [35:0]     w19;
 multiplier mult19 (.in0(d19), .in1(i19), .out(w19));
 reg signed [35:0]     w0_19;
-input  [17:0]     d20;
-input  [17:0]     i20;
+input signed  [17:0]     d20;
+input signed  [17:0]     i20;
 wire signed [35:0]     w20;
 multiplier mult20 (.in0(d20), .in1(i20), .out(w20));
 reg signed [35:0]     w0_20;
-input  [17:0]     d21;
-input  [17:0]     i21;
+input signed  [17:0]     d21;
+input signed  [17:0]     i21;
 wire signed [35:0]     w21;
 multiplier mult21 (.in0(d21), .in1(i21), .out(w21));
 reg signed [35:0]     w0_21;
-input  [17:0]     d22;
-input  [17:0]     i22;
+input signed  [17:0]     d22;
+input signed  [17:0]     i22;
 wire signed [35:0]     w22;
 multiplier mult22 (.in0(d22), .in1(i22), .out(w22));
 reg signed [35:0]     w0_22;
-input  [17:0]     d23;
-input  [17:0]     i23;
+input signed  [17:0]     d23;
+input signed  [17:0]     i23;
 wire signed [35:0]     w23;
 multiplier mult23 (.in0(d23), .in1(i23), .out(w23));
 reg signed [35:0]     w0_23;
-input  [17:0]     d24;
-input  [17:0]     i24;
+input signed  [17:0]     d24;
+input signed  [17:0]     i24;
 wire signed [35:0]     w24;
 multiplier mult24 (.in0(d24), .in1(i24), .out(w24));
 reg signed [35:0]     w0_24;
-input  [17:0]     d25;
-input  [17:0]     i25;
+input signed  [17:0]     d25;
+input signed  [17:0]     i25;
 wire signed [35:0]     w25;
 multiplier mult25 (.in0(d25), .in1(i25), .out(w25));
 reg signed [35:0]     w0_25;
-input  [17:0]     d26;
-input  [17:0]     i26;
+input signed  [17:0]     d26;
+input signed  [17:0]     i26;
 wire signed [35:0]     w26;
 multiplier mult26 (.in0(d26), .in1(i26), .out(w26));
 reg signed [35:0]     w0_26;
-input  [17:0]     d27;
-input  [17:0]     i27;
+input signed  [17:0]     d27;
+input signed  [17:0]     i27;
 wire signed [35:0]     w27;
 multiplier mult27 (.in0(d27), .in1(i27), .out(w27));
 reg signed [35:0]     w0_27;
-input  [17:0]     d28;
-input  [17:0]     i28;
+input signed  [17:0]     d28;
+input signed  [17:0]     i28;
 wire signed [35:0]     w28;
 multiplier mult28 (.in0(d28), .in1(i28), .out(w28));
 reg signed [35:0]     w0_28;
-input  [17:0]     d29;
-input  [17:0]     i29;
+input signed  [17:0]     d29;
+input signed  [17:0]     i29;
 wire signed [35:0]     w29;
 multiplier mult29 (.in0(d29), .in1(i29), .out(w29));
 reg signed [35:0]     w0_29;
-input  [17:0]     d30;
-input  [17:0]     i30;
+input signed  [17:0]     d30;
+input signed  [17:0]     i30;
 wire signed [35:0]     w30;
 multiplier mult30 (.in0(d30), .in1(i30), .out(w30));
 reg signed [35:0]     w0_30;
-input  [17:0]     d31;
-input  [17:0]     i31;
+input signed  [17:0]     d31;
+input signed  [17:0]     i31;
 wire signed [35:0]     w31;
 multiplier mult31 (.in0(d31), .in1(i31), .out(w31));
 reg signed [35:0]     w0_31;
-input  [17:0]     d32;
-input  [17:0]     i32;
+input signed  [17:0]     d32;
+input signed  [17:0]     i32;
 wire signed [35:0]     w32;
 multiplier mult32 (.in0(d32), .in1(i32), .out(w32));
 reg signed [35:0]     w0_32;
-input  [17:0]     d33;
-input  [17:0]     i33;
+input signed  [17:0]     d33;
+input signed  [17:0]     i33;
 wire signed [35:0]     w33;
 multiplier mult33 (.in0(d33), .in1(i33), .out(w33));
 reg signed [35:0]     w0_33;
-input  [17:0]     d34;
-input  [17:0]     i34;
+input signed  [17:0]     d34;
+input signed  [17:0]     i34;
 wire signed [35:0]     w34;
 multiplier mult34 (.in0(d34), .in1(i34), .out(w34));
 reg signed [35:0]     w0_34;
-input  [17:0]     d35;
-input  [17:0]     i35;
+input signed  [17:0]     d35;
+input signed  [17:0]     i35;
 wire signed [35:0]     w35;
 multiplier mult35 (.in0(d35), .in1(i35), .out(w35));
 reg signed [35:0]     w0_35;
-input  [17:0]     d36;
-input  [17:0]     i36;
+input signed  [17:0]     d36;
+input signed  [17:0]     i36;
 wire signed [35:0]     w36;
 multiplier mult36 (.in0(d36), .in1(i36), .out(w36));
 reg signed [35:0]     w0_36;
-input  [17:0]     d37;
-input  [17:0]     i37;
+input signed  [17:0]     d37;
+input signed  [17:0]     i37;
 wire signed [35:0]     w37;
 multiplier mult37 (.in0(d37), .in1(i37), .out(w37));
 reg signed [35:0]     w0_37;
-input  [17:0]     d38;
-input  [17:0]     i38;
+input signed  [17:0]     d38;
+input signed  [17:0]     i38;
 wire signed [35:0]     w38;
 multiplier mult38 (.in0(d38), .in1(i38), .out(w38));
 reg signed [35:0]     w0_38;
-input  [17:0]     d39;
-input  [17:0]     i39;
+input signed  [17:0]     d39;
+input signed  [17:0]     i39;
 wire signed [35:0]     w39;
 multiplier mult39 (.in0(d39), .in1(i39), .out(w39));
 reg signed [35:0]     w0_39;
-input  [17:0]     d40;
-input  [17:0]     i40;
+input signed  [17:0]     d40;
+input signed  [17:0]     i40;
 wire signed [35:0]     w40;
 multiplier mult40 (.in0(d40), .in1(i40), .out(w40));
 reg signed [35:0]     w0_40;
-input  [17:0]     d41;
-input  [17:0]     i41;
+input signed  [17:0]     d41;
+input signed  [17:0]     i41;
 wire signed [35:0]     w41;
 multiplier mult41 (.in0(d41), .in1(i41), .out(w41));
 reg signed [35:0]     w0_41;
-input  [17:0]     d42;
-input  [17:0]     i42;
+input signed  [17:0]     d42;
+input signed  [17:0]     i42;
 wire signed [35:0]     w42;
 multiplier mult42 (.in0(d42), .in1(i42), .out(w42));
 reg signed [35:0]     w0_42;
-input  [17:0]     d43;
-input  [17:0]     i43;
+input signed  [17:0]     d43;
+input signed  [17:0]     i43;
 wire signed [35:0]     w43;
 multiplier mult43 (.in0(d43), .in1(i43), .out(w43));
 reg signed [35:0]     w0_43;
-input  [17:0]     d44;
-input  [17:0]     i44;
+input signed  [17:0]     d44;
+input signed  [17:0]     i44;
 wire signed [35:0]     w44;
 multiplier mult44 (.in0(d44), .in1(i44), .out(w44));
 reg signed [35:0]     w0_44;
-input  [17:0]     d45;
-input  [17:0]     i45;
+input signed  [17:0]     d45;
+input signed  [17:0]     i45;
 wire signed [35:0]     w45;
 multiplier mult45 (.in0(d45), .in1(i45), .out(w45));
 reg signed [35:0]     w0_45;
-input  [17:0]     d46;
-input  [17:0]     i46;
+input signed  [17:0]     d46;
+input signed  [17:0]     i46;
 wire signed [35:0]     w46;
 multiplier mult46 (.in0(d46), .in1(i46), .out(w46));
 reg signed [35:0]     w0_46;
-input  [17:0]     d47;
-input  [17:0]     i47;
+input signed  [17:0]     d47;
+input signed  [17:0]     i47;
 wire signed [35:0]     w47;
 multiplier mult47 (.in0(d47), .in1(i47), .out(w47));
 reg signed [35:0]     w0_47;
-input  [17:0]     d48;
-input  [17:0]     i48;
+input signed  [17:0]     d48;
+input signed  [17:0]     i48;
 wire signed [35:0]     w48;
 multiplier mult48 (.in0(d48), .in1(i48), .out(w48));
 reg signed [35:0]     w0_48;
-input  [17:0]     d49;
-input  [17:0]     i49;
+input signed  [17:0]     d49;
+input signed  [17:0]     i49;
 wire signed [35:0]     w49;
 multiplier mult49 (.in0(d49), .in1(i49), .out(w49));
 reg signed [35:0]     w0_49;
-input  [17:0]     d50;
-input  [17:0]     i50;
+input signed  [17:0]     d50;
+input signed  [17:0]     i50;
 wire signed [35:0]     w50;
 multiplier mult50 (.in0(d50), .in1(i50), .out(w50));
 reg signed [35:0]     w0_50;
-input  [17:0]     d51;
-input  [17:0]     i51;
+input signed  [17:0]     d51;
+input signed  [17:0]     i51;
 wire signed [35:0]     w51;
 multiplier mult51 (.in0(d51), .in1(i51), .out(w51));
 reg signed [35:0]     w0_51;
-input  [17:0]     d52;
-input  [17:0]     i52;
+input signed  [17:0]     d52;
+input signed  [17:0]     i52;
 wire signed [35:0]     w52;
 multiplier mult52 (.in0(d52), .in1(i52), .out(w52));
 reg signed [35:0]     w0_52;
-input  [17:0]     d53;
-input  [17:0]     i53;
+input signed  [17:0]     d53;
+input signed  [17:0]     i53;
 wire signed [35:0]     w53;
 multiplier mult53 (.in0(d53), .in1(i53), .out(w53));
 reg signed [35:0]     w0_53;
-input  [17:0]     d54;
-input  [17:0]     i54;
+input signed  [17:0]     d54;
+input signed  [17:0]     i54;
 wire signed [35:0]     w54;
 multiplier mult54 (.in0(d54), .in1(i54), .out(w54));
 reg signed [35:0]     w0_54;
-input  [17:0]     d55;
-input  [17:0]     i55;
+input signed  [17:0]     d55;
+input signed  [17:0]     i55;
 wire signed [35:0]     w55;
 multiplier mult55 (.in0(d55), .in1(i55), .out(w55));
 reg signed [35:0]     w0_55;
-input  [17:0]     d56;
-input  [17:0]     i56;
+input signed  [17:0]     d56;
+input signed  [17:0]     i56;
 wire signed [35:0]     w56;
 multiplier mult56 (.in0(d56), .in1(i56), .out(w56));
 reg signed [35:0]     w0_56;
-input  [17:0]     d57;
-input  [17:0]     i57;
+input signed  [17:0]     d57;
+input signed  [17:0]     i57;
 wire signed [35:0]     w57;
 multiplier mult57 (.in0(d57), .in1(i57), .out(w57));
 reg signed [35:0]     w0_57;
-input  [17:0]     d58;
-input  [17:0]     i58;
+input signed  [17:0]     d58;
+input signed  [17:0]     i58;
 wire signed [35:0]     w58;
 multiplier mult58 (.in0(d58), .in1(i58), .out(w58));
 reg signed [35:0]     w0_58;
-input  [17:0]     d59;
-input  [17:0]     i59;
+input signed  [17:0]     d59;
+input signed  [17:0]     i59;
 wire signed [35:0]     w59;
 multiplier mult59 (.in0(d59), .in1(i59), .out(w59));
 reg signed [35:0]     w0_59;
-input  [17:0]     d60;
-input  [17:0]     i60;
+input signed  [17:0]     d60;
+input signed  [17:0]     i60;
 wire signed [35:0]     w60;
 multiplier mult60 (.in0(d60), .in1(i60), .out(w60));
 reg signed [35:0]     w0_60;
-input  [17:0]     d61;
-input  [17:0]     i61;
+input signed  [17:0]     d61;
+input signed  [17:0]     i61;
 wire signed [35:0]     w61;
 multiplier mult61 (.in0(d61), .in1(i61), .out(w61));
 reg signed [35:0]     w0_61;
-input  [17:0]     d62;
-input  [17:0]     i62;
+input signed  [17:0]     d62;
+input signed  [17:0]     i62;
 wire signed [35:0]     w62;
 multiplier mult62 (.in0(d62), .in1(i62), .out(w62));
 reg signed [35:0]     w0_62;
-input  [17:0]     d63;
-input  [17:0]     i63;
+input signed  [17:0]     d63;
+input signed  [17:0]     i63;
 wire signed [35:0]     w63;
 multiplier mult63 (.in0(d63), .in1(i63), .out(w63));
 reg signed [35:0]     w0_63;
@@ -7507,7 +7508,6 @@ wire signed [35:0]     w4_3d = adderMode ? w3_6 + w3_7 : (w3_6 > w3_7 ? w3_6 : w
 wire signed [35:0]     w5_0 = adderMode ? w4_0 + w4_1 : (w4_0 > w4_1 ? w4_0 : w4_1);
 wire signed [35:0]     w5_1 = adderMode ? w4_2 + w4_3 : (w4_2 > w4_3 ? w4_2 : w4_3);
 wire signed [35:0]     w6_0 = adderMode ? w5_0 + w5_1 : (w5_0 > w5_1 ? w5_0 : w5_1);
-input adderMode;
 input clk;
 input rst;
 output  [35:0]    out;
@@ -7515,106 +7515,106 @@ output  [35:0]    out;
 assign out = w6_0;
 always @(posedge clk)
    begin
-      w0_0 <= rst ? w0 : 36'b0;
-      w0_1 <= rst ? w1 : 36'b0;
-      w0_2 <= rst ? w2 : 36'b0;
-      w0_3 <= rst ? w3 : 36'b0;
-      w0_4 <= rst ? w4 : 36'b0;
-      w0_5 <= rst ? w5 : 36'b0;
-      w0_6 <= rst ? w6 : 36'b0;
-      w0_7 <= rst ? w7 : 36'b0;
-      w0_8 <= rst ? w8 : 36'b0;
-      w0_9 <= rst ? w9 : 36'b0;
-      w0_10 <= rst ? w10 : 36'b0;
-      w0_11 <= rst ? w11 : 36'b0;
-      w0_12 <= rst ? w12 : 36'b0;
-      w0_13 <= rst ? w13 : 36'b0;
-      w0_14 <= rst ? w14 : 36'b0;
-      w0_15 <= rst ? w15 : 36'b0;
-      w0_16 <= rst ? w16 : 36'b0;
-      w0_17 <= rst ? w17 : 36'b0;
-      w0_18 <= rst ? w18 : 36'b0;
-      w0_19 <= rst ? w19 : 36'b0;
-      w0_20 <= rst ? w20 : 36'b0;
-      w0_21 <= rst ? w21 : 36'b0;
-      w0_22 <= rst ? w22 : 36'b0;
-      w0_23 <= rst ? w23 : 36'b0;
-      w0_24 <= rst ? w24 : 36'b0;
-      w0_25 <= rst ? w25 : 36'b0;
-      w0_26 <= rst ? w26 : 36'b0;
-      w0_27 <= rst ? w27 : 36'b0;
-      w0_28 <= rst ? w28 : 36'b0;
-      w0_29 <= rst ? w29 : 36'b0;
-      w0_30 <= rst ? w30 : 36'b0;
-      w0_31 <= rst ? w31 : 36'b0;
-      w0_32 <= rst ? w32 : 36'b0;
-      w0_33 <= rst ? w33 : 36'b0;
-      w0_34 <= rst ? w34 : 36'b0;
-      w0_35 <= rst ? w35 : 36'b0;
-      w0_36 <= rst ? w36 : 36'b0;
-      w0_37 <= rst ? w37 : 36'b0;
-      w0_38 <= rst ? w38 : 36'b0;
-      w0_39 <= rst ? w39 : 36'b0;
-      w0_40 <= rst ? w40 : 36'b0;
-      w0_41 <= rst ? w41 : 36'b0;
-      w0_42 <= rst ? w42 : 36'b0;
-      w0_43 <= rst ? w43 : 36'b0;
-      w0_44 <= rst ? w44 : 36'b0;
-      w0_45 <= rst ? w45 : 36'b0;
-      w0_46 <= rst ? w46 : 36'b0;
-      w0_47 <= rst ? w47 : 36'b0;
-      w0_48 <= rst ? w48 : 36'b0;
-      w0_49 <= rst ? w49 : 36'b0;
-      w0_50 <= rst ? w50 : 36'b0;
-      w0_51 <= rst ? w51 : 36'b0;
-      w0_52 <= rst ? w52 : 36'b0;
-      w0_53 <= rst ? w53 : 36'b0;
-      w0_54 <= rst ? w54 : 36'b0;
-      w0_55 <= rst ? w55 : 36'b0;
-      w0_56 <= rst ? w56 : 36'b0;
-      w0_57 <= rst ? w57 : 36'b0;
-      w0_58 <= rst ? w58 : 36'b0;
-      w0_59 <= rst ? w59 : 36'b0;
-      w0_60 <= rst ? w60 : 36'b0;
-      w0_61 <= rst ? w61 : 36'b0;
-      w0_62 <= rst ? w62 : 36'b0;
-      w0_63 <= rst ? w63 : 36'b0;
-      w2_0 <= rst ? w2_0d : 36'b0;
-      w2_1 <= rst ? w2_1d : 36'b0;
-      w2_2 <= rst ? w2_2d : 36'b0;
-      w2_3 <= rst ? w2_3d : 36'b0;
-      w2_4 <= rst ? w2_4d : 36'b0;
-      w2_5 <= rst ? w2_5d : 36'b0;
-      w2_6 <= rst ? w2_6d : 36'b0;
-      w2_7 <= rst ? w2_7d : 36'b0;
-      w2_8 <= rst ? w2_8d : 36'b0;
-      w2_9 <= rst ? w2_9d : 36'b0;
-      w2_10 <= rst ? w2_10d : 36'b0;
-      w2_11 <= rst ? w2_11d : 36'b0;
-      w2_12 <= rst ? w2_12d : 36'b0;
-      w2_13 <= rst ? w2_13d : 36'b0;
-      w2_14 <= rst ? w2_14d : 36'b0;
-      w2_15 <= rst ? w2_15d : 36'b0;
-      w4_0 <= rst ? w4_0d : 36'b0;
-      w4_1 <= rst ? w4_1d : 36'b0;
-      w4_2 <= rst ? w4_2d : 36'b0;
-      w4_3 <= rst ? w4_3d : 36'b0;
+      w0_0 <= rst ? w0 : 36'd0;
+      w0_1 <= rst ? w1 : 36'd0;
+      w0_2 <= rst ? w2 : 36'd0;
+      w0_3 <= rst ? w3 : 36'd0;
+      w0_4 <= rst ? w4 : 36'd0;
+      w0_5 <= rst ? w5 : 36'd0;
+      w0_6 <= rst ? w6 : 36'd0;
+      w0_7 <= rst ? w7 : 36'd0;
+      w0_8 <= rst ? w8 : 36'd0;
+      w0_9 <= rst ? w9 : 36'd0;
+      w0_10 <= rst ? w10 : 36'd0;
+      w0_11 <= rst ? w11 : 36'd0;
+      w0_12 <= rst ? w12 : 36'd0;
+      w0_13 <= rst ? w13 : 36'd0;
+      w0_14 <= rst ? w14 : 36'd0;
+      w0_15 <= rst ? w15 : 36'd0;
+      w0_16 <= rst ? w16 : 36'd0;
+      w0_17 <= rst ? w17 : 36'd0;
+      w0_18 <= rst ? w18 : 36'd0;
+      w0_19 <= rst ? w19 : 36'd0;
+      w0_20 <= rst ? w20 : 36'd0;
+      w0_21 <= rst ? w21 : 36'd0;
+      w0_22 <= rst ? w22 : 36'd0;
+      w0_23 <= rst ? w23 : 36'd0;
+      w0_24 <= rst ? w24 : 36'd0;
+      w0_25 <= rst ? w25 : 36'd0;
+      w0_26 <= rst ? w26 : 36'd0;
+      w0_27 <= rst ? w27 : 36'd0;
+      w0_28 <= rst ? w28 : 36'd0;
+      w0_29 <= rst ? w29 : 36'd0;
+      w0_30 <= rst ? w30 : 36'd0;
+      w0_31 <= rst ? w31 : 36'd0;
+      w0_32 <= rst ? w32 : 36'd0;
+      w0_33 <= rst ? w33 : 36'd0;
+      w0_34 <= rst ? w34 : 36'd0;
+      w0_35 <= rst ? w35 : 36'd0;
+      w0_36 <= rst ? w36 : 36'd0;
+      w0_37 <= rst ? w37 : 36'd0;
+      w0_38 <= rst ? w38 : 36'd0;
+      w0_39 <= rst ? w39 : 36'd0;
+      w0_40 <= rst ? w40 : 36'd0;
+      w0_41 <= rst ? w41 : 36'd0;
+      w0_42 <= rst ? w42 : 36'd0;
+      w0_43 <= rst ? w43 : 36'd0;
+      w0_44 <= rst ? w44 : 36'd0;
+      w0_45 <= rst ? w45 : 36'd0;
+      w0_46 <= rst ? w46 : 36'd0;
+      w0_47 <= rst ? w47 : 36'd0;
+      w0_48 <= rst ? w48 : 36'd0;
+      w0_49 <= rst ? w49 : 36'd0;
+      w0_50 <= rst ? w50 : 36'd0;
+      w0_51 <= rst ? w51 : 36'd0;
+      w0_52 <= rst ? w52 : 36'd0;
+      w0_53 <= rst ? w53 : 36'd0;
+      w0_54 <= rst ? w54 : 36'd0;
+      w0_55 <= rst ? w55 : 36'd0;
+      w0_56 <= rst ? w56 : 36'd0;
+      w0_57 <= rst ? w57 : 36'd0;
+      w0_58 <= rst ? w58 : 36'd0;
+      w0_59 <= rst ? w59 : 36'd0;
+      w0_60 <= rst ? w60 : 36'd0;
+      w0_61 <= rst ? w61 : 36'd0;
+      w0_62 <= rst ? w62 : 36'd0;
+      w0_63 <= rst ? w63 : 36'd0;
+      w2_0 <= rst ? w2_0d : 36'd0;
+      w2_1 <= rst ? w2_1d : 36'd0;
+      w2_2 <= rst ? w2_2d : 36'd0;
+      w2_3 <= rst ? w2_3d : 36'd0;
+      w2_4 <= rst ? w2_4d : 36'd0;
+      w2_5 <= rst ? w2_5d : 36'd0;
+      w2_6 <= rst ? w2_6d : 36'd0;
+      w2_7 <= rst ? w2_7d : 36'd0;
+      w2_8 <= rst ? w2_8d : 36'd0;
+      w2_9 <= rst ? w2_9d : 36'd0;
+      w2_10 <= rst ? w2_10d : 36'd0;
+      w2_11 <= rst ? w2_11d : 36'd0;
+      w2_12 <= rst ? w2_12d : 36'd0;
+      w2_13 <= rst ? w2_13d : 36'd0;
+      w2_14 <= rst ? w2_14d : 36'd0;
+      w2_15 <= rst ? w2_15d : 36'd0;
+      w4_0 <= rst ? w4_0d : 36'd0;
+      w4_1 <= rst ? w4_1d : 36'd0;
+      w4_2 <= rst ? w4_2d : 36'd0;
+      w4_3 <= rst ? w4_3d : 36'd0;
    end
 endmodule
 module multiplier(in0, in1, out);
-input [17:0] in0, in1;
+input signed [17:0] in0, in1;
 wire signed [35:0] outMem = in0 * in1;
-output [35:0] out;
+output signed [35:0] out;
 assign out = outMem;
 endmodule
 module mult2reg(in0, in1, sel, out, clk, rst);
-input [35:0] in0, in1;
+input signed [35:0] in0, in1;
 input sel, clk, rst;
 reg signed [35:0] outq;
 output [35:0] out;
 assign out = outq;
 always @(posedge clk)
    begin
-      outq <= rst ? (sel ? in1 : in0) : 36'b0;
+      outq <= rst ? (sel ? in1 : in0) : 36'd0;
    end
 endmodule
