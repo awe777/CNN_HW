@@ -1,0 +1,197 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <sleep.h>
+uint32_t *control = (uint32_t *) 0x40000000;
+int main() {
+  // deactivate hardware processing
+  *(control) = 0;
+  // MARKER = SIGN
+  // input image data to image "array"
+  *(control + 1) = 1944764416; // 115.9169921875
+  *(control + 2) = -1876443136; // -111.8447265625
+  *(control + 3) = 360398848; // 21.4814453125
+  *(control + 4) = 113491968; // 6.7646484375
+  *(control + 5) = -1080393728; // -64.396484375
+  *(control + 6) = -1673003008; // -99.71875
+  *(control + 7) = 0;
+  *(control + 8) = 0;
+  *(control + 9) = -1646477312; // -98.1376953125
+  *(control + 10) = -172556288; // -10.28515625
+  *(control + 11) = 872792064; // 52.0224609375
+  *(control + 12) = 1671610368; // 99.6357421875
+  *(control + 13) = 1263124480; // 75.2880859375
+  *(control + 14) = -1908670464; // -113.765625
+  *(control + 15) = 0;
+  *(control + 16) = 0;
+  *(control + 17) = 1250295808; // 74.5234375
+  *(control + 18) = -552730624; // -32.9453125
+  *(control + 19) = 119767040; // 7.138671875
+  *(control + 20) = -778895360; // -46.42578125
+  *(control + 21) = -1610530816; // -95.9951171875
+  *(control + 22) = -546668544; // -32.583984375
+  *(control + 23) = 0;
+  *(control + 24) = 0;
+  *(control + 25) = -1520926720; // -90.654296875
+  *(control + 26) = -329089024; // -19.615234375
+  *(control + 27) = -1237336064; // -73.7509765625
+  *(control + 28) = 1412005888; // 84.162109375
+  *(control + 29) = 1398816768; // 83.3759765625
+  *(control + 30) = -1149943808; // -68.5419921875
+  *(control + 31) = 0;
+  *(control + 32) = 0;
+  *(control + 33) = 1888354304; // 112.5546875
+  *(control + 34) = -1276051456; // -76.05859375
+  *(control + 35) = 1899577344; // 113.2236328125
+  *(control + 36) = 1684635648; // 100.412109375
+  *(control + 37) = -491978752; // -29.32421875
+  *(control + 38) = -759463936; // -45.267578125
+  *(control + 39) = 0;
+  *(control + 40) = 0;
+  *(control + 41) = 2052440064; // 122.3349609375
+  *(control + 42) = 0;
+  *(control + 43) = 0;
+  *(control + 44) = 0;
+  *(control + 45) = 0;
+  *(control + 46) = 0;
+  *(control + 47) = 0;
+  *(control + 48) = 0;
+  *(control + 49) = 0;
+  *(control + 50) = 0;
+  *(control + 51) = 0;
+  *(control + 52) = 0;
+  *(control + 53) = 0;
+  *(control + 54) = 0;
+  *(control + 55) = 0;
+  *(control + 56) = 0;
+  *(control + 57) = 0;
+  *(control + 58) = 0;
+  *(control + 59) = 0;
+  *(control + 60) = 0;
+  *(control + 61) = 0;
+  *(control + 62) = 0;
+  *(control + 63) = 0;
+  *(control + 64) = 0;
+  // input weight data to weight "array"
+  *(control + 65) = 1629552640; // 97.12890625
+  *(control + 66) = -165740544; // -9.87890625
+  *(control + 67) = 0;
+  *(control + 68) = 0;
+  *(control + 69) = 0;
+  *(control + 70) = 0;
+  *(control + 71) = 0;
+  *(control + 72) = -1551515648; // -92.4775390625
+  *(control + 73) = 1785987072; // 106.453125
+  *(control + 74) = 0;
+  *(control + 75) = 0;
+  *(control + 76) = 0;
+  *(control + 77) = 0;
+  *(control + 78) = 0;
+  *(control + 79) = 0;
+  *(control + 80) = 0;
+  *(control + 81) = 0;
+  *(control + 82) = 0;
+  *(control + 83) = 0;
+  *(control + 84) = 0;
+  *(control + 85) = 0;
+  *(control + 86) = 0;
+  *(control + 87) = 0;
+  *(control + 88) = 0;
+  *(control + 89) = 0;
+  *(control + 90) = 0;
+  *(control + 91) = 0;
+  *(control + 92) = 0;
+  *(control + 93) = 0;
+  *(control + 94) = 0;
+  *(control + 95) = 0;
+  *(control + 96) = 0;
+  *(control + 97) = 0;
+  *(control + 98) = 0;
+  *(control + 99) = 0;
+  *(control + 100) = 0;
+  *(control + 101) = 0;
+  *(control + 102) = 0;
+  *(control + 103) = 0;
+  *(control + 104) = 0;
+  *(control + 105) = 0;
+  *(control + 106) = 0;
+  *(control + 107) = 0;
+  *(control + 108) = 0;
+  *(control + 109) = 0;
+  *(control + 110) = 0;
+  *(control + 111) = 0;
+  *(control + 112) = 0;
+  *(control + 113) = 0;
+  // activate hardware processing
+  *(control) = 0xffffffff;
+  // sleep while hardware is processing, time slept given for the hardware is 120% of hardware processing time to the nearest us
+  usleep(1);
+  // deactivate hardware processing
+  *(control) = 0;
+  printf("result = [\n");
+  printf("%f,\n", (double) *(control + 114) / 65536);
+  printf("%f,\n", (double) *(control + 115) / 65536);
+  printf("%f,\n", (double) *(control + 116) / 65536);
+  printf("%f,\n", (double) *(control + 117) / 65536);
+  printf("%f,\n", (double) *(control + 118) / 65536);
+  printf("%f,\n", (double) *(control + 119) / 65536);
+  printf("%f,\n", (double) *(control + 120) / 65536);
+  printf("%f,\n", (double) *(control + 121) / 65536);
+  printf("%f,\n", (double) *(control + 122) / 65536);
+  printf("%f,\n", (double) *(control + 123) / 65536);
+  printf("%f,\n", (double) *(control + 124) / 65536);
+  printf("%f,\n", (double) *(control + 125) / 65536);
+  printf("%f,\n", (double) *(control + 126) / 65536);
+  printf("%f,\n", (double) *(control + 127) / 65536);
+  printf("%f,\n", (double) *(control + 128) / 65536);
+  printf("%f,\n", (double) *(control + 129) / 65536);
+  printf("%f,\n", (double) *(control + 130) / 65536);
+  printf("%f,\n", (double) *(control + 131) / 65536);
+  printf("%f,\n", (double) *(control + 132) / 65536);
+  printf("%f,\n", (double) *(control + 133) / 65536);
+  printf("%f,\n", (double) *(control + 134) / 65536);
+  printf("%f,\n", (double) *(control + 135) / 65536);
+  printf("%f,\n", (double) *(control + 136) / 65536);
+  printf("%f,\n", (double) *(control + 137) / 65536);
+  printf("%f,\n", (double) *(control + 138) / 65536);
+  printf("%f,\n", (double) *(control + 139) / 65536);
+  printf("%f,\n", (double) *(control + 140) / 65536);
+  printf("%f,\n", (double) *(control + 141) / 65536);
+  printf("%f,\n", (double) *(control + 142) / 65536);
+  printf("%f,\n", (double) *(control + 143) / 65536);
+  printf("%f,\n", (double) *(control + 144) / 65536);
+  printf("%f,\n", (double) *(control + 145) / 65536);
+  printf("%f,\n", (double) *(control + 146) / 65536);
+  printf("%f,\n", (double) *(control + 147) / 65536);
+  printf("%f,\n", (double) *(control + 148) / 65536);
+  printf("%f,\n", (double) *(control + 149) / 65536);
+  printf("%f,\n", (double) *(control + 150) / 65536);
+  printf("%f,\n", (double) *(control + 151) / 65536);
+  printf("%f,\n", (double) *(control + 152) / 65536);
+  printf("%f,\n", (double) *(control + 153) / 65536);
+  printf("%f,\n", (double) *(control + 154) / 65536);
+  printf("%f,\n", (double) *(control + 155) / 65536);
+  printf("%f,\n", (double) *(control + 156) / 65536);
+  printf("%f,\n", (double) *(control + 157) / 65536);
+  printf("%f,\n", (double) *(control + 158) / 65536);
+  printf("%f,\n", (double) *(control + 159) / 65536);
+  printf("%f,\n", (double) *(control + 160) / 65536);
+  printf("%f,\n", (double) *(control + 161) / 65536);
+  printf("%f,\n", (double) *(control + 162) / 65536);
+  printf("%f,\n", (double) *(control + 163) / 65536);
+  printf("%f,\n", (double) *(control + 164) / 65536);
+  printf("%f,\n", (double) *(control + 165) / 65536);
+  printf("%f,\n", (double) *(control + 166) / 65536);
+  printf("%f,\n", (double) *(control + 167) / 65536);
+  printf("%f,\n", (double) *(control + 168) / 65536);
+  printf("%f,\n", (double) *(control + 169) / 65536);
+  printf("%f,\n", (double) *(control + 170) / 65536);
+  printf("%f,\n", (double) *(control + 171) / 65536);
+  printf("%f,\n", (double) *(control + 172) / 65536);
+  printf("%f,\n", (double) *(control + 173) / 65536);
+  printf("%f,\n", (double) *(control + 174) / 65536);
+  printf("%f,\n", (double) *(control + 175) / 65536);
+  printf("%f,\n", (double) *(control + 176) / 65536);
+  printf("%f,\n", (double) *(control + 177) / 65536);
+  printf("]\n");
+  // MARKER = REPEAT from SIGN ad infinitum
+}

@@ -1,0 +1,198 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <sleep.h>
+uint32_t *control = (uint32_t *) 0x40000000;
+int main() {
+  // deactivate hardware processing
+  *(control) = 0;
+  // MARKER = SIGN
+  // input image data to image "array"
+  *(control + 1) = -1754791936; // -104.59375
+  *(control + 2) = 85852160; // 5.1171875
+  *(control + 3) = -677150720; // -40.361328125
+  *(control + 4) = 1384316928; // 82.51171875
+  *(control + 5) = -349798400; // -20.849609375
+  *(control + 6) = -144637952; // -8.62109375
+  *(control + 7) = 0;
+  *(control + 8) = 0;
+  *(control + 9) = 1616216064; // 96.333984375
+  *(control + 10) = 15892480; // 0.947265625
+  *(control + 11) = -445906944; // -26.578125
+  *(control + 12) = 916652032; // 54.63671875
+  *(control + 13) = 637157376; // 37.9775390625
+  *(control + 14) = -61784064; // -3.6826171875
+  *(control + 15) = 0;
+  *(control + 16) = 0;
+  *(control + 17) = 5029888; // 0.2998046875
+  *(control + 18) = 1048051712; // 62.46875
+  *(control + 19) = 47513600; // 2.83203125
+  *(control + 20) = -299237376; // -17.8359375
+  *(control + 21) = 701448192; // 41.8095703125
+  *(control + 22) = -1848672256; // -110.189453125
+  *(control + 23) = 0;
+  *(control + 24) = 0;
+  *(control + 25) = -1523859456; // -90.8291015625
+  *(control + 26) = 121438208; // 7.23828125
+  *(control + 27) = 1745584128; // 104.044921875
+  *(control + 28) = -228917248; // -13.64453125
+  *(control + 29) = 320028672; // 19.0751953125
+  *(control + 30) = 511000576; // 30.4580078125
+  *(control + 31) = 0;
+  *(control + 32) = 0;
+  *(control + 33) = 476479488; // 28.400390625
+  *(control + 34) = -611287040; // -36.435546875
+  *(control + 35) = -658653184; // -39.2587890625
+  *(control + 36) = 1580498944; // 94.205078125
+  *(control + 37) = 1787396096; // 106.537109375
+  *(control + 38) = -808960000; // -48.2177734375
+  *(control + 39) = 0;
+  *(control + 40) = 0;
+  *(control + 41) = 280444928; // 16.7158203125
+  *(control + 42) = 618266624; // 36.8515625
+  *(control + 43) = 356450304; // 21.24609375
+  *(control + 44) = -1565147136; // -93.2900390625
+  *(control + 45) = 0;
+  *(control + 46) = 0;
+  *(control + 47) = 0;
+  *(control + 48) = 0;
+  *(control + 49) = 0;
+  *(control + 50) = 0;
+  *(control + 51) = 0;
+  *(control + 52) = 0;
+  *(control + 53) = 0;
+  *(control + 54) = 0;
+  *(control + 55) = 0;
+  *(control + 56) = 0;
+  *(control + 57) = 0;
+  *(control + 58) = 0;
+  *(control + 59) = 0;
+  *(control + 60) = 0;
+  *(control + 61) = 0;
+  *(control + 62) = 0;
+  *(control + 63) = 0;
+  *(control + 64) = 0;
+  // input weight data to weight "array"
+  *(control + 65) = -1269514240; // -75.6689453125
+  *(control + 66) = -1486028800; // -88.57421875
+  *(control + 67) = 1285865472; // 76.6435546875
+  *(control + 68) = 806223872; // 48.0546875
+  *(control + 69) = 239665152; // 14.28515625
+  *(control + 70) = 0;
+  *(control + 71) = 0;
+  *(control + 72) = -1984708608; // -118.2978515625
+  *(control + 73) = 764067840; // 45.5419921875
+  *(control + 74) = -1804910592; // -107.5810546875
+  *(control + 75) = 1846312960; // 110.048828125
+  *(control + 76) = 1225441280; // 73.0419921875
+  *(control + 77) = 0;
+  *(control + 78) = 0;
+  *(control + 79) = -1754202112; // -104.55859375
+  *(control + 80) = -2050654208; // -122.228515625
+  *(control + 81) = 1204813824; // 71.8125
+  *(control + 82) = 750927872; // 44.7587890625
+  *(control + 83) = 1893498880; // 112.861328125
+  *(control + 84) = 0;
+  *(control + 85) = 0;
+  *(control + 86) = 1328562176; // 79.1884765625
+  *(control + 87) = 1551532032; // 92.478515625
+  *(control + 88) = 783974400; // 46.728515625
+  *(control + 89) = 514457600; // 30.6640625
+  *(control + 90) = -10371072; // -0.6181640625
+  *(control + 91) = 0;
+  *(control + 92) = 0;
+  *(control + 93) = -588300288; // -35.0654296875
+  *(control + 94) = 1284964352; // 76.58984375
+  *(control + 95) = -1095827456; // -65.31640625
+  *(control + 96) = 0;
+  *(control + 97) = 0;
+  *(control + 98) = 0;
+  *(control + 99) = 0;
+  *(control + 100) = 0;
+  *(control + 101) = 0;
+  *(control + 102) = 0;
+  *(control + 103) = 0;
+  *(control + 104) = 0;
+  *(control + 105) = 0;
+  *(control + 106) = 0;
+  *(control + 107) = 0;
+  *(control + 108) = 0;
+  *(control + 109) = 0;
+  *(control + 110) = 0;
+  *(control + 111) = 0;
+  *(control + 112) = 0;
+  *(control + 113) = 0;
+  // activate hardware processing
+  *(control) = 0xffffffff;
+  // sleep while hardware is processing, time slept given for the hardware is 120% of hardware processing time to the nearest us
+  usleep(1);
+  // deactivate hardware processing
+  *(control) = 0;
+  printf("result = [\n");
+  printf("%f,\n", (double) *(control + 114) / 65536);
+  printf("%f,\n", (double) *(control + 115) / 65536);
+  printf("%f,\n", (double) *(control + 116) / 65536);
+  printf("%f,\n", (double) *(control + 117) / 65536);
+  printf("%f,\n", (double) *(control + 118) / 65536);
+  printf("%f,\n", (double) *(control + 119) / 65536);
+  printf("%f,\n", (double) *(control + 120) / 65536);
+  printf("%f,\n", (double) *(control + 121) / 65536);
+  printf("%f,\n", (double) *(control + 122) / 65536);
+  printf("%f,\n", (double) *(control + 123) / 65536);
+  printf("%f,\n", (double) *(control + 124) / 65536);
+  printf("%f,\n", (double) *(control + 125) / 65536);
+  printf("%f,\n", (double) *(control + 126) / 65536);
+  printf("%f,\n", (double) *(control + 127) / 65536);
+  printf("%f,\n", (double) *(control + 128) / 65536);
+  printf("%f,\n", (double) *(control + 129) / 65536);
+  printf("%f,\n", (double) *(control + 130) / 65536);
+  printf("%f,\n", (double) *(control + 131) / 65536);
+  printf("%f,\n", (double) *(control + 132) / 65536);
+  printf("%f,\n", (double) *(control + 133) / 65536);
+  printf("%f,\n", (double) *(control + 134) / 65536);
+  printf("%f,\n", (double) *(control + 135) / 65536);
+  printf("%f,\n", (double) *(control + 136) / 65536);
+  printf("%f,\n", (double) *(control + 137) / 65536);
+  printf("%f,\n", (double) *(control + 138) / 65536);
+  printf("%f,\n", (double) *(control + 139) / 65536);
+  printf("%f,\n", (double) *(control + 140) / 65536);
+  printf("%f,\n", (double) *(control + 141) / 65536);
+  printf("%f,\n", (double) *(control + 142) / 65536);
+  printf("%f,\n", (double) *(control + 143) / 65536);
+  printf("%f,\n", (double) *(control + 144) / 65536);
+  printf("%f,\n", (double) *(control + 145) / 65536);
+  printf("%f,\n", (double) *(control + 146) / 65536);
+  printf("%f,\n", (double) *(control + 147) / 65536);
+  printf("%f,\n", (double) *(control + 148) / 65536);
+  printf("%f,\n", (double) *(control + 149) / 65536);
+  printf("%f,\n", (double) *(control + 150) / 65536);
+  printf("%f,\n", (double) *(control + 151) / 65536);
+  printf("%f,\n", (double) *(control + 152) / 65536);
+  printf("%f,\n", (double) *(control + 153) / 65536);
+  printf("%f,\n", (double) *(control + 154) / 65536);
+  printf("%f,\n", (double) *(control + 155) / 65536);
+  printf("%f,\n", (double) *(control + 156) / 65536);
+  printf("%f,\n", (double) *(control + 157) / 65536);
+  printf("%f,\n", (double) *(control + 158) / 65536);
+  printf("%f,\n", (double) *(control + 159) / 65536);
+  printf("%f,\n", (double) *(control + 160) / 65536);
+  printf("%f,\n", (double) *(control + 161) / 65536);
+  printf("%f,\n", (double) *(control + 162) / 65536);
+  printf("%f,\n", (double) *(control + 163) / 65536);
+  printf("%f,\n", (double) *(control + 164) / 65536);
+  printf("%f,\n", (double) *(control + 165) / 65536);
+  printf("%f,\n", (double) *(control + 166) / 65536);
+  printf("%f,\n", (double) *(control + 167) / 65536);
+  printf("%f,\n", (double) *(control + 168) / 65536);
+  printf("%f,\n", (double) *(control + 169) / 65536);
+  printf("%f,\n", (double) *(control + 170) / 65536);
+  printf("%f,\n", (double) *(control + 171) / 65536);
+  printf("%f,\n", (double) *(control + 172) / 65536);
+  printf("%f,\n", (double) *(control + 173) / 65536);
+  printf("%f,\n", (double) *(control + 174) / 65536);
+  printf("%f,\n", (double) *(control + 175) / 65536);
+  printf("%f,\n", (double) *(control + 176) / 65536);
+  printf("%f,\n", (double) *(control + 177) / 65536);
+  printf("]\n");
+  // MARKER = REPEAT from SIGN ad infinitum
+}
+cgen_container.html:8:17
