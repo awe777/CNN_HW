@@ -32,14 +32,38 @@ function generate(v, im = [], wg = [], ledControl = false, debug = true) {
       wgProc[count1] = count1 % (v - 1) < control ? process(wg[count1 - (v - 1 - control) * Math.floor(count1 / (v - 1))]) : 0;
     }
   }
-  let softwareTime = Date.now();
-  const rsProc = imProc.map((value, indexOffset) => {
-    return wgProc.reduce((acc, currentValue, indexWeight) => {
-      return acc + (currentValue / 16777216) * (imProc[(indexOffset + (indexWeight % (v - 1)) % v + v * (Math.floor(indexOffset / v) + Math.floor(indexWeight / (v - 1))))] / 16777216);
-    }, 0)
-  })
-  softwareTime = Date.now() - softwareTime;
+  let softwareAdderTime = Date.now();
+  let x0 = 0;
+  let x1 = 0;
+  let y0 = 0;
+  let y1 = 0;
+  const rsProc = new Array(v * v).fill(0);
+  for(count0 = 0; count0 < v * v; count0++) {
+    x0 = count0 % v;
+    y0 = Math.floor(count0 / v);
+    for(count1 = 0; count1 < (v - 1) * (v - 1); count1++) {
+      x1 = count1 % (v - 1);
+      y1 = Math.floor(count1 / (v - 1));
+      rsProc[count0] += (wgProc[count1] / 16777216) * (imProc[v * ((y0 + y1) % v) + ((x0 + x1) % v)] / 16777216);
+    }
+  }
+  softwareAdderTime = Date.now() - softwareAdderTime;
   console.log(rsProc);
+  let softwareMaxTime = Date.now();
+  let currentValue = 0;
+  const rsMProc = new Array(v * v).fill();
+  for(count0 = 0; count0 < v * v; count0++) {
+    x0 = count0 % v;
+    y0 = Math.floor(count0 / v);
+    for(count1 = 0; count1 < (v - 1) * (v - 1); count1++) {
+      x1 = count1 % (v - 1);
+      y1 = Math.floor(count1 / (v - 1));
+      currentValue = (wgProc[count1] / 16777216) * (imProc[v * ((y0 + y1) % v) + ((x0 + x1) % v)] / 16777216);
+      rsMProc[count0] = (!rsMProc[count0] && rsMProc[count0] !== 0) || rsMProc[count0] < currentValue ? currentValue : rsMProc[count0];
+    }
+  }
+  softwareMaxTime = Date.now() - softwareMaxTime;
+  console.log(rsMProc);
   bodyReset();
 
   bodyPrint(`#include <stdio.h>`);
@@ -87,5 +111,9 @@ function generate(v, im = [], wg = [], ledControl = false, debug = true) {
   bodyPrint(`  // MARKER = REPEAT from SIGN ad infinitum`)
   bodyPrint(`}`)
   bodyWrite()
-  console.log(`Hardware generation time: ${Date.now() - start - softwareTime}; Software JS processing time: ${softwareTime}`)
+  console.log(`Hardware generation time: ${Date.now() - start - softwareAdderTime - softwareMaxTime}; Software JS processing time (adder): ${softwareAdderTime} ; Software JS processing time (max-pooling): ${softwareMaxTime}`)
+  return {
+    rsProc,
+    rsMProc
+  }
 }
