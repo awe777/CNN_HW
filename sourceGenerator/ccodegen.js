@@ -83,7 +83,7 @@ function generate(v, im = [], wg = [], ledControl = false, debug = true) {
   }
   debug ? bodyPrint(`  printf("image = [\\n");`) : null;
   for(count0 = 0; count0 < imProc.length && debug; count0++) {
-    bodyPrint(`  printf("%f,\\n", (double) *(control + ${count0 + 1}) / 16777216);`);
+    bodyPrint(`  printf("%f,\\n", (double) ((int)*(control + ${count0 + 1})) / 16777216);`);
   }
 
   debug ? bodyPrint(`  printf("]\\n");`) : null
@@ -93,23 +93,25 @@ function generate(v, im = [], wg = [], ledControl = false, debug = true) {
   }
   debug ? bodyPrint(`  printf("weight = [\\n");`) : null
   for(count1 = 0; count1 < wgProc.length && debug; count1++) {
-    bodyPrint(`  printf("%f,\\n", (double) *(control + ${count1 + 1 + imProc.length}) / 16777216);`)
+    bodyPrint(`  printf("%f,\\n", (double) ((int)*(control + ${count1 + 1 + imProc.length})) / 16777216);`)
   }
   debug ? bodyPrint(`  printf("]\\n");`) : null
   bodyPrint(`  // activate hardware processing`)
   bodyPrint(`  *(control) = 0xffffffff;`)
   bodyPrint(`  // sleep while hardware is processing, time slept given for the hardware is 120% of hardware processing time to the nearest us`)
-  bodyPrint(`  usleep(${Math.ceil(18 / 1000 * (v * (Math.ceil(Math.sqrt(im.length)) - Math.ceil(Math.sqrt(wg.length)) + 1) + Math.ceil(Math.log2(v * v)) - 2))});`)
+  bodyPrint(`  usleep(${Math.ceil(16.5 / 1000 * (v * (Math.ceil(Math.sqrt(im.length)) - Math.ceil(Math.sqrt(wg.length)) + 1) + Math.ceil(Math.log2(v * v)) - 2))});`)
   bodyPrint(`  // deactivate hardware processing`)
   bodyPrint(`  *(control) = 0;`)
   ledControl ? bodyPrint(`  *(ledCtrl) = 0b1111;`) : null;
   bodyPrint(`  printf("result = [\\n");`)
   for(count0 = 0; count0 < imProc.length; count0++) {
-    bodyPrint(`  printf("%f,\\n", (double) *(control + ${count0 + 1 + imProc.length + wgProc.length}) / 65536);`)
+    bodyPrint(`  printf("%f,\\n", (double) ((int)*(control + ${count0 + 1 + imProc.length + wgProc.length})) / 65536);`)
   }
   bodyPrint(`  printf("]\\n");`)
   bodyPrint(`  // MARKER = REPEAT from SIGN ad infinitum`)
   bodyPrint(`}`)
+  bodyPrint(`// rsProc = [${rsProc.join()}];`)
+  bodyPrint(`// rsMProc = [${rsMProc.join()}];`)
   bodyWrite()
   console.log(`Hardware generation time: ${Date.now() - start - softwareAdderTime - softwareMaxTime}; Software JS processing time (adder): ${softwareAdderTime} ; Software JS processing time (max-pooling): ${softwareMaxTime}`)
   return {
