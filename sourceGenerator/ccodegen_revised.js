@@ -50,7 +50,7 @@ function generate(v, r, im = [], im_w = 0, im_h = 0, wg = [], emulate = false) {
 
   // PART: Step   1   : square kernel array
   const wg_sq_dim = (v - 1) > Math.ceil(Math.sqrt(wg.length)) ? Math.ceil(Math.sqrt(wg.length)) : (v - 1);
-  const wg_sq = new Array(wg_sq_dim * wg_sq_dim).fill().map((c, i) => i < wg.length ? wg[i % wg_sq_dim + wg_sq_dim * Math.floor(i / wg_sq_dim)] : 0);
+  const wg_sq = new Array(wg_sq_dim * wg_sq_dim).fill().map((c, i) => i < wg.length ? wg[i] : 0);
 
   debugFlag(1)
 
@@ -150,11 +150,24 @@ function generate(v, r, im = [], im_w = 0, im_h = 0, wg = [], emulate = false) {
   
   console.log("Hardware code generation time - " + (Date.now() - start) + " ms");
   if(emulate) {
-  // PART: Step   8   : software emulation with single-threaded JS
+  // PART: Step   8   : unfaithful hardware emulation with single-threaded JS
+    const emu_output = new Array((im_h - wg_sq_dim + 1) * (im_w - wg_sq_dim + 1)).fill();
     const start_emu_0 = Date.now();
+    console.log("Adder result: " + (emu_output.map((c, i) => {
+        return wg_sq.reduce((acc, cur, index) => {
+          return acc + cur * im[i + index % wg_sq_dim + im_w * Math.floor(index / wg_sq_dim)];
+        }, 0);
+      }))
+    )
     console.log("Software emulation (adder) time - " + (Date.now() - start_emu_0) + " ms");
     
     const start_emu_1 = Date.now();
+    console.log("Max-pooling result: " + (emu_output.map((c, i) => {
+        return wg_sq.reduce((acc, cur, index) => {
+          return acc && acc > cur * im[i + index % wg_sq_dim + im_w * Math.floor(index / wg_sq_dim)] ? acc : cur * im[i + index % wg_sq_dim + im_w * Math.floor(index / wg_sq_dim)];
+        });
+      }))
+    )
     console.log("Software emulation (max-pooling) time - " + (Date.now() - start_emu_1) + " ms");
   }
 
