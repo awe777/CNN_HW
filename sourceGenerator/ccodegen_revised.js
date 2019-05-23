@@ -123,7 +123,7 @@ function generate(v, r, im = [], im_w = 0, im_h = 0, wg = [], emulate = false) {
   bodyPrint(`      } else {`)
   bodyPrint(`        *(control) = 0x007fffff; // turn off the first 9 bits to enable max-pooling mode`)
   bodyPrint(`      }`)
-  bodyPrint(`      usleep(${Math.ceil(16.5 * (v * (v - wg_sq_dim) + (v - wg_sq_dim + 1) + Math.ceil(Math.ceil(Math.log2(v * v)) / r) + 1) / 1000)}); // sleep length is mostly determined by HW specifications and performance (added 20% extra time as buffer)`)
+  bodyPrint(`      usleep(${Math.ceil(1.1 * 13.75 * (v * (v - wg_sq_dim) + (v - wg_sq_dim + 1) + Math.ceil(Math.ceil(Math.log2(v * v)) / r) + 1) / 1000)}); // sleep length is mostly determined by HW specifications and performance (added 10% extra time as buffer)`)
   bodyPrint(`      *(control) = 0; `)
   bodyPrint(`      for(moveDown = 0; moveDown < jumps; moveDown++) {`)
   bodyPrint(`        for(moveRight = 0; moveRight < jumps; moveRight++) {`)
