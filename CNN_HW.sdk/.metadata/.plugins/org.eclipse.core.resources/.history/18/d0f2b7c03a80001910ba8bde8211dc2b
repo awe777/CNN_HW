@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <sleep.h>
+uint32_t *control = (uint32_t *) 0x40000000;
+int main() {
+  *(control) = 0;
+  // STEP 3 - commented variable initialisations are to be replaced with a more suitable input data transfer
+  // importing adderMode toggle, image, and kernel data
+  int adderMode = 1; // 1 to run HW on adder mode, 0 to run HW on max-pooling mode
+  int im_h = 9; // image height (vertical pixel length)
+  int im_w = 9; // image width (horizontal pixel length)
+  int wg_dim = 3; // kernel dimension, make sure this value is positive and less than 8
+  int im[81] = {50331648,16777216,67108864,16777216,83886080,150994944,33554432,100663296,83886080,16777216,67108864,33554432,134217728,83886080,117440512,16777216,67108864,33554432,33554432,117440512,16777216,134217728,33554432,134217728,16777216,134217728,33554432,83886080,117440512,117440512,33554432,16777216,83886080,100663296,100663296,67108864,16777216,100663296,16777216,134217728,0,50331648,50331648,150994944,134217728,16777216,33554432,50331648,67108864,83886080,100663296,117440512,134217728,150994944,16777216,33554432,0,33554432,0,83886080,100663296,150994944,0,16777216,16777216,16777216,16777216,16777216,16777216,16777216,16777216,16777216,117440512,83886080,50331648,16777216,33554432,16777216,33554432,33554432,33554432}; // image array goes here, format is signed fixed point with radix at 8th (Q7.24), 14 LSBs will be ignored by HW
+  int wg[9] = {16777216,-16777216,16777216,-16777216,16777216,-16777216,16777216,0,16777216}; // square kernel array goes here, format is signed fixed point with radix at 8th (Q7.24), 14 LSBs will be ignored by HW
+  int out_h = im_h - wg_dim + 1;
+  int out_w = im_w - wg_dim + 1;
+  int out[out_w * out_h]; // output of this (image, kernel) layer will be stored here, format is signed fixed point with radix at 16th (Q15.16)
+  // STEP 4
+  int jumps = 8 - wg_dim + 1;
+  int out_h_rep = out_h % jumps == 0 ? out_h / jumps : 1 + out_h / jumps; // Math.ceil(out_h / jumps)
+  int out_w_rep = out_w % jumps == 0 ? out_w / jumps : 1 + out_w / jumps; // Math.ceil(out_w / jumps)
+  // STEP 5
+  int count = 0;
+  for(count = 0; count < 7 * 7; count++) {
+    if(count % 7 < wg_dim && count / 7 < wg_dim) {
+      *(control + 65 + count) = wg[wg_dim * (count / 7) + count % 7];
+    } else {
+      *(control + 65 + count) = 0;
+    }
+  }
+  // STEP 6
+  int jumpRight = 0;
+  int jumpDown = 0;
+  int moveRight = 0;
+  int moveDown = 0;
+  for(jumpDown = 0; jumpDown < out_h_rep; jumpDown++) {
+    for(jumpRight = 0; jumpRight < out_w_rep; jumpRight++) {
+      for(moveDown = 0; moveDown < 8; moveDown++) {
+        for(moveRight = 0; moveRight < 8; moveRight++) {
+          if(jumps * jumpRight + moveRight < im_w && jumps * jumpDown + moveDown < im_h) {
+            *(control + 1 + 8 * moveDown + moveRight) = im[im_w * (jumps * jumpDown + moveDown) + (jumps * jumpRight + moveRight)];
+          } else {
+            *(control + 1 + 8 * moveDown + moveRight) = 0;
+          }
+        }
+      }
+      if(adderMode = 1) {
+        *(control) = 0xffffffff;// turn on all the bits to enable adder mode
+      } else {
+        *(control) = 0x007fffff; // turn off the first 9 bits to enable max-pooling mode
+      }
+      usleep(1); // sleep length is mostly determined by HW specifications and performance (added 10% extra time as buffer)
+      *(control) = 0;
+      for(moveDown = 0; moveDown < jumps; moveDown++) {
+        for(moveRight = 0; moveRight < jumps; moveRight++) {
+          if(jumps * jumpRight + moveRight < out_w && jumps * jumpDown + moveDown < out_h) {
+            out[out_w * (jumps * jumpDown + moveDown) + (jumps * jumpRight + moveRight)] = (int)*(control + 114 + 8 * moveDown + moveRight);
+          }
+        }
+      }
+    }
+  }
+  // STEP 7 - at this point, output of the (image, kernel) layer is in out[]
+  printf("result = [\n");
+  for(count = 0; count < out_w * out_h; count++) {
+    printf("%f,\n", (double) ((int) (out[count])) / 65536);
+  }
+  printf("]\n");
+}
