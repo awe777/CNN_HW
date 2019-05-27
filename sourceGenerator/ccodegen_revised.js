@@ -118,7 +118,7 @@ function generate(v, r, im = [], im_w = 0, im_h = 0, wg = [], emulate = false) {
   bodyPrint(`          }`)
   bodyPrint(`        }`)
   bodyPrint(`      }`)
-  bodyPrint(`      if(adderMode = 1) {`)
+  bodyPrint(`      if(adderMode == 1) {`)
   bodyPrint(`        *(control) = 0xffffffff;// turn on all the bits to enable adder mode`)
   bodyPrint(`      } else {`)
   bodyPrint(`        *(control) = 0x007fffff; // turn off the first 9 bits to enable max-pooling mode`)
@@ -139,7 +139,11 @@ function generate(v, r, im = [], im_w = 0, im_h = 0, wg = [], emulate = false) {
 
   // PART: Step   7   : provide output data to suitable output channels, or, (from here) repurpose the output as the input of another run
   bodyPrint(`  // STEP 7 - at this point, output of the (image, kernel) layer is in out[]`)
-  bodyPrint(`  printf("result = [\\n");`)
+  bodyPrint(`  if (adderMode == 1) {`)
+  bodyPrint(`    printf("adder_result = [\\n");`)
+  bodyPrint(`  } else {`)
+  bodyPrint(`    printf("compare_result = [\\n");`)
+  bodyPrint(`  }`)
   bodyPrint(`  for(count = 0; count < out_w * out_h; count++) {`)
   bodyPrint(`    printf("%f,\\n", (double) ((int) (out[count])) / 65536);`)
   bodyPrint(`  }`)
