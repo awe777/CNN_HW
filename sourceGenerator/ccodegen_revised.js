@@ -65,15 +65,15 @@ function generate(v, r, im = [], im_w = 0, im_h = 0, wg = [], emulate = false) {
   bodyPrint(`uint32_t *control = (uint32_t *) 0x40000000;`);
   bodyPrint(`int main() {`)
   bodyPrint(`  *(control) = 0;`)
-  bodyPrint(`  // STEP 3 - commented variable initializations are to be replaced with a more suitable input data transfer`)
+  bodyPrint(`  // STEP 3 - commented variable initialisations are to be replaced with a more suitable input data transfer`)
   bodyPrint(`  // importing adderMode toggle, image, and kernel data`)
   // C variables that are initialized using JS variables (except ${v} or ${r}, a HW-specific JS variable) are the one needs to be replaced if I/O methods were to change
   bodyPrint(`  int adderMode = ${true ? 1 : 0}; // 1 to run HW on adder mode, 0 to run HW on max-pooling mode`)
   bodyPrint(`  int im_h = ${im_h}; // image height (vertical pixel length)`)
   bodyPrint(`  int im_w = ${im_w}; // image width (horizontal pixel length)`)
-  bodyPrint(`  int wg_dim = ${wg_sq_dim} // kernel dimension, make sure this value is positive and less than ${v}`)
-  bodyPrint(`  int im[im_h * im_w] = {${im.map(float2Int).join()}}; // image array goes here, format is signed fixed point with radix at 8th (Q7.24), 14 LSBs will be ignored by HW`)
-  bodyPrint(`  int wg[wg_dim * wg_dim] = {${wg_sq.map(float2Int).join()}}; // square kernel array goes here, format is signed fixed point with radix at 8th (Q7.24), 14 LSBs will be ignored by HW`)
+  bodyPrint(`  int wg_dim = ${wg_sq_dim}; // kernel dimension, make sure this value is positive and less than ${v}`)
+  bodyPrint(`  int im[${im_h * im_w}] = {${im.map(float2Int).join()}}; // image array goes here, format is signed fixed point with radix at 8th (Q7.24), 14 LSBs will be ignored by HW`)
+  bodyPrint(`  int wg[${wg_sq_dim * wg_sq_dim}] = {${wg_sq.map(float2Int).join()}}; // square kernel array goes here, format is signed fixed point with radix at 8th (Q7.24), 14 LSBs will be ignored by HW`)
   bodyPrint(`  int out_h = im_h - wg_dim + 1;`)
   bodyPrint(`  int out_w = im_w - wg_dim + 1;`)
   bodyPrint(`  int out[out_w * out_h]; // output of this (image, kernel) layer will be stored here, format is signed fixed point with radix at 16th (Q15.16)`)
@@ -141,7 +141,7 @@ function generate(v, r, im = [], im_w = 0, im_h = 0, wg = [], emulate = false) {
   bodyPrint(`  // STEP 7 - at this point, output of the (image, kernel) layer is in out[]`)
   bodyPrint(`  printf("result = [\\n");`)
   bodyPrint(`  for(count = 0; count < out_w * out_h; count++) {`)
-  bodyPrint(`    printf("%f,\\n", (double) (out[count] / 65536);`)
+  bodyPrint(`    printf("%f,\\n", (double) ((int) (out[count])) / 65536);`)
   bodyPrint(`  }`)
   bodyPrint(`  printf("]\\n");`)
   bodyPrint(`}`)
@@ -149,27 +149,39 @@ function generate(v, r, im = [], im_w = 0, im_h = 0, wg = [], emulate = false) {
   debugFlag(7)
   
   console.log("Hardware code generation time - " + (Date.now() - start) + " ms");
+  bodyWrite();
+  let emu_0_result;
+  let emu_1_result;
   if(emulate) {
   // PART: Step   8   : unfaithful hardware emulation with single-threaded JS
     const emu_output = new Array((im_h - wg_sq_dim + 1) * (im_w - wg_sq_dim + 1)).fill();
     const start_emu_0 = Date.now();
-    console.log("Adder result: " + (emu_output.map((c, i) => {
-        return wg_sq.reduce((acc, cur, index) => {
-          return acc + cur * im[i + index % wg_sq_dim + im_w * Math.floor(index / wg_sq_dim)];
-        }, 0);
-      }))
-    )
+    emu_0_result = emu_output.map((c, i) => {
+      return wg_sq.reduce((acc, cur, index) => {
+        return acc + cur * im[i % (im_w - wg_sq_dim + 1) + index % wg_sq_dim + im_w * (Math.floor(i / (im_w - wg_sq_dim + 1)) + Math.floor(index / wg_sq_dim))];
+      }, 0);
+    })
+    console.log("Adder result: " + emu_0_result)
     console.log("Software emulation (adder) time - " + (Date.now() - start_emu_0) + " ms");
     
     const start_emu_1 = Date.now();
-    console.log("Max-pooling result: " + (emu_output.map((c, i) => {
-        return wg_sq.reduce((acc, cur, index) => {
-          return acc && acc > cur * im[i + index % wg_sq_dim + im_w * Math.floor(index / wg_sq_dim)] ? acc : cur * im[i + index % wg_sq_dim + im_w * Math.floor(index / wg_sq_dim)];
-        });
-      }))
-    )
+    emu_1_result = emu_output.map((c, i) => {
+      return wg_sq.reduce((acc, cur, index) => {
+        return acc && acc > cur * im[i % (im_w - wg_sq_dim + 1) + index % wg_sq_dim + im_w * (Math.floor(i / (im_w - wg_sq_dim + 1)) + Math.floor(index / wg_sq_dim))] ? acc : cur * im[i % (im_w - wg_sq_dim + 1) + index % wg_sq_dim + im_w * (Math.floor(i / (im_w - wg_sq_dim + 1)) + Math.floor(index / wg_sq_dim))];
+      });
+    })
+    console.log("Max-pooling result: " + emu_1_result)
     console.log("Software emulation (max-pooling) time - " + (Date.now() - start_emu_1) + " ms");
   }
 
   debugFlag(8)
+  return emulate ? {
+    im,
+    wg,
+    emu_0_result,
+    emu_1_result
+  } : {
+    im, 
+    wg
+  }
 }
